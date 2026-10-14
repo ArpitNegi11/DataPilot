@@ -1,0 +1,14 @@
+# Pharmaceutical Supply Chain Quality & Audit Guideline
+Document Reference: SOP-2023-QC-PHARMA-101
+Authority: Quality Assurance (QA) & Regulatory Affairs Board
+Effective Date: March 2023
+
+1. Defect Rate Tolerance & Quarantine Protocols:
+- Maximum allowable defect tolerance for commercial release is 2.50%.
+- Any production batch exhibiting a defect rate strictly exceeding 3.00% must be immediately transitioned into "Quality Flagged" status.
+- Quality Flagged batches are strictly prohibited from wholesale commercial distribution and must undergo secondary chromatographic validation.
+
+2. Supplier Quality Standards & Therapeutic Class Oversight:
+- Oncology manufacturing involves cytotoxic active pharmaceutical ingredients and operates under zero-contamination tolerance.
+- High-volume therapeutic classes (Cardiology, Anti-Infective) stored in Central Hub (Chicago) and Newark must maintain 99.0% on-time audit release schedules.
+- Any supplier with repeated batch defect rates above 3% across consecutive manufacturing cycles shall face immediate vendor probation.

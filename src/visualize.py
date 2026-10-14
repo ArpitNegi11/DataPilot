@@ -111,7 +111,7 @@ def generate_visuals(df: pd.DataFrame, output_dir: str = "outputs") -> dict:
                 print(f"[VISUAL_WARN] Distribution error for {col}: {e}")
 
     # 4. Bar plot for first categorical column frequencies
-    cat_df = df.select_dtypes(include=["object", "category"])
+    cat_df = df.select_dtypes(include=["object", "string", "category"])
     if not cat_df.empty:
         col = cat_df.columns[0]
         try:

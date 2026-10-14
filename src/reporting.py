@@ -2,7 +2,7 @@ from jinja2 import Environment, FileSystemLoader
 import os
 from datetime import datetime
 
-def generate_report(validation, anomalies, figures, summary, insights=None, output_path="outputs/report.html"):
+def generate_report(validation, anomalies, figures, summary, insights=None, output_path="outputs/report.html", recommendations=None):
     print("[REPORT] Generating styled HTML report with Jinja2...")
 
     # Load template
@@ -22,6 +22,7 @@ def generate_report(validation, anomalies, figures, summary, insights=None, outp
         figures=figures,
         summary=summary,
         insights=insights or {},
+        recommendations=recommendations or [],
         footer=footer
     )
 

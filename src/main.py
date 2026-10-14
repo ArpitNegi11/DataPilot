@@ -12,12 +12,28 @@ if sys.platform == "win32" and hasattr(sys.stdout, "reconfigure"):
 # Ensure project root is on sys.path for direct CLI execution
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from src import cleaning, validation, anomalies, visualize, reporting, predictive, io_utils
+from src import cleaning, validation, anomalies, visualize, reporting, predictive, io_utils, analytics, recommendations
 
 
 def load_config(config_path: str):
-    with open(config_path, "r") as f:
-        return yaml.safe_load(f)
+    if not os.path.exists(config_path):
+        return {}
+    with open(config_path, "r", encoding="utf-8") as f:
+        return yaml.safe_load(f) or {}
+
+
+def extract_validation_rules(config: dict) -> list:
+    """Extract validation rules from various config schema formats."""
+    raw_rules = config.get("validation_rules") or config.get("validation") or config.get("validations") or []
+    if isinstance(raw_rules, list):
+        return raw_rules
+    elif isinstance(raw_rules, dict):
+        rules_list = []
+        for col_name, rule_body in raw_rules.items():
+            if isinstance(rule_body, dict):
+                rules_list.append({"column": col_name, **rule_body})
+        return rules_list
+    return []
 
 
 def run_pipeline(input_file: str, output_dir: str, config_path: str):
@@ -31,17 +47,23 @@ def run_pipeline(input_file: str, output_dir: str, config_path: str):
     # Load config
     config = load_config(config_path)
 
-    df = io_utils.load_file(input_file, auto_clean_header=True)
+    # Load data via smart ingestion
     print(f"[INFO] Loading file: {input_file}")
+    df = io_utils.load_file(input_file, auto_clean_header=True)
     print(f"[OK] Loaded {df.shape[0]} rows and {df.shape[1]} columns")
 
     # --- Cleaning ---
     df_clean = cleaning.clean_data(df, config)
-    cleaned_file = os.path.join(output_dir, "cleaned.xlsx")
-    df_clean.to_excel(cleaned_file, index=False)
+
+    # Save cleaned file matching input format
+    ext = os.path.splitext(input_file)[1].lower()
+    cleaned_ext = ".csv" if ext == ".csv" else ".xlsx"
+    cleaned_file = os.path.join(output_dir, f"cleaned{cleaned_ext}")
+    io_utils.save_file(df_clean, cleaned_file)
 
     # --- Validation ---
-    validation_issues = validation.validate_data(df_clean, config.get("validation_rules", []))
+    validation_rules = extract_validation_rules(config)
+    validation_issues = validation.validate_data(df_clean, validation_rules)
 
     # --- Anomalies ---
     anomalies_found = anomalies.detect_anomalies(df_clean)
@@ -53,6 +75,9 @@ def run_pipeline(input_file: str, output_dir: str, config_path: str):
     insights = predictive.run_predictive_models(df_clean)
 
     # --- Summary for Report ---
+    roles = analytics.infer_business_columns(df_clean)
+    kpis = analytics.compute_kpis(df_clean, roles)
+
     summary = {
         "Original Rows": df.shape[0],
         "Original Columns": df.shape[1],
@@ -64,9 +89,30 @@ def run_pipeline(input_file: str, output_dir: str, config_path: str):
         "Output File": os.path.basename(cleaned_file),
     }
 
+    if kpis.get("total_revenue") is not None:
+        summary["Total Revenue"] = f"${kpis['total_revenue']:,.2f}"
+    if kpis.get("total_profit") is not None:
+        summary["Total Profit"] = f"${kpis['total_profit']:,.2f}"
+    if kpis.get("profit_margin_pct") is not None:
+        summary["Profit Margin"] = f"{kpis['profit_margin_pct']:.1f}%"
+    if kpis.get("average_order_value") is not None:
+        summary["Average Order Value"] = f"${kpis['average_order_value']:,.2f}"
+
+    # --- Strategic Recommendations ---
+    rec_engine = recommendations.RecommendationEngine(df_clean, roles)
+    business_recs = rec_engine.generate_recommendations()
+
     # --- Report ---
     report_file = os.path.join(output_dir, "report.html")
-    reporting.generate_report(validation_issues, anomalies_found, figures, summary, insights, report_file)
+    reporting.generate_report(
+        validation=validation_issues,
+        anomalies=anomalies_found,
+        figures=figures,
+        summary=summary,
+        insights=insights,
+        output_path=report_file,
+        recommendations=business_recs
+    )
 
 
 

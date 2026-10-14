@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
-from typing import Dict, Optional, List
+from typing import Dict, Optional, Any, List
+
 
 def infer_business_columns(df: pd.DataFrame) -> Dict[str, Optional[str]]:
     """
@@ -40,8 +41,180 @@ def infer_business_columns(df: pd.DataFrame) -> Dict[str, Optional[str]]:
     if not roles["revenue"] and num_cols:
         roles["revenue"] = num_cols[-1]
 
-    text_cols = df.select_dtypes(include=["object", "category"]).columns.tolist()
+    text_cols = df.select_dtypes(include=["object", "string", "category"]).columns.tolist()
     if not roles["product"] and text_cols:
         roles["product"] = text_cols[0]
 
     return roles
+
+
+def compute_kpis(df: pd.DataFrame, roles: Optional[Dict[str, Optional[str]]] = None) -> Dict[str, Any]:
+    """
+    Compute deterministic core business KPIs from dataset.
+    Guarantees zero hallucination of aggregates.
+    """
+    if roles is None:
+        roles = infer_business_columns(df)
+
+    kpis = {
+        "total_records": int(len(df)),
+        "total_revenue": None,
+        "total_profit": None,
+        "profit_margin_pct": None,
+        "total_quantity": None,
+        "average_order_value": None,
+        "unique_products": None,
+        "unique_categories": None,
+        "unique_regions": None,
+    }
+
+    rev_col = roles.get("revenue")
+    prof_col = roles.get("profit")
+    qty_col = roles.get("quantity")
+    prod_col = roles.get("product")
+    cat_col = roles.get("category")
+    reg_col = roles.get("region")
+
+    if rev_col and rev_col in df.columns and pd.api.types.is_numeric_dtype(df[rev_col]):
+        rev_sum = float(df[rev_col].sum())
+        kpis["total_revenue"] = round(rev_sum, 2)
+        if len(df) > 0:
+            kpis["average_order_value"] = round(rev_sum / len(df), 2)
+
+    if prof_col and prof_col in df.columns and pd.api.types.is_numeric_dtype(df[prof_col]):
+        prof_sum = float(df[prof_col].sum())
+        kpis["total_profit"] = round(prof_sum, 2)
+        if kpis["total_revenue"] and kpis["total_revenue"] > 0:
+            kpis["profit_margin_pct"] = round((prof_sum / kpis["total_revenue"]) * 100, 2)
+
+    if qty_col and qty_col in df.columns and pd.api.types.is_numeric_dtype(df[qty_col]):
+        kpis["total_quantity"] = float(df[qty_col].sum())
+
+    if prod_col and prod_col in df.columns:
+        kpis["unique_products"] = int(df[prod_col].nunique())
+
+    if cat_col and cat_col in df.columns:
+        kpis["unique_categories"] = int(df[cat_col].nunique())
+
+    if reg_col and reg_col in df.columns:
+        kpis["unique_regions"] = int(df[reg_col].nunique())
+
+    return kpis
+
+
+def compute_breakdowns(df: pd.DataFrame, roles: Optional[Dict[str, Optional[str]]] = None) -> Dict[str, Any]:
+    """
+    Compute categorical, regional, and product dimensional aggregations.
+    """
+    if roles is None:
+        roles = infer_business_columns(df)
+
+    rev_col = roles.get("revenue")
+    prof_col = roles.get("profit")
+    cat_col = roles.get("category")
+    reg_col = roles.get("region")
+    prod_col = roles.get("product")
+
+    breakdowns = {}
+
+    if cat_col and cat_col in df.columns and rev_col and rev_col in df.columns:
+        cat_agg = df.groupby(cat_col)[rev_col].agg(["sum", "mean", "count"]).reset_index()
+        cat_agg.columns = [cat_col, "Total_Revenue", "Average_Revenue", "Transactions"]
+        cat_agg = cat_agg.sort_values(by="Total_Revenue", ascending=False)
+        breakdowns["category"] = cat_agg
+
+    if reg_col and reg_col in df.columns and rev_col and rev_col in df.columns:
+        reg_agg = df.groupby(reg_col)[rev_col].agg(["sum", "count"]).reset_index()
+        reg_agg.columns = [reg_col, "Total_Revenue", "Transactions"]
+        reg_agg = reg_agg.sort_values(by="Total_Revenue", ascending=False)
+        breakdowns["region"] = reg_agg
+
+    if prod_col and prod_col in df.columns and rev_col and rev_col in df.columns:
+        prod_agg = df.groupby(prod_col)[rev_col].sum().reset_index()
+        prod_agg.columns = [prod_col, "Total_Revenue"]
+        prod_agg = prod_agg.sort_values(by="Total_Revenue", ascending=False).head(10)
+        breakdowns["top_products"] = prod_agg
+
+    return breakdowns
+
+
+def compute_time_trends(df: pd.DataFrame, roles: Optional[Dict[str, Optional[str]]] = None) -> Optional[pd.DataFrame]:
+    """
+    Compute monthly revenue aggregations and Month-over-Month (MoM) growth rates.
+    """
+    if roles is None:
+        roles = infer_business_columns(df)
+
+    date_col = roles.get("date")
+    rev_col = roles.get("revenue")
+
+    if not date_col or not rev_col or date_col not in df.columns or rev_col not in df.columns:
+        return None
+
+    try:
+        temp = df.copy()
+        temp[date_col] = pd.to_datetime(temp[date_col], errors="coerce")
+        temp = temp.dropna(subset=[date_col, rev_col])
+
+        if temp.empty:
+            return None
+
+        monthly = temp.set_index(date_col).resample("M")[rev_col].sum().reset_index()
+        monthly["Period"] = monthly[date_col].dt.strftime("%Y-%m")
+        monthly["MoM_Growth_Pct"] = monthly[rev_col].pct_change() * 100
+        monthly["MoM_Growth_Pct"] = monthly["MoM_Growth_Pct"].round(2)
+        return monthly
+    except Exception as e:
+        print(f"[ANALYTICS_WARN] Time trends computation error: {e}")
+        return None
+
+
+def compute_data_quality_score(
+    df_raw: pd.DataFrame,
+    df_clean: pd.DataFrame,
+    validation_issues: Dict[str, List[str]],
+    anomalies: Dict[str, List[Any]]
+) -> Dict[str, Any]:
+    """
+    Compute a deterministic data quality health score from 0 to 100%.
+    """
+    score = 100.0
+
+    total_cells = df_raw.shape[0] * df_raw.shape[1] if df_raw.size > 0 else 1
+    raw_nulls = df_raw.isna().sum().sum()
+    null_ratio = raw_nulls / total_cells
+    # Deduct up to 30 points for missing values
+    score -= min(30.0, null_ratio * 100)
+
+    # Duplicates penalty (up to 20 points)
+    raw_dups = df_raw.duplicated().sum()
+    dup_ratio = raw_dups / max(1, len(df_raw))
+    score -= min(20.0, dup_ratio * 100)
+
+    # Validation issues penalty (up to 30 points)
+    total_issues = sum(len(v) for v in validation_issues.values()) if validation_issues else 0
+    score -= min(30.0, total_issues * 5.0)
+
+    # Anomalies penalty (up to 20 points)
+    total_anomalies = sum(len(v) for v in anomalies.values()) if anomalies else 0
+    score -= min(20.0, total_anomalies * 2.0)
+
+    final_score = max(0.0, min(100.0, round(score, 1)))
+
+    if final_score >= 85:
+        grade = "Excellent"
+    elif final_score >= 70:
+        grade = "Good"
+    elif final_score >= 50:
+        grade = "Fair"
+    else:
+        grade = "Poor"
+
+    return {
+        "score": final_score,
+        "grade": grade,
+        "raw_nulls": int(raw_nulls),
+        "raw_duplicates": int(raw_dups),
+        "validation_issues_count": int(total_issues),
+        "anomalies_count": int(total_anomalies)
+    }

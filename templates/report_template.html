@@ -2,70 +2,186 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>DataPilot - Executive Report</title>
+    <title>DataPilot Executive Analysis & Recommendation Report</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background: #121212;
-            color: #e0e0e0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 30px;
+            background: #0f172a;
+            color: #f1f5f9;
+            line-height: 1.6;
         }
-        h1, h2, h3 {
-            color: #ffffff;
+        .header {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.2em;
+            color: #38bdf8;
+            letter-spacing: -0.5px;
+        }
+        .header p {
+            margin: 8px 0 0;
+            color: #94a3b8;
+            font-size: 1.1em;
         }
         .section {
-            margin-bottom: 30px;
-            padding: 20px;
-            background: #1e1e1e;
+            margin-bottom: 25px;
+            padding: 24px;
+            background: #1e293b;
             border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+            border: 1px solid #334155;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+        }
+        h2 {
+            margin-top: 0;
+            color: #f8fafc;
+            border-bottom: 2px solid #334155;
+            padding-bottom: 10px;
+            font-size: 1.4em;
+        }
+        h3 {
+            color: #38bdf8;
+            margin-top: 15px;
+        }
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .kpi-card {
+            background: #0f172a;
+            padding: 16px;
+            border-radius: 8px;
+            border: 1px solid #334155;
+            text-align: center;
+        }
+        .kpi-label {
+            font-size: 0.85em;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .kpi-val {
+            font-size: 1.6em;
+            font-weight: bold;
+            color: #38bdf8;
+            margin-top: 6px;
+        }
+        .rec-card {
+            background: #0f172a;
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 15px;
+            border-left: 4px solid #38bdf8;
+            border: 1px solid #334155;
+            border-left-width: 5px;
+        }
+        .rec-card.high { border-left-color: #ef4444; }
+        .rec-card.medium { border-left-color: #f59e0b; }
+        .rec-card.low { border-left-color: #10b981; }
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.75em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .badge.high { background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid #ef4444; }
+        .badge.medium { background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid #f59e0b; }
+        .badge.low { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid #10b981; }
+        .rec-title {
+            font-size: 1.15em;
+            font-weight: bold;
+            color: #f8fafc;
+            margin: 8px 0;
+        }
+        .rec-obs {
+            color: #cbd5e1;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+        .rec-action {
+            background: rgba(56, 189, 248, 0.1);
+            border-left: 3px solid #38bdf8;
+            padding: 10px;
+            border-radius: 4px;
+            color: #e2e8f0;
+            font-size: 0.9em;
         }
         img {
-            max-width: 600px;
+            max-width: 100%;
+            height: auto;
             display: block;
             margin: 15px auto;
-            border: 1px solid #333;
             border-radius: 8px;
-            padding: 5px;
-            background: #222;
+            border: 1px solid #334155;
         }
         ul {
-            list-style-type: none;
-            padding-left: 0;
+            padding-left: 20px;
         }
         li {
-            margin-bottom: 5px;
+            margin-bottom: 6px;
         }
         .footer {
             margin-top: 40px;
-            padding: 15px;
+            padding: 20px;
             text-align: center;
-            font-size: 0.9em;
-            color: #aaa;
-            border-top: 1px solid #333;
-        }
-        .insight {
-            background: #2a2a2a;
-            padding: 10px;
-            margin: 8px 0;
-            border-radius: 6px;
+            font-size: 0.85em;
+            color: #64748b;
+            border-top: 1px solid #334155;
         }
     </style>
 </head>
 <body>
-    <h1>DataPilot - Executive Report</h1>
-
-    <div class="section">
-        <h2>Summary</h2>
-        <ul>
-        {% for key, value in summary.items() %}
-            <li><strong>{{ key }}:</strong> {{ value }}</li>
-        {% endfor %}
-        </ul>
+    <div class="header">
+        <h1>DataPilot Executive Summary & Recommendations</h1>
+        <p>AI Data Analyst & Automated Business Intelligence Engine</p>
     </div>
 
+    <!-- Executive Metrics & Summary -->
     <div class="section">
-        <h2>Validation Results</h2>
+        <h2>Executive Performance Overview</h2>
+        <div class="kpi-grid">
+        {% for key, value in summary.items() %}
+            <div class="kpi-card">
+                <div class="kpi-label">{{ key }}</div>
+                <div class="kpi-val">{{ value }}</div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+
+    <!-- Strategic Business Recommendations -->
+    {% if recommendations %}
+    <div class="section">
+        <h2>Strategic Business Recommendations</h2>
+        <p style="color: #94a3b8; font-size: 0.95em;">Data-grounded actionable steps prioritized by expected revenue and operational impact:</p>
+        {% for rec in recommendations %}
+            <div class="rec-card {{ rec.priority.lower() }}">
+                <div>
+                    <span class="badge {{ rec.priority.lower() }}">{{ rec.priority }} Priority</span>
+                    <span style="color: #94a3b8; font-size: 0.85em; margin-left: 8px;">{{ rec.category }}</span>
+                </div>
+                <div class="rec-title">{{ rec.title }}</div>
+                <div class="rec-obs"><b>Evidence:</b> {{ rec.observation }}</div>
+                <div class="rec-action"><b>Recommended Action:</b> {{ rec.action }}</div>
+            </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Validation & Quality Checks -->
+    <div class="section">
+        <h2>Data Quality & Rule Validation</h2>
         {% if validation %}
             <ul>
             {% for col, issues in validation.items() %}
@@ -73,45 +189,41 @@
             {% endfor %}
             </ul>
         {% else %}
-            <p>No validation issues found.</p>
+            <p>✅ All records satisfied defined schema and validation rules with zero errors.</p>
         {% endif %}
-    </div>
 
-    <div class="section">
-        <h2>Anomalies</h2>
         {% if anomalies %}
-            <pre>{{ anomalies }}</pre>
-        {% else %}
-            <p>No anomalies detected.</p>
+            <h3>Flagged Numeric Anomalies (Z-Score &gt; 3.0)</h3>
+            <pre style="background: #0f172a; padding: 12px; border-radius: 6px; border: 1px solid #334155; overflow-x: auto;">{{ anomalies }}</pre>
         {% endif %}
     </div>
 
+    <!-- Predictive Insights -->
+    {% if insights %}
     <div class="section">
-        <h2>Predictive Insights</h2>
-        {% if insights %}
-            {% for key, value in insights.items() %}
-                <h3>{{ key.replace('_',' ').title() }}</h3>
-                {% if value.formula %}
-                    <p><b>Formula:</b> <code>{{ value.formula }}</code></p>
-                    {% if value.r2 is defined %}
-                        <p><b>Fit Quality (R2):</b> {{ value.r2 }}</p>
-                    {% endif %}
-                    <p><i>{{ value.interpretation }}</i></p>
-                {% elif value.summary %}
-                    <p><b>Summary:</b> {{ value.summary }}</p>
-                    <p><i>{{ value.interpretation }}</i></p>
+        <h2>Machine Learning & Predictive Insights</h2>
+        {% for key, value in insights.items() %}
+            <h3>{{ key.replace('_',' ').title() }}</h3>
+            {% if value.formula %}
+                <p><b>Model Formula:</b> <code>{{ value.formula }}</code></p>
+                {% if value.r2 is defined %}
+                    <p><b>Fit Quality (R²):</b> {{ value.r2 }}</p>
                 {% endif %}
+                <p><i>{{ value.interpretation }}</i></p>
+            {% elif value.summary %}
+                <p><b>Summary:</b> {{ value.summary }}</p>
+                <p><i>{{ value.interpretation }}</i></p>
                 {% if value.image %}
                     <img src="data:image/png;base64,{{ value.image }}" alt="{{ key }}">
                 {% endif %}
-            {% endfor %}
-        {% else %}
-            <p>No predictive insights available.</p>
-        {% endif %}
+            {% endif %}
+        {% endfor %}
     </div>
+    {% endif %}
 
+    <!-- Visualizations -->
     <div class="section">
-        <h2>Visualizations</h2>
+        <h2>Analytical Visualizations</h2>
         {% for name, img in figures.items() %}
             <h3>{{ name.replace('_',' ').title() }}</h3>
             <img src="data:image/png;base64,{{ img }}" alt="{{ name }}">
