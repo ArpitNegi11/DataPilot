@@ -1,0 +1,1001 @@
+Order_ID,Order_Date,Customer_Segment,Region,Product_Category,Product_Name,Unit_Cost,Unit_Price,Quantity,Net_Sales,Discount_Pct,Profit,Shipping_Mode,Return_Status
+ORD-2023001,2023-01-15,Consumer,West,Office Furniture,Leather Conference Room Chair,110.0,269.99,4,1079.96,0.0,631.96,Express Air,No
+ORD-2023002,2023-01-16,Small Business,West,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,2,439.98,0.0,256.98,Standard Class,No
+ORD-2023003,2023-01-16,Consumer,West,Technology,Smart Conference Webcam 4K,70.0,179.99,4,539.97,0.25,251.97,Express Air,No
+ORD-2023004,2023-01-17,Small Business,Central,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,2,37.98,0.05,22.98,Standard Class,Yes
+ORD-2023005,2023-01-18,Corporate,South,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,12,4499.91,0.25,1611.91,Express Air,No
+ORD-2023006,2023-01-18,Small Business,East,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,4,139.96,0.0,76.96,Same Day Priority,No
+ORD-2023007,2023-01-19,Consumer,North,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,1,408.49,0.05,220.49,Express Air,No
+ORD-2023008,2023-01-20,Small Business,South,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,3,449.97,0.0,246.97,Express Air,No
+ORD-2023009,2023-01-20,Corporate,West,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,1,350.99,0.1,182.99,Express Air,No
+ORD-2023010,2023-01-21,Consumer,South,Technology,Smart Conference Webcam 4K,70.0,179.99,8,1439.92,0.0,871.92,Express Air,No
+ORD-2023011,2023-01-22,Consumer,North,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,2,816.98,0.05,453.98,Standard Class,No
+ORD-2023012,2023-01-22,Corporate,West,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,1,11.99,0.0,-7.01,Same Day Priority,No
+ORD-2023013,2023-01-23,Small Business,West,Technology,UltraBook Pro 15,850.0,1299.99,1,1234.99,0.05,369.99,Same Day Priority,No
+ORD-2023014,2023-01-24,Corporate,South,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,1,208.99,0.05,115.99,Standard Class,No
+ORD-2023015,2023-01-24,Corporate,South,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,3,1499.97,0.0,776.97,Standard Class,No
+ORD-2023016,2023-01-25,Consumer,West,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,20,2249.85,0.25,934.85,Same Day Priority,No
+ORD-2023017,2023-01-26,Consumer,North,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,1,389.99,0.0,221.99,Express Air,Yes
+ORD-2023018,2023-01-26,Corporate,North,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,2,179.98,0.0,106.98,Standard Class,No
+ORD-2023019,2023-01-27,Corporate,West,Technology,UltraBook Pro 15,850.0,1299.99,1,1234.99,0.05,369.99,Same Day Priority,No
+ORD-2023020,2023-01-28,Consumer,Central,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,2,39.98,0.0,19.98,Express Air,No
+ORD-2023021,2023-01-28,Consumer,West,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,5,664.95,0.05,381.95,Express Air,No
+ORD-2023022,2023-01-29,Small Business,West,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,1,76.49,0.15,31.49,Same Day Priority,No
+ORD-2023023,2023-01-29,Small Business,East,Technology,Smart Conference Webcam 4K,70.0,179.99,1,161.99,0.1,76.99,Same Day Priority,No
+ORD-2023024,2023-01-30,Consumer,Central,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,3,1160.97,0.1,612.97,Express Air,Yes
+ORD-2023025,2023-01-31,Corporate,East,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,3,256.47,0.05,151.47,Same Day Priority,No
+ORD-2023026,2023-01-31,Corporate,East,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,3,967.48,0.25,419.48,Express Air,No
+ORD-2023027,2023-02-01,Corporate,West,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,5,2042.45,0.05,1134.45,Express Air,No
+ORD-2023028,2023-02-02,Corporate,East,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,2,143.99,0.4,38.99,Same Day Priority,No
+ORD-2023029,2023-02-02,Corporate,West,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,8,1671.92,0.05,936.92,Same Day Priority,No
+ORD-2023030,2023-02-03,Small Business,North,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,1,292.49,0.25,129.49,Standard Class,No
+ORD-2023031,2023-02-04,Consumer,West,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,1,799.99,0.0,404.99,Same Day Priority,No
+ORD-2023032,2023-02-04,Consumer,South,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,4,791.96,0.1,416.96,Same Day Priority,No
+ORD-2023033,2023-02-05,Small Business,West,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,8,151.92,0.05,88.92,Same Day Priority,No
+ORD-2023034,2023-02-06,Corporate,East,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,1,219.99,0.0,126.99,Standard Class,No
+ORD-2023035,2023-02-06,Corporate,East,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,3,1111.47,0.05,623.47,Express Air,Yes
+ORD-2023036,2023-02-07,Consumer,West,Technology,Smart Conference Webcam 4K,70.0,179.99,2,323.98,0.1,175.98,Express Air,No
+ORD-2023037,2023-02-08,Small Business,South,Office Furniture,Leather Conference Room Chair,110.0,269.99,3,809.97,0.0,476.97,Standard Class,No
+ORD-2023038,2023-02-08,Consumer,South,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,1,719.99,0.1,331.99,Express Air,No
+ORD-2023039,2023-02-09,Small Business,North,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,4,47.96,0.0,16.96,Same Day Priority,No
+ORD-2023040,2023-02-10,Small Business,Central,Technology,Noise-Cancelling Headphones,95.0,249.99,20,4749.81,0.05,2841.81,Express Air,No
+ORD-2023041,2023-02-10,Consumer,South,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,1,19.99,0.0,-1.01,Same Day Priority,No
+ORD-2023042,2023-02-11,Small Business,West,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,5,359.97,0.4,126.97,Express Air,No
+ORD-2023043,2023-02-11,Consumer,West,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,2,740.98,0.05,405.98,Same Day Priority,No
+ORD-2023044,2023-02-12,Small Business,East,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,1,719.99,0.1,331.99,Express Air,No
+ORD-2023045,2023-02-13,Small Business,North,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,1,219.99,0.0,114.99,Same Day Priority,No
+ORD-2023046,2023-02-13,Consumer,South,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,3,269.97,0.0,161.97,Standard Class,No
+ORD-2023047,2023-02-14,Small Business,North,Technology,Noise-Cancelling Headphones,95.0,249.99,4,899.96,0.1,504.96,Same Day Priority,No
+ORD-2023048,2023-02-15,Corporate,North,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,3,2399.97,0.0,1256.97,Standard Class,No
+ORD-2023049,2023-02-15,Small Business,East,Technology,UltraBook Pro 15,850.0,1299.99,20,24699.81,0.05,7684.81,Same Day Priority,No
+ORD-2023050,2023-02-16,Corporate,West,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,1,219.99,0.0,121.99,Express Air,No
+ORD-2023051,2023-02-17,Small Business,North,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,4,305.97,0.15,157.97,Express Air,No
+ORD-2023052,2023-02-17,Corporate,North,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,2,39.98,0.0,24.98,Standard Class,No
+ORD-2023053,2023-02-18,Small Business,West,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,3,1052.97,0.1,564.97,Express Air,No
+ORD-2023054,2023-02-19,Small Business,West,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,2,170.98,0.05,92.98,Express Air,No
+ORD-2023055,2023-02-19,Small Business,South,Technology,USB-C Fast Charging Dock,28.0,79.99,8,543.93,0.15,311.93,Express Air,Yes
+ORD-2023056,2023-02-20,Small Business,Central,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,2,373.98,0.15,178.98,Same Day Priority,No
+ORD-2023057,2023-02-21,Small Business,South,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,1,370.49,0.05,207.49,Standard Class,No
+ORD-2023058,2023-02-21,Corporate,South,Technology,UltraBook Pro 15,850.0,1299.99,1,1234.99,0.05,381.99,Standard Class,No
+ORD-2023059,2023-02-22,Small Business,East,Technology,UltraBook Pro 15,850.0,1299.99,20,19499.85,0.25,2491.85,Express Air,No
+ORD-2023060,2023-02-23,Small Business,East,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,2,227.98,0.05,122.98,Same Day Priority,No
+ORD-2023061,2023-02-23,Consumer,Central,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,2,816.98,0.05,441.98,Same Day Priority,No
+ORD-2023062,2023-02-24,Corporate,East,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,1,89.99,0.25,41.99,Standard Class,No
+ORD-2023063,2023-02-24,Corporate,Central,Office Furniture,Leather Conference Room Chair,110.0,269.99,2,539.98,0.0,311.98,Express Air,No
+ORD-2023064,2023-02-25,Consumer,West,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,8,2579.94,0.25,1136.94,Standard Class,No
+ORD-2023065,2023-02-26,Small Business,East,Office Furniture,Leather Conference Room Chair,110.0,269.99,1,242.99,0.1,117.99,Same Day Priority,No
+ORD-2023066,2023-02-26,Small Business,Central,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,3,99.72,0.05,60.72,Standard Class,No
+ORD-2023067,2023-02-27,Small Business,South,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,1,799.99,0.0,416.99,Standard Class,No
+ORD-2023068,2023-02-28,Corporate,East,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,2,395.98,0.1,207.98,Express Air,No
+ORD-2023069,2023-02-28,Consumer,South,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,1,112.49,0.25,39.49,Express Air,No
+ORD-2023070,2023-03-01,Consumer,Central,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,2,239.98,0.0,141.98,Express Air,No
+ORD-2023071,2023-03-02,Corporate,North,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,1,34.99,0.0,19.99,Standard Class,No
+ORD-2023072,2023-03-02,Small Business,Central,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,5,712.45,0.05,372.45,Same Day Priority,No
+ORD-2023073,2023-03-03,Corporate,Central,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,1,429.99,0.0,234.99,Same Day Priority,No
+ORD-2023074,2023-03-04,Corporate,East,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,4,1547.96,0.1,812.96,Same Day Priority,No
+ORD-2023075,2023-03-04,Consumer,East,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,2,816.98,0.05,448.98,Express Air,No
+ORD-2023076,2023-03-05,Corporate,East,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,12,4385.9,0.15,2210.9,Same Day Priority,No
+ORD-2023077,2023-03-06,Small Business,North,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,5,3599.95,0.1,1696.95,Standard Class,No
+ORD-2023078,2023-03-06,Small Business,East,Office Furniture,Leather Conference Room Chair,110.0,269.99,1,202.49,0.25,77.49,Same Day Priority,No
+ORD-2023079,2023-03-07,Small Business,South,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,3,1424.97,0.05,696.97,Express Air,No
+ORD-2023080,2023-03-08,Corporate,North,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,1,474.99,0.05,219.99,Same Day Priority,No
+ORD-2023081,2023-03-08,Small Business,Central,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,20,227.81,0.05,132.81,Same Day Priority,No
+ORD-2023082,2023-03-09,Corporate,North,Office Furniture,Leather Conference Room Chair,110.0,269.99,8,1835.93,0.15,947.93,Express Air,No
+ORD-2023083,2023-03-09,Corporate,East,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,2,999.98,0.0,516.98,Standard Class,No
+ORD-2023084,2023-03-10,Consumer,East,Technology,Noise-Cancelling Headphones,95.0,249.99,1,249.99,0.0,151.99,Standard Class,No
+ORD-2023085,2023-03-11,Small Business,Central,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,8,1319.94,0.25,596.94,Standard Class,No
+ORD-2023086,2023-03-11,Small Business,West,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,2,439.98,0.0,251.98,Express Air,No
+ORD-2023087,2023-03-12,Corporate,North,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,2,22.78,0.05,6.78,Express Air,No
+ORD-2023088,2023-03-13,Consumer,North,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,1,80.99,0.1,42.99,Standard Class,No
+ORD-2023089,2023-03-13,Consumer,West,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,2,1519.98,0.05,756.98,Standard Class,No
+ORD-2023090,2023-03-14,Corporate,South,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,5,1934.95,0.1,1026.95,Express Air,Yes
+ORD-2023091,2023-03-15,Corporate,South,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,1,370.49,0.05,202.49,Express Air,No
+ORD-2023092,2023-03-15,Consumer,East,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,3,341.97,0.05,203.97,Standard Class,No
+ORD-2023093,2023-03-16,Consumer,Central,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,4,449.97,0.25,174.97,Same Day Priority,No
+ORD-2023094,2023-03-17,Corporate,North,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,1,219.99,0.0,126.99,Standard Class,No
+ORD-2023095,2023-03-17,Consumer,West,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,3,1052.97,0.1,557.97,Same Day Priority,No
+ORD-2023096,2023-03-18,Consumer,South,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,2,279.98,0.0,154.98,Same Day Priority,No
+ORD-2023097,2023-03-19,Consumer,South,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,4,509.97,0.15,234.97,Same Day Priority,No
+ORD-2023098,2023-03-19,Small Business,South,Technology,USB-C Fast Charging Dock,28.0,79.99,4,191.98,0.4,76.98,Standard Class,No
+ORD-2023099,2023-03-20,Consumer,North,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,1,329.99,0.4,101.99,Express Air,No
+ORD-2023100,2023-03-21,Corporate,North,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,3,626.97,0.05,348.97,Express Air,No
+ORD-2023101,2023-03-21,Consumer,North,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,2,1044.98,0.05,589.98,Same Day Priority,No
+ORD-2023102,2023-03-22,Consumer,West,Technology,Noise-Cancelling Headphones,95.0,249.99,2,499.98,0.0,306.98,Standard Class,No
+ORD-2023103,2023-03-22,Small Business,East,Technology,UltraBook Pro 15,850.0,1299.99,1,1299.99,0.0,446.99,Standard Class,No
+ORD-2023104,2023-03-23,Consumer,East,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,1,499.99,0.0,251.99,Express Air,No
+ORD-2023105,2023-03-24,Corporate,East,Technology,USB-C Fast Charging Dock,28.0,79.99,3,215.97,0.1,123.97,Express Air,No
+ORD-2023106,2023-03-24,Corporate,Central,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,3,35.97,0.0,15.97,Express Air,No
+ORD-2023107,2023-03-25,Small Business,South,Technology,UltraBook Pro 15,850.0,1299.99,3,3509.97,0.1,956.97,Standard Class,No
+ORD-2023108,2023-03-26,Consumer,West,Technology,Smart Conference Webcam 4K,70.0,179.99,3,512.97,0.05,299.97,Standard Class,No
+ORD-2023109,2023-03-26,Small Business,East,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,2,659.99,0.4,204.99,Same Day Priority,No
+ORD-2023110,2023-03-27,Consumer,North,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,4,1633.96,0.05,905.96,Express Air,No
+ORD-2023111,2023-03-28,Small Business,South,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,3,359.97,0.0,216.97,Express Air,No
+ORD-2023112,2023-03-28,Small Business,Central,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,2,179.98,0.0,106.98,Standard Class,No
+ORD-2023113,2023-03-29,Consumer,Central,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,4,1719.96,0.0,991.96,Express Air,Yes
+ORD-2023114,2023-03-30,Small Business,West,Office Furniture,Leather Conference Room Chair,110.0,269.99,3,728.97,0.1,383.97,Same Day Priority,No
+ORD-2023115,2023-03-30,Consumer,Central,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,1,11.99,0.0,4.99,Standard Class,No
+ORD-2023116,2023-03-31,Corporate,East,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,1,149.99,0.0,81.99,Standard Class,No
+ORD-2023117,2023-04-01,Corporate,East,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,2,1044.98,0.05,589.98,Same Day Priority,No
+ORD-2023118,2023-04-01,Consumer,South,Technology,USB-C Fast Charging Dock,28.0,79.99,8,543.93,0.15,311.93,Express Air,No
+ORD-2023119,2023-04-02,Consumer,South,Technology,USB-C Fast Charging Dock,28.0,79.99,5,299.96,0.25,144.96,Same Day Priority,No
+ORD-2023120,2023-04-03,Small Business,North,Technology,Smart Conference Webcam 4K,70.0,179.99,3,485.97,0.1,260.97,Same Day Priority,No
+ORD-2023121,2023-04-03,Consumer,South,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,3,104.97,0.0,60.97,Express Air,No
+ORD-2023122,2023-04-04,Small Business,West,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,2,439.98,0.0,251.98,Express Air,No
+ORD-2023123,2023-04-04,Corporate,South,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,2,417.98,0.05,222.98,Same Day Priority,No
+ORD-2023124,2023-04-05,Corporate,West,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,2,170.98,0.05,95.98,Same Day Priority,No
+ORD-2023125,2023-04-06,Small Business,West,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,1,449.99,0.1,206.99,Standard Class,No
+ORD-2023126,2023-04-06,Consumer,North,Technology,Smart Conference Webcam 4K,70.0,179.99,1,152.99,0.15,79.99,Standard Class,No
+ORD-2023127,2023-04-07,Corporate,East,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,1,89.99,0.25,41.99,Standard Class,No
+ORD-2023128,2023-04-08,Consumer,North,Technology,UltraBook Pro 15,850.0,1299.99,2,2599.98,0.0,896.98,Standard Class,No
+ORD-2023129,2023-04-08,Consumer,South,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,2,439.98,0.0,256.98,Standard Class,No
+ORD-2023130,2023-04-09,Corporate,Central,Technology,UltraBook Pro 15,850.0,1299.99,5,6499.95,0.0,2241.95,Express Air,No
+ORD-2023131,2023-04-10,Corporate,North,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,1,208.99,0.05,115.99,Standard Class,No
+ORD-2023132,2023-04-10,Small Business,West,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,8,81.53,0.15,34.53,Same Day Priority,No
+ORD-2023133,2023-04-11,Corporate,South,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,1,374.99,0.25,131.99,Standard Class,No
+ORD-2023134,2023-04-12,Consumer,North,Technology,Smart Conference Webcam 4K,70.0,179.99,2,341.98,0.05,198.98,Standard Class,No
+ORD-2023135,2023-04-12,Consumer,South,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,1,31.49,0.1,4.49,Same Day Priority,No
+ORD-2023136,2023-04-13,Consumer,West,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,5,699.95,0.0,409.95,Same Day Priority,No
+ORD-2023137,2023-04-14,Corporate,South,Technology,UltraBook Pro 15,850.0,1299.99,5,6499.95,0.0,2241.95,Express Air,No
+ORD-2023138,2023-04-14,Consumer,East,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,1,219.99,0.0,126.99,Standard Class,No
+ORD-2023139,2023-04-15,Consumer,West,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,2,161.98,0.1,83.98,Express Air,No
+ORD-2023140,2023-04-16,Small Business,South,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,5,56.95,0.05,28.95,Express Air,No
+ORD-2023141,2023-04-16,Corporate,West,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,2,816.98,0.05,453.98,Standard Class,No
+ORD-2023142,2023-04-17,Corporate,South,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,1,389.99,0.0,226.99,Standard Class,No
+ORD-2023143,2023-04-17,Consumer,East,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,1,389.99,0.0,226.99,Standard Class,No
+ORD-2023144,2023-04-18,Corporate,North,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,1,219.99,0.0,114.99,Same Day Priority,No
+ORD-2023145,2023-04-19,Small Business,West,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,4,359.96,0.0,211.96,Express Air,No
+ORD-2023146,2023-04-19,Corporate,North,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,5,2499.95,0.0,1296.95,Standard Class,No
+ORD-2023147,2023-04-20,Consumer,South,Technology,UltraBook Pro 15,850.0,1299.99,3,3704.97,0.05,1151.97,Standard Class,No
+ORD-2023148,2023-04-21,Consumer,West,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,2,35.98,0.1,8.98,Same Day Priority,No
+ORD-2023149,2023-04-21,Corporate,Central,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,8,2963.92,0.05,1680.92,Standard Class,Yes
+ORD-2023150,2023-04-22,Consumer,Central,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,12,4385.9,0.15,2210.9,Same Day Priority,No
+ORD-2023151,2023-04-23,Corporate,East,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,2,22.78,0.05,11.78,Standard Class,No
+ORD-2023152,2023-04-23,Corporate,South,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,2,1099.98,0.0,651.98,Express Air,No
+ORD-2023153,2023-04-24,Consumer,West,Technology,USB-C Fast Charging Dock,28.0,79.99,2,159.98,0.0,95.98,Express Air,No
+ORD-2023154,2023-04-25,Corporate,North,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,1,208.99,0.05,110.99,Express Air,No
+ORD-2023155,2023-04-25,Small Business,North,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,1,119.99,0.0,71.99,Standard Class,Yes
+ORD-2023156,2023-04-26,Small Business,North,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,3,35.97,0.0,20.97,Standard Class,No
+ORD-2023157,2023-04-27,Consumer,North,Technology,Smart Conference Webcam 4K,70.0,179.99,20,3599.8,0.0,2196.8,Standard Class,No
+ORD-2023158,2023-04-27,Consumer,Central,Technology,Noise-Cancelling Headphones,95.0,249.99,4,999.96,0.0,616.96,Standard Class,No
+ORD-2023159,2023-04-28,Corporate,East,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,4,40.77,0.15,16.77,Express Air,No
+ORD-2023160,2023-04-29,Consumer,West,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,3,994.47,0.15,499.47,Same Day Priority,Yes
+ORD-2023161,2023-04-29,Corporate,North,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,3,1649.97,0.0,974.97,Same Day Priority,No
+ORD-2023162,2023-04-30,Small Business,Central,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,20,10449.81,0.05,6034.81,Same Day Priority,No
+ORD-2023163,2023-04-30,Consumer,East,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,4,75.96,0.05,43.96,Express Air,No
+ORD-2023164,2023-05-01,Consumer,South,Technology,USB-C Fast Charging Dock,28.0,79.99,4,191.98,0.4,76.98,Standard Class,No
+ORD-2023165,2023-05-02,Consumer,North,Office Furniture,Leather Conference Room Chair,110.0,269.99,3,809.97,0.0,476.97,Standard Class,No
+ORD-2023166,2023-05-02,Consumer,South,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,1,499.99,0.0,251.99,Express Air,No
+ORD-2023167,2023-05-03,Corporate,West,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,1,83.99,0.4,20.99,Express Air,No
+ORD-2023168,2023-05-04,Corporate,Central,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,8,3439.92,0.0,1991.92,Express Air,No
+ORD-2023169,2023-05-04,Small Business,South,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,5,3999.95,0.0,2091.95,Express Air,No
+ORD-2023170,2023-05-05,Consumer,Central,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,1,139.99,0.0,76.99,Express Air,No
+ORD-2023171,2023-05-06,Corporate,South,Technology,Smart Conference Webcam 4K,70.0,179.99,20,3059.83,0.15,1644.83,Same Day Priority,Yes
+ORD-2023172,2023-05-06,Small Business,West,Technology,Noise-Cancelling Headphones,95.0,249.99,2,499.98,0.0,306.98,Standard Class,No
+ORD-2023173,2023-05-07,Small Business,Central,Technology,Noise-Cancelling Headphones,95.0,249.99,2,499.98,0.0,301.98,Express Air,No
+ORD-2023174,2023-05-08,Corporate,West,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,4,1999.96,0.0,1031.96,Express Air,No
+ORD-2023175,2023-05-08,Consumer,North,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,4,835.96,0.05,467.96,Express Air,No
+ORD-2023176,2023-05-09,Consumer,Central,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,3,395.98,0.4,122.98,Standard Class,No
+ORD-2023177,2023-05-10,Consumer,South,Technology,Noise-Cancelling Headphones,95.0,249.99,4,999.96,0.0,616.96,Standard Class,Yes
+ORD-2023178,2023-05-10,Corporate,North,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,1,799.99,0.0,416.99,Standard Class,No
+ORD-2023179,2023-05-11,Small Business,South,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,5,84.96,0.15,39.96,Same Day Priority,No
+ORD-2023180,2023-05-12,Consumer,East,Technology,UltraBook Pro 15,850.0,1299.99,8,10399.92,0.0,3591.92,Express Air,No
+ORD-2023181,2023-05-12,Small Business,South,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,2,1519.98,0.05,744.98,Same Day Priority,No
+ORD-2023182,2023-05-13,Small Business,South,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,3,593.97,0.1,320.97,Standard Class,No
+ORD-2023183,2023-05-13,Small Business,East,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,3,449.97,0.0,251.97,Standard Class,No
+ORD-2023184,2023-05-14,Corporate,West,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,5,427.45,0.05,244.45,Express Air,Yes
+ORD-2023185,2023-05-15,Small Business,Central,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,3,659.97,0.0,386.97,Standard Class,No
+ORD-2023186,2023-05-15,Corporate,Central,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,3,269.97,0.0,156.97,Express Air,No
+ORD-2023187,2023-05-16,Consumer,East,Office Furniture,Leather Conference Room Chair,110.0,269.99,12,3239.88,0.0,1916.88,Standard Class,No
+ORD-2023188,2023-05-17,Consumer,West,Technology,USB-C Fast Charging Dock,28.0,79.99,2,159.98,0.0,95.98,Express Air,No
+ORD-2023189,2023-05-17,Consumer,North,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,20,8169.81,0.05,4566.81,Standard Class,No
+ORD-2023190,2023-05-18,Consumer,West,Office Furniture,Leather Conference Room Chair,110.0,269.99,2,539.98,0.0,304.98,Same Day Priority,No
+ORD-2023191,2023-05-19,Corporate,North,Technology,UltraBook Pro 15,850.0,1299.99,5,6499.95,0.0,2234.95,Same Day Priority,No
+ORD-2023192,2023-05-19,Small Business,Central,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,4,1899.96,0.05,936.96,Standard Class,No
+ORD-2023193,2023-05-20,Consumer,South,Technology,USB-C Fast Charging Dock,28.0,79.99,1,71.99,0.1,40.99,Standard Class,No
+ORD-2023194,2023-05-21,Corporate,East,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,5,569.95,0.05,336.95,Express Air,No
+ORD-2023195,2023-05-21,Corporate,Central,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,12,2639.88,0.0,1551.88,Express Air,No
+ORD-2023196,2023-05-22,Corporate,West,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,3,59.97,0.0,38.97,Standard Class,No
+ORD-2023197,2023-05-23,Small Business,East,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,5,174.95,0.0,106.95,Express Air,No
+ORD-2023198,2023-05-23,Consumer,South,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,3,626.97,0.05,341.97,Same Day Priority,No
+ORD-2023199,2023-05-24,Consumer,South,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,12,1979.91,0.25,891.91,Express Air,No
+ORD-2023200,2023-05-25,Corporate,Central,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,1,208.99,0.05,115.99,Standard Class,No
+ORD-2023201,2023-05-25,Consumer,South,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,1,34.99,0.0,19.99,Standard Class,No
+ORD-2023202,2023-05-26,Small Business,North,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,3,1169.97,0.0,674.97,Same Day Priority,No
+ORD-2023203,2023-05-26,Consumer,South,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,3,242.97,0.1,134.97,Standard Class,No
+ORD-2023204,2023-05-27,Small Business,West,Office Furniture,Leather Conference Room Chair,110.0,269.99,5,1214.95,0.1,656.95,Express Air,No
+ORD-2023205,2023-05-28,Small Business,North,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,3,1111.47,0.05,628.47,Standard Class,No
+ORD-2023206,2023-05-28,Corporate,North,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,1,113.99,0.05,65.99,Standard Class,No
+ORD-2023207,2023-05-29,Corporate,West,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,1,85.49,0.05,47.49,Standard Class,No
+ORD-2023208,2023-05-30,Consumer,West,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,2,179.98,0.0,106.98,Standard Class,Yes
+ORD-2023209,2023-05-30,Corporate,North,Office Furniture,Leather Conference Room Chair,110.0,269.99,3,485.98,0.4,147.98,Express Air,No
+ORD-2023210,2023-05-31,Consumer,North,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,2,227.98,0.05,134.98,Standard Class,No
+ORD-2023211,2023-06-01,Corporate,South,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,5,2749.95,0.0,1646.95,Standard Class,No
+ORD-2023212,2023-06-01,Corporate,North,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,1,134.99,0.1,61.99,Express Air,No
+ORD-2023213,2023-06-02,Consumer,Central,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,5,1612.46,0.25,704.46,Express Air,No
+ORD-2023214,2023-06-03,Corporate,Central,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,12,1799.88,0.0,1004.88,Same Day Priority,No
+ORD-2023215,2023-06-03,Consumer,Central,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,8,6399.92,0.0,3344.92,Same Day Priority,No
+ORD-2023216,2023-06-04,Corporate,Central,Technology,Smart Conference Webcam 4K,70.0,179.99,2,359.98,0.0,211.98,Express Air,No
+ORD-2023217,2023-06-05,Corporate,Central,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,1,474.99,0.05,226.99,Express Air,No
+ORD-2023218,2023-06-05,Corporate,East,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,1,17.99,0.1,3.99,Express Air,No
+ORD-2023219,2023-06-06,Consumer,South,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,3,359.97,0.0,216.97,Express Air,No
+ORD-2023220,2023-06-07,Consumer,Central,Technology,USB-C Fast Charging Dock,28.0,79.99,2,135.98,0.15,71.98,Express Air,No
+ORD-2023221,2023-06-07,Small Business,South,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,3,2279.97,0.05,1136.97,Standard Class,No
+ORD-2023222,2023-06-08,Consumer,West,Technology,Smart Conference Webcam 4K,70.0,179.99,8,1223.93,0.15,655.93,Express Air,No
+ORD-2023223,2023-06-08,Consumer,West,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,2,999.98,0.0,516.98,Standard Class,No
+ORD-2023224,2023-06-09,Small Business,North,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,2,69.98,0.0,37.98,Express Air,No
+ORD-2023225,2023-06-10,Consumer,North,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,1,374.99,0.25,119.99,Same Day Priority,Yes
+ORD-2023226,2023-06-10,Consumer,East,Technology,UltraBook Pro 15,850.0,1299.99,2,2599.98,0.0,891.98,Express Air,No
+ORD-2023227,2023-06-11,Consumer,Central,Technology,Smart Conference Webcam 4K,70.0,179.99,4,719.96,0.0,436.96,Standard Class,No
+ORD-2023228,2023-06-12,Corporate,East,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,5,3999.95,0.0,2084.95,Same Day Priority,No
+ORD-2023229,2023-06-12,Consumer,West,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,1,119.99,0.0,71.99,Standard Class,No
+ORD-2023230,2023-06-13,Small Business,North,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,20,594.83,0.15,346.83,Express Air,No
+ORD-2023231,2023-06-14,Consumer,Central,Technology,Noise-Cancelling Headphones,95.0,249.99,1,249.99,0.0,146.99,Express Air,No
+ORD-2023232,2023-06-14,Corporate,East,Office Furniture,Leather Conference Room Chair,110.0,269.99,2,485.98,0.1,262.98,Standard Class,No
+ORD-2023233,2023-06-15,Corporate,Central,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,2,859.98,0.0,484.98,Same Day Priority,No
+ORD-2023234,2023-06-16,Small Business,West,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,2,1599.98,0.0,836.98,Standard Class,No
+ORD-2023235,2023-06-16,Corporate,South,Technology,Noise-Cancelling Headphones,95.0,249.99,3,749.97,0.0,449.97,Same Day Priority,No
+ORD-2023236,2023-06-17,Corporate,West,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,1,119.99,0.0,66.99,Express Air,No
+ORD-2023237,2023-06-18,Small Business,East,Office Furniture,Leather Conference Room Chair,110.0,269.99,4,971.96,0.1,523.96,Express Air,No
+ORD-2023238,2023-06-18,Consumer,West,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,1,101.99,0.15,48.99,Express Air,No
+ORD-2023239,2023-06-19,Consumer,South,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,1,219.99,0.0,114.99,Same Day Priority,No
+ORD-2023240,2023-06-20,Corporate,North,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,2,239.98,0.0,146.98,Standard Class,No
+ORD-2023241,2023-06-20,Small Business,West,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,2,179.98,0.0,111.98,Express Air,No
+ORD-2023242,2023-06-21,Corporate,West,Technology,Noise-Cancelling Headphones,95.0,249.99,2,474.98,0.05,269.98,Same Day Priority,No
+ORD-2023243,2023-06-21,Corporate,West,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,2,1199.98,0.25,424.98,Same Day Priority,No
+ORD-2023244,2023-06-22,Consumer,Central,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,1,85.49,0.05,35.49,Same Day Priority,No
+ORD-2023245,2023-06-23,Corporate,South,Technology,USB-C Fast Charging Dock,28.0,79.99,1,79.99,0.0,48.99,Standard Class,Yes
+ORD-2023246,2023-06-23,Corporate,East,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,1,10.19,0.15,3.19,Standard Class,No
+ORD-2023247,2023-06-24,Corporate,East,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,2,1599.98,0.0,831.98,Express Air,No
+ORD-2023248,2023-06-25,Consumer,North,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,4,559.96,0.0,336.96,Standard Class,No
+ORD-2023249,2023-06-25,Small Business,South,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,2,859.98,0.0,496.98,Standard Class,No
+ORD-2023250,2023-06-26,Corporate,North,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,8,1139.92,0.05,604.92,Same Day Priority,No
+ORD-2023251,2023-06-27,Corporate,North,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,8,1199.92,0.0,664.92,Same Day Priority,No
+ORD-2023252,2023-06-27,Consumer,North,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,5,2124.96,0.15,921.96,Standard Class,No
+ORD-2023253,2023-06-28,Corporate,South,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,2,23.98,0.0,12.98,Standard Class,No
+ORD-2023254,2023-06-29,Consumer,Central,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,2,35.98,0.1,15.98,Express Air,No
+ORD-2023255,2023-06-29,Consumer,East,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,5,989.95,0.1,524.95,Same Day Priority,No
+ORD-2023256,2023-06-30,Small Business,North,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,1,131.99,0.4,38.99,Standard Class,No
+ORD-2023257,2023-07-01,Corporate,Central,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,2,269.98,0.1,124.98,Same Day Priority,No
+ORD-2023258,2023-07-01,Consumer,North,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,1,331.49,0.15,163.49,Express Air,No
+ORD-2023259,2023-07-02,Small Business,East,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,1,429.99,0.0,241.99,Express Air,No
+ORD-2023260,2023-07-03,Small Business,Central,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,1,139.99,0.0,69.99,Same Day Priority,No
+ORD-2023261,2023-07-03,Consumer,East,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,3,1799.98,0.25,656.98,Standard Class,No
+ORD-2023262,2023-07-04,Small Business,East,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,3,256.47,0.05,136.47,Same Day Priority,No
+ORD-2023263,2023-07-04,Consumer,North,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,1,799.99,0.0,411.99,Express Air,No
+ORD-2023264,2023-07-05,Corporate,West,Technology,UltraBook Pro 15,850.0,1299.99,2,2339.98,0.1,631.98,Express Air,Yes
+ORD-2023265,2023-07-06,Consumer,Central,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,2,17.98,0.25,-5.02,Same Day Priority,No
+ORD-2023266,2023-07-06,Corporate,West,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,20,179.85,0.25,84.85,Same Day Priority,No
+ORD-2023267,2023-07-07,Corporate,West,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,12,5999.88,0.0,3111.88,Express Air,No
+ORD-2023268,2023-07-08,Corporate,Central,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,3,377.97,0.1,204.97,Express Air,No
+ORD-2023269,2023-07-08,Consumer,Central,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,1,549.99,0.0,326.99,Standard Class,No
+ORD-2023270,2023-07-09,Consumer,North,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,1,408.49,0.05,225.49,Standard Class,No
+ORD-2023271,2023-07-10,Consumer,West,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,2,37.98,0.05,17.98,Express Air,No
+ORD-2023272,2023-07-10,Corporate,Central,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,1,449.99,0.1,201.99,Express Air,No
+ORD-2023273,2023-07-11,Small Business,East,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,3,32.37,0.1,17.37,Standard Class,No
+ORD-2023274,2023-07-12,Small Business,West,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,1,429.99,0.0,246.99,Standard Class,No
+ORD-2023275,2023-07-12,Consumer,Central,Technology,Noise-Cancelling Headphones,95.0,249.99,3,674.97,0.1,381.97,Express Air,No
+ORD-2023276,2023-07-13,Small Business,North,Technology,USB-C Fast Charging Dock,28.0,79.99,3,239.97,0.0,140.97,Same Day Priority,No
+ORD-2023277,2023-07-14,Small Business,South,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,1,208.99,0.05,110.99,Express Air,No
+ORD-2023278,2023-07-14,Corporate,North,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,3,1499.97,0.0,776.97,Standard Class,No
+ORD-2023279,2023-07-15,Corporate,North,Technology,Smart Conference Webcam 4K,70.0,179.99,1,179.99,0.0,101.99,Express Air,No
+ORD-2023280,2023-07-16,Consumer,West,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,8,1055.95,0.4,327.95,Express Air,No
+ORD-2023281,2023-07-16,Small Business,Central,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,3,99.72,0.05,60.72,Standard Class,No
+ORD-2023282,2023-07-17,Small Business,South,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,5,2612.45,0.05,1509.45,Standard Class,No
+ORD-2023283,2023-07-17,Consumer,North,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,2,170.98,0.05,85.98,Same Day Priority,No
+ORD-2023284,2023-07-18,Corporate,West,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,3,2039.97,0.15,891.97,Express Air,No
+ORD-2023285,2023-07-19,Consumer,North,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,1,19.99,0.0,-1.01,Same Day Priority,No
+ORD-2023286,2023-07-19,Consumer,South,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,8,1495.93,0.15,767.93,Express Air,No
+ORD-2023287,2023-07-20,Small Business,South,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,2,179.99,0.25,81.99,Express Air,No
+ORD-2023288,2023-07-21,Consumer,Central,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,3,341.97,0.05,198.97,Express Air,No
+ORD-2023289,2023-07-21,Small Business,East,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,4,599.96,0.0,331.96,Express Air,No
+ORD-2023290,2023-07-22,Small Business,South,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,12,8639.89,0.1,4064.89,Same Day Priority,No
+ORD-2023291,2023-07-23,Small Business,Central,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,3,34.17,0.05,14.17,Express Air,No
+ORD-2023292,2023-07-23,Small Business,South,Technology,UltraBook Pro 15,850.0,1299.99,1,1299.99,0.0,446.99,Standard Class,No
+ORD-2023293,2023-07-24,Small Business,South,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,4,2719.97,0.15,1196.97,Standard Class,No
+ORD-2023294,2023-07-25,Corporate,Central,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,8,6399.92,0.0,3351.92,Express Air,No
+ORD-2023295,2023-07-25,Small Business,North,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,4,1999.96,0.0,1036.96,Standard Class,No
+ORD-2023296,2023-07-26,Small Business,Central,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,20,4399.8,0.0,2596.8,Standard Class,No
+ORD-2023297,2023-07-27,Corporate,West,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,1,10.19,0.15,-8.81,Same Day Priority,Yes
+ORD-2023298,2023-07-27,Corporate,South,Technology,USB-C Fast Charging Dock,28.0,79.99,12,815.9,0.15,476.9,Standard Class,No
+ORD-2023299,2023-07-28,Corporate,East,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,3,53.97,0.1,32.97,Standard Class,No
+ORD-2023300,2023-07-29,Small Business,West,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,5,1099.95,0.0,634.95,Same Day Priority,No
+ORD-2023301,2023-07-29,Small Business,West,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,2,740.98,0.05,417.98,Standard Class,No
+ORD-2023302,2023-07-30,Corporate,North,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,1,85.49,0.05,40.49,Same Day Priority,Yes
+ORD-2023303,2023-07-30,Consumer,North,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,2,209.98,0.25,96.98,Standard Class,No
+ORD-2023304,2023-07-31,Small Business,East,Office Furniture,Leather Conference Room Chair,110.0,269.99,12,3077.89,0.05,1749.89,Express Air,No
+ORD-2023305,2023-08-01,Consumer,North,Technology,Smart Conference Webcam 4K,70.0,179.99,2,359.98,0.0,216.98,Standard Class,No
+ORD-2023306,2023-08-01,Small Business,East,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,1,67.49,0.25,22.49,Same Day Priority,No
+ORD-2023307,2023-08-02,Small Business,Central,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,5,934.96,0.15,469.96,Same Day Priority,No
+ORD-2023308,2023-08-03,Small Business,Central,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,12,917.9,0.15,554.9,Standard Class,No
+ORD-2023309,2023-08-03,Corporate,North,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,4,569.96,0.05,301.96,Express Air,No
+ORD-2023310,2023-08-04,Corporate,North,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,2,1599.98,0.0,836.98,Standard Class,No
+ORD-2023311,2023-08-05,Consumer,North,Office Furniture,Leather Conference Room Chair,110.0,269.99,3,769.47,0.05,424.47,Same Day Priority,No
+ORD-2023312,2023-08-05,Small Business,West,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,1,429.99,0.0,234.99,Same Day Priority,No
+ORD-2023313,2023-08-06,Consumer,North,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,1,139.99,0.0,81.99,Standard Class,No
+ORD-2023314,2023-08-07,Small Business,Central,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,4,215.98,0.4,72.98,Standard Class,Yes
+ORD-2023315,2023-08-07,Corporate,West,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,1,389.99,0.0,226.99,Standard Class,No
+ORD-2023316,2023-08-08,Consumer,West,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,1,149.99,0.0,69.99,Same Day Priority,No
+ORD-2023317,2023-08-09,Small Business,East,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,1,33.24,0.05,18.24,Standard Class,No
+ORD-2023318,2023-08-09,Small Business,South,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,1,29.74,0.15,2.74,Same Day Priority,No
+ORD-2023319,2023-08-10,Consumer,Central,Technology,UltraBook Pro 15,850.0,1299.99,2,2599.98,0.0,891.98,Express Air,No
+ORD-2023320,2023-08-11,Small Business,Central,Office Furniture,Leather Conference Room Chair,110.0,269.99,1,269.99,0.0,156.99,Standard Class,No
+ORD-2023321,2023-08-11,Small Business,West,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,20,7019.82,0.1,3804.82,Same Day Priority,No
+ORD-2023322,2023-08-12,Consumer,East,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,5,2499.95,0.0,1284.95,Same Day Priority,No
+ORD-2023323,2023-08-12,Small Business,West,Technology,UltraBook Pro 15,850.0,1299.99,1,1299.99,0.0,441.99,Express Air,No
+ORD-2023324,2023-08-13,Consumer,South,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,1,208.99,0.05,103.99,Same Day Priority,No
+ORD-2023325,2023-08-14,Consumer,North,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,2,161.98,0.1,86.98,Same Day Priority,No
+ORD-2023326,2023-08-14,Corporate,East,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,1,29.74,0.15,2.74,Same Day Priority,No
+ORD-2023327,2023-08-15,Corporate,North,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,8,3439.92,0.0,1984.92,Same Day Priority,No
+ORD-2023328,2023-08-16,Small Business,Central,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,2,69.98,0.0,30.98,Same Day Priority,No
+ORD-2023329,2023-08-16,Corporate,South,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,20,8599.8,0.0,4996.8,Standard Class,No
+ORD-2023330,2023-08-17,Small Business,East,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,20,1709.81,0.05,1101.81,Express Air,Yes
+ORD-2023331,2023-08-18,Consumer,Central,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,1,139.99,0.0,81.99,Standard Class,No
+ORD-2023332,2023-08-18,Consumer,West,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,5,664.95,0.05,386.95,Standard Class,No
+ORD-2023333,2023-08-19,Small Business,South,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,3,59.97,0.0,33.97,Express Air,No
+ORD-2023334,2023-08-20,Corporate,West,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,3,104.97,0.0,65.97,Standard Class,No
+ORD-2023335,2023-08-20,Small Business,South,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,1,16.99,0.15,7.99,Standard Class,No
+ORD-2023336,2023-08-21,Corporate,Central,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,3,1111.47,0.05,623.47,Express Air,No
+ORD-2023337,2023-08-22,Consumer,East,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,12,4211.89,0.1,2288.89,Standard Class,No
+ORD-2023338,2023-08-22,Small Business,South,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,4,139.96,0.0,83.96,Express Air,No
+ORD-2023339,2023-08-23,Corporate,East,Technology,Smart Conference Webcam 4K,70.0,179.99,1,179.99,0.0,94.99,Same Day Priority,No
+ORD-2023340,2023-08-24,Consumer,South,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,3,659.97,0.0,386.97,Standard Class,No
+ORD-2023341,2023-08-24,Consumer,West,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,8,151.92,0.05,95.92,Express Air,No
+ORD-2023342,2023-08-25,Small Business,North,Technology,Noise-Cancelling Headphones,95.0,249.99,12,2849.89,0.05,1706.89,Standard Class,No
+ORD-2023343,2023-08-25,Small Business,North,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,2,21.58,0.1,-1.42,Same Day Priority,No
+ORD-2023344,2023-08-26,Corporate,Central,Technology,UltraBook Pro 15,850.0,1299.99,12,9359.93,0.4,-855.07,Same Day Priority,No
+ORD-2023345,2023-08-27,Small Business,West,Technology,Smart Conference Webcam 4K,70.0,179.99,4,683.96,0.05,388.96,Same Day Priority,No
+ORD-2023346,2023-08-27,Consumer,South,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,5,59.95,0.0,31.95,Express Air,No
+ORD-2023347,2023-08-28,Small Business,North,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,2,23.98,0.0,0.98,Same Day Priority,No
+ORD-2023348,2023-08-29,Small Business,Central,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,1,599.99,0.25,216.99,Standard Class,No
+ORD-2023349,2023-08-29,Corporate,Central,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,4,269.97,0.25,126.97,Standard Class,No
+ORD-2023350,2023-08-30,Corporate,Central,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,3,1160.97,0.1,612.97,Express Air,No
+ORD-2023351,2023-08-31,Small Business,South,Technology,UltraBook Pro 15,850.0,1299.99,2,2469.98,0.05,754.98,Same Day Priority,No
+ORD-2023352,2023-08-31,Corporate,South,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,5,2612.45,0.05,1509.45,Standard Class,No
+ORD-2023353,2023-09-01,Corporate,West,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,1,386.99,0.1,203.99,Standard Class,No
+ORD-2023354,2023-09-02,Consumer,West,Office Furniture,Leather Conference Room Chair,110.0,269.99,5,1349.95,0.0,791.95,Express Air,No
+ORD-2023355,2023-09-02,Consumer,Central,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,1,142.49,0.05,62.49,Same Day Priority,No
+ORD-2023356,2023-09-03,Consumer,West,Technology,UltraBook Pro 15,850.0,1299.99,4,4939.96,0.05,1531.96,Express Air,No
+ORD-2023357,2023-09-04,Small Business,South,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,4,3199.96,0.0,1664.96,Same Day Priority,No
+ORD-2023358,2023-09-04,Small Business,Central,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,8,863.93,0.1,495.93,Express Air,No
+ORD-2023359,2023-09-05,Small Business,Central,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,1,14.99,0.25,0.99,Express Air,No
+ORD-2023360,2023-09-06,Small Business,Central,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,2,37.98,0.05,10.98,Same Day Priority,No
+ORD-2023361,2023-09-06,Consumer,South,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,2,1599.98,0.0,836.98,Standard Class,No
+ORD-2023362,2023-09-07,Small Business,Central,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,2,179.98,0.0,101.98,Express Air,No
+ORD-2023363,2023-09-07,Consumer,South,Technology,Noise-Cancelling Headphones,95.0,249.99,1,249.99,0.0,151.99,Standard Class,No
+ORD-2023364,2023-09-08,Corporate,North,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,3,341.97,0.05,203.97,Standard Class,No
+ORD-2023365,2023-09-09,Corporate,Central,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,3,1052.97,0.1,557.97,Same Day Priority,Yes
+ORD-2023366,2023-09-09,Small Business,West,Technology,Noise-Cancelling Headphones,95.0,249.99,1,237.49,0.05,127.49,Same Day Priority,No
+ORD-2023367,2023-09-10,Small Business,North,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,8,5439.93,0.15,2391.93,Express Air,No
+ORD-2023368,2023-09-11,Small Business,North,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,20,2039.83,0.15,1131.83,Express Air,No
+ORD-2023369,2023-09-11,Small Business,East,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,2,740.98,0.05,412.98,Express Air,No
+ORD-2023370,2023-09-12,Corporate,West,Technology,USB-C Fast Charging Dock,28.0,79.99,3,179.98,0.25,92.98,Standard Class,No
+ORD-2023371,2023-09-13,Small Business,North,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,5,56.95,0.05,21.95,Same Day Priority,No
+ORD-2023372,2023-09-13,Consumer,West,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,3,626.97,0.05,353.97,Standard Class,No
+ORD-2023373,2023-09-14,Small Business,North,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,1,679.99,0.15,284.99,Same Day Priority,No
+ORD-2023374,2023-09-15,Small Business,Central,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,1,449.99,0.1,206.99,Standard Class,Yes
+ORD-2023375,2023-09-15,Small Business,South,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,2,69.98,0.0,30.98,Same Day Priority,No
+ORD-2023376,2023-09-16,Consumer,West,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,5,674.95,0.1,341.95,Express Air,No
+ORD-2023377,2023-09-17,Corporate,South,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,2,52.48,0.25,25.48,Standard Class,No
+ORD-2023378,2023-09-17,Consumer,South,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,12,227.89,0.05,140.89,Same Day Priority,No
+ORD-2023379,2023-09-18,Consumer,South,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,2,152.98,0.15,84.98,Express Air,No
+ORD-2023380,2023-09-19,Consumer,East,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,1,429.99,0.0,234.99,Same Day Priority,No
+ORD-2023381,2023-09-19,Consumer,East,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,3,659.97,0.0,374.97,Same Day Priority,No
+ORD-2023382,2023-09-20,Corporate,East,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,2,1439.98,0.1,671.98,Express Air,No
+ORD-2023383,2023-09-20,Corporate,Central,Technology,Noise-Cancelling Headphones,95.0,249.99,2,474.98,0.05,281.98,Standard Class,No
+ORD-2023384,2023-09-21,Corporate,Central,Technology,Smart Conference Webcam 4K,70.0,179.99,3,539.97,0.0,314.97,Same Day Priority,No
+ORD-2023385,2023-09-22,Consumer,East,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,4,879.96,0.0,504.96,Same Day Priority,No
+ORD-2023386,2023-09-22,Corporate,Central,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,2,254.98,0.15,116.98,Express Air,No
+ORD-2023387,2023-09-23,Corporate,Central,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,2,299.98,0.0,154.98,Same Day Priority,Yes
+ORD-2023388,2023-09-24,Consumer,West,Technology,Smart Conference Webcam 4K,70.0,179.99,1,179.99,0.0,106.99,Standard Class,No
+ORD-2023389,2023-09-24,Small Business,North,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,1,494.99,0.1,266.99,Express Air,No
+ORD-2023390,2023-09-25,Small Business,West,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,1,89.99,0.0,56.99,Standard Class,No
+ORD-2023391,2023-09-26,Consumer,South,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,4,1325.97,0.15,670.97,Same Day Priority,No
+ORD-2023392,2023-09-26,Consumer,East,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,4,1719.96,0.0,991.96,Express Air,No
+ORD-2023393,2023-09-27,Corporate,South,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,1,759.99,0.05,371.99,Express Air,No
+ORD-2023394,2023-09-28,Consumer,West,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,1,80.99,0.1,37.99,Express Air,No
+ORD-2023395,2023-09-28,Corporate,West,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,3,626.97,0.05,353.97,Standard Class,No
+ORD-2023396,2023-09-29,Corporate,North,Technology,USB-C Fast Charging Dock,28.0,79.99,2,151.98,0.05,92.98,Standard Class,No
+ORD-2023397,2023-09-30,Corporate,West,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,1,365.49,0.15,170.49,Same Day Priority,No
+ORD-2023398,2023-09-30,Consumer,West,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,4,1403.96,0.1,755.96,Express Air,No
+ORD-2023399,2023-10-01,Small Business,West,Technology,Noise-Cancelling Headphones,95.0,249.99,3,749.97,0.0,461.97,Standard Class,No
+ORD-2023400,2023-10-02,Small Business,South,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,2,816.98,0.05,448.98,Express Air,No
+ORD-2023401,2023-10-02,Corporate,West,Technology,UltraBook Pro 15,850.0,1299.99,2,2339.98,0.1,636.98,Standard Class,No
+ORD-2023402,2023-10-03,Corporate,North,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,1,113.99,0.05,60.99,Express Air,No
+ORD-2023403,2023-10-03,Small Business,West,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,4,879.96,0.0,511.96,Express Air,No
+ORD-2023404,2023-10-04,Small Business,East,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,2,251.98,0.1,126.98,Same Day Priority,No
+ORD-2023405,2023-10-05,Consumer,Central,Office Furniture,Leather Conference Room Chair,110.0,269.99,12,3239.88,0.0,1904.88,Same Day Priority,No
+ORD-2023406,2023-10-05,Small Business,West,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,1,11.99,0.0,4.99,Standard Class,No
+ORD-2023407,2023-10-06,Corporate,East,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,20,4399.8,0.0,2584.8,Same Day Priority,No
+ORD-2023408,2023-10-07,Small Business,West,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,1,799.99,0.0,404.99,Same Day Priority,No
+ORD-2023409,2023-10-07,Corporate,East,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,3,382.47,0.15,179.47,Express Air,No
+ORD-2023410,2023-10-08,Consumer,East,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,3,398.97,0.05,218.97,Same Day Priority,No
+ORD-2023411,2023-10-09,Small Business,South,Technology,Smart Conference Webcam 4K,70.0,179.99,1,179.99,0.0,101.99,Express Air,No
+ORD-2023412,2023-10-09,Consumer,East,Office Furniture,Leather Conference Room Chair,110.0,269.99,3,728.97,0.1,383.97,Same Day Priority,No
+ORD-2023413,2023-10-10,Consumer,South,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,3,104.97,0.0,65.97,Standard Class,No
+ORD-2023414,2023-10-11,Small Business,South,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,8,3119.92,0.0,1836.92,Standard Class,No
+ORD-2023415,2023-10-11,Corporate,South,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,8,611.93,0.15,356.93,Same Day Priority,No
+ORD-2023416,2023-10-12,Corporate,South,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,2,1599.98,0.0,824.98,Same Day Priority,No
+ORD-2023417,2023-10-13,Small Business,East,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,2,1599.98,0.0,824.98,Same Day Priority,No
+ORD-2023418,2023-10-13,Consumer,South,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,12,6269.89,0.05,3621.89,Express Air,No
+ORD-2023419,2023-10-14,Consumer,East,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,3,269.97,0.0,176.97,Standard Class,No
+ORD-2023420,2023-10-15,Consumer,South,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,2,816.98,0.05,441.98,Same Day Priority,No
+ORD-2023421,2023-10-15,Small Business,North,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,2,170.98,0.05,97.98,Standard Class,No
+ORD-2023422,2023-10-16,Corporate,East,Technology,Smart Conference Webcam 4K,70.0,179.99,2,341.98,0.05,193.98,Express Air,Yes
+ORD-2023423,2023-10-16,Small Business,West,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,3,269.97,0.0,171.97,Express Air,No
+ORD-2023424,2023-10-17,Small Business,North,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,3,314.98,0.25,134.98,Same Day Priority,No
+ORD-2023425,2023-10-18,Small Business,Central,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,1,799.99,0.0,416.99,Standard Class,Yes
+ORD-2023426,2023-10-18,Corporate,North,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,5,2337.46,0.15,1229.46,Express Air,No
+ORD-2023427,2023-10-19,Consumer,North,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,4,1719.96,0.0,984.96,Same Day Priority,No
+ORD-2023428,2023-10-20,Consumer,South,Technology,Noise-Cancelling Headphones,95.0,249.99,5,1124.95,0.1,634.95,Same Day Priority,No
+ORD-2023429,2023-10-20,Small Business,North,Technology,USB-C Fast Charging Dock,28.0,79.99,2,159.98,0.0,100.98,Standard Class,No
+ORD-2023430,2023-10-21,Consumer,North,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,1,142.49,0.05,69.49,Express Air,No
+ORD-2023431,2023-10-22,Corporate,East,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,3,626.97,0.05,348.97,Express Air,No
+ORD-2023432,2023-10-22,Corporate,Central,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,5,2149.95,0.0,1241.95,Express Air,No
+ORD-2023433,2023-10-23,Small Business,North,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,1,350.99,0.1,187.99,Standard Class,No
+ORD-2023434,2023-10-24,Small Business,South,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,1,16.99,0.15,2.99,Express Air,No
+ORD-2023435,2023-10-24,Consumer,East,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,2,1099.98,0.0,656.98,Standard Class,No
+ORD-2023436,2023-10-25,Consumer,South,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,5,659.97,0.4,206.97,Standard Class,No
+ORD-2023437,2023-10-26,Consumer,Central,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,1,799.99,0.0,411.99,Express Air,No
+ORD-2023438,2023-10-26,Corporate,North,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,3,1289.97,0.0,734.97,Same Day Priority,No
+ORD-2023439,2023-10-27,Small Business,East,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,2,179.98,0.0,106.98,Standard Class,No
+ORD-2023440,2023-10-28,Corporate,East,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,2,170.98,0.05,107.98,Standard Class,Yes
+ORD-2023441,2023-10-28,Corporate,West,Technology,Smart Conference Webcam 4K,70.0,179.99,3,512.97,0.05,299.97,Standard Class,No
+ORD-2023442,2023-10-29,Corporate,East,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,3,1289.97,0.0,734.97,Same Day Priority,No
+ORD-2023443,2023-10-29,Consumer,East,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,2,179.99,0.25,74.99,Same Day Priority,No
+ORD-2023444,2023-10-30,Small Business,South,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,1,132.99,0.05,74.99,Standard Class,No
+ORD-2023445,2023-10-31,Corporate,East,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,2,859.98,0.0,484.98,Same Day Priority,No
+ORD-2023446,2023-10-31,Corporate,Central,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,1,759.99,0.05,376.99,Standard Class,No
+ORD-2023447,2023-11-01,Small Business,South,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,1,365.49,0.15,177.49,Express Air,No
+ORD-2023448,2023-11-02,Corporate,East,Office Furniture,Leather Conference Room Chair,110.0,269.99,4,647.98,0.4,204.98,Standard Class,No
+ORD-2023449,2023-11-02,Corporate,West,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,2,269.98,0.1,136.98,Standard Class,No
+ORD-2023450,2023-11-03,Corporate,South,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,2,284.98,0.05,151.98,Standard Class,No
+ORD-2023451,2023-11-04,Consumer,North,Office Furniture,Leather Conference Room Chair,110.0,269.99,5,1349.95,0.0,791.95,Express Air,No
+ORD-2023452,2023-11-04,Consumer,West,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,1,386.99,0.1,198.99,Express Air,No
+ORD-2023453,2023-11-05,Corporate,West,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,1,424.99,0.15,176.99,Express Air,No
+ORD-2023454,2023-11-06,Corporate,East,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,2,773.98,0.1,405.98,Express Air,No
+ORD-2023455,2023-11-06,Corporate,South,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,8,959.92,0.0,591.92,Express Air,No
+ORD-2023456,2023-11-07,Consumer,North,Technology,Smart Conference Webcam 4K,70.0,179.99,3,539.97,0.0,314.97,Same Day Priority,No
+ORD-2023457,2023-11-08,Corporate,East,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,2,215.98,0.1,117.98,Express Air,No
+ORD-2023458,2023-11-08,Consumer,North,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,2,209.98,0.25,91.98,Express Air,No
+ORD-2023459,2023-11-09,Corporate,West,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,3,269.97,0.0,161.97,Standard Class,No
+ORD-2023460,2023-11-10,Corporate,Central,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,1,219.99,0.0,114.99,Same Day Priority,No
+ORD-2023461,2023-11-10,Consumer,West,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,12,5159.88,0.0,2996.88,Standard Class,No
+ORD-2023462,2023-11-11,Consumer,Central,Technology,Smart Conference Webcam 4K,70.0,179.99,5,809.95,0.1,451.95,Express Air,No
+ORD-2023463,2023-11-11,Consumer,Central,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,4,305.97,0.15,177.97,Express Air,No
+ORD-2023464,2023-11-12,Small Business,Central,Technology,Noise-Cancelling Headphones,95.0,249.99,12,2999.88,0.0,1851.88,Express Air,No
+ORD-2023465,2023-11-13,Consumer,North,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,1,679.99,0.15,296.99,Standard Class,No
+ORD-2023466,2023-11-13,Consumer,West,Technology,Smart Conference Webcam 4K,70.0,179.99,3,485.97,0.1,267.97,Express Air,No
+ORD-2023467,2023-11-14,Consumer,East,Technology,Smart Conference Webcam 4K,70.0,179.99,1,179.99,0.0,101.99,Express Air,No
+ORD-2023468,2023-11-15,Small Business,North,Technology,Smart Conference Webcam 4K,70.0,179.99,1,161.99,0.1,76.99,Same Day Priority,No
+ORD-2023469,2023-11-15,Small Business,South,Technology,Smart Conference Webcam 4K,70.0,179.99,1,170.99,0.05,85.99,Same Day Priority,No
+ORD-2023470,2023-11-16,Corporate,Central,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,3,56.97,0.05,23.97,Same Day Priority,No
+ORD-2023471,2023-11-17,Small Business,North,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,1,85.49,0.05,47.49,Express Air,No
+ORD-2023472,2023-11-17,Corporate,South,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,2,279.98,0.0,154.98,Same Day Priority,No
+ORD-2023473,2023-11-18,Corporate,Central,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,12,3599.93,0.4,711.93,Express Air,No
+ORD-2023474,2023-11-19,Consumer,South,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,2,779.98,0.0,451.98,Express Air,No
+ORD-2023475,2023-11-19,Corporate,Central,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,2,224.98,0.25,86.98,Express Air,No
+ORD-2023476,2023-11-20,Corporate,West,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,2,179.98,0.0,104.98,Same Day Priority,No
+ORD-2023477,2023-11-21,Corporate,East,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,1,89.99,0.0,56.99,Standard Class,No
+ORD-2023478,2023-11-21,Small Business,East,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,2,859.98,0.0,484.98,Same Day Priority,No
+ORD-2023479,2023-11-22,Consumer,West,Technology,Noise-Cancelling Headphones,95.0,249.99,2,474.98,0.05,281.98,Standard Class,No
+ORD-2023480,2023-11-23,Small Business,West,Office Furniture,Leather Conference Room Chair,110.0,269.99,3,769.47,0.05,431.47,Express Air,No
+ORD-2023481,2023-11-23,Consumer,North,Technology,USB-C Fast Charging Dock,28.0,79.99,2,143.98,0.1,84.98,Standard Class,No
+ORD-2023482,2023-11-24,Consumer,West,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,4,559.96,0.0,336.96,Standard Class,No
+ORD-2023483,2023-11-24,Corporate,East,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,2,62.98,0.1,23.98,Same Day Priority,No
+ORD-2023484,2023-11-25,Small Business,North,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,1,429.99,0.0,246.99,Standard Class,No
+ORD-2023485,2023-11-26,Corporate,West,Technology,Smart Conference Webcam 4K,70.0,179.99,1,170.99,0.05,85.99,Same Day Priority,No
+ORD-2023486,2023-11-26,Consumer,North,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,1,365.49,0.15,170.49,Same Day Priority,No
+ORD-2023487,2023-11-27,Consumer,South,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,2,66.48,0.05,34.48,Express Air,No
+ORD-2023488,2023-11-28,Corporate,West,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,8,1759.92,0.0,1031.92,Express Air,No
+ORD-2023489,2023-11-28,Corporate,West,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,1,386.99,0.1,191.99,Same Day Priority,No
+ORD-2023490,2023-11-29,Small Business,South,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,3,626.97,0.05,353.97,Standard Class,No
+ORD-2023491,2023-11-30,Consumer,North,Technology,Smart Conference Webcam 4K,70.0,179.99,3,512.97,0.05,294.97,Express Air,No
+ORD-2023492,2023-11-30,Consumer,North,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,1,408.49,0.05,213.49,Same Day Priority,No
+ORD-2023493,2023-12-01,Corporate,South,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,2,859.98,0.0,491.98,Express Air,No
+ORD-2023494,2023-12-02,Corporate,East,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,12,1079.88,0.0,656.88,Standard Class,No
+ORD-2023495,2023-12-02,Corporate,Central,Office Furniture,Leather Conference Room Chair,110.0,269.99,2,323.99,0.4,95.99,Express Air,No
+ORD-2023496,2023-12-03,Small Business,East,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,3,1289.97,0.0,746.97,Standard Class,No
+ORD-2023497,2023-12-04,Small Business,West,Technology,UltraBook Pro 15,850.0,1299.99,4,3119.98,0.4,-295.02,Same Day Priority,No
+ORD-2023498,2023-12-04,Small Business,North,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,8,5759.93,0.1,2704.93,Same Day Priority,No
+ORD-2023499,2023-12-05,Small Business,North,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,2,849.98,0.15,361.98,Express Air,No
+ORD-2023500,2023-12-06,Small Business,West,Technology,Noise-Cancelling Headphones,95.0,249.99,2,449.98,0.1,251.98,Express Air,No
+ORD-2023501,2023-12-06,Corporate,South,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,4,132.96,0.05,76.96,Express Air,No
+ORD-2023502,2023-12-07,Corporate,East,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,1,80.99,0.1,30.99,Same Day Priority,No
+ORD-2023503,2023-12-07,Consumer,East,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,4,835.96,0.05,460.96,Same Day Priority,No
+ORD-2023504,2023-12-08,Corporate,South,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,1,33.24,0.05,18.24,Standard Class,Yes
+ORD-2023505,2023-12-09,Consumer,East,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,2,69.98,0.0,30.98,Same Day Priority,No
+ORD-2023506,2023-12-09,Consumer,South,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,2,730.98,0.15,355.98,Same Day Priority,No
+ORD-2023507,2023-12-10,Corporate,North,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,1,18.99,0.05,9.99,Standard Class,No
+ORD-2023508,2023-12-11,Small Business,Central,Technology,Noise-Cancelling Headphones,95.0,249.99,2,474.98,0.05,276.98,Express Air,No
+ORD-2023509,2023-12-11,Small Business,East,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,3,35.97,0.0,8.97,Same Day Priority,No
+ORD-2023510,2023-12-12,Small Business,West,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,1,408.49,0.05,225.49,Standard Class,No
+ORD-2023511,2023-12-13,Corporate,South,Technology,Noise-Cancelling Headphones,95.0,249.99,1,249.99,0.0,151.99,Standard Class,No
+ORD-2023512,2023-12-13,Consumer,West,Technology,USB-C Fast Charging Dock,28.0,79.99,1,59.99,0.25,16.99,Same Day Priority,No
+ORD-2023513,2023-12-14,Corporate,West,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,2,1099.98,0.0,644.98,Same Day Priority,No
+ORD-2023514,2023-12-15,Small Business,Central,Technology,Noise-Cancelling Headphones,95.0,249.99,3,449.98,0.4,161.98,Standard Class,No
+ORD-2023515,2023-12-15,Small Business,South,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,1,412.49,0.25,177.49,Same Day Priority,No
+ORD-2023516,2023-12-16,Small Business,East,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,1,89.99,0.0,39.99,Same Day Priority,No
+ORD-2023517,2023-12-17,Corporate,South,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,2,239.98,0.0,146.98,Standard Class,No
+ORD-2023518,2023-12-17,Corporate,East,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,1,799.99,0.0,404.99,Same Day Priority,No
+ORD-2023519,2023-12-18,Corporate,Central,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,2,439.98,0.0,244.98,Same Day Priority,No
+ORD-2023520,2023-12-19,Corporate,West,Technology,Smart Conference Webcam 4K,70.0,179.99,2,359.98,0.0,204.98,Same Day Priority,No
+ORD-2023521,2023-12-19,Consumer,Central,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,1,208.99,0.05,110.99,Express Air,No
+ORD-2023522,2023-12-20,Small Business,East,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,1,365.49,0.15,177.49,Express Air,No
+ORD-2023523,2023-12-20,Small Business,West,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,2,41.99,0.4,14.99,Standard Class,No
+ORD-2023524,2023-12-21,Small Business,West,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,2,439.98,0.0,251.98,Express Air,No
+ORD-2023525,2023-12-22,Consumer,East,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,2,773.98,0.1,398.98,Same Day Priority,No
+ORD-2023526,2023-12-22,Corporate,East,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,4,1559.96,0.0,904.96,Same Day Priority,No
+ORD-2023527,2023-12-23,Small Business,South,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,3,593.97,0.1,308.97,Same Day Priority,No
+ORD-2023528,2023-12-24,Corporate,Central,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,4,359.96,0.0,204.96,Same Day Priority,No
+ORD-2023529,2023-12-24,Consumer,East,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,3,967.48,0.25,424.48,Standard Class,No
+ORD-2023530,2023-12-25,Consumer,East,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,1,139.99,0.0,69.99,Same Day Priority,No
+ORD-2023531,2023-12-26,Consumer,North,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,1,799.99,0.0,411.99,Express Air,No
+ORD-2023532,2023-12-26,Small Business,South,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,1,719.99,0.1,336.99,Standard Class,No
+ORD-2023533,2023-12-27,Consumer,East,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,2,170.98,0.05,95.98,Same Day Priority,No
+ORD-2023534,2023-12-28,Consumer,North,Office Furniture,Leather Conference Room Chair,110.0,269.99,2,539.98,0.0,316.98,Standard Class,No
+ORD-2023535,2023-12-28,Corporate,West,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,3,967.48,0.25,412.48,Same Day Priority,No
+ORD-2023536,2023-12-29,Small Business,West,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,20,2999.8,0.0,1696.8,Standard Class,No
+ORD-2023537,2023-12-30,Consumer,North,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,2,69.98,0.0,37.98,Express Air,No
+ORD-2023538,2023-12-30,Corporate,Central,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,5,94.95,0.05,56.95,Express Air,No
+ORD-2023539,2023-12-31,Small Business,East,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,2,417.98,0.05,222.98,Same Day Priority,No
+ORD-2023540,2024-01-01,Corporate,East,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,4,359.97,0.25,171.97,Express Air,No
+ORD-2023541,2024-01-01,Corporate,West,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,2,1099.98,0.0,651.98,Express Air,No
+ORD-2023542,2024-01-02,Corporate,South,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,3,398.97,0.05,230.97,Standard Class,No
+ORD-2023543,2024-01-02,Corporate,Central,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,5,1099.95,0.0,641.95,Express Air,No
+ORD-2023544,2024-01-03,Consumer,Central,Technology,Smart Conference Webcam 4K,70.0,179.99,5,899.95,0.0,541.95,Express Air,No
+ORD-2023545,2024-01-04,Corporate,Central,Technology,USB-C Fast Charging Dock,28.0,79.99,1,75.99,0.05,44.99,Standard Class,No
+ORD-2023546,2024-01-04,Small Business,South,Technology,Smart Conference Webcam 4K,70.0,179.99,8,1295.93,0.1,732.93,Standard Class,No
+ORD-2023547,2024-01-05,Small Business,South,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,2,39.98,0.0,12.98,Same Day Priority,No
+ORD-2023548,2024-01-06,Small Business,West,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,2,37.98,0.05,22.98,Standard Class,No
+ORD-2023549,2024-01-06,Consumer,West,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,1,219.99,0.0,126.99,Standard Class,No
+ORD-2023550,2024-01-07,Small Business,South,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,2,52.48,0.25,13.48,Same Day Priority,No
+ORD-2023551,2024-01-08,Corporate,East,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,4,2199.96,0.0,1316.96,Standard Class,No
+ORD-2023552,2024-01-08,Corporate,East,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,2,179.99,0.25,81.99,Express Air,No
+ORD-2023553,2024-01-09,Consumer,South,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,1,134.99,0.1,66.99,Standard Class,Yes
+ORD-2023554,2024-01-10,Consumer,North,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,5,934.96,0.15,476.96,Express Air,No
+ORD-2023555,2024-01-10,Consumer,West,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,1,89.99,0.0,51.99,Standard Class,No
+ORD-2023556,2024-01-11,Small Business,Central,Technology,UltraBook Pro 15,850.0,1299.99,12,14819.89,0.05,4604.89,Same Day Priority,No
+ORD-2023557,2024-01-12,Small Business,Central,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,12,4211.89,0.1,2283.89,Express Air,No
+ORD-2023558,2024-01-12,Small Business,East,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,20,10999.8,0.0,6591.8,Express Air,No
+ORD-2023559,2024-01-13,Consumer,West,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,1,219.99,0.0,126.99,Standard Class,No
+ORD-2023560,2024-01-14,Small Business,East,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,12,3599.93,0.4,716.93,Standard Class,No
+ORD-2023561,2024-01-14,Consumer,East,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,1,799.99,0.0,416.99,Standard Class,No
+ORD-2023562,2024-01-15,Corporate,West,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,2,239.98,0.0,146.98,Standard Class,No
+ORD-2023563,2024-01-15,Corporate,West,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,3,419.97,0.0,251.97,Standard Class,No
+ORD-2023564,2024-01-16,Corporate,South,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,2,1044.98,0.05,601.98,Standard Class,No
+ORD-2023565,2024-01-17,Corporate,North,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,3,419.97,0.0,246.97,Express Air,No
+ORD-2023566,2024-01-17,Consumer,Central,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,1,85.49,0.05,35.49,Same Day Priority,No
+ORD-2023567,2024-01-18,Corporate,West,Technology,Noise-Cancelling Headphones,95.0,249.99,8,1999.92,0.0,1236.92,Standard Class,No
+ORD-2023568,2024-01-19,Small Business,North,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,2,816.98,0.05,448.98,Express Air,No
+ORD-2023569,2024-01-19,Small Business,East,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,2,21.58,0.1,-1.42,Same Day Priority,Yes
+ORD-2023570,2024-01-20,Small Business,South,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,5,2149.95,0.0,1246.95,Standard Class,No
+ORD-2023571,2024-01-21,Small Business,North,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,3,1567.47,0.05,892.47,Same Day Priority,No
+ORD-2023572,2024-01-21,Corporate,East,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,1,107.99,0.1,54.99,Express Air,No
+ORD-2023573,2024-01-22,Consumer,South,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,2,21.58,0.1,-1.42,Same Day Priority,No
+ORD-2023574,2024-01-23,Corporate,South,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,1,429.99,0.0,246.99,Standard Class,Yes
+ORD-2023575,2024-01-23,Corporate,Central,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,2,1044.98,0.05,596.98,Express Air,No
+ORD-2023576,2024-01-24,Consumer,Central,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,20,15199.81,0.05,7591.81,Express Air,No
+ORD-2023577,2024-01-25,Consumer,South,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,8,279.92,0.0,175.92,Express Air,No
+ORD-2023578,2024-01-25,Consumer,Central,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,1,429.99,0.0,241.99,Express Air,No
+ORD-2023579,2024-01-26,Corporate,West,Technology,Smart Conference Webcam 4K,70.0,179.99,1,179.99,0.0,106.99,Standard Class,No
+ORD-2023580,2024-01-27,Consumer,Central,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,2,224.98,0.25,91.98,Standard Class,No
+ORD-2023581,2024-01-27,Small Business,South,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,5,382.46,0.15,204.46,Standard Class,No
+ORD-2023582,2024-01-28,Consumer,Central,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,4,431.96,0.1,236.96,Same Day Priority,No
+ORD-2023583,2024-01-28,Corporate,Central,Technology,Smart Conference Webcam 4K,70.0,179.99,2,359.98,0.0,216.98,Standard Class,No
+ORD-2023584,2024-01-29,Small Business,South,Office Furniture,Leather Conference Room Chair,110.0,269.99,1,202.49,0.25,77.49,Same Day Priority,No
+ORD-2023585,2024-01-30,Consumer,East,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,1,112.49,0.25,39.49,Express Air,No
+ORD-2023586,2024-01-30,Small Business,East,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,2,1599.98,0.0,836.98,Standard Class,No
+ORD-2023587,2024-01-31,Small Business,Central,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,8,95.92,0.0,60.92,Standard Class,No
+ORD-2023588,2024-02-01,Corporate,West,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,5,427.45,0.05,249.45,Standard Class,No
+ORD-2023589,2024-02-01,Corporate,South,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,5,2749.95,0.0,1641.95,Express Air,No
+ORD-2023590,2024-02-02,Small Business,East,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,2,1099.98,0.0,651.98,Express Air,No
+ORD-2023591,2024-02-03,Small Business,Central,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,1,34.99,0.0,14.99,Express Air,No
+ORD-2023592,2024-02-03,Consumer,South,Technology,Smart Conference Webcam 4K,70.0,179.99,4,611.97,0.15,328.97,Standard Class,No
+ORD-2023593,2024-02-04,Corporate,West,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,12,1679.88,0.0,1011.88,Express Air,No
+ORD-2023594,2024-02-05,Corporate,Central,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,4,359.96,0.0,216.96,Standard Class,No
+ORD-2023595,2024-02-05,Small Business,West,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,5,44.96,0.25,9.96,Same Day Priority,No
+ORD-2023596,2024-02-06,Small Business,East,Technology,Noise-Cancelling Headphones,95.0,249.99,5,1187.45,0.05,704.45,Express Air,No
+ORD-2023597,2024-02-07,Corporate,West,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,1,132.99,0.05,74.99,Standard Class,No
+ORD-2023598,2024-02-07,Small Business,West,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,1,408.49,0.05,213.49,Same Day Priority,No
+ORD-2023599,2024-02-08,Small Business,North,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,3,659.97,0.0,374.97,Same Day Priority,No
+ORD-2023600,2024-02-09,Small Business,Central,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,3,382.47,0.15,179.47,Express Air,No
+ORD-2023601,2024-02-09,Consumer,West,Technology,Noise-Cancelling Headphones,95.0,249.99,3,637.47,0.15,337.47,Same Day Priority,Yes
+ORD-2023602,2024-02-10,Consumer,North,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,4,1633.96,0.05,910.96,Standard Class,Yes
+ORD-2023603,2024-02-10,Consumer,North,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,1,85.49,0.05,40.49,Same Day Priority,No
+ORD-2023604,2024-02-11,Corporate,East,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,2,251.98,0.1,133.98,Express Air,No
+ORD-2023605,2024-02-12,Small Business,East,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,1,11.39,0.05,-7.61,Same Day Priority,No
+ORD-2023606,2024-02-12,Small Business,Central,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,2,373.98,0.15,178.98,Same Day Priority,No
+ORD-2023607,2024-02-13,Small Business,North,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,1,132.99,0.05,62.99,Same Day Priority,No
+ORD-2023608,2024-02-14,Small Business,West,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,1,89.99,0.0,46.99,Express Air,No
+ORD-2023609,2024-02-14,Consumer,North,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,12,143.88,0.0,92.88,Standard Class,No
+ORD-2023610,2024-02-15,Consumer,Central,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,2,69.98,0.0,30.98,Same Day Priority,No
+ORD-2023611,2024-02-16,Consumer,Central,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,1,799.99,0.0,411.99,Express Air,No
+ORD-2023612,2024-02-16,Consumer,Central,Technology,USB-C Fast Charging Dock,28.0,79.99,5,239.97,0.4,84.97,Same Day Priority,No
+ORD-2023613,2024-02-17,Corporate,Central,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,5,404.95,0.1,226.95,Standard Class,No
+ORD-2023614,2024-02-18,Corporate,South,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,5,1044.95,0.05,591.95,Standard Class,No
+ORD-2023615,2024-02-18,Corporate,Central,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,1,331.49,0.15,163.49,Express Air,No
+ORD-2023616,2024-02-19,Small Business,Central,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,1,85.49,0.05,42.49,Express Air,No
+ORD-2023617,2024-02-20,Consumer,East,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,1,429.99,0.0,241.99,Express Air,No
+ORD-2023618,2024-02-20,Corporate,South,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,2,254.98,0.15,116.98,Express Air,No
+ORD-2023619,2024-02-21,Corporate,Central,Office Furniture,Leather Conference Room Chair,110.0,269.99,3,769.47,0.05,424.47,Same Day Priority,No
+ORD-2023620,2024-02-22,Small Business,Central,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,4,569.96,0.05,306.96,Standard Class,No
+ORD-2023621,2024-02-22,Consumer,Central,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,3,1499.97,0.0,771.97,Express Air,No
+ORD-2023622,2024-02-23,Small Business,North,Technology,Smart Conference Webcam 4K,70.0,179.99,2,341.98,0.05,193.98,Express Air,No
+ORD-2023623,2024-02-23,Small Business,East,Technology,USB-C Fast Charging Dock,28.0,79.99,2,159.98,0.0,88.98,Same Day Priority,No
+ORD-2023624,2024-02-24,Consumer,South,Technology,USB-C Fast Charging Dock,28.0,79.99,3,239.97,0.0,147.97,Express Air,No
+ORD-2023625,2024-02-25,Small Business,West,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,1,125.99,0.1,67.99,Standard Class,No
+ORD-2023626,2024-02-25,Corporate,East,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,20,1799.8,0.0,1184.8,Same Day Priority,No
+ORD-2023627,2024-02-26,Corporate,South,Technology,Smart Conference Webcam 4K,70.0,179.99,2,215.99,0.4,72.99,Standard Class,No
+ORD-2023628,2024-02-27,Consumer,North,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,1,549.99,0.0,321.99,Express Air,No
+ORD-2023629,2024-02-27,Consumer,South,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,2,1599.98,0.0,831.98,Express Air,No
+ORD-2023630,2024-02-28,Consumer,North,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,5,449.95,0.0,271.95,Standard Class,No
+ORD-2023631,2024-02-29,Corporate,Central,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,2,179.98,0.0,111.98,Express Air,No
+ORD-2023632,2024-02-29,Corporate,North,Technology,USB-C Fast Charging Dock,28.0,79.99,2,159.98,0.0,88.98,Same Day Priority,No
+ORD-2023633,2024-03-01,Small Business,Central,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,5,382.46,0.15,224.46,Express Air,No
+ORD-2023634,2024-03-02,Small Business,South,Office Furniture,Leather Conference Room Chair,110.0,269.99,2,539.98,0.0,311.98,Express Air,No
+ORD-2023635,2024-03-02,Corporate,West,Office Furniture,Leather Conference Room Chair,110.0,269.99,2,458.98,0.15,223.98,Same Day Priority,No
+ORD-2023636,2024-03-03,Corporate,Central,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,1,76.49,0.15,38.49,Standard Class,No
+ORD-2023637,2024-03-04,Corporate,Central,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,2,179.98,0.0,104.98,Same Day Priority,No
+ORD-2023638,2024-03-04,Small Business,East,Office Furniture,Leather Conference Room Chair,110.0,269.99,1,202.49,0.25,84.49,Express Air,No
+ORD-2023639,2024-03-05,Small Business,Central,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,12,9599.88,0.0,5036.88,Standard Class,No
+ORD-2023640,2024-03-06,Consumer,North,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,1,89.99,0.0,46.99,Express Air,No
+ORD-2023641,2024-03-06,Small Business,North,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,4,1719.96,0.0,984.96,Same Day Priority,No
+ORD-2023642,2024-03-07,Consumer,East,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,3,1225.47,0.05,682.47,Standard Class,No
+ORD-2023643,2024-03-07,Corporate,West,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,2,1519.98,0.05,756.98,Standard Class,No
+ORD-2023644,2024-03-08,Consumer,East,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,2,773.98,0.1,398.98,Same Day Priority,No
+ORD-2023645,2024-03-09,Consumer,Central,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,12,1079.91,0.25,524.91,Same Day Priority,No
+ORD-2023646,2024-03-09,Corporate,East,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,2,179.98,0.0,111.98,Express Air,No
+ORD-2023647,2024-03-10,Small Business,Central,Technology,USB-C Fast Charging Dock,28.0,79.99,5,339.96,0.15,184.96,Same Day Priority,No
+ORD-2023648,2024-03-11,Corporate,South,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,1,119.99,0.0,59.99,Same Day Priority,No
+ORD-2023649,2024-03-11,Small Business,North,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,3,494.98,0.25,221.98,Standard Class,No
+ORD-2023650,2024-03-12,Corporate,East,Technology,Noise-Cancelling Headphones,95.0,249.99,1,149.99,0.4,51.99,Standard Class,No
+ORD-2023651,2024-03-13,Corporate,Central,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,1,18.99,0.05,9.99,Standard Class,No
+ORD-2023652,2024-03-13,Small Business,East,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,3,967.48,0.25,424.48,Standard Class,No
+ORD-2023653,2024-03-14,Consumer,West,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,3,59.97,0.0,33.97,Express Air,No
+ORD-2023654,2024-03-15,Small Business,West,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,3,2159.97,0.1,1016.97,Standard Class,No
+ORD-2023655,2024-03-15,Corporate,South,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,3,1169.97,0.0,681.97,Express Air,No
+ORD-2023656,2024-03-16,Small Business,West,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,12,1709.89,0.05,921.89,Express Air,No
+ORD-2023657,2024-03-17,Consumer,South,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,4,341.96,0.05,218.96,Standard Class,No
+ORD-2023658,2024-03-17,Consumer,West,Office Furniture,Leather Conference Room Chair,110.0,269.99,20,5399.8,0.0,3196.8,Standard Class,Yes
+ORD-2023659,2024-03-18,Small Business,North,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,1,208.99,0.05,115.99,Standard Class,No
+ORD-2023660,2024-03-19,Corporate,Central,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,3,242.97,0.1,134.97,Standard Class,No
+ORD-2023661,2024-03-19,Corporate,East,Technology,Smart Conference Webcam 4K,70.0,179.99,1,134.99,0.25,56.99,Express Air,No
+ORD-2023662,2024-03-20,Corporate,East,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,2,779.98,0.0,444.98,Same Day Priority,No
+ORD-2023663,2024-03-20,Consumer,North,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,3,449.97,0.0,246.97,Express Air,No
+ORD-2023664,2024-03-21,Small Business,East,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,1,34.99,0.0,19.99,Standard Class,No
+ORD-2023665,2024-03-22,Small Business,East,Technology,Smart Conference Webcam 4K,70.0,179.99,4,719.96,0.0,431.96,Express Air,No
+ORD-2023666,2024-03-22,Small Business,North,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,2,701.98,0.1,373.98,Express Air,No
+ORD-2023667,2024-03-23,Corporate,North,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,3,994.47,0.15,499.47,Same Day Priority,No
+ORD-2023668,2024-03-24,Consumer,West,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,3,2399.97,0.0,1244.97,Same Day Priority,No
+ORD-2023669,2024-03-24,Small Business,West,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,20,2099.85,0.25,991.85,Express Air,No
+ORD-2023670,2024-03-25,Small Business,South,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,1,7.19,0.4,-4.81,Express Air,No
+ORD-2023671,2024-03-26,Corporate,North,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,5,2374.95,0.05,1166.95,Express Air,No
+ORD-2023672,2024-03-26,Small Business,East,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,1,67.49,0.25,29.49,Standard Class,No
+ORD-2023673,2024-03-27,Consumer,West,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,4,3199.96,0.0,1671.96,Express Air,No
+ORD-2023674,2024-03-28,Corporate,South,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,4,791.96,0.1,428.96,Standard Class,No
+ORD-2023675,2024-03-28,Consumer,East,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,2,39.98,0.0,12.98,Same Day Priority,No
+ORD-2023676,2024-03-29,Consumer,East,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,2,417.98,0.05,222.98,Same Day Priority,No
+ORD-2023677,2024-03-30,Small Business,West,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,8,265.92,0.05,154.92,Same Day Priority,No
+ORD-2023678,2024-03-30,Small Business,South,Technology,USB-C Fast Charging Dock,28.0,79.99,1,47.99,0.4,11.99,Express Air,No
+ORD-2023679,2024-03-31,Corporate,South,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,3,269.97,0.0,156.97,Express Air,No
+ORD-2023680,2024-04-01,Small Business,Central,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,2,170.98,0.05,85.98,Same Day Priority,Yes
+ORD-2023681,2024-04-01,Corporate,North,Technology,UltraBook Pro 15,850.0,1299.99,1,1104.99,0.15,246.99,Express Air,No
+ORD-2023682,2024-04-02,Corporate,East,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,4,47.96,0.0,28.96,Standard Class,No
+ORD-2023683,2024-04-02,Corporate,East,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,2,1599.98,0.0,831.98,Express Air,No
+ORD-2023684,2024-04-03,Small Business,Central,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,2,1099.98,0.0,651.98,Express Air,No
+ORD-2023685,2024-04-04,Small Business,South,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,20,7739.82,0.1,4136.82,Standard Class,No
+ORD-2023686,2024-04-04,Corporate,West,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,4,879.96,0.0,511.96,Express Air,No
+ORD-2023687,2024-04-05,Consumer,West,Technology,Smart Conference Webcam 4K,70.0,179.99,3,512.97,0.05,287.97,Same Day Priority,No
+ORD-2023688,2024-04-06,Small Business,East,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,12,3599.93,0.4,711.93,Express Air,No
+ORD-2023689,2024-04-06,Consumer,West,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,1,119.99,0.0,71.99,Standard Class,No
+ORD-2023690,2024-04-07,Corporate,East,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,1,89.99,0.4,9.99,Same Day Priority,No
+ORD-2023691,2024-04-08,Consumer,South,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,2,439.98,0.0,244.98,Same Day Priority,No
+ORD-2023692,2024-04-08,Corporate,North,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,2,999.98,0.0,504.98,Same Day Priority,No
+ORD-2023693,2024-04-09,Consumer,West,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,2,1599.98,0.0,824.98,Same Day Priority,No
+ORD-2023694,2024-04-10,Small Business,North,Office Furniture,Leather Conference Room Chair,110.0,269.99,1,269.99,0.0,151.99,Express Air,No
+ORD-2023695,2024-04-10,Small Business,East,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,1,799.99,0.0,404.99,Same Day Priority,No
+ORD-2023696,2024-04-11,Corporate,East,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,4,3199.96,0.0,1664.96,Same Day Priority,No
+ORD-2023697,2024-04-12,Consumer,North,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,1,104.99,0.25,34.99,Same Day Priority,No
+ORD-2023698,2024-04-12,Corporate,South,Technology,UltraBook Pro 15,850.0,1299.99,5,6499.95,0.0,2246.95,Standard Class,No
+ORD-2023699,2024-04-13,Corporate,North,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,5,1657.46,0.15,842.46,Same Day Priority,No
+ORD-2023700,2024-04-14,Consumer,East,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,3,359.97,0.0,209.97,Same Day Priority,No
+ORD-2023701,2024-04-14,Corporate,South,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,8,3959.93,0.1,2196.93,Standard Class,No
+ORD-2023702,2024-04-15,Corporate,North,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,1,429.99,0.0,241.99,Express Air,No
+ORD-2023703,2024-04-15,Consumer,Central,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,4,879.96,0.0,504.96,Same Day Priority,No
+ORD-2023704,2024-04-16,Corporate,North,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,1,299.99,0.4,56.99,Standard Class,No
+ORD-2023705,2024-04-17,Corporate,South,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,4,1325.97,0.15,682.97,Standard Class,No
+ORD-2023706,2024-04-17,Small Business,East,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,2,1044.98,0.05,589.98,Same Day Priority,No
+ORD-2023707,2024-04-18,Consumer,South,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,1,89.99,0.0,39.99,Same Day Priority,No
+ORD-2023708,2024-04-19,Corporate,North,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,4,531.96,0.05,308.96,Standard Class,No
+ORD-2023709,2024-04-19,Consumer,North,Technology,Smart Conference Webcam 4K,70.0,179.99,4,647.96,0.1,352.96,Same Day Priority,No
+ORD-2023710,2024-04-20,Consumer,Central,Technology,USB-C Fast Charging Dock,28.0,79.99,3,215.97,0.1,123.97,Express Air,No
+ORD-2023711,2024-04-21,Consumer,West,Technology,Smart Conference Webcam 4K,70.0,179.99,1,161.99,0.1,83.99,Express Air,No
+ORD-2023712,2024-04-21,Consumer,Central,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,4,3199.96,0.0,1664.96,Same Day Priority,No
+ORD-2023713,2024-04-22,Consumer,West,Technology,USB-C Fast Charging Dock,28.0,79.99,2,119.99,0.25,55.99,Express Air,No
+ORD-2023714,2024-04-23,Consumer,West,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,5,3999.95,0.0,2096.95,Standard Class,No
+ORD-2023715,2024-04-23,Consumer,West,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,5,1099.95,0.0,634.95,Same Day Priority,No
+ORD-2023716,2024-04-24,Corporate,Central,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,8,3439.92,0.0,1996.92,Standard Class,Yes
+ORD-2023717,2024-04-25,Corporate,North,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,1,219.99,0.0,121.99,Express Air,No
+ORD-2023718,2024-04-25,Small Business,West,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,1,11.39,0.05,-0.61,Express Air,No
+ORD-2023719,2024-04-26,Corporate,East,Technology,Noise-Cancelling Headphones,95.0,249.99,12,2849.89,0.05,1694.89,Same Day Priority,No
+ORD-2023720,2024-04-27,Corporate,West,Office Furniture,Leather Conference Room Chair,110.0,269.99,12,3239.88,0.0,1911.88,Express Air,No
+ORD-2023721,2024-04-27,Small Business,Central,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,3,427.47,0.05,224.47,Express Air,No
+ORD-2023722,2024-04-28,Small Business,South,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,4,531.96,0.05,303.96,Express Air,No
+ORD-2023723,2024-04-28,Corporate,South,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,2,899.98,0.1,411.98,Express Air,No
+ORD-2023724,2024-04-29,Small Business,East,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,4,71.96,0.1,32.96,Same Day Priority,No
+ORD-2023725,2024-04-30,Small Business,South,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,4,569.96,0.05,294.96,Same Day Priority,No
+ORD-2023726,2024-04-30,Corporate,East,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,3,229.47,0.15,109.47,Same Day Priority,No
+ORD-2023727,2024-05-01,Small Business,West,Office Furniture,Leather Conference Room Chair,110.0,269.99,2,512.98,0.05,284.98,Express Air,No
+ORD-2023728,2024-05-02,Corporate,East,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,2,179.98,0.0,104.98,Same Day Priority,No
+ORD-2023729,2024-05-02,Small Business,North,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,1,499.99,0.0,251.99,Express Air,No
+ORD-2023730,2024-05-03,Consumer,East,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,12,1529.9,0.15,734.9,Same Day Priority,No
+ORD-2023731,2024-05-04,Consumer,North,Office Furniture,Leather Conference Room Chair,110.0,269.99,3,688.47,0.15,343.47,Same Day Priority,No
+ORD-2023732,2024-05-04,Consumer,North,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,4,47.96,0.0,23.96,Express Air,No
+ORD-2023733,2024-05-05,Consumer,North,Technology,UltraBook Pro 15,850.0,1299.99,3,3704.97,0.05,1146.97,Express Air,No
+ORD-2023734,2024-05-06,Small Business,South,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,3,256.47,0.05,136.47,Same Day Priority,No
+ORD-2023735,2024-05-06,Small Business,Central,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,1,19.99,0.0,5.99,Express Air,No
+ORD-2023736,2024-05-07,Consumer,Central,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,1,89.99,0.0,51.99,Express Air,No
+ORD-2023737,2024-05-08,Consumer,East,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,1,429.99,0.0,241.99,Express Air,No
+ORD-2023738,2024-05-08,Small Business,Central,Technology,USB-C Fast Charging Dock,28.0,79.99,1,67.99,0.15,36.99,Standard Class,No
+ORD-2023739,2024-05-09,Corporate,South,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,1,89.99,0.0,51.99,Standard Class,No
+ORD-2023740,2024-05-10,Consumer,East,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,4,1481.96,0.05,838.96,Standard Class,No
+ORD-2023741,2024-05-10,Small Business,West,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,2,1439.98,0.1,664.98,Same Day Priority,No
+ORD-2023742,2024-05-11,Corporate,East,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,2,239.98,0.0,146.98,Standard Class,No
+ORD-2023743,2024-05-11,Small Business,South,Technology,UltraBook Pro 15,850.0,1299.99,3,3899.97,0.0,1341.97,Express Air,No
+ORD-2023744,2024-05-12,Corporate,Central,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,12,6599.88,0.0,3951.88,Express Air,No
+ORD-2023745,2024-05-13,Consumer,West,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,2,395.98,0.1,212.98,Standard Class,No
+ORD-2023746,2024-05-13,Corporate,South,Technology,UltraBook Pro 15,850.0,1299.99,1,1234.99,0.05,381.99,Standard Class,Yes
+ORD-2023747,2024-05-14,Small Business,South,Technology,Smart Conference Webcam 4K,70.0,179.99,8,1439.92,0.0,871.92,Express Air,No
+ORD-2023748,2024-05-15,Small Business,West,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,3,356.97,0.15,188.97,Standard Class,No
+ORD-2023749,2024-05-15,Consumer,West,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,1,125.99,0.1,67.99,Standard Class,No
+ORD-2023750,2024-05-16,Small Business,Central,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,12,5159.88,0.0,2991.88,Express Air,No
+ORD-2023751,2024-05-17,Corporate,South,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,4,791.96,0.1,416.96,Same Day Priority,No
+ORD-2023752,2024-05-17,Consumer,West,Office Furniture,Leather Conference Room Chair,110.0,269.99,5,1282.45,0.05,729.45,Standard Class,No
+ORD-2023753,2024-05-18,Consumer,North,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,2,20.38,0.15,9.38,Standard Class,No
+ORD-2023754,2024-05-19,Consumer,East,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,12,647.93,0.4,219.93,Express Air,No
+ORD-2023755,2024-05-19,Small Business,East,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,2,152.98,0.15,67.98,Same Day Priority,No
+ORD-2023756,2024-05-20,Small Business,North,Technology,UltraBook Pro 15,850.0,1299.99,5,4874.96,0.25,621.96,Standard Class,No
+ORD-2023757,2024-05-21,Small Business,South,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,2,39.98,0.0,24.98,Standard Class,No
+ORD-2023758,2024-05-21,Consumer,North,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,4,341.96,0.05,193.96,Express Air,Yes
+ORD-2023759,2024-05-22,Consumer,West,Technology,UltraBook Pro 15,850.0,1299.99,2,2599.98,0.0,896.98,Standard Class,No
+ORD-2023760,2024-05-23,Corporate,North,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,1,499.99,0.0,244.99,Same Day Priority,No
+ORD-2023761,2024-05-23,Small Business,West,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,1,125.99,0.1,67.99,Standard Class,No
+ORD-2023762,2024-05-24,Corporate,North,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,3,1424.97,0.05,696.97,Express Air,No
+ORD-2023763,2024-05-24,Corporate,North,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,3,1052.97,0.1,564.97,Express Air,No
+ORD-2023764,2024-05-25,Consumer,South,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,1,134.99,0.1,66.99,Standard Class,No
+ORD-2023765,2024-05-26,Consumer,Central,Technology,Smart Conference Webcam 4K,70.0,179.99,5,854.95,0.05,489.95,Same Day Priority,No
+ORD-2023766,2024-05-26,Small Business,East,Technology,Noise-Cancelling Headphones,95.0,249.99,2,424.98,0.15,226.98,Express Air,No
+ORD-2023767,2024-05-27,Small Business,South,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,4,503.96,0.1,275.96,Express Air,No
+ORD-2023768,2024-05-28,Consumer,East,Office Furniture,Leather Conference Room Chair,110.0,269.99,2,539.98,0.0,311.98,Express Air,No
+ORD-2023769,2024-05-28,Consumer,West,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,2,816.98,0.05,453.98,Standard Class,No
+ORD-2023770,2024-05-29,Consumer,Central,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,3,419.97,0.0,239.97,Same Day Priority,No
+ORD-2023771,2024-05-30,Small Business,South,Office Furniture,Leather Conference Room Chair,110.0,269.99,2,539.98,0.0,304.98,Same Day Priority,No
+ORD-2023772,2024-05-30,Consumer,North,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,1,85.49,0.05,35.49,Same Day Priority,No
+ORD-2023773,2024-05-31,Small Business,South,Technology,Noise-Cancelling Headphones,95.0,249.99,12,2999.88,0.0,1844.88,Same Day Priority,No
+ORD-2023774,2024-06-01,Small Business,East,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,1,14.99,0.25,-6.01,Same Day Priority,No
+ORD-2023775,2024-06-01,Consumer,North,Office Furniture,Leather Conference Room Chair,110.0,269.99,2,512.98,0.05,289.98,Standard Class,No
+ORD-2023776,2024-06-02,Small Business,North,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,8,3119.92,0.0,1831.92,Express Air,No
+ORD-2023777,2024-06-03,Consumer,South,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,4,45.56,0.05,14.56,Same Day Priority,No
+ORD-2023778,2024-06-03,Consumer,North,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,1,389.99,0.0,226.99,Standard Class,No
+ORD-2023779,2024-06-04,Corporate,West,Technology,UltraBook Pro 15,850.0,1299.99,1,1169.99,0.1,311.99,Express Air,Yes
+ORD-2023780,2024-06-05,Corporate,East,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,2,265.98,0.05,147.98,Express Air,No
+ORD-2023781,2024-06-05,Corporate,West,Technology,USB-C Fast Charging Dock,28.0,79.99,2,159.98,0.0,95.98,Express Air,No
+ORD-2023782,2024-06-06,Corporate,West,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,4,3039.96,0.05,1504.96,Same Day Priority,No
+ORD-2023783,2024-06-06,Consumer,North,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,2,439.98,0.0,251.98,Express Air,No
+ORD-2023784,2024-06-07,Small Business,East,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,2,740.98,0.05,417.98,Standard Class,No
+ORD-2023785,2024-06-08,Small Business,West,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,3,398.97,0.05,230.97,Standard Class,No
+ORD-2023786,2024-06-08,Corporate,Central,Office Furniture,Leather Conference Room Chair,110.0,269.99,5,1349.95,0.0,791.95,Express Air,No
+ORD-2023787,2024-06-09,Small Business,North,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,2,66.48,0.05,34.48,Express Air,No
+ORD-2023788,2024-06-10,Consumer,South,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,8,1759.92,0.0,1036.92,Standard Class,No
+ORD-2023789,2024-06-10,Corporate,South,Technology,USB-C Fast Charging Dock,28.0,79.99,1,75.99,0.05,39.99,Express Air,Yes
+ORD-2023790,2024-06-11,Corporate,South,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,1,76.49,0.15,33.49,Express Air,No
+ORD-2023791,2024-06-12,Small Business,North,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,4,879.96,0.0,516.96,Standard Class,No
+ORD-2023792,2024-06-12,Small Business,West,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,2,899.98,0.1,416.98,Standard Class,No
+ORD-2023793,2024-06-13,Consumer,North,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,1,33.24,0.05,13.24,Express Air,No
+ORD-2023794,2024-06-14,Small Business,East,Technology,UltraBook Pro 15,850.0,1299.99,1,1234.99,0.05,376.99,Express Air,No
+ORD-2023795,2024-06-14,Corporate,Central,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,1,350.99,0.1,187.99,Standard Class,No
+ORD-2023796,2024-06-15,Corporate,South,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,1,33.24,0.05,6.24,Same Day Priority,No
+ORD-2023797,2024-06-16,Corporate,West,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,1,549.99,0.0,326.99,Standard Class,No
+ORD-2023798,2024-06-16,Consumer,Central,Technology,UltraBook Pro 15,850.0,1299.99,2,2599.98,0.0,884.98,Same Day Priority,No
+ORD-2023799,2024-06-17,Consumer,South,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,8,1079.93,0.1,556.93,Standard Class,No
+ORD-2023800,2024-06-18,Small Business,Central,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,1,389.99,0.0,226.99,Standard Class,No
+ORD-2023801,2024-06-18,Corporate,Central,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,2,779.98,0.0,456.98,Standard Class,No
+ORD-2023802,2024-06-19,Consumer,North,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,5,59.95,0.0,31.95,Express Air,No
+ORD-2023803,2024-06-19,Small Business,East,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,1,208.99,0.05,110.99,Express Air,No
+ORD-2023804,2024-06-20,Small Business,West,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,2,934.98,0.15,479.98,Same Day Priority,No
+ORD-2023805,2024-06-21,Consumer,North,Office Furniture,Leather Conference Room Chair,110.0,269.99,2,512.98,0.05,284.98,Express Air,No
+ORD-2023806,2024-06-21,Corporate,North,Technology,USB-C Fast Charging Dock,28.0,79.99,8,639.92,0.0,407.92,Express Air,No
+ORD-2023807,2024-06-22,Small Business,East,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,5,594.96,0.15,311.96,Express Air,No
+ORD-2023808,2024-06-23,Small Business,Central,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,4,3039.96,0.05,1504.96,Same Day Priority,No
+ORD-2023809,2024-06-23,Small Business,West,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,2,170.98,0.05,92.98,Express Air,No
+ORD-2023810,2024-06-24,Consumer,East,Technology,Noise-Cancelling Headphones,95.0,249.99,3,712.47,0.05,412.47,Same Day Priority,No
+ORD-2023811,2024-06-25,Consumer,East,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,3,30.57,0.15,15.57,Standard Class,No
+ORD-2023812,2024-06-25,Consumer,South,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,1,679.99,0.15,284.99,Same Day Priority,No
+ORD-2023813,2024-06-26,Consumer,Central,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,3,35.97,0.0,8.97,Same Day Priority,No
+ORD-2023814,2024-06-27,Consumer,South,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,4,1481.96,0.05,838.96,Standard Class,No
+ORD-2023815,2024-06-27,Consumer,East,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,8,95.92,0.0,60.92,Standard Class,No
+ORD-2023816,2024-06-28,Consumer,Central,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,2,859.98,0.0,496.98,Standard Class,No
+ORD-2023817,2024-06-29,Consumer,West,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,1,164.99,0.25,66.99,Express Air,No
+ORD-2023818,2024-06-29,Corporate,East,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,3,62.98,0.4,23.98,Standard Class,No
+ORD-2023819,2024-06-30,Consumer,West,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,1,429.99,0.0,241.99,Express Air,No
+ORD-2023820,2024-07-01,Corporate,East,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,1,85.49,0.05,52.49,Standard Class,No
+ORD-2023821,2024-07-01,Corporate,North,Technology,USB-C Fast Charging Dock,28.0,79.99,3,227.97,0.05,128.97,Same Day Priority,Yes
+ORD-2023822,2024-07-02,Consumer,West,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,4,139.96,0.0,88.96,Standard Class,No
+ORD-2023823,2024-07-02,Corporate,South,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,2,66.48,0.05,39.48,Standard Class,No
+ORD-2023824,2024-07-03,Consumer,South,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,5,2612.45,0.05,1497.45,Same Day Priority,No
+ORD-2023825,2024-07-04,Consumer,West,Technology,Smart Conference Webcam 4K,70.0,179.99,4,719.96,0.0,436.96,Standard Class,No
+ORD-2023826,2024-07-04,Corporate,South,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,2,1099.98,0.0,656.98,Standard Class,Yes
+ORD-2023827,2024-07-05,Small Business,West,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,3,59.97,0.0,33.97,Express Air,No
+ORD-2023828,2024-07-06,Consumer,South,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,4,1699.97,0.15,724.97,Same Day Priority,No
+ORD-2023829,2024-07-06,Consumer,South,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,2,417.98,0.05,222.98,Same Day Priority,No
+ORD-2023830,2024-07-07,Small Business,Central,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,1,118.99,0.15,55.99,Express Air,No
+ORD-2023831,2024-07-08,Small Business,West,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,4,43.16,0.1,24.16,Standard Class,No
+ORD-2023832,2024-07-08,Corporate,East,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,2,279.98,0.0,166.98,Standard Class,No
+ORD-2023833,2024-07-09,Corporate,North,Technology,USB-C Fast Charging Dock,28.0,79.99,12,863.89,0.1,519.89,Express Air,Yes
+ORD-2023834,2024-07-10,Consumer,West,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,2,265.98,0.05,140.98,Same Day Priority,No
+ORD-2023835,2024-07-10,Consumer,East,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,2,1519.98,0.05,751.98,Express Air,No
+ORD-2023836,2024-07-11,Consumer,North,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,20,7799.8,0.0,4596.8,Standard Class,No
+ORD-2023837,2024-07-12,Corporate,East,Technology,Smart Conference Webcam 4K,70.0,179.99,3,512.97,0.05,299.97,Standard Class,No
+ORD-2023838,2024-07-12,Consumer,East,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,1,149.99,0.0,81.99,Standard Class,No
+ORD-2023839,2024-07-13,Small Business,North,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,5,539.95,0.1,299.95,Same Day Priority,No
+ORD-2023840,2024-07-14,Consumer,South,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,2,299.98,0.0,166.98,Standard Class,No
+ORD-2023841,2024-07-14,Consumer,South,Technology,UltraBook Pro 15,850.0,1299.99,4,5199.96,0.0,1784.96,Same Day Priority,No
+ORD-2023842,2024-07-15,Corporate,South,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,1,11.99,0.0,4.99,Standard Class,No
+ORD-2023843,2024-07-15,Small Business,Central,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,5,174.95,0.0,111.95,Standard Class,No
+ORD-2023844,2024-07-16,Corporate,Central,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,5,1044.95,0.05,586.95,Express Air,No
+ORD-2023845,2024-07-17,Corporate,South,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,1,85.49,0.05,47.49,Standard Class,No
+ORD-2023846,2024-07-17,Consumer,West,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,1,449.99,0.1,194.99,Same Day Priority,No
+ORD-2023847,2024-07-18,Consumer,Central,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,2,644.98,0.25,276.98,Express Air,No
+ORD-2023848,2024-07-19,Small Business,West,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,3,99.72,0.05,55.72,Express Air,No
+ORD-2023849,2024-07-19,Corporate,North,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,5,659.97,0.4,194.97,Same Day Priority,No
+ORD-2023850,2024-07-20,Consumer,West,Technology,Smart Conference Webcam 4K,70.0,179.99,8,1439.92,0.0,871.92,Express Air,No
+ORD-2023851,2024-07-21,Small Business,South,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,1,331.49,0.15,163.49,Express Air,No
+ORD-2023852,2024-07-21,Corporate,North,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,2,224.98,0.25,91.98,Standard Class,No
+ORD-2023853,2024-07-22,Consumer,South,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,4,3199.96,0.0,1671.96,Express Air,No
+ORD-2023854,2024-07-23,Corporate,East,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,8,4399.92,0.0,2631.92,Express Air,No
+ORD-2023855,2024-07-23,Corporate,Central,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,5,2149.95,0.0,1241.95,Express Air,No
+ORD-2023856,2024-07-24,Consumer,North,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,12,2639.88,0.0,1551.88,Express Air,No
+ORD-2023857,2024-07-25,Corporate,Central,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,20,7799.8,0.0,4591.8,Express Air,No
+ORD-2023858,2024-07-25,Consumer,Central,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,2,179.98,0.0,111.98,Express Air,No
+ORD-2023859,2024-07-26,Small Business,North,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,5,404.95,0.1,246.95,Express Air,No
+ORD-2023860,2024-07-27,Small Business,Central,Technology,USB-C Fast Charging Dock,28.0,79.99,4,319.96,0.0,192.96,Same Day Priority,No
+ORD-2023861,2024-07-27,Consumer,East,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,3,2399.97,0.0,1256.97,Standard Class,No
+ORD-2023862,2024-07-28,Consumer,South,Technology,Smart Conference Webcam 4K,70.0,179.99,2,359.98,0.0,216.98,Standard Class,Yes
+ORD-2023863,2024-07-28,Corporate,West,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,2,1044.98,0.05,601.98,Standard Class,No
+ORD-2023864,2024-07-29,Corporate,North,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,20,7019.82,0.1,3811.82,Express Air,No
+ORD-2023865,2024-07-30,Corporate,West,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,8,719.92,0.0,436.92,Standard Class,No
+ORD-2023866,2024-07-30,Consumer,West,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,4,132.96,0.05,76.96,Express Air,No
+ORD-2023867,2024-07-31,Small Business,Central,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,2,251.98,0.1,126.98,Same Day Priority,No
+ORD-2023868,2024-08-01,Consumer,West,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,5,2749.95,0.0,1641.95,Express Air,No
+ORD-2023869,2024-08-01,Corporate,Central,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,20,7309.83,0.15,3701.83,Express Air,No
+ORD-2023870,2024-08-02,Corporate,South,Office Furniture,Leather Conference Room Chair,110.0,269.99,1,202.49,0.25,84.49,Express Air,No
+ORD-2023871,2024-08-03,Consumer,Central,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,4,79.96,0.0,47.96,Express Air,No
+ORD-2023872,2024-08-03,Consumer,North,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,1,408.49,0.05,220.49,Express Air,No
+ORD-2023873,2024-08-04,Consumer,East,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,20,15999.8,0.0,8396.8,Standard Class,No
+ORD-2023874,2024-08-05,Consumer,West,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,3,2399.97,0.0,1256.97,Standard Class,No
+ORD-2023875,2024-08-05,Consumer,Central,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,1,127.49,0.15,54.49,Express Air,No
+ORD-2023876,2024-08-06,Small Business,West,Technology,USB-C Fast Charging Dock,28.0,79.99,1,67.99,0.15,31.99,Express Air,No
+ORD-2023877,2024-08-07,Corporate,North,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,1,389.99,0.0,226.99,Standard Class,No
+ORD-2023878,2024-08-07,Corporate,East,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,1,34.99,0.0,14.99,Express Air,No
+ORD-2023879,2024-08-08,Corporate,South,Technology,UltraBook Pro 15,850.0,1299.99,3,3314.97,0.15,756.97,Express Air,No
+ORD-2023880,2024-08-09,Small Business,North,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,1,34.99,0.0,7.99,Same Day Priority,No
+ORD-2023881,2024-08-09,Small Business,Central,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,3,34.17,0.05,19.17,Standard Class,No
+ORD-2023882,2024-08-10,Consumer,South,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,2,170.98,0.05,95.98,Same Day Priority,No
+ORD-2023883,2024-08-10,Consumer,West,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,3,377.97,0.1,209.97,Standard Class,No
+ORD-2023884,2024-08-11,Corporate,South,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,1,11.99,0.0,4.99,Standard Class,No
+ORD-2023885,2024-08-12,Consumer,South,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,1,107.99,0.1,59.99,Standard Class,No
+ORD-2023886,2024-08-12,Small Business,West,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,3,398.97,0.05,225.97,Express Air,No
+ORD-2023887,2024-08-13,Small Business,North,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,8,95.92,0.0,55.92,Express Air,No
+ORD-2023888,2024-08-14,Consumer,West,Technology,UltraBook Pro 15,850.0,1299.99,1,1104.99,0.15,251.99,Standard Class,No
+ORD-2023889,2024-08-14,Consumer,South,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,5,1934.95,0.1,1026.95,Express Air,No
+ORD-2023890,2024-08-15,Corporate,North,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,5,131.21,0.25,68.21,Standard Class,No
+ORD-2023891,2024-08-16,Corporate,South,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,1,759.99,0.05,364.99,Same Day Priority,No
+ORD-2023892,2024-08-16,Corporate,East,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,2,1099.98,0.0,644.98,Same Day Priority,No
+ORD-2023893,2024-08-17,Small Business,South,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,1,89.99,0.0,56.99,Standard Class,No
+ORD-2023894,2024-08-18,Small Business,Central,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,2,52.48,0.25,13.48,Same Day Priority,No
+ORD-2023895,2024-08-18,Small Business,Central,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,12,5699.89,0.05,2811.89,Express Air,No
+ORD-2023896,2024-08-19,Consumer,Central,Technology,Noise-Cancelling Headphones,95.0,249.99,2,374.98,0.25,169.98,Same Day Priority,No
+ORD-2023897,2024-08-20,Small Business,Central,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,8,4799.94,0.25,1756.94,Standard Class,No
+ORD-2023898,2024-08-20,Small Business,North,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,1,80.99,0.1,42.99,Standard Class,No
+ORD-2023899,2024-08-21,Corporate,North,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,1,599.99,0.25,216.99,Standard Class,No
+ORD-2023900,2024-08-22,Corporate,East,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,2,373.98,0.15,178.98,Same Day Priority,No
+ORD-2023901,2024-08-22,Small Business,East,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,2,395.98,0.1,200.98,Same Day Priority,No
+ORD-2023902,2024-08-23,Consumer,North,Office Furniture,Leather Conference Room Chair,110.0,269.99,3,607.48,0.25,274.48,Standard Class,No
+ORD-2023903,2024-08-23,Corporate,North,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,2,22.78,0.05,-0.22,Same Day Priority,No
+ORD-2023904,2024-08-24,Small Business,East,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,1,197.99,0.1,104.99,Standard Class,No
+ORD-2023905,2024-08-25,Corporate,South,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,8,1759.92,0.0,1031.92,Express Air,No
+ORD-2023906,2024-08-25,Small Business,North,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,3,62.98,0.4,23.98,Standard Class,No
+ORD-2023907,2024-08-26,Consumer,South,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,1,107.99,0.1,59.99,Standard Class,No
+ORD-2023908,2024-08-27,Small Business,Central,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,1,386.99,0.1,198.99,Express Air,No
+ORD-2023909,2024-08-27,Corporate,Central,Technology,Noise-Cancelling Headphones,95.0,249.99,1,224.99,0.1,121.99,Express Air,No
+ORD-2023910,2024-08-28,Consumer,South,Technology,UltraBook Pro 15,850.0,1299.99,1,1104.99,0.15,239.99,Same Day Priority,No
+ORD-2023911,2024-08-29,Consumer,West,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,2,859.98,0.0,491.98,Express Air,No
+ORD-2023912,2024-08-29,Small Business,West,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,1,197.99,0.1,92.99,Same Day Priority,No
+ORD-2023913,2024-08-30,Consumer,West,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,3,256.47,0.05,143.47,Express Air,No
+ORD-2023914,2024-08-31,Corporate,Central,Technology,UltraBook Pro 15,850.0,1299.99,2,2599.98,0.0,891.98,Express Air,No
+ORD-2023915,2024-08-31,Corporate,East,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,2,279.98,0.0,161.98,Express Air,No
+ORD-2023916,2024-09-01,Consumer,Central,Technology,Smart Conference Webcam 4K,70.0,179.99,1,161.99,0.1,76.99,Same Day Priority,No
+ORD-2023917,2024-09-02,Consumer,Central,Technology,USB-C Fast Charging Dock,28.0,79.99,2,159.98,0.0,95.98,Express Air,No
+ORD-2023918,2024-09-02,Corporate,East,Technology,Noise-Cancelling Headphones,95.0,249.99,3,449.98,0.4,156.98,Express Air,No
+ORD-2023919,2024-09-03,Consumer,North,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,20,4399.8,0.0,2591.8,Express Air,No
+ORD-2023920,2024-09-04,Consumer,South,Technology,UltraBook Pro 15,850.0,1299.99,20,25999.8,0.0,8984.8,Same Day Priority,No
+ORD-2023921,2024-09-04,Consumer,East,Technology,Noise-Cancelling Headphones,95.0,249.99,1,212.49,0.15,109.49,Express Air,No
+ORD-2023922,2024-09-05,Corporate,North,Office Furniture,Leather Conference Room Chair,110.0,269.99,5,1349.95,0.0,791.95,Express Air,No
+ORD-2023923,2024-09-05,Small Business,Central,Technology,USB-C Fast Charging Dock,28.0,79.99,2,119.99,0.25,55.99,Express Air,No
+ORD-2023924,2024-09-06,Corporate,East,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,4,1999.96,0.0,1031.96,Express Air,No
+ORD-2023925,2024-09-07,Small Business,North,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,1,101.99,0.15,53.99,Standard Class,No
+ORD-2023926,2024-09-07,Consumer,South,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,2,29.99,0.25,2.99,Same Day Priority,No
+ORD-2023927,2024-09-08,Corporate,Central,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,2,662.98,0.15,327.98,Same Day Priority,No
+ORD-2023928,2024-09-09,Small Business,South,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,1,449.99,0.1,206.99,Standard Class,No
+ORD-2023929,2024-09-09,Small Business,East,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,1,80.99,0.1,30.99,Same Day Priority,No
+ORD-2023930,2024-09-10,Corporate,West,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,2,170.98,0.05,97.98,Standard Class,No
+ORD-2023931,2024-09-11,Small Business,West,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,1,139.99,0.0,69.99,Same Day Priority,No
+ORD-2023932,2024-09-11,Small Business,Central,Technology,USB-C Fast Charging Dock,28.0,79.99,2,159.98,0.0,95.98,Express Air,No
+ORD-2023933,2024-09-12,Small Business,South,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,3,427.47,0.05,217.47,Same Day Priority,No
+ORD-2023934,2024-09-13,Corporate,South,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,4,2199.96,0.0,1304.96,Same Day Priority,No
+ORD-2023935,2024-09-13,Consumer,North,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,12,2639.88,0.0,1544.88,Same Day Priority,No
+ORD-2023936,2024-09-14,Corporate,East,Technology,USB-C Fast Charging Dock,28.0,79.99,1,75.99,0.05,44.99,Standard Class,No
+ORD-2023937,2024-09-15,Consumer,West,Technology,Noise-Cancelling Headphones,95.0,249.99,2,474.98,0.05,269.98,Same Day Priority,No
+ORD-2023938,2024-09-15,Consumer,South,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,1,467.49,0.15,232.49,Same Day Priority,No
+ORD-2023939,2024-09-16,Consumer,North,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,12,9599.88,0.0,5031.88,Express Air,No
+ORD-2023940,2024-09-17,Small Business,East,Technology,UltraBook Pro 15,850.0,1299.99,4,4939.96,0.05,1536.96,Standard Class,No
+ORD-2023941,2024-09-17,Consumer,North,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,1,134.99,0.1,61.99,Express Air,No
+ORD-2023942,2024-09-18,Corporate,West,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,2,1439.98,0.1,676.98,Standard Class,No
+ORD-2023943,2024-09-18,Consumer,South,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,1,599.99,0.25,211.99,Express Air,Yes
+ORD-2023944,2024-09-19,Small Business,Central,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,2,134.99,0.25,49.99,Same Day Priority,No
+ORD-2023945,2024-09-20,Corporate,East,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,1,33.24,0.05,6.24,Same Day Priority,No
+ORD-2023946,2024-09-20,Corporate,South,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,1,219.99,0.0,121.99,Express Air,No
+ORD-2023947,2024-09-21,Corporate,South,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,20,1799.8,0.0,1096.8,Standard Class,No
+ORD-2023948,2024-09-22,Consumer,South,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,2,859.98,0.0,496.98,Standard Class,No
+ORD-2023949,2024-09-22,Consumer,Central,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,3,2279.97,0.05,1136.97,Standard Class,No
+ORD-2023950,2024-09-23,Small Business,South,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,2,179.98,0.0,116.98,Standard Class,No
+ORD-2023951,2024-09-24,Small Business,East,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,4,79.96,0.0,47.96,Express Air,No
+ORD-2023952,2024-09-24,Small Business,South,Technology,USB-C Fast Charging Dock,28.0,79.99,1,75.99,0.05,44.99,Standard Class,No
+ORD-2023953,2024-09-25,Small Business,North,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,2,1439.98,0.1,676.98,Standard Class,No
+ORD-2023954,2024-09-26,Small Business,South,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,1,429.99,0.0,246.99,Standard Class,Yes
+ORD-2023955,2024-09-26,Consumer,Central,Technology,Smart Conference Webcam 4K,70.0,179.99,2,305.98,0.15,157.98,Express Air,No
+ORD-2023956,2024-09-27,Consumer,Central,Office Furniture,Leather Conference Room Chair,110.0,269.99,1,242.99,0.1,117.99,Same Day Priority,No
+ORD-2023957,2024-09-28,Consumer,Central,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,2,701.98,0.1,378.98,Standard Class,No
+ORD-2023958,2024-09-28,Corporate,West,Technology,Curved 4K Gaming Monitor 32-inch,240.0,499.99,5,2499.95,0.0,1291.95,Express Air,No
+ORD-2023959,2024-09-29,Consumer,East,Office Furniture,Leather Conference Room Chair,110.0,269.99,1,242.99,0.1,124.99,Express Air,No
+ORD-2023960,2024-09-30,Small Business,Central,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,4,1403.96,0.1,760.96,Standard Class,No
+ORD-2023961,2024-09-30,Small Business,South,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,4,1869.97,0.15,986.97,Standard Class,No
+ORD-2023962,2024-10-01,Consumer,South,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,1,19.99,0.0,-1.01,Same Day Priority,Yes
+ORD-2023963,2024-10-01,Consumer,West,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,3,404.97,0.1,206.97,Standard Class,No
+ORD-2023964,2024-10-02,Corporate,East,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,2,170.98,0.05,97.98,Standard Class,No
+ORD-2023965,2024-10-03,Corporate,South,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,1,219.99,0.0,126.99,Standard Class,No
+ORD-2023966,2024-10-03,Small Business,Central,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,1,522.49,0.05,287.49,Same Day Priority,No
+ORD-2023967,2024-10-04,Small Business,Central,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,1,18.99,0.05,-2.01,Same Day Priority,No
+ORD-2023968,2024-10-05,Small Business,South,Commercial Equipment,Touchscreen POS Terminal,380.0,799.99,2,1439.98,0.1,664.98,Same Day Priority,No
+ORD-2023969,2024-10-05,Small Business,West,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,1,76.49,0.15,38.49,Standard Class,No
+ORD-2023970,2024-10-06,Small Business,Central,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,1,370.49,0.05,207.49,Standard Class,No
+ORD-2023971,2024-10-07,Small Business,South,Office Furniture,Executive Ergonomic Mesh Chair,160.0,389.99,2,779.98,0.0,456.98,Standard Class,No
+ORD-2023972,2024-10-07,Corporate,East,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,2,227.98,0.05,122.98,Same Day Priority,No
+ORD-2023973,2024-10-08,Corporate,North,Office Supplies,Thermal Label Roll Multi-pack,12.0,34.99,1,33.24,0.05,13.24,Express Air,No
+ORD-2023974,2024-10-09,Corporate,Central,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,3,1567.47,0.05,904.47,Standard Class,No
+ORD-2023975,2024-10-09,Consumer,South,Technology,USB-C Fast Charging Dock,28.0,79.99,4,319.96,0.0,192.96,Same Day Priority,No
+ORD-2023976,2024-10-10,Corporate,North,Technology,UltraBook Pro 15,850.0,1299.99,4,5199.96,0.0,1784.96,Same Day Priority,No
+ORD-2023977,2024-10-11,Consumer,North,Technology,UltraBook Pro 15,850.0,1299.99,3,3509.97,0.1,951.97,Express Air,No
+ORD-2023978,2024-10-11,Small Business,Central,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,4,323.96,0.1,200.96,Standard Class,No
+ORD-2023979,2024-10-12,Small Business,East,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,3,59.97,0.0,33.97,Express Air,No
+ORD-2023980,2024-10-13,Small Business,West,Office Furniture,Leather Conference Room Chair,110.0,269.99,3,769.47,0.05,431.47,Express Air,No
+ORD-2023981,2024-10-13,Consumer,Central,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,1,107.99,0.1,47.99,Same Day Priority,No
+ORD-2023982,2024-10-14,Consumer,North,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,2,417.98,0.05,234.98,Standard Class,Yes
+ORD-2023983,2024-10-14,Small Business,East,Office Supplies,Premium Heavyweight Copy Paper Ream,4.0,11.99,2,23.98,0.0,12.98,Standard Class,No
+ORD-2023984,2024-10-15,Corporate,South,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,2,179.98,0.0,101.98,Express Air,No
+ORD-2023985,2024-10-16,Corporate,East,Office Furniture,Mobile Steel Filing Cabinet,65.0,149.99,2,254.98,0.15,116.98,Express Air,No
+ORD-2023986,2024-10-16,Small Business,North,Commercial Equipment,Heavy Duty Pallet Scale,180.0,429.99,1,408.49,0.05,213.49,Same Day Priority,No
+ORD-2023987,2024-10-17,Small Business,Central,Office Furniture,Acoustic Desk Privacy Panel,35.0,89.99,3,256.47,0.05,143.47,Express Air,No
+ORD-2023988,2024-10-18,Small Business,South,Technology,Smart Conference Webcam 4K,70.0,179.99,4,719.96,0.0,436.96,Standard Class,No
+ORD-2023989,2024-10-18,Consumer,Central,Technology,UltraBook Pro 15,850.0,1299.99,5,5524.96,0.15,1271.96,Standard Class,No
+ORD-2023990,2024-10-19,Consumer,South,Technology,Noise-Cancelling Headphones,95.0,249.99,3,562.48,0.25,262.48,Same Day Priority,No
+ORD-2023991,2024-10-20,Small Business,South,Office Furniture,Leather Conference Room Chair,110.0,269.99,1,256.49,0.05,131.49,Same Day Priority,No
+ORD-2023992,2024-10-20,Corporate,West,Office Furniture,Motorized Standing Desk 60-inch,220.0,549.99,3,1484.97,0.1,809.97,Same Day Priority,No
+ORD-2023993,2024-10-21,Corporate,South,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,1,17.99,0.1,3.99,Express Air,No
+ORD-2023994,2024-10-22,Consumer,North,Commercial Equipment,Industrial Barcode Scanner Wireless,90.0,219.99,1,186.99,0.15,88.99,Express Air,No
+ORD-2023995,2024-10-22,Consumer,East,Office Supplies,Desktop Gel Pen Organizer Box,6.0,19.99,1,19.99,0.0,10.99,Standard Class,No
+ORD-2023996,2024-10-23,Corporate,East,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,2,209.98,0.25,96.98,Standard Class,No
+ORD-2023997,2024-10-24,Consumer,East,Technology,USB-C Fast Charging Dock,28.0,79.99,1,71.99,0.1,35.99,Express Air,No
+ORD-2023998,2024-10-24,Consumer,South,Technology,Ergonomic Mechanical Keyboard,45.0,119.99,4,431.96,0.1,236.96,Same Day Priority,No
+ORD-2023999,2024-10-25,Corporate,West,Office Supplies,Heavy Duty Document Shredder,55.0,139.99,4,475.97,0.15,240.97,Same Day Priority,No
+ORD-2024000,2024-10-26,Small Business,North,Office Supplies,High-Capacity Toner Cartridge,30.0,89.99,1,89.99,0.0,51.99,Express Air,No

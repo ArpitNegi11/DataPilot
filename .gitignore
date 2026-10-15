@@ -8,6 +8,13 @@ __pycache__/
 dist/
 build/
 
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
 # Virtual Environments
 .venv/
 venv/
@@ -21,8 +28,21 @@ venv.bak/
 .env
 .env.local
 .env.*.local
+.env.*
+*.env
+!.env.example
+!.env.template
 
-# IDE & Editors
+# Streamlit Local Configuration & Secrets
+.streamlit/secrets.toml
+
+# Database Cache & Temporary Lockfiles
+*.duckdb
+*.duckdb.wal
+*.db
+*.sqlite3
+
+# IDE, OS, & Editor Caches
 .vscode/
 .idea/
 *.swp
@@ -30,28 +50,29 @@ venv.bak/
 *~
 .DS_Store
 Thumbs.db
+ehthumbs.db
+desktop.ini
 
-# Jupyter / Streamlit temporary caches
-.ipynb_checkpoints/
-.streamlit/
-
-# Temporary Outputs & Generated Reports
+# Temporary Outputs & Working Directories
 outputs/
 figures/
 temp/
 tmp/
+scratch/
 *.tmp
 *.log
 
-# Generated PDF & HTML report artifacts in root
+# Generated Reports & Exported Dataset Artifacts
 report.html
 report.pdf
 DataPilot_Report.html
 DataPilot_Report.pdf
 cleaned*.xlsx
 cleaned*.csv
-
-# Note: sample_data/ and data/ are tracked for testing and demo execution
-
-#output files
+cleaned_*.csv
 *.png
+DataPilot_Executive_Report.html
+DataPilot_Executive_Report.pdf
+
+# Note: sample_data/, data/, and sample_documents/ are tracked for demonstration and automated testing.
+

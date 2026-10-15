@@ -1,0 +1,12 @@
+# Corporate Sales Discount & Pricing Governance Policy
+Document ID: POL-2023-SALES-04
+Applicability: Global Sales Teams, Account Executives, and Deal Desk
+
+1. Standard Discount Thresholds
+- Standard Sales Authorization: Account representatives are permitted to offer discretionary discounts up to 10% on qualifying volume orders.
+- Senior Management Approval: Any discount between 10% and 15% requires written sign-off from the Regional Sales Director.
+- Deal Desk & CFO Approval: Discounts exceeding 15% are strictly prohibited without formal Deal Desk evaluation, as historical audit data indicates discounts above 15% severely dilute EBITDA and gross margins.
+
+2. Unprofitable Deals Policy
+No transaction may be executed at negative gross margin under any circumstances without executive board authorization.
+Loss-leader strategies must be registered in advance with the Strategic Finance group.

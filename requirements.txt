@@ -11,3 +11,10 @@ jinja2
 pdfkit
 streamlit
 PyYAML
+pytest
+pypdf
+python-docx
+langgraph
+openai
+google-genai
+python-dotenv

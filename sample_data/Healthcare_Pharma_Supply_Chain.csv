@@ -1,0 +1,651 @@
+Batch_ID,Manufacture_Date,Medicine_Name,Therapeutic_Class,Supplier_Name,Warehouse_Location,Units_Produced,Units_Sold,Defect_Rate_Pct,Total_Cost,Total_Revenue,Gross_Profit,Audit_Status
+BTC-88001,2023-02-01,Trastuzumab 440mg Lyophilized,Oncology,Novus Life Sciences,West Logistics (Reno),1402,1136,1.49,252360.0,727040.0,522560.0,Certified Released
+BTC-88002,2023-02-02,Rituximab 500mg Solution,Oncology,Apex BioPharma Labs,Central Hub (Chicago),393,62,3.23,86460.0,48360.0,34720.0,Quality Flagged
+BTC-88003,2023-02-03,Ciprofloxacin 500mg Tablets,Anti-Infective,Apex BioPharma Labs,Central Hub (Chicago),18016,4280,1.16,23420.8,20544.0,14980.0,Audit Pending
+BTC-88004,2023-02-04,Amoxicillin-Clavulanate 875mg,Anti-Infective,Novus Life Sciences,Southern Facility (Dallas),26169,359,4.5,36636.6,1830.9,1328.3,Quality Flagged
+BTC-88005,2023-02-05,Amoxicillin-Clavulanate 875mg,Anti-Infective,Apex BioPharma Labs,Central Hub (Chicago),38088,37234,2.29,53323.2,189893.4,137765.8,Certified Released
+BTC-88006,2023-02-06,Lisinopril 10mg,Cardiology,Helix Chemical Synthetics,Southern Facility (Dallas),39371,147,4.02,29528.25,433.65,323.4,Quality Flagged
+BTC-88007,2023-02-07,Rituximab 500mg Solution,Oncology,Apex BioPharma Labs,Central Hub (Chicago),1400,1023,0.57,308000.0,797940.0,572880.0,Certified Released
+BTC-88008,2023-02-08,Pembrolizumab Infusion 100mg,Oncology,Novus Life Sciences,Southern Facility (Dallas),883,683,2.18,309050.0,785450.0,546400.0,Certified Released
+BTC-88009,2023-02-09,Pregabalin 75mg Capsule,Neurology,Apex BioPharma Labs,Southern Facility (Dallas),5201,1238,3.98,9361.8,8047.0,5818.6,Quality Flagged
+BTC-88010,2023-02-10,Azithromycin 500mg Tablets,Anti-Infective,Helix Chemical Synthetics,West Logistics (Reno),13776,367,4.0,28929.6,2752.5,1981.8,Quality Flagged
+BTC-88011,2023-02-10,Atorvastatin 20mg,Cardiology,Helix Chemical Synthetics,West Logistics (Reno),12133,9841,2.47,14559.6,44284.5,32475.3,Certified Released
+BTC-88012,2023-02-11,Azithromycin 500mg Tablets,Anti-Infective,Apex BioPharma Labs,East Depot (Newark),31691,23582,0.96,66551.1,176865.0,127342.8,Certified Released
+BTC-88013,2023-02-12,Rituximab 500mg Solution,Oncology,Apex BioPharma Labs,East Depot (Newark),1124,810,1.31,247280.0,631800.0,453600.0,Certified Released
+BTC-88014,2023-02-13,Levetiracetam 500mg,Neurology,MedVantage Global,East Depot (Newark),39057,27808,2.46,42962.7,116793.6,86204.8,Certified Released
+BTC-88015,2023-02-14,Pregabalin 75mg Capsule,Neurology,Apex BioPharma Labs,West Logistics (Reno),20574,16909,2.27,37033.2,109908.5,79472.3,Certified Released
+BTC-88016,2023-02-15,Atorvastatin 20mg,Cardiology,Apex BioPharma Labs,East Depot (Newark),32952,207,3.53,39542.4,931.5,683.1,Quality Flagged
+BTC-88017,2023-02-16,Metoprolol Tartrate 50mg,Cardiology,Apex BioPharma Labs,East Depot (Newark),28679,20784,1.82,25811.1,78979.2,60273.6,Certified Released
+BTC-88018,2023-02-17,Lisinopril 10mg,Cardiology,Novus Life Sciences,Southern Facility (Dallas),9763,7107,1.51,7322.25,20965.65,15635.4,Certified Released
+BTC-88019,2023-02-18,Rituximab 500mg Solution,Oncology,MedVantage Global,West Logistics (Reno),928,792,0.33,204160.0,617760.0,443520.0,Certified Released
+BTC-88020,2023-02-19,Ciprofloxacin 500mg Tablets,Anti-Infective,Apex BioPharma Labs,Southern Facility (Dallas),36802,35060,1.97,47842.6,168288.0,122710.0,Certified Released
+BTC-88021,2023-02-19,Trastuzumab 440mg Lyophilized,Oncology,MedVantage Global,Central Hub (Chicago),437,306,1.17,78660.0,195840.0,140760.0,Certified Released
+BTC-88022,2023-02-20,Amoxicillin-Clavulanate 875mg,Anti-Infective,MedVantage Global,West Logistics (Reno),20559,17559,2.2,28782.6,89550.9,64968.3,Certified Released
+BTC-88023,2023-02-21,Paclitaxel 300mg Concentrate,Oncology,Apex BioPharma Labs,East Depot (Newark),678,498,2.94,40680.0,119520.0,89640.0,Certified Released
+BTC-88024,2023-02-22,Amlodipine Besylate 10mg,Cardiology,Zenith Active Ingredients,Central Hub (Chicago),8112,6997,2.33,6895.2,22390.4,16442.95,Certified Released
+BTC-88025,2023-02-23,Amlodipine Besylate 10mg,Cardiology,MedVantage Global,East Depot (Newark),6033,956,3.24,5128.05,3059.2,2246.6,Quality Flagged
+BTC-88026,2023-02-24,Pregabalin 75mg Capsule,Neurology,Novus Life Sciences,Southern Facility (Dallas),32573,6529,3.47,58631.4,42438.5,30686.3,Quality Flagged
+BTC-88027,2023-02-25,Ciprofloxacin 500mg Tablets,Anti-Infective,MedVantage Global,Southern Facility (Dallas),10875,1124,4.01,14137.5,5395.2,3934.0,Quality Flagged
+BTC-88028,2023-02-26,Pregabalin 75mg Capsule,Neurology,Zenith Active Ingredients,East Depot (Newark),14629,10327,1.55,26332.2,67125.5,48536.9,Certified Released
+BTC-88029,2023-02-27,Pregabalin 75mg Capsule,Neurology,Helix Chemical Synthetics,East Depot (Newark),16476,624,4.02,29656.8,4056.0,2932.8,Quality Flagged
+BTC-88030,2023-02-28,Trastuzumab 440mg Lyophilized,Oncology,Novus Life Sciences,Southern Facility (Dallas),1027,734,2.58,184860.0,469760.0,337640.0,Certified Released
+BTC-88031,2023-02-28,Lisinopril 10mg,Cardiology,Novus Life Sciences,Southern Facility (Dallas),12714,12073,2.11,9535.5,35615.35,26560.6,Certified Released
+BTC-88032,2023-03-01,Amoxicillin-Clavulanate 875mg,Anti-Infective,Novus Life Sciences,West Logistics (Reno),19949,17707,2.39,27928.6,90305.7,65515.9,Certified Released
+BTC-88033,2023-03-02,Pregabalin 75mg Capsule,Neurology,Novus Life Sciences,East Depot (Newark),6146,2110,3.78,11062.8,13715.0,9917.0,Quality Flagged
+BTC-88034,2023-03-03,Amlodipine Besylate 10mg,Cardiology,Zenith Active Ingredients,Central Hub (Chicago),14336,2841,4.07,12185.6,9091.2,6676.35,Quality Flagged
+BTC-88035,2023-03-04,Azithromycin 500mg Tablets,Anti-Infective,Apex BioPharma Labs,East Depot (Newark),31622,28125,2.7,66406.2,210937.5,151875.0,Certified Released
+BTC-88036,2023-03-05,Ciprofloxacin 500mg Tablets,Anti-Infective,MedVantage Global,Central Hub (Chicago),30063,26350,2.62,39081.9,126480.0,92225.0,Certified Released
+BTC-88037,2023-03-06,Pembrolizumab Infusion 100mg,Oncology,Helix Chemical Synthetics,Southern Facility (Dallas),1072,1015,0.53,375200.0,1167250.0,812000.0,Certified Released
+BTC-88038,2023-03-07,Trastuzumab 440mg Lyophilized,Oncology,Helix Chemical Synthetics,West Logistics (Reno),446,345,1.21,80280.0,220800.0,158700.0,Certified Released
+BTC-88039,2023-03-08,Rituximab 500mg Solution,Oncology,Helix Chemical Synthetics,West Logistics (Reno),1242,1166,1.3,273240.0,909480.0,652960.0,Certified Released
+BTC-88040,2023-03-09,Paclitaxel 300mg Concentrate,Oncology,Novus Life Sciences,Central Hub (Chicago),213,38,3.04,12780.0,9120.0,6840.0,Quality Flagged
+BTC-88041,2023-03-09,Azithromycin 500mg Tablets,Anti-Infective,Apex BioPharma Labs,Central Hub (Chicago),12653,3380,3.77,26571.3,25350.0,18252.0,Quality Flagged
+BTC-88042,2023-03-10,Pembrolizumab Infusion 100mg,Oncology,Apex BioPharma Labs,East Depot (Newark),1453,1364,1.57,508550.0,1568600.0,1091200.0,Certified Released
+BTC-88043,2023-03-11,Atorvastatin 20mg,Cardiology,Zenith Active Ingredients,Central Hub (Chicago),23300,16787,0.45,27960.0,75541.5,55397.1,Certified Released
+BTC-88044,2023-03-12,Levetiracetam 500mg,Neurology,Zenith Active Ingredients,Southern Facility (Dallas),16612,3033,3.9,18273.2,12738.6,9402.3,Quality Flagged
+BTC-88045,2023-03-13,Ciprofloxacin 500mg Tablets,Anti-Infective,Zenith Active Ingredients,East Depot (Newark),8296,640,3.31,10784.8,3072.0,2240.0,Quality Flagged
+BTC-88046,2023-03-14,Donepezil Hydrochloride 10mg,Neurology,Apex BioPharma Labs,Southern Facility (Dallas),33878,25254,2.05,50817.0,146473.2,108592.2,Certified Released
+BTC-88047,2023-03-15,Amoxicillin-Clavulanate 875mg,Anti-Infective,Zenith Active Ingredients,Southern Facility (Dallas),13521,11567,2.72,18929.4,58991.7,42797.9,Certified Released
+BTC-88048,2023-03-16,Lisinopril 10mg,Cardiology,Zenith Active Ingredients,Southern Facility (Dallas),8125,1607,4.42,6093.75,4740.65,3535.4,Quality Flagged
+BTC-88049,2023-03-17,Amlodipine Besylate 10mg,Cardiology,Apex BioPharma Labs,Southern Facility (Dallas),39339,3618,3.07,33438.15,11577.6,8502.3,Quality Flagged
+BTC-88050,2023-03-18,Rituximab 500mg Solution,Oncology,Novus Life Sciences,Southern Facility (Dallas),675,648,0.49,148500.0,505440.0,362880.0,Certified Released
+BTC-88051,2023-03-18,Pregabalin 75mg Capsule,Neurology,Novus Life Sciences,East Depot (Newark),27592,3875,4.13,49665.6,25187.5,18212.5,Quality Flagged
+BTC-88052,2023-03-19,Ciprofloxacin 500mg Tablets,Anti-Infective,Apex BioPharma Labs,Southern Facility (Dallas),5697,5435,1.0,7406.1,26088.0,19022.5,Certified Released
+BTC-88053,2023-03-20,Atorvastatin 20mg,Cardiology,Helix Chemical Synthetics,East Depot (Newark),5030,4115,1.77,6036.0,18517.5,13579.5,Certified Released
+BTC-88054,2023-03-21,Levetiracetam 500mg,Neurology,Zenith Active Ingredients,Southern Facility (Dallas),27607,22783,1.75,30367.7,95688.6,70627.3,Certified Released
+BTC-88055,2023-03-22,Donepezil Hydrochloride 10mg,Neurology,MedVantage Global,Central Hub (Chicago),16055,1815,3.9,24082.5,10527.0,7804.5,Quality Flagged
+BTC-88056,2023-03-23,Paclitaxel 300mg Concentrate,Oncology,MedVantage Global,Central Hub (Chicago),393,280,2.0,23580.0,67200.0,50400.0,Certified Released
+BTC-88057,2023-03-24,Amoxicillin-Clavulanate 875mg,Anti-Infective,MedVantage Global,Central Hub (Chicago),31106,23008,2.17,43548.4,117340.8,85129.6,Certified Released
+BTC-88058,2023-03-25,Ciprofloxacin 500mg Tablets,Anti-Infective,Zenith Active Ingredients,East Depot (Newark),17232,15145,0.43,22401.6,72696.0,53007.5,Certified Released
+BTC-88059,2023-03-26,Ciprofloxacin 500mg Tablets,Anti-Infective,Helix Chemical Synthetics,East Depot (Newark),11706,11244,2.86,15217.8,53971.2,39354.0,Certified Released
+BTC-88060,2023-03-27,Amoxicillin-Clavulanate 875mg,Anti-Infective,Helix Chemical Synthetics,West Logistics (Reno),37198,8941,3.55,52077.2,45599.1,33081.7,Quality Flagged
+BTC-88061,2023-03-27,Amoxicillin-Clavulanate 875mg,Anti-Infective,Zenith Active Ingredients,East Depot (Newark),20927,6211,3.96,29297.8,31676.1,22980.7,Quality Flagged
+BTC-88062,2023-03-28,Trastuzumab 440mg Lyophilized,Oncology,Zenith Active Ingredients,Central Hub (Chicago),893,865,1.11,160740.0,553600.0,397900.0,Certified Released
+BTC-88063,2023-03-29,Lisinopril 10mg,Cardiology,Helix Chemical Synthetics,Southern Facility (Dallas),31396,10927,3.1,23547.0,32234.65,24039.4,Quality Flagged
+BTC-88064,2023-03-30,Azithromycin 500mg Tablets,Anti-Infective,Apex BioPharma Labs,Southern Facility (Dallas),37536,34471,1.14,78825.6,258532.5,186143.4,Certified Released
+BTC-88065,2023-03-31,Pembrolizumab Infusion 100mg,Oncology,MedVantage Global,Central Hub (Chicago),970,285,2.48,339500.0,327750.0,228000.0,Audit Pending
+BTC-88066,2023-04-01,Rituximab 500mg Solution,Oncology,MedVantage Global,West Logistics (Reno),526,496,0.48,115720.0,386880.0,277760.0,Certified Released
+BTC-88067,2023-04-02,Levetiracetam 500mg,Neurology,MedVantage Global,Southern Facility (Dallas),11874,1682,3.12,13061.4,7064.4,5214.2,Quality Flagged
+BTC-88068,2023-04-03,Pembrolizumab Infusion 100mg,Oncology,Helix Chemical Synthetics,East Depot (Newark),348,16,4.42,121800.0,18400.0,12800.0,Quality Flagged
+BTC-88069,2023-04-04,Azithromycin 500mg Tablets,Anti-Infective,Helix Chemical Synthetics,Central Hub (Chicago),22597,19246,1.13,47453.7,144345.0,103928.4,Certified Released
+BTC-88070,2023-04-05,Metoprolol Tartrate 50mg,Cardiology,Novus Life Sciences,Central Hub (Chicago),26684,8885,3.61,24015.6,33763.0,25766.5,Quality Flagged
+BTC-88071,2023-04-05,Paclitaxel 300mg Concentrate,Oncology,Helix Chemical Synthetics,West Logistics (Reno),1239,281,4.36,74340.0,67440.0,50580.0,Quality Flagged
+BTC-88072,2023-04-06,Pregabalin 75mg Capsule,Neurology,MedVantage Global,Central Hub (Chicago),10505,8958,1.35,18909.0,58227.0,42102.6,Certified Released
+BTC-88073,2023-04-07,Amoxicillin-Clavulanate 875mg,Anti-Infective,Zenith Active Ingredients,Central Hub (Chicago),28392,2338,4.16,39748.8,11923.8,8650.6,Quality Flagged
+BTC-88074,2023-04-08,Azithromycin 500mg Tablets,Anti-Infective,Zenith Active Ingredients,Southern Facility (Dallas),17844,13423,2.47,37472.4,100672.5,72484.2,Certified Released
+BTC-88075,2023-04-09,Azithromycin 500mg Tablets,Anti-Infective,Zenith Active Ingredients,Central Hub (Chicago),9160,2127,3.27,19236.0,15952.5,11485.8,Quality Flagged
+BTC-88076,2023-04-10,Azithromycin 500mg Tablets,Anti-Infective,Helix Chemical Synthetics,Southern Facility (Dallas),30196,25995,2.48,63411.6,194962.5,140373.0,Certified Released
+BTC-88077,2023-04-11,Ciprofloxacin 500mg Tablets,Anti-Infective,Zenith Active Ingredients,East Depot (Newark),13486,11305,1.51,17531.8,54264.0,39567.5,Certified Released
+BTC-88078,2023-04-12,Amlodipine Besylate 10mg,Cardiology,Helix Chemical Synthetics,Central Hub (Chicago),31122,28690,2.93,26453.7,91808.0,67421.5,Certified Released
+BTC-88079,2023-04-13,Levetiracetam 500mg,Neurology,MedVantage Global,Central Hub (Chicago),28616,3907,3.42,31477.6,16409.4,12111.7,Quality Flagged
+BTC-88080,2023-04-14,Pregabalin 75mg Capsule,Neurology,Zenith Active Ingredients,Central Hub (Chicago),7007,411,3.06,12612.6,2671.5,1931.7,Quality Flagged
+BTC-88081,2023-04-14,Trastuzumab 440mg Lyophilized,Oncology,MedVantage Global,West Logistics (Reno),714,591,0.9,128520.0,378240.0,271860.0,Certified Released
+BTC-88082,2023-04-15,Amoxicillin-Clavulanate 875mg,Anti-Infective,Novus Life Sciences,West Logistics (Reno),24278,23463,0.92,33989.2,119661.3,86813.1,Certified Released
+BTC-88083,2023-04-16,Donepezil Hydrochloride 10mg,Neurology,Novus Life Sciences,East Depot (Newark),11756,8491,1.6,17634.0,49247.8,36511.3,Certified Released
+BTC-88084,2023-04-17,Levetiracetam 500mg,Neurology,Helix Chemical Synthetics,West Logistics (Reno),36673,29666,0.88,40340.3,124597.2,91964.6,Certified Released
+BTC-88085,2023-04-18,Paclitaxel 300mg Concentrate,Oncology,Helix Chemical Synthetics,East Depot (Newark),655,584,1.61,39300.0,140160.0,105120.0,Certified Released
+BTC-88086,2023-04-19,Metoprolol Tartrate 50mg,Cardiology,Helix Chemical Synthetics,Central Hub (Chicago),30638,6925,1.72,27574.2,26315.0,20082.5,Audit Pending
+BTC-88087,2023-04-20,Donepezil Hydrochloride 10mg,Neurology,Helix Chemical Synthetics,West Logistics (Reno),6024,5520,2.78,9036.0,32016.0,23736.0,Certified Released
+BTC-88088,2023-04-21,Donepezil Hydrochloride 10mg,Neurology,Novus Life Sciences,Central Hub (Chicago),17724,16762,1.45,26586.0,97219.6,72076.6,Certified Released
+BTC-88089,2023-04-22,Atorvastatin 20mg,Cardiology,Zenith Active Ingredients,Southern Facility (Dallas),15801,14178,0.31,18961.2,63801.0,46787.4,Certified Released
+BTC-88090,2023-04-23,Trastuzumab 440mg Lyophilized,Oncology,Apex BioPharma Labs,Central Hub (Chicago),945,747,1.02,170100.0,478080.0,343620.0,Certified Released
+BTC-88091,2023-04-23,Amoxicillin-Clavulanate 875mg,Anti-Infective,MedVantage Global,West Logistics (Reno),18257,14651,0.57,25559.8,74720.1,54208.7,Certified Released
+BTC-88092,2023-04-24,Paclitaxel 300mg Concentrate,Oncology,Zenith Active Ingredients,Central Hub (Chicago),687,107,3.61,41220.0,25680.0,19260.0,Quality Flagged
+BTC-88093,2023-04-25,Levetiracetam 500mg,Neurology,Apex BioPharma Labs,West Logistics (Reno),14809,3334,3.17,16289.9,14002.8,10335.4,Quality Flagged
+BTC-88094,2023-04-26,Amlodipine Besylate 10mg,Cardiology,Apex BioPharma Labs,Central Hub (Chicago),28190,23910,0.88,23961.5,76512.0,56188.5,Certified Released
+BTC-88095,2023-04-27,Lisinopril 10mg,Cardiology,Helix Chemical Synthetics,Central Hub (Chicago),13626,32,3.43,10219.5,94.4,70.4,Quality Flagged
+BTC-88096,2023-04-28,Levetiracetam 500mg,Neurology,Novus Life Sciences,West Logistics (Reno),31358,24855,0.82,34493.8,104391.0,77050.5,Certified Released
+BTC-88097,2023-04-29,Azithromycin 500mg Tablets,Anti-Infective,Apex BioPharma Labs,West Logistics (Reno),38190,32495,1.93,80199.0,243712.5,175473.0,Certified Released
+BTC-88098,2023-04-30,Donepezil Hydrochloride 10mg,Neurology,Novus Life Sciences,East Depot (Newark),37290,6658,3.21,55935.0,38616.4,28629.4,Quality Flagged
+BTC-88099,2023-05-01,Pregabalin 75mg Capsule,Neurology,MedVantage Global,Southern Facility (Dallas),28836,3202,3.61,51904.8,20813.0,15049.4,Quality Flagged
+BTC-88100,2023-05-02,Levetiracetam 500mg,Neurology,Helix Chemical Synthetics,East Depot (Newark),24958,7953,4.32,27453.8,33402.6,24654.3,Quality Flagged
+BTC-88101,2023-05-02,Lisinopril 10mg,Cardiology,MedVantage Global,Central Hub (Chicago),13921,30,4.2,10440.75,88.5,66.0,Quality Flagged
+BTC-88102,2023-05-03,Atorvastatin 20mg,Cardiology,Novus Life Sciences,West Logistics (Reno),29412,27822,2.91,35294.4,125199.0,91812.6,Certified Released
+BTC-88103,2023-05-04,Metoprolol Tartrate 50mg,Cardiology,Novus Life Sciences,Central Hub (Chicago),26363,638,3.92,23726.7,2424.4,1850.2,Quality Flagged
+BTC-88104,2023-05-05,Amlodipine Besylate 10mg,Cardiology,MedVantage Global,Southern Facility (Dallas),7214,5909,2.4,6131.9,18908.8,13886.15,Certified Released
+BTC-88105,2023-05-06,Pembrolizumab Infusion 100mg,Oncology,MedVantage Global,West Logistics (Reno),782,143,3.84,273700.0,164450.0,114400.0,Quality Flagged
+BTC-88106,2023-05-07,Azithromycin 500mg Tablets,Anti-Infective,Helix Chemical Synthetics,Southern Facility (Dallas),14441,14113,2.3,30326.1,105847.5,76210.2,Certified Released
+BTC-88107,2023-05-08,Paclitaxel 300mg Concentrate,Oncology,Zenith Active Ingredients,Southern Facility (Dallas),799,560,2.93,47940.0,134400.0,100800.0,Certified Released
+BTC-88108,2023-05-09,Pregabalin 75mg Capsule,Neurology,Novus Life Sciences,West Logistics (Reno),23868,20221,1.02,42962.4,131436.5,95038.7,Certified Released
+BTC-88109,2023-05-10,Pembrolizumab Infusion 100mg,Oncology,Novus Life Sciences,East Depot (Newark),328,310,0.66,114800.0,356500.0,248000.0,Certified Released
+BTC-88110,2023-05-11,Amlodipine Besylate 10mg,Cardiology,Helix Chemical Synthetics,Central Hub (Chicago),8865,278,1.76,7535.25,889.6,653.3,Audit Pending
+BTC-88111,2023-05-11,Paclitaxel 300mg Concentrate,Oncology,MedVantage Global,Southern Facility (Dallas),527,419,1.0,31620.0,100560.0,75420.0,Certified Released
+BTC-88112,2023-05-12,Paclitaxel 300mg Concentrate,Oncology,Zenith Active Ingredients,Central Hub (Chicago),1133,904,0.88,67980.0,216960.0,162720.0,Certified Released
+BTC-88113,2023-05-13,Azithromycin 500mg Tablets,Anti-Infective,MedVantage Global,West Logistics (Reno),22408,21098,2.23,47056.8,158235.0,113929.2,Certified Released
+BTC-88114,2023-05-14,Amlodipine Besylate 10mg,Cardiology,Novus Life Sciences,Central Hub (Chicago),38484,11514,3.69,32711.4,36844.8,27057.9,Quality Flagged
+BTC-88115,2023-05-15,Azithromycin 500mg Tablets,Anti-Infective,Helix Chemical Synthetics,East Depot (Newark),11701,8785,1.83,24572.1,65887.5,47439.0,Certified Released
+BTC-88116,2023-05-16,Amoxicillin-Clavulanate 875mg,Anti-Infective,Zenith Active Ingredients,East Depot (Newark),9149,7538,2.11,12808.6,38443.8,27890.6,Certified Released
+BTC-88117,2023-05-17,Rituximab 500mg Solution,Oncology,Apex BioPharma Labs,West Logistics (Reno),572,491,0.86,125840.0,382980.0,274960.0,Certified Released
+BTC-88118,2023-05-18,Paclitaxel 300mg Concentrate,Oncology,Novus Life Sciences,Central Hub (Chicago),1074,247,3.62,64440.0,59280.0,44460.0,Quality Flagged
+BTC-88119,2023-05-19,Amlodipine Besylate 10mg,Cardiology,Novus Life Sciences,East Depot (Newark),20496,2332,4.05,17421.6,7462.4,5480.2,Quality Flagged
+BTC-88120,2023-05-20,Pregabalin 75mg Capsule,Neurology,Novus Life Sciences,East Depot (Newark),25984,21229,2.55,46771.2,137988.5,99776.3,Certified Released
+BTC-88121,2023-05-20,Ciprofloxacin 500mg Tablets,Anti-Infective,Zenith Active Ingredients,Southern Facility (Dallas),19343,14878,0.81,25145.9,71414.4,52073.0,Certified Released
+BTC-88122,2023-05-21,Amlodipine Besylate 10mg,Cardiology,MedVantage Global,West Logistics (Reno),37644,28252,2.79,31997.4,90406.4,66392.2,Certified Released
+BTC-88123,2023-05-22,Ciprofloxacin 500mg Tablets,Anti-Infective,Helix Chemical Synthetics,Southern Facility (Dallas),5176,3724,0.92,6728.8,17875.2,13034.0,Certified Released
+BTC-88124,2023-05-23,Amlodipine Besylate 10mg,Cardiology,Novus Life Sciences,Southern Facility (Dallas),39537,9946,4.11,33606.45,31827.2,23373.1,Quality Flagged
+BTC-88125,2023-05-24,Paclitaxel 300mg Concentrate,Oncology,MedVantage Global,East Depot (Newark),1386,458,4.29,83160.0,109920.0,82440.0,Quality Flagged
+BTC-88126,2023-05-25,Rituximab 500mg Solution,Oncology,Novus Life Sciences,Central Hub (Chicago),401,362,0.69,88220.0,282360.0,202720.0,Certified Released
+BTC-88127,2023-05-26,Metoprolol Tartrate 50mg,Cardiology,Novus Life Sciences,Central Hub (Chicago),7914,6883,1.27,7122.6,26155.4,19960.7,Certified Released
+BTC-88128,2023-05-27,Ciprofloxacin 500mg Tablets,Anti-Infective,Helix Chemical Synthetics,Southern Facility (Dallas),27892,6768,3.11,36259.6,32486.4,23688.0,Quality Flagged
+BTC-88129,2023-05-28,Pregabalin 75mg Capsule,Neurology,Helix Chemical Synthetics,West Logistics (Reno),17101,16396,1.14,30781.8,106574.0,77061.2,Certified Released
+BTC-88130,2023-05-29,Metoprolol Tartrate 50mg,Cardiology,Apex BioPharma Labs,West Logistics (Reno),24798,17928,1.14,22318.2,68126.4,51991.2,Certified Released
+BTC-88131,2023-05-29,Levetiracetam 500mg,Neurology,Zenith Active Ingredients,Central Hub (Chicago),27733,1582,3.77,30506.3,6644.4,4904.2,Quality Flagged
+BTC-88132,2023-05-30,Pembrolizumab Infusion 100mg,Oncology,Apex BioPharma Labs,East Depot (Newark),1382,1331,0.84,483700.0,1530650.0,1064800.0,Certified Released
+BTC-88133,2023-05-31,Pregabalin 75mg Capsule,Neurology,Apex BioPharma Labs,Central Hub (Chicago),24843,23426,0.97,44717.4,152269.0,110102.2,Certified Released
+BTC-88134,2023-06-01,Pembrolizumab Infusion 100mg,Oncology,Helix Chemical Synthetics,East Depot (Newark),210,151,2.64,73500.0,173650.0,120800.0,Certified Released
+BTC-88135,2023-06-02,Amoxicillin-Clavulanate 875mg,Anti-Infective,Helix Chemical Synthetics,Central Hub (Chicago),14514,13133,1.85,20319.6,66978.3,48592.1,Certified Released
+BTC-88136,2023-06-03,Metoprolol Tartrate 50mg,Cardiology,Novus Life Sciences,Central Hub (Chicago),35169,25993,1.9,31652.1,98773.4,75379.7,Certified Released
+BTC-88137,2023-06-04,Atorvastatin 20mg,Cardiology,Apex BioPharma Labs,Central Hub (Chicago),30072,22571,1.87,36086.4,101569.5,74484.3,Certified Released
+BTC-88138,2023-06-05,Atorvastatin 20mg,Cardiology,Zenith Active Ingredients,East Depot (Newark),27474,8899,3.01,32968.8,40045.5,29366.7,Quality Flagged
+BTC-88139,2023-06-06,Amoxicillin-Clavulanate 875mg,Anti-Infective,Novus Life Sciences,East Depot (Newark),7426,5988,1.39,10396.4,30538.8,22155.6,Certified Released
+BTC-88140,2023-06-07,Pembrolizumab Infusion 100mg,Oncology,Novus Life Sciences,Southern Facility (Dallas),817,29,3.52,285950.0,33350.0,23200.0,Quality Flagged
+BTC-88141,2023-06-07,Levetiracetam 500mg,Neurology,Apex BioPharma Labs,Central Hub (Chicago),23641,19161,0.2,26005.1,80476.2,59399.1,Certified Released
+BTC-88142,2023-06-08,Trastuzumab 440mg Lyophilized,Oncology,Apex BioPharma Labs,West Logistics (Reno),475,349,0.76,85500.0,223360.0,160540.0,Certified Released
+BTC-88143,2023-06-09,Trastuzumab 440mg Lyophilized,Oncology,MedVantage Global,Southern Facility (Dallas),335,86,3.67,60300.0,55040.0,39560.0,Quality Flagged
+BTC-88144,2023-06-10,Metoprolol Tartrate 50mg,Cardiology,Helix Chemical Synthetics,West Logistics (Reno),13401,2736,3.53,12060.9,10396.8,7934.4,Quality Flagged
+BTC-88145,2023-06-11,Atorvastatin 20mg,Cardiology,Novus Life Sciences,Southern Facility (Dallas),12775,12287,0.72,15330.0,55291.5,40547.1,Certified Released
+BTC-88146,2023-06-12,Pregabalin 75mg Capsule,Neurology,MedVantage Global,Southern Facility (Dallas),25115,1145,3.46,45207.0,7442.5,5381.5,Quality Flagged
+BTC-88147,2023-06-13,Amlodipine Besylate 10mg,Cardiology,Apex BioPharma Labs,East Depot (Newark),6680,4776,0.72,5678.0,15283.2,11223.6,Certified Released
+BTC-88148,2023-06-14,Amlodipine Besylate 10mg,Cardiology,Helix Chemical Synthetics,East Depot (Newark),36412,26103,1.12,30950.2,83529.6,61342.05,Certified Released
+BTC-88149,2023-06-15,Lisinopril 10mg,Cardiology,Apex BioPharma Labs,Southern Facility (Dallas),32931,257,3.89,24698.25,758.15,565.4,Quality Flagged
+BTC-88150,2023-06-16,Rituximab 500mg Solution,Oncology,Novus Life Sciences,West Logistics (Reno),1287,1024,2.96,283140.0,798720.0,573440.0,Certified Released
+BTC-88151,2023-06-16,Levetiracetam 500mg,Neurology,Apex BioPharma Labs,East Depot (Newark),23707,139,0.24,26077.7,583.8,430.9,Audit Pending
+BTC-88152,2023-06-17,Donepezil Hydrochloride 10mg,Neurology,Zenith Active Ingredients,Southern Facility (Dallas),29154,25492,1.96,43731.0,147853.6,109615.6,Certified Released
+BTC-88153,2023-06-18,Donepezil Hydrochloride 10mg,Neurology,Helix Chemical Synthetics,West Logistics (Reno),29377,28343,1.35,44065.5,164389.4,121874.9,Certified Released
+BTC-88154,2023-06-19,Donepezil Hydrochloride 10mg,Neurology,Apex BioPharma Labs,East Depot (Newark),21456,331,2.13,32184.0,1919.8,1423.3,Audit Pending
+BTC-88155,2023-06-20,Atorvastatin 20mg,Cardiology,Helix Chemical Synthetics,Central Hub (Chicago),7538,6831,1.01,9045.6,30739.5,22542.3,Certified Released
+BTC-88156,2023-06-21,Ciprofloxacin 500mg Tablets,Anti-Infective,Novus Life Sciences,Central Hub (Chicago),34447,24980,1.85,44781.1,119904.0,87430.0,Certified Released
+BTC-88157,2023-06-22,Paclitaxel 300mg Concentrate,Oncology,Helix Chemical Synthetics,Central Hub (Chicago),1314,334,0.16,78840.0,80160.0,60120.0,Audit Pending
+BTC-88158,2023-06-23,Donepezil Hydrochloride 10mg,Neurology,Apex BioPharma Labs,East Depot (Newark),6997,264,3.92,10495.5,1531.2,1135.2,Quality Flagged
+BTC-88159,2023-06-24,Pregabalin 75mg Capsule,Neurology,Apex BioPharma Labs,Southern Facility (Dallas),10533,1669,0.96,18959.4,10848.5,7844.3,Audit Pending
+BTC-88160,2023-06-25,Pembrolizumab Infusion 100mg,Oncology,Zenith Active Ingredients,East Depot (Newark),880,268,0.45,308000.0,308200.0,214400.0,Audit Pending
+BTC-88161,2023-06-25,Pregabalin 75mg Capsule,Neurology,MedVantage Global,Southern Facility (Dallas),24676,18062,0.98,44416.8,117403.0,84891.4,Certified Released
+BTC-88162,2023-06-26,Pembrolizumab Infusion 100mg,Oncology,Apex BioPharma Labs,Southern Facility (Dallas),572,508,1.64,200200.0,584200.0,406400.0,Certified Released
+BTC-88163,2023-06-27,Azithromycin 500mg Tablets,Anti-Infective,Zenith Active Ingredients,West Logistics (Reno),37517,26319,0.23,78785.7,197392.5,142122.6,Certified Released
+BTC-88164,2023-06-28,Rituximab 500mg Solution,Oncology,Helix Chemical Synthetics,Southern Facility (Dallas),520,167,3.72,114400.0,130260.0,93520.0,Quality Flagged
+BTC-88165,2023-06-29,Azithromycin 500mg Tablets,Anti-Infective,Zenith Active Ingredients,Southern Facility (Dallas),33626,928,3.72,70614.6,6960.0,5011.2,Quality Flagged
+BTC-88166,2023-06-30,Metoprolol Tartrate 50mg,Cardiology,Novus Life Sciences,Southern Facility (Dallas),6243,5074,0.24,5618.7,19281.2,14714.6,Certified Released
+BTC-88167,2023-07-01,Amoxicillin-Clavulanate 875mg,Anti-Infective,MedVantage Global,West Logistics (Reno),6634,1846,3.42,9287.6,9414.6,6830.2,Quality Flagged
+BTC-88168,2023-07-02,Lisinopril 10mg,Cardiology,Helix Chemical Synthetics,Southern Facility (Dallas),35628,25135,0.65,26721.0,74148.25,55297.0,Certified Released
+BTC-88169,2023-07-03,Pregabalin 75mg Capsule,Neurology,Novus Life Sciences,Central Hub (Chicago),22665,20102,2.63,40797.0,130663.0,94479.4,Certified Released
+BTC-88170,2023-07-04,Amlodipine Besylate 10mg,Cardiology,Novus Life Sciences,Central Hub (Chicago),21745,20140,2.79,18483.25,64448.0,47329.0,Certified Released
+BTC-88171,2023-07-04,Pregabalin 75mg Capsule,Neurology,Helix Chemical Synthetics,Southern Facility (Dallas),30886,5720,3.55,55594.8,37180.0,26884.0,Quality Flagged
+BTC-88172,2023-07-05,Ciprofloxacin 500mg Tablets,Anti-Infective,Novus Life Sciences,Central Hub (Chicago),18019,13220,2.14,23424.7,63456.0,46270.0,Certified Released
+BTC-88173,2023-07-06,Azithromycin 500mg Tablets,Anti-Infective,Helix Chemical Synthetics,West Logistics (Reno),11688,8507,1.91,24544.8,63802.5,45937.8,Certified Released
+BTC-88174,2023-07-07,Paclitaxel 300mg Concentrate,Oncology,MedVantage Global,Central Hub (Chicago),1193,913,2.21,71580.0,219120.0,164340.0,Certified Released
+BTC-88175,2023-07-08,Trastuzumab 440mg Lyophilized,Oncology,Zenith Active Ingredients,East Depot (Newark),631,213,3.34,113580.0,136320.0,97980.0,Quality Flagged
+BTC-88176,2023-07-09,Pregabalin 75mg Capsule,Neurology,Helix Chemical Synthetics,Central Hub (Chicago),34233,802,3.65,61619.4,5213.0,3769.4,Quality Flagged
+BTC-88177,2023-07-10,Levetiracetam 500mg,Neurology,Zenith Active Ingredients,East Depot (Newark),6724,1084,1.04,7396.4,4552.8,3360.4,Audit Pending
+BTC-88178,2023-07-11,Pembrolizumab Infusion 100mg,Oncology,Apex BioPharma Labs,Southern Facility (Dallas),312,72,3.8,109200.0,82800.0,57600.0,Quality Flagged
+BTC-88179,2023-07-12,Amlodipine Besylate 10mg,Cardiology,Apex BioPharma Labs,Central Hub (Chicago),20414,17806,1.73,17351.9,56979.2,41844.1,Certified Released
+BTC-88180,2023-07-13,Amoxicillin-Clavulanate 875mg,Anti-Infective,Apex BioPharma Labs,Central Hub (Chicago),34127,8730,4.34,47777.8,44523.0,32301.0,Quality Flagged
+BTC-88181,2023-07-13,Pregabalin 75mg Capsule,Neurology,Helix Chemical Synthetics,Central Hub (Chicago),9627,3127,4.37,17328.6,20325.5,14696.9,Quality Flagged
+BTC-88182,2023-07-14,Donepezil Hydrochloride 10mg,Neurology,Helix Chemical Synthetics,East Depot (Newark),15532,2453,3.43,23298.0,14227.4,10547.9,Quality Flagged
+BTC-88183,2023-07-15,Pregabalin 75mg Capsule,Neurology,Helix Chemical Synthetics,East Depot (Newark),33859,4429,4.38,60946.2,28788.5,20816.3,Quality Flagged
+BTC-88184,2023-07-16,Metoprolol Tartrate 50mg,Cardiology,Apex BioPharma Labs,Central Hub (Chicago),22006,17377,2.48,19805.4,66032.6,50393.3,Certified Released
+BTC-88185,2023-07-17,Metoprolol Tartrate 50mg,Cardiology,Novus Life Sciences,Southern Facility (Dallas),10578,9669,1.42,9520.2,36742.2,28040.1,Certified Released
+BTC-88186,2023-07-18,Metoprolol Tartrate 50mg,Cardiology,Helix Chemical Synthetics,Southern Facility (Dallas),22721,4770,3.58,20448.9,18126.0,13833.0,Quality Flagged
+BTC-88187,2023-07-19,Ciprofloxacin 500mg Tablets,Anti-Infective,Helix Chemical Synthetics,East Depot (Newark),35366,4853,3.3,45975.8,23294.4,16985.5,Quality Flagged
+BTC-88188,2023-07-20,Ciprofloxacin 500mg Tablets,Anti-Infective,Apex BioPharma Labs,West Logistics (Reno),7826,5736,2.69,10173.8,27532.8,20076.0,Certified Released
+BTC-88189,2023-07-21,Lisinopril 10mg,Cardiology,Apex BioPharma Labs,West Logistics (Reno),32993,29028,0.29,24744.75,85632.6,63861.6,Certified Released
+BTC-88190,2023-07-22,Paclitaxel 300mg Concentrate,Oncology,MedVantage Global,East Depot (Newark),882,109,3.28,52920.0,26160.0,19620.0,Quality Flagged
+BTC-88191,2023-07-22,Ciprofloxacin 500mg Tablets,Anti-Infective,Zenith Active Ingredients,East Depot (Newark),24192,23208,2.92,31449.6,111398.4,81228.0,Certified Released
+BTC-88192,2023-07-23,Pregabalin 75mg Capsule,Neurology,Zenith Active Ingredients,Southern Facility (Dallas),21295,6972,3.27,38331.0,45318.0,32768.4,Quality Flagged
+BTC-88193,2023-07-24,Amoxicillin-Clavulanate 875mg,Anti-Infective,MedVantage Global,Southern Facility (Dallas),38534,156,1.47,53947.6,795.6,577.2,Audit Pending
+BTC-88194,2023-07-25,Levetiracetam 500mg,Neurology,Zenith Active Ingredients,East Depot (Newark),15473,1925,4.42,17020.3,8085.0,5967.5,Quality Flagged
+BTC-88195,2023-07-26,Paclitaxel 300mg Concentrate,Oncology,MedVantage Global,East Depot (Newark),200,184,2.31,12000.0,44160.0,33120.0,Certified Released
+BTC-88196,2023-07-27,Trastuzumab 440mg Lyophilized,Oncology,Helix Chemical Synthetics,Southern Facility (Dallas),1290,102,3.17,232200.0,65280.0,46920.0,Quality Flagged
+BTC-88197,2023-07-28,Lisinopril 10mg,Cardiology,Novus Life Sciences,West Logistics (Reno),30899,28143,2.21,23174.25,83021.85,61914.6,Certified Released
+BTC-88198,2023-07-29,Ciprofloxacin 500mg Tablets,Anti-Infective,Helix Chemical Synthetics,Central Hub (Chicago),32847,23813,0.2,42701.1,114302.4,83345.5,Certified Released
+BTC-88199,2023-07-30,Metoprolol Tartrate 50mg,Cardiology,Apex BioPharma Labs,East Depot (Newark),28445,9827,3.01,25600.5,37342.6,28498.3,Quality Flagged
+BTC-88200,2023-07-31,Rituximab 500mg Solution,Oncology,Zenith Active Ingredients,Central Hub (Chicago),676,642,1.04,148720.0,500760.0,359520.0,Certified Released
+BTC-88201,2023-07-31,Levetiracetam 500mg,Neurology,Novus Life Sciences,Central Hub (Chicago),21679,17607,1.51,23846.9,73949.4,54581.7,Certified Released
+BTC-88202,2023-08-01,Metoprolol Tartrate 50mg,Cardiology,MedVantage Global,West Logistics (Reno),24797,21636,2.28,22317.3,82216.8,62744.4,Certified Released
+BTC-88203,2023-08-02,Azithromycin 500mg Tablets,Anti-Infective,Apex BioPharma Labs,East Depot (Newark),23949,19556,1.3,50292.9,146670.0,105602.4,Certified Released
+BTC-88204,2023-08-03,Lisinopril 10mg,Cardiology,Zenith Active Ingredients,Central Hub (Chicago),38802,33009,0.66,29101.5,97376.55,72619.8,Certified Released
+BTC-88205,2023-08-04,Atorvastatin 20mg,Cardiology,Zenith Active Ingredients,Southern Facility (Dallas),14532,1377,0.53,17438.4,6196.5,4544.1,Audit Pending
+BTC-88206,2023-08-05,Metoprolol Tartrate 50mg,Cardiology,MedVantage Global,East Depot (Newark),30855,26314,2.86,27769.5,99993.2,76310.6,Certified Released
+BTC-88207,2023-08-06,Paclitaxel 300mg Concentrate,Oncology,Helix Chemical Synthetics,Southern Facility (Dallas),838,111,4.19,50280.0,26640.0,19980.0,Quality Flagged
+BTC-88208,2023-08-07,Pregabalin 75mg Capsule,Neurology,Apex BioPharma Labs,West Logistics (Reno),27300,25252,2.69,49140.0,164138.0,118684.4,Certified Released
+BTC-88209,2023-08-08,Atorvastatin 20mg,Cardiology,Apex BioPharma Labs,East Depot (Newark),16834,14035,0.36,20200.8,63157.5,46315.5,Certified Released
+BTC-88210,2023-08-09,Levetiracetam 500mg,Neurology,Zenith Active Ingredients,Central Hub (Chicago),28020,22928,0.6,30822.0,96297.6,71076.8,Certified Released
+BTC-88211,2023-08-09,Metoprolol Tartrate 50mg,Cardiology,Helix Chemical Synthetics,Southern Facility (Dallas),18575,18077,1.95,16717.5,68692.6,52423.3,Certified Released
+BTC-88212,2023-08-10,Pembrolizumab Infusion 100mg,Oncology,Helix Chemical Synthetics,West Logistics (Reno),871,148,1.74,304850.0,170200.0,118400.0,Audit Pending
+BTC-88213,2023-08-11,Atorvastatin 20mg,Cardiology,Helix Chemical Synthetics,West Logistics (Reno),13905,10707,1.41,16686.0,48181.5,35333.1,Certified Released
+BTC-88214,2023-08-12,Amlodipine Besylate 10mg,Cardiology,Zenith Active Ingredients,Southern Facility (Dallas),22955,5949,3.56,19511.75,19036.8,13980.15,Quality Flagged
+BTC-88215,2023-08-13,Azithromycin 500mg Tablets,Anti-Infective,Zenith Active Ingredients,Southern Facility (Dallas),8276,6168,1.54,17379.6,46260.0,33307.2,Certified Released
+BTC-88216,2023-08-14,Donepezil Hydrochloride 10mg,Neurology,Zenith Active Ingredients,West Logistics (Reno),37114,4415,3.43,55671.0,25607.0,18984.5,Quality Flagged
+BTC-88217,2023-08-15,Lisinopril 10mg,Cardiology,MedVantage Global,West Logistics (Reno),19465,16942,0.95,14598.75,49978.9,37272.4,Certified Released
+BTC-88218,2023-08-16,Amoxicillin-Clavulanate 875mg,Anti-Infective,Novus Life Sciences,West Logistics (Reno),21914,6717,3.62,30679.6,34256.7,24852.9,Quality Flagged
+BTC-88219,2023-08-17,Rituximab 500mg Solution,Oncology,Zenith Active Ingredients,West Logistics (Reno),792,628,0.34,174240.0,489840.0,351680.0,Certified Released
+BTC-88220,2023-08-18,Levetiracetam 500mg,Neurology,Apex BioPharma Labs,Central Hub (Chicago),32885,24630,0.81,36173.5,103446.0,76353.0,Certified Released
+BTC-88221,2023-08-18,Levetiracetam 500mg,Neurology,Zenith Active Ingredients,Southern Facility (Dallas),36350,6029,3.15,39985.0,25321.8,18689.9,Quality Flagged
+BTC-88222,2023-08-19,Amoxicillin-Clavulanate 875mg,Anti-Infective,MedVantage Global,Central Hub (Chicago),30568,3005,0.22,42795.2,15325.5,11118.5,Audit Pending
+BTC-88223,2023-08-20,Atorvastatin 20mg,Cardiology,MedVantage Global,West Logistics (Reno),39957,8942,3.61,47948.4,40239.0,29508.6,Quality Flagged
+BTC-88224,2023-08-21,Atorvastatin 20mg,Cardiology,Helix Chemical Synthetics,Central Hub (Chicago),12100,9811,2.19,14520.0,44149.5,32376.3,Certified Released
+BTC-88225,2023-08-22,Ciprofloxacin 500mg Tablets,Anti-Infective,Novus Life Sciences,East Depot (Newark),10186,9816,0.86,13241.8,47116.8,34356.0,Certified Released
+BTC-88226,2023-08-23,Amoxicillin-Clavulanate 875mg,Anti-Infective,MedVantage Global,Southern Facility (Dallas),13841,1979,4.47,19377.4,10092.9,7322.3,Quality Flagged
+BTC-88227,2023-08-24,Levetiracetam 500mg,Neurology,Zenith Active Ingredients,Central Hub (Chicago),14651,4715,3.31,16116.1,19803.0,14616.5,Quality Flagged
+BTC-88228,2023-08-25,Metoprolol Tartrate 50mg,Cardiology,Helix Chemical Synthetics,West Logistics (Reno),19995,6189,3.34,17995.5,23518.2,17948.1,Quality Flagged
+BTC-88229,2023-08-26,Levetiracetam 500mg,Neurology,Zenith Active Ingredients,West Logistics (Reno),30288,5642,3.91,33316.8,23696.4,17490.2,Quality Flagged
+BTC-88230,2023-08-27,Ciprofloxacin 500mg Tablets,Anti-Infective,MedVantage Global,East Depot (Newark),29149,9671,4.43,37893.7,46420.8,33848.5,Quality Flagged
+BTC-88231,2023-08-27,Trastuzumab 440mg Lyophilized,Oncology,Novus Life Sciences,Central Hub (Chicago),1341,109,3.16,241380.0,69760.0,50140.0,Quality Flagged
+BTC-88232,2023-08-28,Donepezil Hydrochloride 10mg,Neurology,MedVantage Global,West Logistics (Reno),8089,6238,0.24,12133.5,36180.4,26823.4,Certified Released
+BTC-88233,2023-08-29,Donepezil Hydrochloride 10mg,Neurology,Zenith Active Ingredients,West Logistics (Reno),14544,4303,3.93,21816.0,24957.4,18502.9,Quality Flagged
+BTC-88234,2023-08-30,Atorvastatin 20mg,Cardiology,Novus Life Sciences,East Depot (Newark),15103,5205,4.21,18123.6,23422.5,17176.5,Quality Flagged
+BTC-88235,2023-08-31,Pregabalin 75mg Capsule,Neurology,Helix Chemical Synthetics,Southern Facility (Dallas),10561,8570,2.08,19009.8,55705.0,40279.0,Certified Released
+BTC-88236,2023-09-01,Rituximab 500mg Solution,Oncology,MedVantage Global,East Depot (Newark),1202,1121,0.85,264440.0,874380.0,627760.0,Certified Released
+BTC-88237,2023-09-02,Ciprofloxacin 500mg Tablets,Anti-Infective,Novus Life Sciences,Central Hub (Chicago),36112,6861,1.66,46945.6,32932.8,24013.5,Audit Pending
+BTC-88238,2023-09-03,Lisinopril 10mg,Cardiology,Novus Life Sciences,Central Hub (Chicago),21707,15396,1.55,16280.25,45418.2,33871.2,Certified Released
+BTC-88239,2023-09-04,Trastuzumab 440mg Lyophilized,Oncology,Helix Chemical Synthetics,East Depot (Newark),746,699,2.85,134280.0,447360.0,321540.0,Certified Released
+BTC-88240,2023-09-05,Levetiracetam 500mg,Neurology,Apex BioPharma Labs,Central Hub (Chicago),38731,31889,0.4,42604.1,133933.8,98855.9,Certified Released
+BTC-88241,2023-09-05,Pregabalin 75mg Capsule,Neurology,Apex BioPharma Labs,Southern Facility (Dallas),27632,2696,4.45,49737.6,17524.0,12671.2,Quality Flagged
+BTC-88242,2023-09-06,Pregabalin 75mg Capsule,Neurology,MedVantage Global,West Logistics (Reno),22163,16818,1.98,39893.4,109317.0,79044.6,Certified Released
+BTC-88243,2023-09-07,Pregabalin 75mg Capsule,Neurology,Apex BioPharma Labs,Southern Facility (Dallas),19250,14052,2.08,34650.0,91338.0,66044.4,Certified Released
+BTC-88244,2023-09-08,Levetiracetam 500mg,Neurology,Helix Chemical Synthetics,Central Hub (Chicago),14639,12347,2.46,16102.9,51857.4,38275.7,Certified Released
+BTC-88245,2023-09-09,Pregabalin 75mg Capsule,Neurology,Zenith Active Ingredients,Southern Facility (Dallas),39582,37534,2.36,71247.6,243971.0,176409.8,Certified Released
+BTC-88246,2023-09-10,Amlodipine Besylate 10mg,Cardiology,MedVantage Global,Southern Facility (Dallas),13706,502,3.79,11650.1,1606.4,1179.7,Quality Flagged
+BTC-88247,2023-09-11,Ciprofloxacin 500mg Tablets,Anti-Infective,Novus Life Sciences,West Logistics (Reno),29696,27953,1.12,38604.8,134174.4,97835.5,Certified Released
+BTC-88248,2023-09-12,Ciprofloxacin 500mg Tablets,Anti-Infective,MedVantage Global,East Depot (Newark),22550,19300,0.68,29315.0,92640.0,67550.0,Certified Released
+BTC-88249,2023-09-13,Paclitaxel 300mg Concentrate,Oncology,Novus Life Sciences,East Depot (Newark),687,668,2.6,41220.0,160320.0,120240.0,Certified Released
+BTC-88250,2023-09-14,Amoxicillin-Clavulanate 875mg,Anti-Infective,Zenith Active Ingredients,East Depot (Newark),18768,3396,4.43,26275.2,17319.6,12565.2,Quality Flagged
+BTC-88251,2023-09-14,Metoprolol Tartrate 50mg,Cardiology,Novus Life Sciences,East Depot (Newark),12938,9727,0.3,11644.2,36962.6,28208.3,Certified Released
+BTC-88252,2023-09-15,Pembrolizumab Infusion 100mg,Oncology,Apex BioPharma Labs,Central Hub (Chicago),1269,929,1.8,444150.0,1068350.0,743200.0,Certified Released
+BTC-88253,2023-09-16,Lisinopril 10mg,Cardiology,Zenith Active Ingredients,Central Hub (Chicago),5734,4317,2.51,4300.5,12735.15,9497.4,Certified Released
+BTC-88254,2023-09-17,Amoxicillin-Clavulanate 875mg,Anti-Infective,MedVantage Global,Central Hub (Chicago),20416,2067,4.05,28582.4,10541.7,7647.9,Quality Flagged
+BTC-88255,2023-09-18,Pregabalin 75mg Capsule,Neurology,Novus Life Sciences,Central Hub (Chicago),38445,10578,3.42,69201.0,68757.0,49716.6,Quality Flagged
+BTC-88256,2023-09-19,Donepezil Hydrochloride 10mg,Neurology,Helix Chemical Synthetics,East Depot (Newark),17778,17335,1.49,26667.0,100543.0,74540.5,Certified Released
+BTC-88257,2023-09-20,Pregabalin 75mg Capsule,Neurology,Apex BioPharma Labs,Central Hub (Chicago),5239,3692,0.97,9430.2,23998.0,17352.4,Certified Released
+BTC-88258,2023-09-21,Amoxicillin-Clavulanate 875mg,Anti-Infective,Apex BioPharma Labs,West Logistics (Reno),23281,7761,4.25,32593.4,39581.1,28715.7,Quality Flagged
+BTC-88259,2023-09-22,Azithromycin 500mg Tablets,Anti-Infective,Apex BioPharma Labs,West Logistics (Reno),6280,101,4.07,13188.0,757.5,545.4,Quality Flagged
+BTC-88260,2023-09-23,Ciprofloxacin 500mg Tablets,Anti-Infective,Zenith Active Ingredients,Southern Facility (Dallas),22607,5121,0.5,29389.1,24580.8,17923.5,Audit Pending
+BTC-88261,2023-09-23,Donepezil Hydrochloride 10mg,Neurology,Apex BioPharma Labs,Central Hub (Chicago),19732,10,4.44,29598.0,58.0,43.0,Quality Flagged
+BTC-88262,2023-09-24,Ciprofloxacin 500mg Tablets,Anti-Infective,MedVantage Global,Central Hub (Chicago),31137,26952,2.8,40478.1,129369.6,94332.0,Certified Released
+BTC-88263,2023-09-25,Amoxicillin-Clavulanate 875mg,Anti-Infective,Helix Chemical Synthetics,Central Hub (Chicago),29070,7734,3.5,40698.0,39443.4,28615.8,Quality Flagged
+BTC-88264,2023-09-26,Azithromycin 500mg Tablets,Anti-Infective,Helix Chemical Synthetics,East Depot (Newark),24280,21929,2.54,50988.0,164467.5,118416.6,Certified Released
+BTC-88265,2023-09-27,Amoxicillin-Clavulanate 875mg,Anti-Infective,Zenith Active Ingredients,Southern Facility (Dallas),6010,5146,2.42,8414.0,26244.6,19040.2,Certified Released
+BTC-88266,2023-09-28,Lisinopril 10mg,Cardiology,Helix Chemical Synthetics,Southern Facility (Dallas),9761,8448,1.7,7320.75,24921.6,18585.6,Certified Released
+BTC-88267,2023-09-29,Trastuzumab 440mg Lyophilized,Oncology,Zenith Active Ingredients,Central Hub (Chicago),1366,1221,2.1,245880.0,781440.0,561660.0,Certified Released
+BTC-88268,2023-09-30,Rituximab 500mg Solution,Oncology,Apex BioPharma Labs,Central Hub (Chicago),471,460,2.0,103620.0,358800.0,257600.0,Certified Released
+BTC-88269,2023-10-01,Ciprofloxacin 500mg Tablets,Anti-Infective,Helix Chemical Synthetics,East Depot (Newark),29912,25572,0.16,38885.6,122745.6,89502.0,Certified Released
+BTC-88270,2023-10-02,Amlodipine Besylate 10mg,Cardiology,Novus Life Sciences,Central Hub (Chicago),35211,34225,1.69,29929.35,109520.0,80428.75,Certified Released
+BTC-88271,2023-10-02,Lisinopril 10mg,Cardiology,Zenith Active Ingredients,Southern Facility (Dallas),24057,5649,3.21,18042.75,16664.55,12427.8,Quality Flagged
+BTC-88272,2023-10-03,Paclitaxel 300mg Concentrate,Oncology,MedVantage Global,Southern Facility (Dallas),1433,271,0.91,85980.0,65040.0,48780.0,Audit Pending
+BTC-88273,2023-10-04,Trastuzumab 440mg Lyophilized,Oncology,Apex BioPharma Labs,Southern Facility (Dallas),482,356,2.02,86760.0,227840.0,163760.0,Certified Released
+BTC-88274,2023-10-05,Azithromycin 500mg Tablets,Anti-Infective,Helix Chemical Synthetics,Central Hub (Chicago),34443,33712,0.33,72330.3,252840.0,182044.8,Certified Released
+BTC-88275,2023-10-06,Pregabalin 75mg Capsule,Neurology,MedVantage Global,West Logistics (Reno),13643,12151,0.56,24557.4,78981.5,57109.7,Certified Released
+BTC-88276,2023-10-07,Donepezil Hydrochloride 10mg,Neurology,Apex BioPharma Labs,West Logistics (Reno),33515,1482,3.53,50272.5,8595.6,6372.6,Quality Flagged
+BTC-88277,2023-10-08,Rituximab 500mg Solution,Oncology,MedVantage Global,Southern Facility (Dallas),200,1,3.23,44000.0,780.0,560.0,Quality Flagged
+BTC-88278,2023-10-09,Atorvastatin 20mg,Cardiology,Zenith Active Ingredients,East Depot (Newark),27424,22724,1.9,32908.8,102258.0,74989.2,Certified Released
+BTC-88279,2023-10-10,Rituximab 500mg Solution,Oncology,MedVantage Global,Southern Facility (Dallas),563,490,2.31,123860.0,382200.0,274400.0,Certified Released
+BTC-88280,2023-10-11,Levetiracetam 500mg,Neurology,Apex BioPharma Labs,Central Hub (Chicago),36816,34191,2.39,40497.6,143602.2,105992.1,Certified Released
+BTC-88281,2023-10-11,Rituximab 500mg Solution,Oncology,MedVantage Global,Southern Facility (Dallas),692,498,0.5,152240.0,388440.0,278880.0,Certified Released
+BTC-88282,2023-10-12,Levetiracetam 500mg,Neurology,Zenith Active Ingredients,Central Hub (Chicago),8861,2924,3.56,9747.1,12280.8,9064.4,Quality Flagged
+BTC-88283,2023-10-13,Atorvastatin 20mg,Cardiology,Apex BioPharma Labs,West Logistics (Reno),5067,4803,2.79,6080.4,21613.5,15849.9,Certified Released
+BTC-88284,2023-10-14,Atorvastatin 20mg,Cardiology,MedVantage Global,East Depot (Newark),33010,29982,0.46,39612.0,134919.0,98940.6,Certified Released
+BTC-88285,2023-10-15,Paclitaxel 300mg Concentrate,Oncology,Apex BioPharma Labs,East Depot (Newark),608,563,0.29,36480.0,135120.0,101340.0,Certified Released
+BTC-88286,2023-10-16,Pregabalin 75mg Capsule,Neurology,Apex BioPharma Labs,Central Hub (Chicago),36710,35852,1.23,66078.0,233038.0,168504.4,Certified Released
+BTC-88287,2023-10-17,Amlodipine Besylate 10mg,Cardiology,Helix Chemical Synthetics,West Logistics (Reno),24204,22347,1.1,20573.4,71510.4,52515.45,Certified Released
+BTC-88288,2023-10-18,Azithromycin 500mg Tablets,Anti-Infective,Helix Chemical Synthetics,East Depot (Newark),32009,24907,1.62,67218.9,186802.5,134497.8,Certified Released
+BTC-88289,2023-10-19,Amoxicillin-Clavulanate 875mg,Anti-Infective,Zenith Active Ingredients,Central Hub (Chicago),38729,13248,4.17,54220.6,67564.8,49017.6,Quality Flagged
+BTC-88290,2023-10-20,Trastuzumab 440mg Lyophilized,Oncology,Helix Chemical Synthetics,Central Hub (Chicago),636,161,4.07,114480.0,103040.0,74060.0,Quality Flagged
+BTC-88291,2023-10-20,Atorvastatin 20mg,Cardiology,MedVantage Global,West Logistics (Reno),7975,7065,0.78,9570.0,31792.5,23314.5,Certified Released
+BTC-88292,2023-10-21,Amoxicillin-Clavulanate 875mg,Anti-Infective,Novus Life Sciences,Central Hub (Chicago),35688,2664,4.03,49963.2,13586.4,9856.8,Quality Flagged
+BTC-88293,2023-10-22,Donepezil Hydrochloride 10mg,Neurology,MedVantage Global,East Depot (Newark),27111,1436,3.93,40666.5,8328.8,6174.8,Quality Flagged
+BTC-88294,2023-10-23,Lisinopril 10mg,Cardiology,MedVantage Global,Southern Facility (Dallas),7550,1183,3.38,5662.5,3489.85,2602.6,Quality Flagged
+BTC-88295,2023-10-24,Trastuzumab 440mg Lyophilized,Oncology,MedVantage Global,East Depot (Newark),1320,1219,1.44,237600.0,780160.0,560740.0,Certified Released
+BTC-88296,2023-10-25,Ciprofloxacin 500mg Tablets,Anti-Infective,MedVantage Global,Southern Facility (Dallas),14037,10034,2.48,18248.1,48163.2,35119.0,Certified Released
+BTC-88297,2023-10-26,Azithromycin 500mg Tablets,Anti-Infective,Apex BioPharma Labs,Southern Facility (Dallas),28599,20660,2.08,60057.9,154950.0,111564.0,Certified Released
+BTC-88298,2023-10-27,Amoxicillin-Clavulanate 875mg,Anti-Infective,Novus Life Sciences,East Depot (Newark),5637,4471,2.71,7891.8,22802.1,16542.7,Certified Released
+BTC-88299,2023-10-28,Levetiracetam 500mg,Neurology,Apex BioPharma Labs,Southern Facility (Dallas),25281,5893,3.31,27809.1,24750.6,18268.3,Quality Flagged
+BTC-88300,2023-10-29,Metoprolol Tartrate 50mg,Cardiology,Apex BioPharma Labs,Central Hub (Chicago),11561,9348,2.14,10404.9,35522.4,27109.2,Certified Released
+BTC-88301,2023-10-29,Metoprolol Tartrate 50mg,Cardiology,MedVantage Global,West Logistics (Reno),34175,645,3.1,30757.5,2451.0,1870.5,Quality Flagged
+BTC-88302,2023-10-30,Rituximab 500mg Solution,Oncology,Apex BioPharma Labs,Southern Facility (Dallas),1471,1366,1.73,323620.0,1065480.0,764960.0,Certified Released
+BTC-88303,2023-10-31,Pregabalin 75mg Capsule,Neurology,Apex BioPharma Labs,East Depot (Newark),5042,1176,4.03,9075.6,7644.0,5527.2,Quality Flagged
+BTC-88304,2023-11-01,Paclitaxel 300mg Concentrate,Oncology,MedVantage Global,West Logistics (Reno),321,292,0.15,19260.0,70080.0,52560.0,Certified Released
+BTC-88305,2023-11-02,Atorvastatin 20mg,Cardiology,MedVantage Global,Central Hub (Chicago),27102,20360,1.04,32522.4,91620.0,67188.0,Certified Released
+BTC-88306,2023-11-03,Pregabalin 75mg Capsule,Neurology,Helix Chemical Synthetics,West Logistics (Reno),33845,23994,2.89,60921.0,155961.0,112771.8,Certified Released
+BTC-88307,2023-11-04,Levetiracetam 500mg,Neurology,Zenith Active Ingredients,Central Hub (Chicago),34028,10058,3.2,37430.8,42243.6,31179.8,Quality Flagged
+BTC-88308,2023-11-05,Ciprofloxacin 500mg Tablets,Anti-Infective,Helix Chemical Synthetics,Central Hub (Chicago),28190,5820,3.22,36647.0,27936.0,20370.0,Quality Flagged
+BTC-88309,2023-11-06,Pregabalin 75mg Capsule,Neurology,Apex BioPharma Labs,East Depot (Newark),9309,7266,0.31,16756.2,47229.0,34150.2,Certified Released
+BTC-88310,2023-11-07,Trastuzumab 440mg Lyophilized,Oncology,Apex BioPharma Labs,East Depot (Newark),1385,1018,0.62,249300.0,651520.0,468280.0,Certified Released
+BTC-88311,2023-11-07,Metoprolol Tartrate 50mg,Cardiology,Zenith Active Ingredients,Central Hub (Chicago),38192,29773,2.79,34372.8,113137.4,86341.7,Certified Released
+BTC-88312,2023-11-08,Amlodipine Besylate 10mg,Cardiology,Helix Chemical Synthetics,Central Hub (Chicago),19508,2299,4.46,16581.8,7356.8,5402.65,Quality Flagged
+BTC-88313,2023-11-09,Trastuzumab 440mg Lyophilized,Oncology,MedVantage Global,East Depot (Newark),965,114,3.12,173700.0,72960.0,52440.0,Quality Flagged
+BTC-88314,2023-11-10,Amlodipine Besylate 10mg,Cardiology,Zenith Active Ingredients,Central Hub (Chicago),7179,6169,0.36,6102.15,19740.8,14497.15,Certified Released
+BTC-88315,2023-11-11,Atorvastatin 20mg,Cardiology,Zenith Active Ingredients,Southern Facility (Dallas),8852,7285,0.42,10622.4,32782.5,24040.5,Certified Released
+BTC-88316,2023-11-12,Levetiracetam 500mg,Neurology,Novus Life Sciences,Southern Facility (Dallas),37830,34072,1.28,41613.0,143102.4,105623.2,Certified Released
+BTC-88317,2023-11-13,Rituximab 500mg Solution,Oncology,Helix Chemical Synthetics,West Logistics (Reno),828,666,2.66,182160.0,519480.0,372960.0,Certified Released
+BTC-88318,2023-11-14,Pembrolizumab Infusion 100mg,Oncology,Apex BioPharma Labs,Southern Facility (Dallas),1205,1129,2.12,421750.0,1298350.0,903200.0,Certified Released
+BTC-88319,2023-11-15,Donepezil Hydrochloride 10mg,Neurology,Apex BioPharma Labs,East Depot (Newark),15530,11187,2.88,23295.0,64884.6,48104.1,Certified Released
+BTC-88320,2023-11-16,Paclitaxel 300mg Concentrate,Oncology,MedVantage Global,West Logistics (Reno),466,29,4.05,27960.0,6960.0,5220.0,Quality Flagged
+BTC-88321,2023-11-16,Lisinopril 10mg,Cardiology,Helix Chemical Synthetics,West Logistics (Reno),17043,15086,2.66,12782.25,44503.7,33189.2,Certified Released
+BTC-88322,2023-11-17,Rituximab 500mg Solution,Oncology,Novus Life Sciences,West Logistics (Reno),877,21,3.87,192940.0,16380.0,11760.0,Quality Flagged
+BTC-88323,2023-11-18,Atorvastatin 20mg,Cardiology,Zenith Active Ingredients,Central Hub (Chicago),28341,27449,1.17,34009.2,123520.5,90581.7,Certified Released
+BTC-88324,2023-11-19,Ciprofloxacin 500mg Tablets,Anti-Infective,MedVantage Global,East Depot (Newark),5913,4285,0.77,7686.9,20568.0,14997.5,Certified Released
+BTC-88325,2023-11-20,Azithromycin 500mg Tablets,Anti-Infective,Novus Life Sciences,East Depot (Newark),5425,5252,1.34,11392.5,39390.0,28360.8,Certified Released
+BTC-88326,2023-11-21,Azithromycin 500mg Tablets,Anti-Infective,Helix Chemical Synthetics,Southern Facility (Dallas),26186,7888,3.87,54990.6,59160.0,42595.2,Quality Flagged
+BTC-88327,2023-11-22,Metoprolol Tartrate 50mg,Cardiology,Helix Chemical Synthetics,Southern Facility (Dallas),25426,8483,0.84,22883.4,32235.4,24600.7,Audit Pending
+BTC-88328,2023-11-23,Paclitaxel 300mg Concentrate,Oncology,Novus Life Sciences,Central Hub (Chicago),489,367,2.11,29340.0,88080.0,66060.0,Certified Released
+BTC-88329,2023-11-24,Donepezil Hydrochloride 10mg,Neurology,Zenith Active Ingredients,Central Hub (Chicago),13262,9620,0.1,19893.0,55796.0,41366.0,Certified Released
+BTC-88330,2023-11-25,Levetiracetam 500mg,Neurology,Novus Life Sciences,Central Hub (Chicago),16857,12594,0.93,18542.7,52894.8,39041.4,Certified Released
+BTC-88331,2023-11-25,Pembrolizumab Infusion 100mg,Oncology,MedVantage Global,Central Hub (Chicago),1269,889,2.62,444150.0,1022350.0,711200.0,Certified Released
+BTC-88332,2023-11-26,Pregabalin 75mg Capsule,Neurology,Apex BioPharma Labs,Southern Facility (Dallas),11974,2108,3.5,21553.2,13702.0,9907.6,Quality Flagged
+BTC-88333,2023-11-27,Trastuzumab 440mg Lyophilized,Oncology,MedVantage Global,Central Hub (Chicago),1405,279,3.98,252900.0,178560.0,128340.0,Quality Flagged
+BTC-88334,2023-11-28,Ciprofloxacin 500mg Tablets,Anti-Infective,Zenith Active Ingredients,East Depot (Newark),11173,10038,1.78,14524.9,48182.4,35133.0,Certified Released
+BTC-88335,2023-11-29,Levetiracetam 500mg,Neurology,Zenith Active Ingredients,East Depot (Newark),9401,9061,2.51,10341.1,38056.2,28089.1,Certified Released
+BTC-88336,2023-11-30,Amoxicillin-Clavulanate 875mg,Anti-Infective,Helix Chemical Synthetics,West Logistics (Reno),26738,2910,4.33,37433.2,14841.0,10767.0,Quality Flagged
+BTC-88337,2023-12-01,Atorvastatin 20mg,Cardiology,Helix Chemical Synthetics,East Depot (Newark),16018,2672,3.28,19221.6,12024.0,8817.6,Quality Flagged
+BTC-88338,2023-12-02,Atorvastatin 20mg,Cardiology,Novus Life Sciences,East Depot (Newark),24303,22719,2.46,29163.6,102235.5,74972.7,Certified Released
+BTC-88339,2023-12-03,Rituximab 500mg Solution,Oncology,Novus Life Sciences,Central Hub (Chicago),716,699,0.49,157520.0,545220.0,391440.0,Certified Released
+BTC-88340,2023-12-04,Rituximab 500mg Solution,Oncology,Helix Chemical Synthetics,Central Hub (Chicago),335,268,1.95,73700.0,209040.0,150080.0,Certified Released
+BTC-88341,2023-12-04,Pembrolizumab Infusion 100mg,Oncology,Novus Life Sciences,Central Hub (Chicago),461,329,0.26,161350.0,378350.0,263200.0,Certified Released
+BTC-88342,2023-12-05,Rituximab 500mg Solution,Oncology,Novus Life Sciences,East Depot (Newark),1098,807,2.29,241560.0,629460.0,451920.0,Certified Released
+BTC-88343,2023-12-06,Metoprolol Tartrate 50mg,Cardiology,MedVantage Global,East Depot (Newark),7715,2050,4.05,6943.5,7790.0,5945.0,Quality Flagged
+BTC-88344,2023-12-07,Lisinopril 10mg,Cardiology,MedVantage Global,Central Hub (Chicago),31683,28229,1.22,23762.25,83275.55,62103.8,Certified Released
+BTC-88345,2023-12-08,Amlodipine Besylate 10mg,Cardiology,Helix Chemical Synthetics,East Depot (Newark),33833,32238,2.11,28758.05,103161.6,75759.3,Certified Released
+BTC-88346,2023-12-09,Metoprolol Tartrate 50mg,Cardiology,Novus Life Sciences,Central Hub (Chicago),6501,4713,2.97,5850.9,17909.4,13667.7,Certified Released
+BTC-88347,2023-12-10,Lisinopril 10mg,Cardiology,MedVantage Global,Southern Facility (Dallas),7678,427,3.89,5758.5,1259.65,939.4,Quality Flagged
+BTC-88348,2023-12-11,Pembrolizumab Infusion 100mg,Oncology,Apex BioPharma Labs,West Logistics (Reno),707,183,3.81,247450.0,210450.0,146400.0,Quality Flagged
+BTC-88349,2023-12-12,Levetiracetam 500mg,Neurology,Helix Chemical Synthetics,Southern Facility (Dallas),30682,28362,0.81,33750.2,119120.4,87922.2,Certified Released
+BTC-88350,2023-12-13,Pembrolizumab Infusion 100mg,Oncology,Zenith Active Ingredients,Southern Facility (Dallas),228,195,2.3,79800.0,224250.0,156000.0,Certified Released
+BTC-88351,2023-12-13,Donepezil Hydrochloride 10mg,Neurology,Zenith Active Ingredients,Southern Facility (Dallas),7659,7355,1.79,11488.5,42659.0,31626.5,Certified Released
+BTC-88352,2023-12-14,Lisinopril 10mg,Cardiology,MedVantage Global,West Logistics (Reno),8961,8187,1.43,6720.75,24151.65,18011.4,Certified Released
+BTC-88353,2023-12-15,Donepezil Hydrochloride 10mg,Neurology,Apex BioPharma Labs,Southern Facility (Dallas),33277,26146,1.82,49915.5,151646.8,112427.8,Certified Released
+BTC-88354,2023-12-16,Rituximab 500mg Solution,Oncology,Helix Chemical Synthetics,Southern Facility (Dallas),904,728,0.14,198880.0,567840.0,407680.0,Certified Released
+BTC-88355,2023-12-17,Amoxicillin-Clavulanate 875mg,Anti-Infective,Novus Life Sciences,East Depot (Newark),30253,22172,0.69,42354.2,113077.2,82036.4,Certified Released
+BTC-88356,2023-12-18,Levetiracetam 500mg,Neurology,MedVantage Global,East Depot (Newark),31931,10277,3.03,35124.1,43163.4,31858.7,Quality Flagged
+BTC-88357,2023-12-19,Pregabalin 75mg Capsule,Neurology,Helix Chemical Synthetics,West Logistics (Reno),22468,797,3.06,40442.4,5180.5,3745.9,Quality Flagged
+BTC-88358,2023-12-20,Lisinopril 10mg,Cardiology,Helix Chemical Synthetics,Central Hub (Chicago),31710,24959,0.75,23782.5,73629.05,54909.8,Certified Released
+BTC-88359,2023-12-21,Lisinopril 10mg,Cardiology,MedVantage Global,East Depot (Newark),18173,17236,2.56,13629.75,50846.2,37919.2,Certified Released
+BTC-88360,2023-12-22,Donepezil Hydrochloride 10mg,Neurology,Novus Life Sciences,West Logistics (Reno),8775,6745,1.7,13162.5,39121.0,29003.5,Certified Released
+BTC-88361,2023-12-22,Pembrolizumab Infusion 100mg,Oncology,Novus Life Sciences,Central Hub (Chicago),361,46,3.21,126350.0,52900.0,36800.0,Quality Flagged
+BTC-88362,2023-12-23,Azithromycin 500mg Tablets,Anti-Infective,Apex BioPharma Labs,West Logistics (Reno),22503,20337,1.73,47256.3,152527.5,109819.8,Certified Released
+BTC-88363,2023-12-24,Donepezil Hydrochloride 10mg,Neurology,MedVantage Global,Southern Facility (Dallas),31304,28902,2.68,46956.0,167631.6,124278.6,Certified Released
+BTC-88364,2023-12-25,Pregabalin 75mg Capsule,Neurology,MedVantage Global,East Depot (Newark),28625,4374,4.36,51525.0,28431.0,20557.8,Quality Flagged
+BTC-88365,2023-12-26,Azithromycin 500mg Tablets,Anti-Infective,Zenith Active Ingredients,Southern Facility (Dallas),37950,31143,1.78,79695.0,233572.5,168172.2,Certified Released
+BTC-88366,2023-12-27,Levetiracetam 500mg,Neurology,Apex BioPharma Labs,East Depot (Newark),27495,6714,1.36,30244.5,28198.8,20813.4,Audit Pending
+BTC-88367,2023-12-28,Amlodipine Besylate 10mg,Cardiology,Helix Chemical Synthetics,West Logistics (Reno),38295,34960,0.49,32550.75,111872.0,82156.0,Certified Released
+BTC-88368,2023-12-29,Trastuzumab 440mg Lyophilized,Oncology,MedVantage Global,Southern Facility (Dallas),1013,741,1.43,182340.0,474240.0,340860.0,Certified Released
+BTC-88369,2023-12-30,Pembrolizumab Infusion 100mg,Oncology,Zenith Active Ingredients,West Logistics (Reno),479,414,1.15,167650.0,476100.0,331200.0,Certified Released
+BTC-88370,2023-12-31,Amlodipine Besylate 10mg,Cardiology,Novus Life Sciences,Southern Facility (Dallas),13030,1303,4.21,11075.5,4169.6,3062.05,Quality Flagged
+BTC-88371,2023-12-31,Pregabalin 75mg Capsule,Neurology,Helix Chemical Synthetics,East Depot (Newark),21240,1170,3.59,38232.0,7605.0,5499.0,Quality Flagged
+BTC-88372,2024-01-01,Amoxicillin-Clavulanate 875mg,Anti-Infective,MedVantage Global,West Logistics (Reno),25247,20873,1.04,35345.8,106452.3,77230.1,Certified Released
+BTC-88373,2024-01-02,Amoxicillin-Clavulanate 875mg,Anti-Infective,Zenith Active Ingredients,East Depot (Newark),11832,2818,4.33,16564.8,14371.8,10426.6,Quality Flagged
+BTC-88374,2024-01-03,Atorvastatin 20mg,Cardiology,Helix Chemical Synthetics,Central Hub (Chicago),37485,10783,4.24,44982.0,48523.5,35583.9,Quality Flagged
+BTC-88375,2024-01-04,Rituximab 500mg Solution,Oncology,Apex BioPharma Labs,Central Hub (Chicago),954,149,3.31,209880.0,116220.0,83440.0,Quality Flagged
+BTC-88376,2024-01-05,Donepezil Hydrochloride 10mg,Neurology,Novus Life Sciences,East Depot (Newark),28773,6625,3.69,43159.5,38425.0,28487.5,Quality Flagged
+BTC-88377,2024-01-06,Paclitaxel 300mg Concentrate,Oncology,Helix Chemical Synthetics,Southern Facility (Dallas),731,693,1.28,43860.0,166320.0,124740.0,Certified Released
+BTC-88378,2024-01-07,Amoxicillin-Clavulanate 875mg,Anti-Infective,Apex BioPharma Labs,Southern Facility (Dallas),17713,15613,2.93,24798.2,79626.3,57768.1,Certified Released
+BTC-88379,2024-01-08,Lisinopril 10mg,Cardiology,MedVantage Global,East Depot (Newark),19585,3172,4.08,14688.75,9357.4,6978.4,Quality Flagged
+BTC-88380,2024-01-09,Paclitaxel 300mg Concentrate,Oncology,Zenith Active Ingredients,West Logistics (Reno),1032,754,0.93,61920.0,180960.0,135720.0,Certified Released
+BTC-88381,2024-01-09,Atorvastatin 20mg,Cardiology,MedVantage Global,East Depot (Newark),33791,743,4.2,40549.2,3343.5,2451.9,Quality Flagged
+BTC-88382,2024-01-10,Donepezil Hydrochloride 10mg,Neurology,Helix Chemical Synthetics,Central Hub (Chicago),7383,6938,0.21,11074.5,40240.4,29833.4,Certified Released
+BTC-88383,2024-01-11,Rituximab 500mg Solution,Oncology,Apex BioPharma Labs,West Logistics (Reno),581,560,1.51,127820.0,436800.0,313600.0,Certified Released
+BTC-88384,2024-01-12,Lisinopril 10mg,Cardiology,Apex BioPharma Labs,West Logistics (Reno),19857,4811,4.36,14892.75,14192.45,10584.2,Quality Flagged
+BTC-88385,2024-01-13,Metoprolol Tartrate 50mg,Cardiology,Zenith Active Ingredients,Central Hub (Chicago),37399,11891,4.47,33659.1,45185.8,34483.9,Quality Flagged
+BTC-88386,2024-01-14,Pembrolizumab Infusion 100mg,Oncology,Novus Life Sciences,Southern Facility (Dallas),1474,1245,1.62,515900.0,1431750.0,996000.0,Certified Released
+BTC-88387,2024-01-15,Amoxicillin-Clavulanate 875mg,Anti-Infective,Apex BioPharma Labs,East Depot (Newark),36761,4425,3.55,51465.4,22567.5,16372.5,Quality Flagged
+BTC-88388,2024-01-16,Pregabalin 75mg Capsule,Neurology,MedVantage Global,East Depot (Newark),20376,18218,0.75,36676.8,118417.0,85624.6,Certified Released
+BTC-88389,2024-01-17,Amoxicillin-Clavulanate 875mg,Anti-Infective,Helix Chemical Synthetics,East Depot (Newark),39223,30611,2.75,54912.2,156116.1,113260.7,Certified Released
+BTC-88390,2024-01-18,Ciprofloxacin 500mg Tablets,Anti-Infective,Novus Life Sciences,West Logistics (Reno),19778,14326,0.67,25711.4,68764.8,50141.0,Certified Released
+BTC-88391,2024-01-18,Levetiracetam 500mg,Neurology,Zenith Active Ingredients,Southern Facility (Dallas),11005,2123,4.09,12105.5,8916.6,6581.3,Quality Flagged
+BTC-88392,2024-01-19,Amoxicillin-Clavulanate 875mg,Anti-Infective,Helix Chemical Synthetics,East Depot (Newark),30499,22380,2.77,42698.6,114138.0,82806.0,Certified Released
+BTC-88393,2024-01-20,Rituximab 500mg Solution,Oncology,Zenith Active Ingredients,Central Hub (Chicago),402,326,0.16,88440.0,254280.0,182560.0,Certified Released
+BTC-88394,2024-01-21,Pregabalin 75mg Capsule,Neurology,Helix Chemical Synthetics,East Depot (Newark),16985,5728,3.21,30573.0,37232.0,26921.6,Quality Flagged
+BTC-88395,2024-01-22,Ciprofloxacin 500mg Tablets,Anti-Infective,Zenith Active Ingredients,West Logistics (Reno),21926,3671,3.53,28503.8,17620.8,12848.5,Quality Flagged
+BTC-88396,2024-01-23,Donepezil Hydrochloride 10mg,Neurology,MedVantage Global,East Depot (Newark),14512,11038,1.02,21768.0,64020.4,47463.4,Certified Released
+BTC-88397,2024-01-24,Rituximab 500mg Solution,Oncology,Novus Life Sciences,Central Hub (Chicago),1499,1155,0.57,329780.0,900900.0,646800.0,Certified Released
+BTC-88398,2024-01-25,Trastuzumab 440mg Lyophilized,Oncology,Helix Chemical Synthetics,East Depot (Newark),1492,93,3.89,268560.0,59520.0,42780.0,Quality Flagged
+BTC-88399,2024-01-26,Donepezil Hydrochloride 10mg,Neurology,Apex BioPharma Labs,Southern Facility (Dallas),16995,3675,3.71,25492.5,21315.0,15802.5,Quality Flagged
+BTC-88400,2024-01-27,Levetiracetam 500mg,Neurology,MedVantage Global,Central Hub (Chicago),30533,28130,1.17,33586.3,118146.0,87203.0,Certified Released
+BTC-88401,2024-01-27,Amoxicillin-Clavulanate 875mg,Anti-Infective,Apex BioPharma Labs,Central Hub (Chicago),39837,36731,0.34,55771.8,187328.1,135904.7,Certified Released
+BTC-88402,2024-01-28,Levetiracetam 500mg,Neurology,Novus Life Sciences,Central Hub (Chicago),36822,2952,3.04,40504.2,12398.4,9151.2,Quality Flagged
+BTC-88403,2024-01-29,Levetiracetam 500mg,Neurology,Helix Chemical Synthetics,West Logistics (Reno),14731,11218,0.16,16204.1,47115.6,34775.8,Certified Released
+BTC-88404,2024-01-30,Amoxicillin-Clavulanate 875mg,Anti-Infective,Zenith Active Ingredients,Central Hub (Chicago),38339,8909,3.55,53674.6,45435.9,32963.3,Quality Flagged
+BTC-88405,2024-01-31,Paclitaxel 300mg Concentrate,Oncology,MedVantage Global,Southern Facility (Dallas),329,274,1.48,19740.0,65760.0,49320.0,Certified Released
+BTC-88406,2024-02-01,Donepezil Hydrochloride 10mg,Neurology,MedVantage Global,Central Hub (Chicago),16421,3791,4.22,24631.5,21987.8,16301.3,Quality Flagged
+BTC-88407,2024-02-02,Levetiracetam 500mg,Neurology,Zenith Active Ingredients,West Logistics (Reno),9719,8635,0.44,10690.9,36267.0,26768.5,Certified Released
+BTC-88408,2024-02-03,Donepezil Hydrochloride 10mg,Neurology,MedVantage Global,Central Hub (Chicago),10985,10718,2.64,16477.5,62164.4,46087.4,Certified Released
+BTC-88409,2024-02-04,Donepezil Hydrochloride 10mg,Neurology,Helix Chemical Synthetics,Southern Facility (Dallas),28445,599,3.64,42667.5,3474.2,2575.7,Quality Flagged
+BTC-88410,2024-02-05,Metoprolol Tartrate 50mg,Cardiology,Apex BioPharma Labs,West Logistics (Reno),16057,11306,2.01,14451.3,42962.8,32787.4,Certified Released
+BTC-88411,2024-02-05,Amoxicillin-Clavulanate 875mg,Anti-Infective,Novus Life Sciences,Central Hub (Chicago),14808,12735,1.45,20731.2,64948.5,47119.5,Certified Released
+BTC-88412,2024-02-06,Ciprofloxacin 500mg Tablets,Anti-Infective,Zenith Active Ingredients,Southern Facility (Dallas),39863,28309,2.59,51821.9,135883.2,99081.5,Certified Released
+BTC-88413,2024-02-07,Amoxicillin-Clavulanate 875mg,Anti-Infective,Apex BioPharma Labs,East Depot (Newark),32942,23796,2.26,46118.8,121359.6,88045.2,Certified Released
+BTC-88414,2024-02-08,Rituximab 500mg Solution,Oncology,Zenith Active Ingredients,Southern Facility (Dallas),257,221,2.13,56540.0,172380.0,123760.0,Certified Released
+BTC-88415,2024-02-09,Ciprofloxacin 500mg Tablets,Anti-Infective,Helix Chemical Synthetics,Southern Facility (Dallas),28095,21302,1.14,36523.5,102249.6,74557.0,Certified Released
+BTC-88416,2024-02-10,Levetiracetam 500mg,Neurology,Apex BioPharma Labs,Central Hub (Chicago),30049,29059,1.55,33053.9,122047.8,90082.9,Certified Released
+BTC-88417,2024-02-11,Levetiracetam 500mg,Neurology,Novus Life Sciences,Central Hub (Chicago),14485,10420,0.3,15933.5,43764.0,32302.0,Certified Released
+BTC-88418,2024-02-12,Amlodipine Besylate 10mg,Cardiology,Zenith Active Ingredients,Southern Facility (Dallas),22844,4501,4.47,19417.4,14403.2,10577.35,Quality Flagged
+BTC-88419,2024-02-13,Azithromycin 500mg Tablets,Anti-Infective,Zenith Active Ingredients,Central Hub (Chicago),8272,7090,0.11,17371.2,53175.0,38286.0,Certified Released
+BTC-88420,2024-02-14,Azithromycin 500mg Tablets,Anti-Infective,MedVantage Global,Southern Facility (Dallas),37532,32505,1.86,78817.2,243787.5,175527.0,Certified Released
+BTC-88421,2024-02-14,Levetiracetam 500mg,Neurology,Zenith Active Ingredients,East Depot (Newark),30274,4520,4.02,33301.4,18984.0,14012.0,Quality Flagged
+BTC-88422,2024-02-15,Amlodipine Besylate 10mg,Cardiology,MedVantage Global,Central Hub (Chicago),6510,5831,1.89,5533.5,18659.2,13702.85,Certified Released
+BTC-88423,2024-02-16,Amoxicillin-Clavulanate 875mg,Anti-Infective,Apex BioPharma Labs,Southern Facility (Dallas),22851,22156,2.59,31991.4,112995.6,81977.2,Certified Released
+BTC-88424,2024-02-17,Amoxicillin-Clavulanate 875mg,Anti-Infective,Apex BioPharma Labs,West Logistics (Reno),14001,11059,2.6,19601.4,56400.9,40918.3,Certified Released
+BTC-88425,2024-02-18,Amlodipine Besylate 10mg,Cardiology,Helix Chemical Synthetics,Southern Facility (Dallas),5521,4114,0.89,4692.85,13164.8,9667.9,Certified Released
+BTC-88426,2024-02-19,Paclitaxel 300mg Concentrate,Oncology,Zenith Active Ingredients,East Depot (Newark),1073,1007,1.42,64380.0,241680.0,181260.0,Certified Released
+BTC-88427,2024-02-20,Pregabalin 75mg Capsule,Neurology,Helix Chemical Synthetics,West Logistics (Reno),30786,27217,1.63,55414.8,176910.5,127919.9,Certified Released
+BTC-88428,2024-02-21,Trastuzumab 440mg Lyophilized,Oncology,MedVantage Global,West Logistics (Reno),798,85,3.38,143640.0,54400.0,39100.0,Quality Flagged
+BTC-88429,2024-02-22,Levetiracetam 500mg,Neurology,MedVantage Global,Central Hub (Chicago),30920,23761,2.61,34012.0,99796.2,73659.1,Certified Released
+BTC-88430,2024-02-23,Trastuzumab 440mg Lyophilized,Oncology,MedVantage Global,Southern Facility (Dallas),783,740,1.1,140940.0,473600.0,340400.0,Certified Released
+BTC-88431,2024-02-23,Levetiracetam 500mg,Neurology,Helix Chemical Synthetics,East Depot (Newark),14575,12245,1.09,16032.5,51429.0,37959.5,Certified Released
+BTC-88432,2024-02-24,Paclitaxel 300mg Concentrate,Oncology,Novus Life Sciences,West Logistics (Reno),404,283,1.2,24240.0,67920.0,50940.0,Certified Released
+BTC-88433,2024-02-25,Amoxicillin-Clavulanate 875mg,Anti-Infective,Apex BioPharma Labs,East Depot (Newark),12546,3344,3.89,17564.4,17054.4,12372.8,Quality Flagged
+BTC-88434,2024-02-26,Azithromycin 500mg Tablets,Anti-Infective,MedVantage Global,West Logistics (Reno),17629,14377,1.36,37020.9,107827.5,77635.8,Certified Released
+BTC-88435,2024-02-27,Donepezil Hydrochloride 10mg,Neurology,Helix Chemical Synthetics,East Depot (Newark),13235,1397,0.26,19852.5,8102.6,6007.1,Audit Pending
+BTC-88436,2024-02-28,Azithromycin 500mg Tablets,Anti-Infective,Zenith Active Ingredients,Central Hub (Chicago),14724,1151,3.28,30920.4,8632.5,6215.4,Quality Flagged
+BTC-88437,2024-02-29,Atorvastatin 20mg,Cardiology,Novus Life Sciences,West Logistics (Reno),11988,10854,0.7,14385.6,48843.0,35818.2,Certified Released
+BTC-88438,2024-03-01,Azithromycin 500mg Tablets,Anti-Infective,Zenith Active Ingredients,West Logistics (Reno),39653,5434,3.21,83271.3,40755.0,29343.6,Quality Flagged
+BTC-88439,2024-03-02,Pregabalin 75mg Capsule,Neurology,MedVantage Global,Southern Facility (Dallas),5151,4768,2.54,9271.8,30992.0,22409.6,Certified Released
+BTC-88440,2024-03-03,Pembrolizumab Infusion 100mg,Oncology,MedVantage Global,West Logistics (Reno),1331,1053,1.41,465850.0,1210950.0,842400.0,Certified Released
+BTC-88441,2024-03-03,Amoxicillin-Clavulanate 875mg,Anti-Infective,Apex BioPharma Labs,Central Hub (Chicago),19602,3778,4.21,27442.8,19267.8,13978.6,Quality Flagged
+BTC-88442,2024-03-04,Metoprolol Tartrate 50mg,Cardiology,MedVantage Global,East Depot (Newark),17484,964,3.75,15735.6,3663.2,2795.6,Quality Flagged
+BTC-88443,2024-03-05,Pembrolizumab Infusion 100mg,Oncology,Novus Life Sciences,East Depot (Newark),834,678,2.11,291900.0,779700.0,542400.0,Certified Released
+BTC-88444,2024-03-06,Atorvastatin 20mg,Cardiology,MedVantage Global,East Depot (Newark),34541,5025,3.24,41449.2,22612.5,16582.5,Quality Flagged
+BTC-88445,2024-03-07,Ciprofloxacin 500mg Tablets,Anti-Infective,Apex BioPharma Labs,Central Hub (Chicago),25564,8027,3.23,33233.2,38529.6,28094.5,Quality Flagged
+BTC-88446,2024-03-08,Donepezil Hydrochloride 10mg,Neurology,Helix Chemical Synthetics,Central Hub (Chicago),15026,3438,4.0,22539.0,19940.4,14783.4,Quality Flagged
+BTC-88447,2024-03-09,Azithromycin 500mg Tablets,Anti-Infective,MedVantage Global,Central Hub (Chicago),35527,27874,1.26,74606.7,209055.0,150519.6,Certified Released
+BTC-88448,2024-03-10,Levetiracetam 500mg,Neurology,Novus Life Sciences,East Depot (Newark),29026,1659,4.27,31928.6,6967.8,5142.9,Quality Flagged
+BTC-88449,2024-03-11,Donepezil Hydrochloride 10mg,Neurology,Zenith Active Ingredients,West Logistics (Reno),16873,15931,2.07,25309.5,92399.8,68503.3,Certified Released
+BTC-88450,2024-03-12,Rituximab 500mg Solution,Oncology,Novus Life Sciences,East Depot (Newark),1265,276,4.47,278300.0,215280.0,154560.0,Quality Flagged
+BTC-88451,2024-03-12,Pembrolizumab Infusion 100mg,Oncology,Novus Life Sciences,Central Hub (Chicago),475,346,1.55,166250.0,397900.0,276800.0,Certified Released
+BTC-88452,2024-03-13,Pembrolizumab Infusion 100mg,Oncology,Novus Life Sciences,Central Hub (Chicago),649,534,0.97,227150.0,614100.0,427200.0,Certified Released
+BTC-88453,2024-03-14,Lisinopril 10mg,Cardiology,Zenith Active Ingredients,West Logistics (Reno),5701,5229,2.03,4275.75,15425.55,11503.8,Certified Released
+BTC-88454,2024-03-15,Donepezil Hydrochloride 10mg,Neurology,Novus Life Sciences,Central Hub (Chicago),16374,11718,1.32,24561.0,67964.4,50387.4,Certified Released
+BTC-88455,2024-03-16,Rituximab 500mg Solution,Oncology,Helix Chemical Synthetics,West Logistics (Reno),1198,113,0.85,263560.0,88140.0,63280.0,Audit Pending
+BTC-88456,2024-03-17,Pembrolizumab Infusion 100mg,Oncology,Novus Life Sciences,West Logistics (Reno),1138,981,0.4,398300.0,1128150.0,784800.0,Certified Released
+BTC-88457,2024-03-18,Atorvastatin 20mg,Cardiology,Zenith Active Ingredients,East Depot (Newark),15709,727,3.01,18850.8,3271.5,2399.1,Quality Flagged
+BTC-88458,2024-03-19,Amlodipine Besylate 10mg,Cardiology,Apex BioPharma Labs,Southern Facility (Dallas),32104,2909,4.13,27288.4,9308.8,6836.15,Quality Flagged
+BTC-88459,2024-03-20,Ciprofloxacin 500mg Tablets,Anti-Infective,Apex BioPharma Labs,Southern Facility (Dallas),37452,27326,1.51,48687.6,131164.8,95641.0,Certified Released
+BTC-88460,2024-03-21,Trastuzumab 440mg Lyophilized,Oncology,Apex BioPharma Labs,Southern Facility (Dallas),936,883,2.92,168480.0,565120.0,406180.0,Certified Released
+BTC-88461,2024-03-21,Amoxicillin-Clavulanate 875mg,Anti-Infective,Zenith Active Ingredients,East Depot (Newark),27248,20445,2.33,38147.2,104269.5,75646.5,Certified Released
+BTC-88462,2024-03-22,Pregabalin 75mg Capsule,Neurology,Apex BioPharma Labs,West Logistics (Reno),30249,27209,1.83,54448.2,176858.5,127882.3,Certified Released
+BTC-88463,2024-03-23,Rituximab 500mg Solution,Oncology,Zenith Active Ingredients,East Depot (Newark),1484,1429,0.93,326480.0,1114620.0,800240.0,Certified Released
+BTC-88464,2024-03-24,Pembrolizumab Infusion 100mg,Oncology,Novus Life Sciences,Central Hub (Chicago),376,15,4.41,131600.0,17250.0,12000.0,Quality Flagged
+BTC-88465,2024-03-25,Ciprofloxacin 500mg Tablets,Anti-Infective,Apex BioPharma Labs,East Depot (Newark),27718,5362,4.42,36033.4,25737.6,18767.0,Quality Flagged
+BTC-88466,2024-03-26,Atorvastatin 20mg,Cardiology,Zenith Active Ingredients,Central Hub (Chicago),36767,8097,1.38,44120.4,36436.5,26720.1,Audit Pending
+BTC-88467,2024-03-27,Rituximab 500mg Solution,Oncology,MedVantage Global,Central Hub (Chicago),1403,303,4.38,308660.0,236340.0,169680.0,Quality Flagged
+BTC-88468,2024-03-28,Levetiracetam 500mg,Neurology,Helix Chemical Synthetics,West Logistics (Reno),12169,9002,2.27,13385.9,37808.4,27906.2,Certified Released
+BTC-88469,2024-03-29,Azithromycin 500mg Tablets,Anti-Infective,MedVantage Global,East Depot (Newark),19438,13723,2.55,40819.8,102922.5,74104.2,Certified Released
+BTC-88470,2024-03-30,Levetiracetam 500mg,Neurology,Novus Life Sciences,Central Hub (Chicago),29620,26415,0.88,32582.0,110943.0,81886.5,Certified Released
+BTC-88471,2024-03-30,Pregabalin 75mg Capsule,Neurology,Zenith Active Ingredients,East Depot (Newark),17799,9,3.36,32038.2,58.5,42.3,Quality Flagged
+BTC-88472,2024-03-31,Rituximab 500mg Solution,Oncology,MedVantage Global,West Logistics (Reno),818,576,2.05,179960.0,449280.0,322560.0,Certified Released
+BTC-88473,2024-04-01,Ciprofloxacin 500mg Tablets,Anti-Infective,Helix Chemical Synthetics,West Logistics (Reno),5769,335,1.29,7499.7,1608.0,1172.5,Audit Pending
+BTC-88474,2024-04-02,Pregabalin 75mg Capsule,Neurology,Zenith Active Ingredients,West Logistics (Reno),9677,7287,2.79,17418.6,47365.5,34248.9,Certified Released
+BTC-88475,2024-04-03,Azithromycin 500mg Tablets,Anti-Infective,MedVantage Global,East Depot (Newark),31034,23113,1.98,65171.4,173347.5,124810.2,Certified Released
+BTC-88476,2024-04-04,Donepezil Hydrochloride 10mg,Neurology,Novus Life Sciences,West Logistics (Reno),17123,13515,2.09,25684.5,78387.0,58114.5,Certified Released
+BTC-88477,2024-04-05,Rituximab 500mg Solution,Oncology,MedVantage Global,East Depot (Newark),235,187,1.94,51700.0,145860.0,104720.0,Certified Released
+BTC-88478,2024-04-06,Metoprolol Tartrate 50mg,Cardiology,Helix Chemical Synthetics,East Depot (Newark),6820,6545,2.98,6138.0,24871.0,18980.5,Certified Released
+BTC-88479,2024-04-07,Trastuzumab 440mg Lyophilized,Oncology,Apex BioPharma Labs,Central Hub (Chicago),860,287,4.17,154800.0,183680.0,132020.0,Quality Flagged
+BTC-88480,2024-04-08,Amoxicillin-Clavulanate 875mg,Anti-Infective,Apex BioPharma Labs,East Depot (Newark),25823,22281,1.49,36152.2,113633.1,82439.7,Certified Released
+BTC-88481,2024-04-08,Paclitaxel 300mg Concentrate,Oncology,Novus Life Sciences,Southern Facility (Dallas),515,450,2.94,30900.0,108000.0,81000.0,Certified Released
+BTC-88482,2024-04-09,Pregabalin 75mg Capsule,Neurology,Novus Life Sciences,Central Hub (Chicago),33276,25708,1.76,59896.8,167102.0,120827.6,Certified Released
+BTC-88483,2024-04-10,Amlodipine Besylate 10mg,Cardiology,Apex BioPharma Labs,East Depot (Newark),18419,1437,3.28,15656.15,4598.4,3376.95,Quality Flagged
+BTC-88484,2024-04-11,Atorvastatin 20mg,Cardiology,MedVantage Global,East Depot (Newark),15291,11460,0.38,18349.2,51570.0,37818.0,Certified Released
+BTC-88485,2024-04-12,Pembrolizumab Infusion 100mg,Oncology,Novus Life Sciences,Central Hub (Chicago),962,172,3.4,336700.0,197800.0,137600.0,Quality Flagged
+BTC-88486,2024-04-13,Amlodipine Besylate 10mg,Cardiology,Helix Chemical Synthetics,East Depot (Newark),33537,32785,2.49,28506.45,104912.0,77044.75,Certified Released
+BTC-88487,2024-04-14,Levetiracetam 500mg,Neurology,Apex BioPharma Labs,Central Hub (Chicago),39789,28503,1.54,43767.9,119712.6,88359.3,Certified Released
+BTC-88488,2024-04-15,Donepezil Hydrochloride 10mg,Neurology,Novus Life Sciences,Central Hub (Chicago),7790,484,3.6,11685.0,2807.2,2081.2,Quality Flagged
+BTC-88489,2024-04-16,Azithromycin 500mg Tablets,Anti-Infective,Helix Chemical Synthetics,Southern Facility (Dallas),21026,3832,3.76,44154.6,28740.0,20692.8,Quality Flagged
+BTC-88490,2024-04-17,Ciprofloxacin 500mg Tablets,Anti-Infective,Zenith Active Ingredients,West Logistics (Reno),31168,8455,3.4,40518.4,40584.0,29592.5,Quality Flagged
+BTC-88491,2024-04-17,Lisinopril 10mg,Cardiology,Novus Life Sciences,East Depot (Newark),24411,18050,3.0,18308.25,53247.5,39710.0,Certified Released
+BTC-88492,2024-04-18,Amoxicillin-Clavulanate 875mg,Anti-Infective,Novus Life Sciences,Central Hub (Chicago),17668,12684,0.91,24735.2,64688.4,46930.8,Certified Released
+BTC-88493,2024-04-19,Levetiracetam 500mg,Neurology,Helix Chemical Synthetics,West Logistics (Reno),39858,31041,1.05,43843.8,130372.2,96227.1,Certified Released
+BTC-88494,2024-04-20,Ciprofloxacin 500mg Tablets,Anti-Infective,Helix Chemical Synthetics,Central Hub (Chicago),10901,8098,2.17,14171.3,38870.4,28343.0,Certified Released
+BTC-88495,2024-04-21,Ciprofloxacin 500mg Tablets,Anti-Infective,Helix Chemical Synthetics,West Logistics (Reno),39527,35397,0.52,51385.1,169905.6,123889.5,Certified Released
+BTC-88496,2024-04-22,Atorvastatin 20mg,Cardiology,Apex BioPharma Labs,East Depot (Newark),33310,8023,1.96,39972.0,36103.5,26475.9,Audit Pending
+BTC-88497,2024-04-23,Pembrolizumab Infusion 100mg,Oncology,Apex BioPharma Labs,Central Hub (Chicago),912,238,4.22,319200.0,273700.0,190400.0,Quality Flagged
+BTC-88498,2024-04-24,Levetiracetam 500mg,Neurology,Helix Chemical Synthetics,Southern Facility (Dallas),17356,23,3.94,19091.6,96.6,71.3,Quality Flagged
+BTC-88499,2024-04-25,Amlodipine Besylate 10mg,Cardiology,Novus Life Sciences,West Logistics (Reno),21008,6611,4.0,17856.8,21155.2,15535.85,Quality Flagged
+BTC-88500,2024-04-26,Amlodipine Besylate 10mg,Cardiology,Helix Chemical Synthetics,East Depot (Newark),32389,6982,3.81,27530.65,22342.4,16407.7,Quality Flagged
+BTC-88501,2024-04-26,Atorvastatin 20mg,Cardiology,Zenith Active Ingredients,Southern Facility (Dallas),39995,2295,3.17,47994.0,10327.5,7573.5,Quality Flagged
+BTC-88502,2024-04-27,Azithromycin 500mg Tablets,Anti-Infective,Novus Life Sciences,East Depot (Newark),16620,5775,3.81,34902.0,43312.5,31185.0,Quality Flagged
+BTC-88503,2024-04-28,Paclitaxel 300mg Concentrate,Oncology,Novus Life Sciences,East Depot (Newark),1190,1001,1.89,71400.0,240240.0,180180.0,Certified Released
+BTC-88504,2024-04-29,Lisinopril 10mg,Cardiology,Novus Life Sciences,Southern Facility (Dallas),34810,27336,0.56,26107.5,80641.2,60139.2,Certified Released
+BTC-88505,2024-04-30,Atorvastatin 20mg,Cardiology,Apex BioPharma Labs,East Depot (Newark),15161,4197,3.02,18193.2,18886.5,13850.1,Quality Flagged
+BTC-88506,2024-05-01,Rituximab 500mg Solution,Oncology,Helix Chemical Synthetics,East Depot (Newark),403,119,3.06,88660.0,92820.0,66640.0,Quality Flagged
+BTC-88507,2024-05-02,Trastuzumab 440mg Lyophilized,Oncology,Novus Life Sciences,Southern Facility (Dallas),1428,31,3.3,257040.0,19840.0,14260.0,Quality Flagged
+BTC-88508,2024-05-03,Azithromycin 500mg Tablets,Anti-Infective,Apex BioPharma Labs,Southern Facility (Dallas),36606,556,2.27,76872.6,4170.0,3002.4,Audit Pending
+BTC-88509,2024-05-04,Pregabalin 75mg Capsule,Neurology,Novus Life Sciences,Central Hub (Chicago),39252,30404,0.54,70653.6,197626.0,142898.8,Certified Released
+BTC-88510,2024-05-05,Metoprolol Tartrate 50mg,Cardiology,Zenith Active Ingredients,Southern Facility (Dallas),31853,28493,0.61,28667.7,108273.4,82629.7,Certified Released
+BTC-88511,2024-05-05,Pregabalin 75mg Capsule,Neurology,Zenith Active Ingredients,East Depot (Newark),24589,22268,1.64,44260.2,144742.0,104659.6,Certified Released
+BTC-88512,2024-05-06,Metoprolol Tartrate 50mg,Cardiology,Zenith Active Ingredients,Southern Facility (Dallas),29159,8388,3.16,26243.1,31874.4,24325.2,Quality Flagged
+BTC-88513,2024-05-07,Amoxicillin-Clavulanate 875mg,Anti-Infective,Helix Chemical Synthetics,West Logistics (Reno),11173,8784,0.71,15642.2,44798.4,32500.8,Certified Released
+BTC-88514,2024-05-08,Trastuzumab 440mg Lyophilized,Oncology,MedVantage Global,East Depot (Newark),1433,1258,1.3,257940.0,805120.0,578680.0,Certified Released
+BTC-88515,2024-05-09,Ciprofloxacin 500mg Tablets,Anti-Infective,MedVantage Global,East Depot (Newark),6472,4789,2.06,8413.6,22987.2,16761.5,Certified Released
+BTC-88516,2024-05-10,Azithromycin 500mg Tablets,Anti-Infective,Helix Chemical Synthetics,West Logistics (Reno),9124,1833,3.46,19160.4,13747.5,9898.2,Quality Flagged
+BTC-88517,2024-05-11,Azithromycin 500mg Tablets,Anti-Infective,Apex BioPharma Labs,Central Hub (Chicago),34968,26973,1.45,73432.8,202297.5,145654.2,Certified Released
+BTC-88518,2024-05-12,Pregabalin 75mg Capsule,Neurology,Helix Chemical Synthetics,West Logistics (Reno),31583,23819,1.31,56849.4,154823.5,111949.3,Certified Released
+BTC-88519,2024-05-13,Levetiracetam 500mg,Neurology,Zenith Active Ingredients,Southern Facility (Dallas),20894,20146,1.37,22983.4,84613.2,62452.6,Certified Released
+BTC-88520,2024-05-14,Levetiracetam 500mg,Neurology,Zenith Active Ingredients,Central Hub (Chicago),29957,21204,1.39,32952.7,89056.8,65732.4,Certified Released
+BTC-88521,2024-05-14,Donepezil Hydrochloride 10mg,Neurology,Apex BioPharma Labs,East Depot (Newark),38735,11873,3.65,58102.5,68863.4,51053.9,Quality Flagged
+BTC-88522,2024-05-15,Levetiracetam 500mg,Neurology,Apex BioPharma Labs,Central Hub (Chicago),15749,11196,1.85,17323.9,47023.2,34707.6,Certified Released
+BTC-88523,2024-05-16,Azithromycin 500mg Tablets,Anti-Infective,Helix Chemical Synthetics,Central Hub (Chicago),6184,387,3.8,12986.4,2902.5,2089.8,Quality Flagged
+BTC-88524,2024-05-17,Donepezil Hydrochloride 10mg,Neurology,Helix Chemical Synthetics,Central Hub (Chicago),19512,16789,0.1,29268.0,97376.2,72192.7,Certified Released
+BTC-88525,2024-05-18,Pembrolizumab Infusion 100mg,Oncology,MedVantage Global,Southern Facility (Dallas),824,155,3.03,288400.0,178250.0,124000.0,Quality Flagged
+BTC-88526,2024-05-19,Paclitaxel 300mg Concentrate,Oncology,MedVantage Global,Central Hub (Chicago),1333,1021,1.63,79980.0,245040.0,183780.0,Certified Released
+BTC-88527,2024-05-20,Paclitaxel 300mg Concentrate,Oncology,MedVantage Global,Central Hub (Chicago),296,35,0.1,17760.0,8400.0,6300.0,Audit Pending
+BTC-88528,2024-05-21,Ciprofloxacin 500mg Tablets,Anti-Infective,Zenith Active Ingredients,Central Hub (Chicago),28323,9598,2.94,36819.9,46070.4,33593.0,Audit Pending
+BTC-88529,2024-05-22,Donepezil Hydrochloride 10mg,Neurology,MedVantage Global,Central Hub (Chicago),22108,1482,3.48,33162.0,8595.6,6372.6,Quality Flagged
+BTC-88530,2024-05-23,Ciprofloxacin 500mg Tablets,Anti-Infective,MedVantage Global,Southern Facility (Dallas),34414,28713,2.61,44738.2,137822.4,100495.5,Certified Released
+BTC-88531,2024-05-23,Atorvastatin 20mg,Cardiology,Helix Chemical Synthetics,Southern Facility (Dallas),15616,11083,1.92,18739.2,49873.5,36573.9,Certified Released
+BTC-88532,2024-05-24,Metoprolol Tartrate 50mg,Cardiology,Zenith Active Ingredients,West Logistics (Reno),13052,10216,0.31,11746.8,38820.8,29626.4,Certified Released
+BTC-88533,2024-05-25,Levetiracetam 500mg,Neurology,Helix Chemical Synthetics,Central Hub (Chicago),30781,29774,2.23,33859.1,125050.8,92299.4,Certified Released
+BTC-88534,2024-05-26,Azithromycin 500mg Tablets,Anti-Infective,Novus Life Sciences,West Logistics (Reno),7530,5536,1.76,15813.0,41520.0,29894.4,Certified Released
+BTC-88535,2024-05-27,Donepezil Hydrochloride 10mg,Neurology,Helix Chemical Synthetics,Southern Facility (Dallas),36305,33221,0.7,54457.5,192681.8,142850.3,Certified Released
+BTC-88536,2024-05-28,Rituximab 500mg Solution,Oncology,Apex BioPharma Labs,Central Hub (Chicago),879,774,1.14,193380.0,603720.0,433440.0,Certified Released
+BTC-88537,2024-05-29,Donepezil Hydrochloride 10mg,Neurology,Apex BioPharma Labs,West Logistics (Reno),37696,29591,1.45,56544.0,171627.8,127241.3,Certified Released
+BTC-88538,2024-05-30,Pregabalin 75mg Capsule,Neurology,MedVantage Global,West Logistics (Reno),19603,14251,2.74,35285.4,92631.5,66979.7,Certified Released
+BTC-88539,2024-05-31,Rituximab 500mg Solution,Oncology,MedVantage Global,Central Hub (Chicago),1201,407,3.75,264220.0,317460.0,227920.0,Quality Flagged
+BTC-88540,2024-06-01,Donepezil Hydrochloride 10mg,Neurology,MedVantage Global,East Depot (Newark),11660,11098,0.83,17490.0,64368.4,47721.4,Certified Released
+BTC-88541,2024-06-01,Atorvastatin 20mg,Cardiology,Novus Life Sciences,Southern Facility (Dallas),13370,12842,3.0,16044.0,57789.0,42378.6,Certified Released
+BTC-88542,2024-06-02,Lisinopril 10mg,Cardiology,Novus Life Sciences,East Depot (Newark),35363,27434,2.28,26522.25,80930.3,60354.8,Certified Released
+BTC-88543,2024-06-03,Trastuzumab 440mg Lyophilized,Oncology,Helix Chemical Synthetics,West Logistics (Reno),857,740,2.54,154260.0,473600.0,340400.0,Certified Released
+BTC-88544,2024-06-04,Levetiracetam 500mg,Neurology,MedVantage Global,East Depot (Newark),25488,21426,0.55,28036.8,89989.2,66420.6,Certified Released
+BTC-88545,2024-06-05,Azithromycin 500mg Tablets,Anti-Infective,Helix Chemical Synthetics,Central Hub (Chicago),34401,24583,0.39,72242.1,184372.5,132748.2,Certified Released
+BTC-88546,2024-06-06,Amlodipine Besylate 10mg,Cardiology,MedVantage Global,Central Hub (Chicago),21929,18246,2.07,18639.65,58387.2,42878.1,Certified Released
+BTC-88547,2024-06-07,Pregabalin 75mg Capsule,Neurology,Novus Life Sciences,West Logistics (Reno),14250,12894,1.41,25650.0,83811.0,60601.8,Certified Released
+BTC-88548,2024-06-08,Levetiracetam 500mg,Neurology,Zenith Active Ingredients,Central Hub (Chicago),28357,27630,2.65,31192.7,116046.0,85653.0,Certified Released
+BTC-88549,2024-06-09,Amoxicillin-Clavulanate 875mg,Anti-Infective,MedVantage Global,West Logistics (Reno),18315,15438,0.26,25641.0,78733.8,57120.6,Certified Released
+BTC-88550,2024-06-10,Metoprolol Tartrate 50mg,Cardiology,Novus Life Sciences,Central Hub (Chicago),39724,10949,1.06,35751.6,41606.2,31752.1,Audit Pending
+BTC-88551,2024-06-10,Rituximab 500mg Solution,Oncology,Helix Chemical Synthetics,East Depot (Newark),1074,192,4.22,236280.0,149760.0,107520.0,Quality Flagged
+BTC-88552,2024-06-11,Pembrolizumab Infusion 100mg,Oncology,MedVantage Global,East Depot (Newark),1182,921,2.49,413700.0,1059150.0,736800.0,Certified Released
+BTC-88553,2024-06-12,Amoxicillin-Clavulanate 875mg,Anti-Infective,MedVantage Global,Central Hub (Chicago),25542,20065,0.9,35758.8,102331.5,74240.5,Certified Released
+BTC-88554,2024-06-13,Pregabalin 75mg Capsule,Neurology,Novus Life Sciences,West Logistics (Reno),19839,16730,2.22,35710.2,108745.0,78631.0,Certified Released
+BTC-88555,2024-06-14,Atorvastatin 20mg,Cardiology,MedVantage Global,Southern Facility (Dallas),36350,29328,0.93,43620.0,131976.0,96782.4,Certified Released
+BTC-88556,2024-06-15,Lisinopril 10mg,Cardiology,Zenith Active Ingredients,Southern Facility (Dallas),15655,15044,2.71,11741.25,44379.8,33096.8,Certified Released
+BTC-88557,2024-06-16,Levetiracetam 500mg,Neurology,Novus Life Sciences,Southern Facility (Dallas),13949,13235,2.69,15343.9,55587.0,41028.5,Certified Released
+BTC-88558,2024-06-17,Azithromycin 500mg Tablets,Anti-Infective,MedVantage Global,Central Hub (Chicago),6900,270,3.13,14490.0,2025.0,1458.0,Quality Flagged
+BTC-88559,2024-06-18,Donepezil Hydrochloride 10mg,Neurology,Novus Life Sciences,Central Hub (Chicago),39818,11604,4.09,59727.0,67303.2,49897.2,Quality Flagged
+BTC-88560,2024-06-19,Levetiracetam 500mg,Neurology,Apex BioPharma Labs,Central Hub (Chicago),31843,3237,3.02,35027.3,13595.4,10034.7,Quality Flagged
+BTC-88561,2024-06-19,Levetiracetam 500mg,Neurology,MedVantage Global,Southern Facility (Dallas),23149,4169,3.34,25463.9,17509.8,12923.9,Quality Flagged
+BTC-88562,2024-06-20,Pregabalin 75mg Capsule,Neurology,Helix Chemical Synthetics,Southern Facility (Dallas),29294,27697,2.03,52729.2,180030.5,130175.9,Certified Released
+BTC-88563,2024-06-21,Azithromycin 500mg Tablets,Anti-Infective,Helix Chemical Synthetics,West Logistics (Reno),39072,28566,0.66,82051.2,214245.0,154256.4,Certified Released
+BTC-88564,2024-06-22,Metoprolol Tartrate 50mg,Cardiology,Novus Life Sciences,Central Hub (Chicago),33908,5491,3.38,30517.2,20865.8,15923.9,Quality Flagged
+BTC-88565,2024-06-23,Metoprolol Tartrate 50mg,Cardiology,MedVantage Global,East Depot (Newark),34612,5598,4.05,31150.8,21272.4,16234.2,Quality Flagged
+BTC-88566,2024-06-24,Pregabalin 75mg Capsule,Neurology,Helix Chemical Synthetics,West Logistics (Reno),22215,6304,4.17,39987.0,40976.0,29628.8,Quality Flagged
+BTC-88567,2024-06-25,Levetiracetam 500mg,Neurology,Zenith Active Ingredients,Southern Facility (Dallas),15477,13101,2.4,17024.7,55024.2,40613.1,Certified Released
+BTC-88568,2024-06-26,Metoprolol Tartrate 50mg,Cardiology,Novus Life Sciences,Central Hub (Chicago),18757,15411,2.42,16881.3,58561.8,44691.9,Certified Released
+BTC-88569,2024-06-27,Atorvastatin 20mg,Cardiology,Helix Chemical Synthetics,East Depot (Newark),37223,1039,3.77,44667.6,4675.5,3428.7,Quality Flagged
+BTC-88570,2024-06-28,Pregabalin 75mg Capsule,Neurology,Apex BioPharma Labs,Central Hub (Chicago),15939,2484,3.77,28690.2,16146.0,11674.8,Quality Flagged
+BTC-88571,2024-06-28,Amlodipine Besylate 10mg,Cardiology,MedVantage Global,East Depot (Newark),32867,6731,4.17,27936.95,21539.2,15817.85,Quality Flagged
+BTC-88572,2024-06-29,Trastuzumab 440mg Lyophilized,Oncology,Apex BioPharma Labs,West Logistics (Reno),1233,311,2.47,221940.0,199040.0,143060.0,Audit Pending
+BTC-88573,2024-06-30,Amlodipine Besylate 10mg,Cardiology,Novus Life Sciences,East Depot (Newark),30858,22653,0.19,26229.3,72489.6,53234.55,Certified Released
+BTC-88574,2024-07-01,Pembrolizumab Infusion 100mg,Oncology,Apex BioPharma Labs,East Depot (Newark),1290,1074,0.65,451500.0,1235100.0,859200.0,Certified Released
+BTC-88575,2024-07-02,Trastuzumab 440mg Lyophilized,Oncology,MedVantage Global,Central Hub (Chicago),698,10,3.28,125640.0,6400.0,4600.0,Quality Flagged
+BTC-88576,2024-07-03,Amlodipine Besylate 10mg,Cardiology,Helix Chemical Synthetics,Central Hub (Chicago),37917,566,3.26,32229.45,1811.2,1330.1,Quality Flagged
+BTC-88577,2024-07-04,Levetiracetam 500mg,Neurology,Novus Life Sciences,West Logistics (Reno),18905,1366,3.24,20795.5,5737.2,4234.6,Quality Flagged
+BTC-88578,2024-07-05,Amlodipine Besylate 10mg,Cardiology,Helix Chemical Synthetics,Southern Facility (Dallas),18476,17666,1.77,15704.6,56531.2,41515.1,Certified Released
+BTC-88579,2024-07-06,Metoprolol Tartrate 50mg,Cardiology,MedVantage Global,Southern Facility (Dallas),21078,18405,1.02,18970.2,69939.0,53374.5,Certified Released
+BTC-88580,2024-07-07,Amlodipine Besylate 10mg,Cardiology,Helix Chemical Synthetics,West Logistics (Reno),33193,25948,0.5,28214.05,83033.6,60977.8,Certified Released
+BTC-88581,2024-07-07,Pembrolizumab Infusion 100mg,Oncology,MedVantage Global,Southern Facility (Dallas),969,728,1.15,339150.0,837200.0,582400.0,Certified Released
+BTC-88582,2024-07-08,Levetiracetam 500mg,Neurology,Apex BioPharma Labs,Southern Facility (Dallas),24017,20937,1.18,26418.7,87935.4,64904.7,Certified Released
+BTC-88583,2024-07-09,Rituximab 500mg Solution,Oncology,Zenith Active Ingredients,Southern Facility (Dallas),572,487,2.11,125840.0,379860.0,272720.0,Certified Released
+BTC-88584,2024-07-10,Ciprofloxacin 500mg Tablets,Anti-Infective,Zenith Active Ingredients,Southern Facility (Dallas),5307,3978,1.61,6899.1,19094.4,13923.0,Certified Released
+BTC-88585,2024-07-11,Lisinopril 10mg,Cardiology,MedVantage Global,West Logistics (Reno),9501,2271,3.69,7125.75,6699.45,4996.2,Quality Flagged
+BTC-88586,2024-07-12,Atorvastatin 20mg,Cardiology,Apex BioPharma Labs,Southern Facility (Dallas),26189,22258,2.89,31426.8,100161.0,73451.4,Certified Released
+BTC-88587,2024-07-13,Donepezil Hydrochloride 10mg,Neurology,MedVantage Global,Central Hub (Chicago),29464,386,4.34,44196.0,2238.8,1659.8,Quality Flagged
+BTC-88588,2024-07-14,Metoprolol Tartrate 50mg,Cardiology,Zenith Active Ingredients,East Depot (Newark),5542,4202,1.26,4987.8,15967.6,12185.8,Certified Released
+BTC-88589,2024-07-15,Pembrolizumab Infusion 100mg,Oncology,MedVantage Global,West Logistics (Reno),754,650,2.09,263900.0,747500.0,520000.0,Certified Released
+BTC-88590,2024-07-16,Levetiracetam 500mg,Neurology,Apex BioPharma Labs,Southern Facility (Dallas),7942,7105,1.94,8736.2,29841.0,22025.5,Certified Released
+BTC-88591,2024-07-16,Metoprolol Tartrate 50mg,Cardiology,Novus Life Sciences,West Logistics (Reno),38367,30293,2.1,34530.3,115113.4,87849.7,Certified Released
+BTC-88592,2024-07-17,Levetiracetam 500mg,Neurology,Novus Life Sciences,West Logistics (Reno),34732,28722,0.7,38205.2,120632.4,89038.2,Certified Released
+BTC-88593,2024-07-18,Pembrolizumab Infusion 100mg,Oncology,Zenith Active Ingredients,Central Hub (Chicago),416,122,3.43,145600.0,140300.0,97600.0,Quality Flagged
+BTC-88594,2024-07-19,Pregabalin 75mg Capsule,Neurology,Apex BioPharma Labs,East Depot (Newark),24992,5166,4.27,44985.6,33579.0,24280.2,Quality Flagged
+BTC-88595,2024-07-20,Lisinopril 10mg,Cardiology,Novus Life Sciences,Southern Facility (Dallas),34044,28711,2.97,25533.0,84697.45,63164.2,Certified Released
+BTC-88596,2024-07-21,Rituximab 500mg Solution,Oncology,Zenith Active Ingredients,West Logistics (Reno),1172,851,2.08,257840.0,663780.0,476560.0,Certified Released
+BTC-88597,2024-07-22,Atorvastatin 20mg,Cardiology,Helix Chemical Synthetics,Central Hub (Chicago),27879,26332,0.95,33454.8,118494.0,86895.6,Certified Released
+BTC-88598,2024-07-23,Metoprolol Tartrate 50mg,Cardiology,Helix Chemical Synthetics,East Depot (Newark),30945,23107,0.69,27850.5,87806.6,67010.3,Certified Released
+BTC-88599,2024-07-24,Amlodipine Besylate 10mg,Cardiology,Apex BioPharma Labs,East Depot (Newark),20246,4331,4.04,17209.1,13859.2,10177.85,Quality Flagged
+BTC-88600,2024-07-25,Donepezil Hydrochloride 10mg,Neurology,Zenith Active Ingredients,East Depot (Newark),5479,3865,1.28,8218.5,22417.0,16619.5,Certified Released
+BTC-88601,2024-07-25,Ciprofloxacin 500mg Tablets,Anti-Infective,Helix Chemical Synthetics,West Logistics (Reno),11534,9272,2.59,14994.2,44505.6,32452.0,Certified Released
+BTC-88602,2024-07-26,Pembrolizumab Infusion 100mg,Oncology,Apex BioPharma Labs,Southern Facility (Dallas),1461,1400,1.46,511350.0,1610000.0,1120000.0,Certified Released
+BTC-88603,2024-07-27,Trastuzumab 440mg Lyophilized,Oncology,Helix Chemical Synthetics,Southern Facility (Dallas),257,214,2.68,46260.0,136960.0,98440.0,Certified Released
+BTC-88604,2024-07-28,Azithromycin 500mg Tablets,Anti-Infective,Helix Chemical Synthetics,Southern Facility (Dallas),18414,18003,0.91,38669.4,135022.5,97216.2,Certified Released
+BTC-88605,2024-07-29,Levetiracetam 500mg,Neurology,Novus Life Sciences,West Logistics (Reno),5916,5210,1.27,6507.6,21882.0,16151.0,Certified Released
+BTC-88606,2024-07-30,Rituximab 500mg Solution,Oncology,Zenith Active Ingredients,Central Hub (Chicago),420,298,2.45,92400.0,232440.0,166880.0,Certified Released
+BTC-88607,2024-07-31,Donepezil Hydrochloride 10mg,Neurology,Helix Chemical Synthetics,Southern Facility (Dallas),11502,865,3.13,17253.0,5017.0,3719.5,Quality Flagged
+BTC-88608,2024-08-01,Amoxicillin-Clavulanate 875mg,Anti-Infective,Novus Life Sciences,Southern Facility (Dallas),34402,2044,3.16,48162.8,10424.4,7562.8,Quality Flagged
+BTC-88609,2024-08-02,Pembrolizumab Infusion 100mg,Oncology,Apex BioPharma Labs,West Logistics (Reno),684,616,1.82,239400.0,708400.0,492800.0,Certified Released
+BTC-88610,2024-08-03,Amlodipine Besylate 10mg,Cardiology,Novus Life Sciences,Southern Facility (Dallas),7043,6123,0.14,5986.55,19593.6,14389.05,Certified Released
+BTC-88611,2024-08-03,Atorvastatin 20mg,Cardiology,Apex BioPharma Labs,Southern Facility (Dallas),20951,17968,0.7,25141.2,80856.0,59294.4,Certified Released
+BTC-88612,2024-08-04,Atorvastatin 20mg,Cardiology,Zenith Active Ingredients,East Depot (Newark),35243,25011,0.49,42291.6,112549.5,82536.3,Certified Released
+BTC-88613,2024-08-05,Amoxicillin-Clavulanate 875mg,Anti-Infective,Novus Life Sciences,Central Hub (Chicago),12153,10434,1.0,17014.2,53213.4,38605.8,Certified Released
+BTC-88614,2024-08-06,Amoxicillin-Clavulanate 875mg,Anti-Infective,Zenith Active Ingredients,Southern Facility (Dallas),14341,4134,0.92,20077.4,21083.4,15295.8,Audit Pending
+BTC-88615,2024-08-07,Pregabalin 75mg Capsule,Neurology,MedVantage Global,Southern Facility (Dallas),12331,478,4.49,22195.8,3107.0,2246.6,Quality Flagged
+BTC-88616,2024-08-08,Pembrolizumab Infusion 100mg,Oncology,Zenith Active Ingredients,Central Hub (Chicago),1131,808,1.23,395850.0,929200.0,646400.0,Certified Released
+BTC-88617,2024-08-09,Rituximab 500mg Solution,Oncology,MedVantage Global,West Logistics (Reno),469,413,0.91,103180.0,322140.0,231280.0,Certified Released
+BTC-88618,2024-08-10,Metoprolol Tartrate 50mg,Cardiology,MedVantage Global,East Depot (Newark),19068,1801,4.11,17161.2,6843.8,5222.9,Quality Flagged
+BTC-88619,2024-08-11,Metoprolol Tartrate 50mg,Cardiology,Apex BioPharma Labs,West Logistics (Reno),24994,3902,3.36,22494.6,14827.6,11315.8,Quality Flagged
+BTC-88620,2024-08-12,Amoxicillin-Clavulanate 875mg,Anti-Infective,Zenith Active Ingredients,Central Hub (Chicago),18647,2745,3.07,26105.8,13999.5,10156.5,Quality Flagged
+BTC-88621,2024-08-12,Donepezil Hydrochloride 10mg,Neurology,Apex BioPharma Labs,East Depot (Newark),13555,2209,2.17,20332.5,12812.2,9498.7,Audit Pending
+BTC-88622,2024-08-13,Pregabalin 75mg Capsule,Neurology,Helix Chemical Synthetics,Central Hub (Chicago),13777,12313,1.29,24798.6,80034.5,57871.1,Certified Released
+BTC-88623,2024-08-14,Levetiracetam 500mg,Neurology,Zenith Active Ingredients,Central Hub (Chicago),13612,9949,0.57,14973.2,41785.8,30841.9,Certified Released
+BTC-88624,2024-08-15,Metoprolol Tartrate 50mg,Cardiology,Zenith Active Ingredients,Southern Facility (Dallas),23712,6658,3.32,21340.8,25300.4,19308.2,Quality Flagged
+BTC-88625,2024-08-16,Azithromycin 500mg Tablets,Anti-Infective,Zenith Active Ingredients,Southern Facility (Dallas),38665,1717,3.07,81196.5,12877.5,9271.8,Quality Flagged
+BTC-88626,2024-08-17,Azithromycin 500mg Tablets,Anti-Infective,Apex BioPharma Labs,Central Hub (Chicago),37781,29184,2.41,79340.1,218880.0,157593.6,Certified Released
+BTC-88627,2024-08-18,Paclitaxel 300mg Concentrate,Oncology,Helix Chemical Synthetics,Central Hub (Chicago),1356,138,0.58,81360.0,33120.0,24840.0,Audit Pending
+BTC-88628,2024-08-19,Pembrolizumab Infusion 100mg,Oncology,Zenith Active Ingredients,West Logistics (Reno),289,261,0.32,101150.0,300150.0,208800.0,Certified Released
+BTC-88629,2024-08-20,Paclitaxel 300mg Concentrate,Oncology,Helix Chemical Synthetics,East Depot (Newark),604,207,3.56,36240.0,49680.0,37260.0,Quality Flagged
+BTC-88630,2024-08-21,Pregabalin 75mg Capsule,Neurology,MedVantage Global,Southern Facility (Dallas),22722,19113,2.08,40899.6,124234.5,89831.1,Certified Released
+BTC-88631,2024-08-21,Metoprolol Tartrate 50mg,Cardiology,Helix Chemical Synthetics,Southern Facility (Dallas),25877,23290,1.31,23289.3,88502.0,67541.0,Certified Released
+BTC-88632,2024-08-22,Metoprolol Tartrate 50mg,Cardiology,Apex BioPharma Labs,East Depot (Newark),18061,3108,3.37,16254.9,11810.4,9013.2,Quality Flagged
+BTC-88633,2024-08-23,Pembrolizumab Infusion 100mg,Oncology,MedVantage Global,West Logistics (Reno),203,54,3.97,71050.0,62100.0,43200.0,Quality Flagged
+BTC-88634,2024-08-24,Atorvastatin 20mg,Cardiology,Apex BioPharma Labs,Central Hub (Chicago),39012,35432,1.76,46814.4,159444.0,116925.6,Certified Released
+BTC-88635,2024-08-25,Azithromycin 500mg Tablets,Anti-Infective,Novus Life Sciences,Central Hub (Chicago),5316,4864,0.11,11163.6,36480.0,26265.6,Certified Released
+BTC-88636,2024-08-26,Atorvastatin 20mg,Cardiology,MedVantage Global,Central Hub (Chicago),31620,256,3.61,37944.0,1152.0,844.8,Quality Flagged
+BTC-88637,2024-08-27,Lisinopril 10mg,Cardiology,Helix Chemical Synthetics,East Depot (Newark),20407,19620,0.71,15305.25,57879.0,43164.0,Certified Released
+BTC-88638,2024-08-28,Ciprofloxacin 500mg Tablets,Anti-Infective,Helix Chemical Synthetics,Central Hub (Chicago),30441,24179,0.14,39573.3,116059.2,84626.5,Certified Released
+BTC-88639,2024-08-29,Lisinopril 10mg,Cardiology,Zenith Active Ingredients,West Logistics (Reno),30461,9822,1.18,22845.75,28974.9,21608.4,Audit Pending
+BTC-88640,2024-08-30,Pregabalin 75mg Capsule,Neurology,Novus Life Sciences,East Depot (Newark),33479,9784,0.62,60262.2,63596.0,45984.8,Audit Pending
+BTC-88641,2024-08-30,Amoxicillin-Clavulanate 875mg,Anti-Infective,Apex BioPharma Labs,Central Hub (Chicago),25862,22779,0.51,36206.8,116172.9,84282.3,Certified Released
+BTC-88642,2024-08-31,Donepezil Hydrochloride 10mg,Neurology,Helix Chemical Synthetics,East Depot (Newark),25253,5620,0.76,37879.5,32596.0,24166.0,Audit Pending
+BTC-88643,2024-09-01,Atorvastatin 20mg,Cardiology,MedVantage Global,East Depot (Newark),26229,2549,3.46,31474.8,11470.5,8411.7,Quality Flagged
+BTC-88644,2024-09-02,Amoxicillin-Clavulanate 875mg,Anti-Infective,Zenith Active Ingredients,West Logistics (Reno),29580,6286,4.25,41412.0,32058.6,23258.2,Quality Flagged
+BTC-88645,2024-09-03,Donepezil Hydrochloride 10mg,Neurology,Helix Chemical Synthetics,West Logistics (Reno),31504,22526,2.0,47256.0,130650.8,96861.8,Certified Released
+BTC-88646,2024-09-04,Metoprolol Tartrate 50mg,Cardiology,MedVantage Global,Central Hub (Chicago),14127,2665,3.21,12714.3,10127.0,7728.5,Quality Flagged
+BTC-88647,2024-09-05,Metoprolol Tartrate 50mg,Cardiology,Novus Life Sciences,East Depot (Newark),38642,30176,2.07,34777.8,114668.8,87510.4,Certified Released
+BTC-88648,2024-09-06,Metoprolol Tartrate 50mg,Cardiology,Zenith Active Ingredients,East Depot (Newark),7207,5186,2.44,6486.3,19706.8,15039.4,Certified Released
+BTC-88649,2024-09-07,Pregabalin 75mg Capsule,Neurology,MedVantage Global,East Depot (Newark),35642,31308,1.1,64155.6,203502.0,147147.6,Certified Released
+BTC-88650,2024-09-08,Paclitaxel 300mg Concentrate,Oncology,MedVantage Global,East Depot (Newark),655,460,1.62,39300.0,110400.0,82800.0,Certified Released

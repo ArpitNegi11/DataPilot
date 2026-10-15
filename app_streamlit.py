@@ -1,53 +1,47 @@
 import streamlit as st
 import os
-import tempfile
-import importlib
 import pandas as pd
 import numpy as np
-import plotly.express as px
-import plotly.graph_objects as go
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import r2_score, mean_squared_error
-from sklearn.cluster import KMeans
+import tempfile
+import io
 
-from src import cleaning, validation, anomalies, visualize, reporting, io_utils, predictive, analytics
 try:
-    importlib.reload(analytics)
-except Exception:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
     pass
 
-from src.main import load_config
-from src.analytics import infer_business_columns, generate_business_insights
-from src.query_engine import DataPilotQueryEngine
+from src import cleaning, validation, anomalies, visualize, reporting, io_utils, predictive, analytics, recommendations
+from src.main import load_config, extract_validation_rules
+from src.document_rag import BusinessDocumentRAG
+from src.orchestrator import DataPilotOrchestrator
+from src.llm_client import LLMClient
 
 # -----------------------------------------------------------------------------
-# 1. Page Configuration & Custom Executive Design System (CSS)
+# 1. Page Configuration & Executive Design System
 # -----------------------------------------------------------------------------
 st.set_page_config(
     page_title="DataPilot – AI Data Analyst & Recommendation Engine",
     page_icon="⚡",
     layout="wide",
-    initial_sidebar_state="expanded",
+    initial_sidebar_state="expanded"
 )
 
 CUSTOM_CSS = """
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
 
-/* Base & Typography */
 html, body, [class*="css"] {
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     color: #F1F5F9;
-    letter-spacing: -0.01em;
 }
 
-/* App Background */
 .stApp {
     background: radial-gradient(circle at 15% 15%, #0d1527 0%, #080c16 60%, #04070d 100%);
     color: #F1F5F9;
 }
 
-/* Clean Block Margins & Sizing */
+/* Main Container Spacing */
 .block-container {
     padding-top: 1.75rem !important;
     padding-bottom: 3rem !important;
@@ -56,7 +50,7 @@ html, body, [class*="css"] {
     max-width: 1440px !important;
 }
 
-/* Sidebar Styling & Shift Upwards */
+/* Sidebar Top Padding Shift Upwards */
 section[data-testid="stSidebar"] {
     background: rgba(11, 17, 32, 0.96) !important;
     border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
@@ -73,30 +67,10 @@ section[data-testid="stSidebar"] [data-testid="stSidebarUserContent"] {
 [data-testid="stSidebarCollapseButton"] {
     margin-top: 0.2rem !important;
 }
-section[data-testid="stSidebar"] .stMarkdown h1,
-section[data-testid="stSidebar"] .stMarkdown h2,
-section[data-testid="stSidebar"] .stMarkdown h3 {
-    color: #F8FAFC;
-    font-weight: 700;
-}
 
-/* Hero Banner */
-.hero-container {
-    background: linear-gradient(135deg, rgba(14, 165, 233, 0.12) 0%, rgba(99, 102, 241, 0.12) 50%, rgba(236, 72, 153, 0.08) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 18px;
-    padding: 24px 30px;
-    margin-bottom: 22px;
-    backdrop-filter: blur(16px);
-    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
-}
-.hero-title {
-    font-size: 2.0rem;
+/* Header & Banner */
+.main-title {
+    font-size: 2.05rem;
     font-weight: 800;
     margin: 0;
     background: linear-gradient(120deg, #FFFFFF 20%, #38BDF8 60%, #818CF8 100%);
@@ -105,176 +79,43 @@ section[data-testid="stSidebar"] .stMarkdown h3 {
     letter-spacing: -0.025em;
     line-height: 1.2;
 }
-.hero-subtitle {
+.sub-title {
     font-size: 0.92rem;
     color: #94A3B8;
-    margin: 8px 0 0 0;
-    max-width: 720px;
-    line-height: 1.55;
-}
-.badge-row {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-top: 12px;
-}
-.hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 4px 12px;
-    border-radius: 9999px;
-    font-size: 0.76rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-}
-.badge-cyan {
-    background: rgba(6, 182, 212, 0.15);
-    color: #38BDF8;
-    border: 1px solid rgba(6, 182, 212, 0.35);
-}
-.badge-violet {
-    background: rgba(139, 92, 246, 0.15);
-    color: #A78BFA;
-    border: 1px solid rgba(139, 92, 246, 0.35);
-}
-.badge-emerald {
-    background: rgba(16, 185, 129, 0.15);
-    color: #34D399;
-    border: 1px solid rgba(16, 185, 129, 0.35);
-}
-.badge-amber {
-    background: rgba(245, 158, 11, 0.15);
-    color: #FBBF24;
-    border: 1px solid rgba(245, 158, 11, 0.35);
+    margin: 6px 0 16px 0;
+    line-height: 1.5;
 }
 
-/* Glass Cards & Proper Sizing */
+/* Glass & Recommendation Cards */
 .glass-card {
     background: rgba(17, 24, 39, 0.72);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 14px;
-    padding: 20px 24px;
-    margin-bottom: 18px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
     backdrop-filter: blur(16px);
-    box-shadow: 0 10px 25px -8px rgba(0, 0, 0, 0.45);
-    transition: transform 0.2s ease, border-color 0.2s ease;
 }
-.glass-card:hover {
-    border-color: rgba(56, 189, 248, 0.32);
-}
-
-/* KPI Metric Cards Grid */
-.kpi-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 14px;
-    margin-bottom: 22px;
-}
-.kpi-card {
-    background: linear-gradient(135deg, rgba(30, 41, 59, 0.85) 0%, rgba(15, 23, 42, 0.92) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 14px;
+.rec-box {
+    background: rgba(30, 41, 59, 0.75);
+    border-radius: 10px;
     padding: 16px 20px;
-    position: relative;
-    overflow: hidden;
-    backdrop-filter: blur(14px);
-    min-height: 110px;
-    transition: all 0.25s ease;
-}
-.kpi-card:hover {
-    transform: translateY(-2px);
-    border-color: rgba(56, 189, 248, 0.38);
-    box-shadow: 0 10px 25px -6px rgba(6, 182, 212, 0.2);
-}
-.kpi-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #06B6D4, #3B82F6, #8B5CF6);
-}
-.kpi-icon {
-    font-size: 1.25rem;
-    margin-bottom: 6px;
-    display: inline-block;
-}
-.kpi-title {
-    font-size: 0.74rem;
-    font-weight: 600;
-    color: #94A3B8;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    margin-bottom: 4px;
-}
-.kpi-value {
-    font-size: 1.52rem;
-    font-weight: 800;
-    color: #F8FAFC;
-    letter-spacing: -0.025em;
-    line-height: 1.2;
-    margin-bottom: 3px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-.kpi-sub {
-    font-size: 0.74rem;
-    color: #64748B;
-    font-weight: 500;
-}
-
-/* Executive Insights & Proper Indentation */
-.insight-item {
-    background: rgba(15, 23, 42, 0.65);
+    margin-bottom: 14px;
+    border-left: 4px solid #38bdf8;
     border: 1px solid rgba(255, 255, 255, 0.06);
-    border-left: 4px solid #06B6D4;
-    border-radius: 0 10px 10px 0;
-    padding: 12px 18px 12px 20px;
-    margin-bottom: 11px;
-    font-size: 0.90rem;
-    line-height: 1.6;
-    color: #E2E8F0;
+    border-left: 4px solid #38bdf8;
 }
-.insight-risk {
-    border-left-color: #F43F5E !important;
-    background: rgba(244, 63, 94, 0.06);
-}
-.insight-rec {
-    border-left-color: #10B981 !important;
-    background: rgba(16, 185, 129, 0.06);
-}
+.rec-high { border-left-color: #ef4444 !important; background: rgba(239, 68, 68, 0.06); }
+.rec-medium { border-left-color: #f59e0b !important; background: rgba(245, 158, 11, 0.06); }
+.rec-low { border-left-color: #10b981 !important; background: rgba(16, 185, 129, 0.06); }
+.badge { font-size: 0.75rem; font-weight: 700; padding: 2px 10px; border-radius: 12px; }
 
-/* Section Header Sizing */
-h2, h3, h4 {
-    letter-spacing: -0.02em;
-}
-h3 {
-    font-size: 1.3rem !important;
-    font-weight: 700 !important;
-    margin-top: 0.5rem !important;
-    margin-bottom: 0.8rem !important;
-}
-h4 {
-    font-size: 1.05rem !important;
-    font-weight: 600 !important;
-    margin-top: 0.8rem !important;
-    margin-bottom: 0.6rem !important;
-}
-
-/* Tabs Customization with proper sizing */
-div[data-testid="stTabs"] {
-    margin-top: 0.5rem;
-}
+/* Tabs Styling */
 div[data-testid="stTabs"] button[role="tab"] {
     font-size: 0.90rem;
     font-weight: 600;
     color: #94A3B8;
     padding: 9px 18px;
     border-radius: 8px;
-    transition: all 0.2s ease;
     margin-right: 4px;
 }
 div[data-testid="stTabs"] button[role="tab"][aria-selected="true"] {
@@ -293,14 +134,8 @@ div[data-testid="stTabs"] button[role="tab"][aria-selected="true"] {
     padding: 8px 18px;
     font-size: 0.88rem;
     box-shadow: 0 4px 14px rgba(14, 165, 233, 0.25);
-    transition: all 0.2s ease;
-}
-.stButton>button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(14, 165, 233, 0.4);
 }
 
-/* Code & SQL drawer */
 pre, code {
     font-family: 'JetBrains Mono', monospace !important;
     font-size: 0.84rem;
@@ -309,9 +144,31 @@ pre, code {
 """
 st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
 
+# App Header
+st.markdown(
+    """
+    <div style="margin-bottom:16px;">
+        <div class="main-title">DataPilot – AI Data Analyst & Recommendation Engine</div>
+        <div class="sub-title">Deterministic tabular analytics, LangGraph multi-agent querying, business document RAG & executive prescriptive recommendations.</div>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 # -----------------------------------------------------------------------------
-# 2. Sidebar Navigation & Dataset Selector (Defaults to Live Data)
+# 2. Session State Initialization
+# -----------------------------------------------------------------------------
+if "rag_engine" not in st.session_state:
+    st.session_state.rag_engine = BusinessDocumentRAG()
+    sample_doc_dir = "sample_documents"
+    if os.path.exists(sample_doc_dir):
+        st.session_state.rag_engine.add_directory(sample_doc_dir)
+
+if "current_query" not in st.session_state:
+    st.session_state.current_query = ""
+
+# -----------------------------------------------------------------------------
+# 3. Sidebar Controls
 # -----------------------------------------------------------------------------
 st.sidebar.markdown(
     """
@@ -319,936 +176,403 @@ st.sidebar.markdown(
         <span style="font-size:1.7rem;">⚡</span>
         <div>
             <div style="font-size:1.15rem; font-weight:800; color:#F8FAFC; letter-spacing:-0.02em;">DataPilot AI</div>
-            <div style="font-size:0.72rem; color:#38BDF8; font-weight:600; letter-spacing:0.04em;">EXECUTIVE ANALYTICS</div>
+            <div style="font-size:0.72rem; color:#38BDF8; font-weight:600; letter-spacing:0.04em;">80%+ ENTERPRISE ENGINE</div>
         </div>
     </div>
     """,
-    unsafe_allow_html=True,
+    unsafe_allow_html=True
 )
 
-st.sidebar.markdown("### 📂 Data Ingestion")
+st.sidebar.markdown("### ⚙️ Settings & Pipeline")
+enable_insights = st.sidebar.checkbox("Enable Predictive Insights & ML", value=True)
+report_type = st.sidebar.radio("Executive Report Type", ["HTML", "PDF", "Both"], index=0)
+num_clusters = st.sidebar.slider("Number of Clusters (KMeans)", min_value=2, max_value=6, value=3)
 
-SAMPLE_MAP = {
-    "🌟 Flagship Sales Demo (400 records)": "sample_data/DataPilot_Sales_Demo.csv",
-    "🛒 Supermarket Retail Orders (70 records)": "sample_data/Supermarket-Sales-Sample-Data.xlsx",
-    "📦 Inventory Records (46 records)": "sample_data/Inventory-Records-Sample-Data.xlsx",
-    "👥 Subscription Cohorts (3,069 records)": "sample_data/Subscription-Cohort-Analysis-Data.xlsx",
-    "📋 Employee Payroll Sample (5 records)": "sample_data/sample.xlsx",
-    "📤 Upload Custom File (CSV / Excel)": "UPLOAD_MODE",
-}
+# LLM Configuration
+st.sidebar.markdown("---")
+st.sidebar.markdown("### 🤖 Natural Language Query Engine")
 
-selected_source = st.sidebar.selectbox(
-    "Select Active Dataset",
-    list(SAMPLE_MAP.keys()),
-    index=0,  # Default: Flagship Sales Demo guarantees data presence
+providers_list = ["Deterministic Engine (No API Key)", "Google Gemini", "OpenAI", "Ollama (Local)"]
+default_idx = 0
+if (os.getenv("GEMINI_API_KEY") or "").strip():
+    default_idx = 1
+elif (os.getenv("OPENAI_API_KEY") or "").strip():
+    default_idx = 2
+
+llm_provider = st.sidebar.selectbox(
+    "Query Intelligence Mode",
+    providers_list,
+    index=default_idx,
+    help="Deterministic uses pure DuckDB pattern matching. Gemini, OpenAI, or Ollama translate free-form natural language queries dynamically into DuckDB SQL."
+)
+
+llm_api_key = ""
+llm_model = None
+llm_base_url = None
+
+if llm_provider == "Google Gemini":
+    env_gemini = (os.getenv("GEMINI_API_KEY") or "").strip()
+    if env_gemini:
+        masked_suffix = env_gemini[-4:] if len(env_gemini) >= 4 else "****"
+        st.sidebar.caption(f"🔒 API Key loaded from `.env` (`...{masked_suffix}`)")
+        override_key = st.sidebar.text_input("Override Gemini API Key", type="password", value="", placeholder="Leave blank to use .env key")
+        llm_api_key = override_key.strip() if override_key.strip() else env_gemini
+    else:
+        llm_api_key = st.sidebar.text_input("Gemini API Key", type="password", value="", placeholder="AIzaSy...")
+    llm_model = st.sidebar.selectbox("Gemini Model", ["gemini-1.5-flash", "gemini-1.5-flash-8b", "gemini-1.5-pro"], index=0)
+
+elif llm_provider == "OpenAI":
+    env_openai = (os.getenv("OPENAI_API_KEY") or "").strip()
+    if env_openai:
+        masked_suffix = env_openai[-4:] if len(env_openai) >= 4 else "****"
+        st.sidebar.caption(f"🔒 API Key loaded from `.env` (`...{masked_suffix}`)")
+        override_key = st.sidebar.text_input("Override OpenAI API Key", type="password", value="", placeholder="Leave blank to use .env key")
+        llm_api_key = override_key.strip() if override_key.strip() else env_openai
+    else:
+        llm_api_key = st.sidebar.text_input("OpenAI API Key", type="password", value="", placeholder="sk-...")
+    llm_model = st.sidebar.selectbox("OpenAI Model", ["gpt-4o-mini", "gpt-4o", "gpt-3.5-turbo"], index=0)
+
+elif llm_provider == "Ollama (Local)":
+    llm_model = st.sidebar.text_input("Ollama Model", value="llama3.2")
+    llm_base_url = st.sidebar.text_input("Ollama Base URL", value=os.getenv("OLLAMA_BASE_URL", "http://localhost:11434/v1"))
+
+llm_client = LLMClient(
+    provider=llm_provider,
+    api_key=llm_api_key,
+    model=llm_model,
+    base_url=llm_base_url
+)
+
+if llm_client.is_configured():
+    st.sidebar.success(f"🟢 LLM Active: {llm_provider}")
+    if st.sidebar.button("🧪 Test LLM Connection", width="stretch"):
+        with st.sidebar.status("Testing API connection..."):
+            try:
+                test_reply = llm_client.chat("Say 'Connection verified! DataPilot is ready to analyze your data.'")
+                if test_reply:
+                    st.sidebar.success(test_reply)
+                else:
+                    st.sidebar.error("❌ Failed to get response from provider.")
+            except Exception as e:
+                st.sidebar.error(f"❌ Error: {e}")
+else:
+    st.sidebar.info("⚡ Fast Deterministic SQL Active")
+
+# Data Source
+st.sidebar.markdown("---")
+st.sidebar.markdown("### 📁 Tabular Dataset")
+input_choice = st.sidebar.radio("Data Source", ["Use Sample Dataset", "Upload File (CSV / Excel)"], index=0)
+
+auto_detect_headers = st.sidebar.checkbox(
+    "Smart Header Auto-Detection",
+    value=True,
+    help="Automatically strips title banners, empty leading rows/columns, and detects true table headers."
 )
 
 uploaded_file = None
-active_file_path = None
-is_sample = True
+sample_file_path = None
 
-if selected_source == "📤 Upload Custom File (CSV / Excel)":
-    is_sample = False
-    uploaded_file = st.sidebar.file_uploader(
-        "Upload Spreadsheet",
-        type=["csv", "xlsx", "xls"],
-        help="Supports CSV and Excel files (.xlsx, .xls)."
-    )
+if input_choice == "Upload File (CSV / Excel)":
+    uploaded_file = st.sidebar.file_uploader("Upload CSV or Excel file", type=["csv", "xlsx", "xls"])
 else:
-    active_file_path = SAMPLE_MAP[selected_source]
+    sample_files = [
+        f for f in sorted(os.listdir("sample_data"))
+        if f.endswith((".csv", ".xlsx", ".xls")) and not f.startswith("~$") and not f.startswith("create")
+    ]
+    if sample_files:
+        chosen_sample = st.sidebar.selectbox("Choose Sample Dataset", sample_files, index=0)
+        sample_file_path = os.path.join("sample_data", chosen_sample)
+    else:
+        st.sidebar.warning("No sample files found in sample_data/")
 
+# Document Upload for RAG
 st.sidebar.markdown("---")
-st.sidebar.markdown("### ⚙️ Analysis Parameters")
-
-enable_insights = st.sidebar.toggle("Predictive Modeling & ML", value=True)
-num_clusters = st.sidebar.slider("KMeans Cluster Segments", min_value=2, max_value=6, value=3)
-auto_detect_headers = st.sidebar.toggle(
-    "Smart Header Auto-Detection",
-    value=True,
-    help="Automatically detects column headers and trims decorative banner rows.",
+st.sidebar.markdown("### 📄 Business Documents (RAG)")
+doc_files = st.sidebar.file_uploader(
+    "Upload Strategy / Policy Documents",
+    type=["pdf", "docx", "txt", "md"],
+    accept_multiple_files=True
 )
-report_type = st.sidebar.radio("Report Export Format", ["HTML", "PDF", "Both"], index=0)
-
+if doc_files:
+    for doc in doc_files:
+        bytes_data = doc.read()
+        buf = io.BytesIO(bytes_data)
+        st.session_state.rag_engine.add_document(buf, doc.name)
+    st.sidebar.success(f"Indexed {len(doc_files)} document(s)! Total chunks: {len(st.session_state.rag_engine.chunks)}")
 
 # -----------------------------------------------------------------------------
-# 3. Data Ingestion & Processing Pipeline
+# 4. Main Pipeline Execution
 # -----------------------------------------------------------------------------
-df_raw = None
-file_display_name = ""
-
-if not is_sample and uploaded_file is not None:
-    file_display_name = uploaded_file.name
+if uploaded_file or sample_file_path:
     tmp_dir = tempfile.mkdtemp()
-    file_path = os.path.join(tmp_dir, file_display_name)
-    with open(file_path, "wb") as f:
-        f.write(uploaded_file.getbuffer())
-    try:
-        df_raw = io_utils.load_file(file_path, auto_clean_header=auto_detect_headers)
-    except Exception as e:
-        st.error(f"Error loading file: {e}")
-elif is_sample and active_file_path and os.path.exists(active_file_path):
-    file_display_name = os.path.basename(active_file_path)
-    df_raw = io_utils.load_file(active_file_path, auto_clean_header=auto_detect_headers)
 
+    if uploaded_file:
+        file_name = uploaded_file.name
+        file_path = os.path.join(tmp_dir, file_name)
+        with open(file_path, "wb") as f:
+            f.write(uploaded_file.getbuffer())
+        df = io_utils.load_file(file_path, auto_clean_header=auto_detect_headers)
+        st.sidebar.success(f"Ingested: **{file_name}** ({df.shape[0]:,} rows, {df.shape[1]} cols)")
+    else:
+        file_name = os.path.basename(sample_file_path)
+        file_path = sample_file_path
+        df = io_utils.load_file(file_path, auto_clean_header=auto_detect_headers)
+        st.sidebar.success(f"Loaded: **{file_name}** ({df.shape[0]:,} rows, {df.shape[1]} cols)")
 
-# -----------------------------------------------------------------------------
-# 4. Empty State Handler (Guarantees zero blank screen)
-# -----------------------------------------------------------------------------
-if df_raw is None:
-    st.markdown(
-        """
-        <div class="hero-container">
-            <div>
-                <h1 class="hero-title">Welcome to DataPilot</h1>
-                <p class="hero-subtitle">
-                    Upload your raw business data or select one of the pre-configured datasets below to immediately explore automated cleaning, interactive Plotly dashboards, natural language queries, and predictive insights.
-                </p>
-                <div class="badge-row">
-                    <span class="hero-badge badge-cyan">⚡ Zero Setup Required</span>
-                    <span class="hero-badge badge-violet">🤖 DuckDB Deterministic Engine</span>
-                    <span class="hero-badge badge-emerald">📊 Interactive Plotly Dashboards</span>
-                </div>
-            </div>
-        </div>
-        """,
-        unsafe_allow_html=True,
+    # Load config
+    config = {}
+    if os.path.exists("config/config.yaml"):
+        try:
+            config = load_config("config/config.yaml") or {}
+        except Exception:
+            config = {}
+
+    # --- 1. Clean Data ---
+    df_clean = cleaning.clean_data(df, config)
+
+    # --- 2. Validation & Anomalies ---
+    val_rules = extract_validation_rules(config)
+    issues = validation.validate_data(df_clean, val_rules)
+    anomalies_found = anomalies.detect_anomalies(df_clean)
+
+    # --- 3. Business Analytics & Roles ---
+    roles = analytics.infer_business_columns(df_clean)
+    kpis = analytics.compute_kpis(df_clean, roles)
+    quality_score = analytics.compute_data_quality_score(df, df_clean, issues, anomalies_found)
+
+    # --- 4. Visualizations ---
+    tmp_fig_dir = os.path.join(tmp_dir, "figures")
+    static_figs = visualize.generate_visuals(df_clean, tmp_fig_dir)
+    interactive_figs = visualize.generate_interactive_visuals(df_clean)
+
+    # --- 5. Predictive ML Insights ---
+    insights = {}
+    if enable_insights:
+        insights = predictive.run_predictive_models(df_clean, num_clusters=num_clusters)
+        if "clustering" in insights and isinstance(insights["clustering"], dict):
+            insights["clustering"]["summary"] = f"Identified {num_clusters} business clusters in the dataset"
+
+    # --- 6. Strategic Recommendations ---
+    rec_engine = recommendations.RecommendationEngine(df_clean, roles)
+    business_recs = rec_engine.generate_recommendations()
+
+    # Save cleaned file
+    base_name, _ = os.path.splitext(file_name)
+    cleaned_filename = f"cleaned_{base_name}.csv"
+    cleaned_path = os.path.join(tmp_dir, cleaned_filename)
+    df_clean.to_csv(cleaned_path, index=False)
+
+    # Summary for Report
+    summary = {
+        "Original Rows": df.shape[0],
+        "Original Columns": df.shape[1],
+        "Cleaned Rows": df_clean.shape[0],
+        "Columns After Cleaning": df_clean.shape[1],
+        "Validation Issues Found": sum(len(v) for v in issues.values()),
+        "Anomalies Detected": len(anomalies_found),
+        "Data Quality Score": f"{quality_score['score']}% ({quality_score['grade']})",
+        "Output File": cleaned_filename,
+    }
+    if kpis.get("total_revenue") is not None:
+        summary["Total Revenue"] = f"${kpis['total_revenue']:,.2f}"
+    if kpis.get("total_profit") is not None:
+        summary["Total Profit"] = f"${kpis['total_profit']:,.2f}"
+    if kpis.get("profit_margin_pct") is not None:
+        summary["Profit Margin"] = f"{kpis['profit_margin_pct']:.1f}%"
+    if kpis.get("average_order_value") is not None:
+        summary["Average Order Value"] = f"${kpis['average_order_value']:,.2f}"
+
+    # Generate HTML report
+    report_path = os.path.join(tmp_dir, "report.html")
+    reporting.generate_report(
+        validation=issues,
+        anomalies=anomalies_found,
+        figures=static_figs,
+        summary=summary,
+        insights=insights,
+        output_path=report_path,
+        recommendations=business_recs
     )
 
-    st.subheader("🚀 Quick-Start Business Datasets")
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        st.markdown(
-            """
-            <div class="glass-card">
-                <div style="font-size:1.4rem; margin-bottom:6px;">🌟</div>
-                <h4 style="margin:0 0 4px 0; color:#F8FAFC;">Sales & Revenue Demo</h4>
-                <p style="font-size:0.84rem; color:#94A3B8; margin-bottom:12px; line-height:1.5;">
-                    400 transactions with Products, Regional Segments, Discounts, Revenue, and Profit Margins.
-                </p>
-            </div>
-            """,
-            unsafe_allow_html=True,
-        )
-        if st.button("Load Sales Demo Dataset", use_container_width=True, key="quick_load_sales"):
-            active_file_path = "sample_data/DataPilot_Sales_Demo.csv"
-            df_raw = io_utils.load_file(active_file_path, auto_clean_header=True)
-            file_display_name = os.path.basename(active_file_path)
-            st.rerun()
+    # =========================================================================
+    # 5. UI TABS (5 Official Tabs)
+    # =========================================================================
+    tab1, tab2, tab3, tab4, tab5 = st.tabs([
+        "📊 Analytics & Visuals",
+        "💬 AI Analyst (LangGraph)",
+        "🎯 Recommendations",
+        "📚 Document Knowledge Base",
+        "📄 Export & Reports"
+    ])
 
-    with col2:
-        st.markdown(
-            """
-            <div class="glass-card">
-                <div style="font-size:1.4rem; margin-bottom:6px;">🛒</div>
-                <h4 style="margin:0 0 4px 0; color:#F8FAFC;">Supermarket Retail</h4>
-                <p style="font-size:0.84rem; color:#94A3B8; margin-bottom:12px; line-height:1.5;">
-                    Retail department orders with product categories, customer types, and shipping dates.
-                </p>
-            </div>
-            """,
-            unsafe_allow_html=True,
-        )
-        if st.button("Load Supermarket Dataset", use_container_width=True, key="quick_load_supermarket"):
-            active_file_path = "sample_data/Supermarket-Sales-Sample-Data.xlsx"
-            df_raw = io_utils.load_file(active_file_path, auto_clean_header=True)
-            file_display_name = os.path.basename(active_file_path)
-            st.rerun()
-
-    with col3:
-        st.markdown(
-            """
-            <div class="glass-card">
-                <div style="font-size:1.4rem; margin-bottom:6px;">👥</div>
-                <h4 style="margin:0 0 4px 0; color:#F8FAFC;">Subscription Cohorts</h4>
-                <p style="font-size:0.84rem; color:#94A3B8; margin-bottom:12px; line-height:1.5;">
-                    3,069 recurring subscriber profiles with monthly billing, intervals, and churn tracking.
-                </p>
-            </div>
-            """,
-            unsafe_allow_html=True,
-        )
-        if st.button("Load Subscription Dataset", use_container_width=True, key="quick_load_cohort"):
-            active_file_path = "sample_data/Subscription-Cohort-Analysis-Data.xlsx"
-            df_raw = io_utils.load_file(active_file_path, auto_clean_header=True)
-            file_display_name = os.path.basename(active_file_path)
-            st.rerun()
-
-    st.stop()
-
-
-# -----------------------------------------------------------------------------
-# 5. Core Pipeline Execution: Clean, Validate, Detect Anomalies & Insights
-# -----------------------------------------------------------------------------
-tmp_dir = tempfile.mkdtemp()
-
-config = {}
-if os.path.exists("config/config.yaml"):
-    try:
-        config = load_config("config/config.yaml") or {}
-    except Exception:
-        config = {}
-
-# Clean data
-df_clean = cleaning.clean_data(df_raw, config)
-
-# Validation & Anomalies
-validation_rules = config.get("validation_rules", [])
-issues = validation.validate_data(df_clean, validation_rules)
-anomalies_found = anomalies.detect_anomalies(df_clean)
-
-# Automated Business Insights
-business_insights = generate_business_insights(df_clean)
-inferred_roles = business_insights.get("roles", {})
-kpis = business_insights.get("kpis", {})
-
-# Visualizations
-tmp_fig_dir = os.path.join(tmp_dir, "figures")
-static_figs = visualize.generate_visuals(df_clean, tmp_fig_dir)
-interactive_figs = visualize.generate_interactive_visuals(df_clean)
-
-# Predictive ML Models
-insights_models = {}
-if enable_insights:
-    try:
-        insights_models = predictive.run_predictive_models(df_clean, num_clusters=num_clusters)
-        if "clustering" in insights_models and isinstance(insights_models["clustering"], dict):
-            insights_models["clustering"]["summary"] = f"Identified {num_clusters} business clusters in dataset"
-    except Exception as e:
-        print(f"[PREDICTIVE_ERROR] {e}")
-
-# Save Cleaned CSV
-base_name, _ = os.path.splitext(file_display_name)
-cleaned_filename = f"cleaned_{base_name}.csv"
-cleaned_path = os.path.join(tmp_dir, cleaned_filename)
-df_clean.to_csv(cleaned_path, index=False)
-
-# Executive Report Generation
-report_summary = {
-    "Original Rows": df_raw.shape[0],
-    "Original Columns": df_raw.shape[1],
-    "Cleaned Rows": df_clean.shape[0],
-    "Columns After Cleaning": df_clean.shape[1],
-    "Validation Issues Found": sum(len(v) for v in issues.values()),
-    "Columns With Issues": len(issues),
-    "Anomalies Detected": len(anomalies_found),
-    "Output File": cleaned_filename,
-}
-report_path = os.path.join(tmp_dir, "report.html")
-reporting.generate_report(
-    issues, anomalies_found, static_figs, report_summary, insights_models, report_path
-)
-
-
-# -----------------------------------------------------------------------------
-# 6. Hero Header & Quick Stats Bar (Proper Sizing & Padding)
-# -----------------------------------------------------------------------------
-st.markdown(
-    f"""
-    <div class="hero-container">
-        <div>
-            <h1 class="hero-title">DataPilot Executive Intelligence</h1>
-            <p class="hero-subtitle">
-                Automated data hygiene, deterministic KPI tracking, interactive Plotly visualization, and predictive machine learning.
-            </p>
-            <div class="badge-row">
-                <span class="hero-badge badge-cyan">📂 {file_display_name}</span>
-                <span class="hero-badge badge-emerald">⚡ {df_clean.shape[0]:,} Rows Active</span>
-                <span class="hero-badge badge-violet">🛡️ Cleaned & Validated</span>
-                <span class="hero-badge badge-amber">🤖 AI Engine Active</span>
-            </div>
-        </div>
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
-
-# Compute High-Level Metrics
-rev_val = kpis.get("total_revenue", None)
-prof_val = kpis.get("total_profit", None)
-margin_val = kpis.get("profit_margin", None)
-total_anomalies_count = sum(len(v) for v in anomalies_found.values())
-duplicate_count = df_raw.duplicated().sum()
-missing_cells = df_raw.isnull().sum().sum()
-health_score = max(0, min(100, int(100 - (missing_cells / (df_raw.size or 1) * 60) - (duplicate_count / (len(df_raw) or 1) * 30))))
-
-# KPI Cards Bar
-st.markdown(
-    f"""
-    <div class="kpi-container">
-        <div class="kpi-card">
-            <span class="kpi-icon">💰</span>
-            <div class="kpi-title">Total Volume / Revenue</div>
-            <div class="kpi-value">{"${:,.2f}".format(rev_val) if rev_val is not None else f"{len(df_clean):,} Records"}</div>
-            <div class="kpi-sub">{"Avg ${:,.2f} / tx".format(kpis.get('avg_revenue', 0)) if rev_val is not None else "Active transactions"}</div>
-        </div>
-        <div class="kpi-card">
-            <span class="kpi-icon">📈</span>
-            <div class="kpi-title">Net Profit / Margin</div>
-            <div class="kpi-value" style="color: {'#34D399' if (margin_val or 0) >= 0 else '#F43F5E'};">
-                {f"{margin_val:.1f}% Margin" if margin_val is not None else f"{df_clean.shape[1]} Columns"}
-            </div>
-            <div class="kpi-sub">{"${:,.2f} total profit".format(prof_val) if prof_val is not None else "Analyzed dimensions"}</div>
-        </div>
-        <div class="kpi-card">
-            <span class="kpi-icon">🧹</span>
-            <div class="kpi-title">Data Cleanliness</div>
-            <div class="kpi-value">{df_clean.shape[0]:,}</div>
-            <div class="kpi-sub">{duplicate_count} duplicates removed • {missing_cells} imputed</div>
-        </div>
-        <div class="kpi-card">
-            <span class="kpi-icon">🛡️</span>
-            <div class="kpi-title">Data Quality Health</div>
-            <div class="kpi-value" style="color:#38BDF8;">{health_score}%</div>
-            <div class="kpi-sub">{'A+ Enterprise Grade' if health_score >= 90 else 'Good Quality'}</div>
-        </div>
-        <div class="kpi-card">
-            <span class="kpi-icon">⚠️</span>
-            <div class="kpi-title">Anomalies Detected</div>
-            <div class="kpi-value" style="color: {'#FBBF24' if total_anomalies_count > 0 else '#34D399'};">
-                {total_anomalies_count}
-            </div>
-            <div class="kpi-sub">{len(anomalies_found)} numeric columns flagged</div>
-        </div>
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
-
-
-# -----------------------------------------------------------------------------
-# 7. Main Executive Tabs
-# -----------------------------------------------------------------------------
-tab_overview, tab_cleaning, tab_visuals, tab_predictive, tab_query, tab_reports = st.tabs([
-    "📊 Executive Overview & KPIs",
-    "🧹 Data Profiling & Health",
-    "📈 Visual Analytics Studio",
-    "🤖 Predictive AI & Insights",
-    "💬 Ask DataPilot (NL Query)",
-    "📑 Reports & Export",
-])
-
-
-# =============================================================================
-# TAB 1: EXECUTIVE OVERVIEW & KPIS
-# =============================================================================
-with tab_overview:
-    st.markdown("### 📊 Executive Summary & Core Performance")
-    
-    # Dual Highlight Charts with Unique Keys
-    col_left, col_right = st.columns([1.1, 0.9])
-    
-    with col_left:
-        if "top_products" in interactive_figs:
-            st.plotly_chart(interactive_figs["top_products"], use_container_width=True, key="overview_chart_top_products")
-        elif "monthly_trend" in interactive_figs:
-            st.plotly_chart(interactive_figs["monthly_trend"], use_container_width=True, key="overview_chart_monthly_trend_left")
-        elif interactive_figs:
-            st.plotly_chart(list(interactive_figs.values())[0], use_container_width=True, key="overview_chart_fallback_0")
+    # ---------------- TAB 1: Analytics & Visuals ----------------
+    with tab1:
+        st.subheader("💡 Core Business KPIs")
+        kpi_c1, kpi_c2, kpi_c3, kpi_c4 = st.columns(4)
+        if kpis.get("total_revenue") is not None:
+            kpi_c1.metric("Total Revenue", f"${kpis['total_revenue']:,.2f}")
         else:
-            st.info("Chart preview not available for this column format.")
+            kpi_c1.metric("Total Rows", f"{len(df_clean):,}")
 
-    with col_right:
-        if "category_breakdown" in interactive_figs:
-            st.plotly_chart(interactive_figs["category_breakdown"], use_container_width=True, key="overview_chart_category_breakdown")
-        elif "correlation_matrix" in interactive_figs:
-            st.plotly_chart(interactive_figs["correlation_matrix"], use_container_width=True, key="overview_chart_correlation_matrix")
-        elif len(interactive_figs) > 1:
-            st.plotly_chart(list(interactive_figs.values())[1], use_container_width=True, key="overview_chart_fallback_1")
+        if kpis.get("total_profit") is not None:
+            kpi_c2.metric("Total Profit", f"${kpis['total_profit']:,.2f}")
         else:
-            st.info("Category breakdown not available.")
+            kpi_c2.metric("Columns", len(df_clean.columns))
 
-    # Time series secondary chart
-    if "monthly_trend" in interactive_figs and "top_products" in interactive_figs:
+        if kpis.get("profit_margin_pct") is not None:
+            kpi_c3.metric("Profit Margin", f"{kpis['profit_margin_pct']:.1f}%")
+        elif kpis.get("unique_products") is not None:
+            kpi_c3.metric("Unique Products", f"{kpis['unique_products']:,}")
+        else:
+            kpi_c3.metric("Duplicates Dropped", f"{df.duplicated().sum():,}")
+
+        kpi_c4.metric("Data Quality Health", f"{quality_score['score']}%", quality_score["grade"])
+
         st.markdown("---")
-        st.plotly_chart(interactive_figs["monthly_trend"], use_container_width=True, key="overview_chart_monthly_trend_bottom")
-
-    # Cleaned Records Preview
-    st.markdown("---")
-    st.markdown("#### 📋 Cleaned Dataset Quick Preview")
-    st.dataframe(df_clean.head(10), use_container_width=True, height=280)
-
-
-# =============================================================================
-# TAB 2: DATA PROFILING & HEALTH
-# =============================================================================
-with tab_cleaning:
-    st.markdown("### 🧹 Data Hygiene & Automated Cleaning Audit")
-    
-    col_prof1, col_prof2 = st.columns([1, 1])
-    
-    with col_prof1:
-        st.markdown(
-            f"""
-            <div class="glass-card">
-                <h4 style="margin-top:0; color:#38BDF8;">Dataset Quality Scorecard</h4>
-                <ul style="list-style-type:none; padding-left:4px; line-height:2.1; font-size:0.92rem; color:#CBD5E1;">
-                    <li><strong>Total Input Records:</strong> {df_raw.shape[0]:,}</li>
-                    <li><strong>Clean Records Retained:</strong> {df_clean.shape[0]:,} ({df_clean.shape[0]/(df_raw.shape[0] or 1)*100:.1f}%)</li>
-                    <li><strong>Duplicates Removed:</strong> {duplicate_count:,}</li>
-                    <li><strong>Missing Cells Imputed:</strong> {missing_cells:,}</li>
-                    <li><strong>Validation Rule Violations:</strong> {sum(len(v) for v in issues.values())}</li>
-                    <li><strong>Outliers Detected (Z > 3.0):</strong> {total_anomalies_count}</li>
-                </ul>
-            </div>
-            """,
-            unsafe_allow_html=True,
-        )
-
-    with col_prof2:
-        if "missing_values" in interactive_figs:
-            st.plotly_chart(interactive_figs["missing_values"], use_container_width=True, key="cleaning_chart_missing_values")
-        else:
-            st.markdown(
-                """
-                <div class="glass-card" style="text-align:center; padding:38px 24px;">
-                    <span style="font-size:2.4rem;">🎉</span>
-                    <h4 style="color:#34D399; margin:10px 0 6px 0;">Zero Missing Values</h4>
-                    <p style="font-size:0.85rem; color:#94A3B8; margin:0;">All columns maintain complete data integrity across all rows.</p>
-                </div>
-                """,
-                unsafe_allow_html=True,
-            )
-
-    # Detailed Audit & Expanders
-    st.markdown("#### 🔍 Schema & Statistical Distribution")
-    with st.expander("Show Detailed Column Statistics (Describe)", expanded=False):
-        st.dataframe(df_clean.describe(include="all").transpose(), use_container_width=True, height=320)
-
-    if issues:
-        with st.expander("⚠️ Validation Issues Detected", expanded=True):
-            for col_name, col_issues in issues.items():
-                st.markdown(f"**{col_name}**: " + ", ".join(col_issues))
-
-    if anomalies_found:
-        with st.expander("🚨 Anomaly Details by Column", expanded=False):
-            for col_name, values in anomalies_found.items():
-                st.markdown(
-                    f"**{col_name}**: {len(values)} outlier(s) flagged — values: `{', '.join(str(v) for v in values[:10])}`"
-                    + (" ..." if len(values) > 10 else "")
-                )
-
-
-# =============================================================================
-# TAB 3: VISUAL ANALYTICS STUDIO
-# =============================================================================
-with tab_visuals:
-    st.markdown("### 📈 Interactive Visual Analytics Studio")
-    
-    chart_view = st.radio(
-        "Select Visual Dashboard Mode",
-        ["Curated Business Dashboards", "Custom Chart Explorer (Ad-Hoc Builder)"],
-        horizontal=True,
-    )
-
-    if chart_view == "Curated Business Dashboards":
+        st.subheader("📈 Interactive Visual Analytics")
         if interactive_figs:
-            visual_tabs_list = []
+            tab_config = []
             if "top_products" in interactive_figs:
-                visual_tabs_list.append(("🏆 Top Items", "top_products"))
+                tab_config.append(("Top Items", "top_products"))
             if "category_breakdown" in interactive_figs:
-                visual_tabs_list.append(("🍩 Category Share", "category_breakdown"))
+                tab_config.append(("Category", "category_breakdown"))
             if "monthly_trend" in interactive_figs:
-                visual_tabs_list.append(("📅 Time Series Trends", "monthly_trend"))
+                tab_config.append(("Trends", "monthly_trend"))
             if "correlation_matrix" in interactive_figs:
-                visual_tabs_list.append(("🌡️ Correlation Matrix", "correlation_matrix"))
-            
-            # Distributions
+                tab_config.append(("Correlation", "correlation_matrix"))
+            if "regression_model" in interactive_figs:
+                tab_config.append(("Regression", "regression_model"))
+            if "missing_values" in interactive_figs:
+                tab_config.append(("Missing Values", "missing_values"))
+
             dist_keys = sorted(k for k in interactive_figs if k.startswith("distribution"))
             if dist_keys:
-                visual_tabs_list.append(("📊 Distributions", dist_keys))
+                tab_config.append(("Distributions", dist_keys))
 
-            if visual_tabs_list:
-                v_tabs = st.tabs([t[0] for t in visual_tabs_list])
-                for v_tab, (label, fig_key) in zip(v_tabs, visual_tabs_list):
-                    with v_tab:
-                        if isinstance(fig_key, list):
-                            for dk in fig_key:
-                                st.plotly_chart(
-                                    interactive_figs[dk],
-                                    use_container_width=True,
-                                    key=f"studio_curated_dist_{dk}"
-                                )
+            if tab_config:
+                tab_labels = [t[0] for t in tab_config]
+                chart_tabs = st.tabs(tab_labels)
+                for ctab, (label, key_or_keys) in zip(chart_tabs, tab_config):
+                    with ctab:
+                        if isinstance(key_or_keys, list):
+                            for dk in key_or_keys:
+                                st.plotly_chart(interactive_figs[dk], width="stretch", key=f"tab1_dist_{dk}")
                         else:
-                            st.plotly_chart(
-                                interactive_figs[fig_key],
-                                use_container_width=True,
-                                key=f"studio_curated_{fig_key}"
-                            )
+                            st.plotly_chart(interactive_figs[key_or_keys], width="stretch", key=f"tab1_chart_{key_or_keys}")
         else:
-            st.info("No numerical or categorical data available to generate charts.")
+            st.info("No numerical or categorical columns available to plot.")
 
-    else:
-        # Custom Ad-Hoc Chart Builder with proper sizing
-        st.markdown("#### 🎨 Custom 2D Chart Explorer")
-        c_col1, c_col2, c_col3, c_col4 = st.columns(4)
-        
-        all_cols = list(df_clean.columns)
-        num_cols = df_clean.select_dtypes(include=[np.number]).columns.tolist()
-        cat_cols = df_clean.select_dtypes(include=["object", "category"]).columns.tolist()
+        with st.expander("🔎 Raw & Cleaned Data Profiling", expanded=False):
+            st.dataframe(df_clean.head(10), width="stretch")
+            st.write(df_clean.describe(include="all").transpose())
 
-        with c_col1:
-            chart_type = st.selectbox("Chart Type", ["Scatter Plot", "Bar Chart", "Box Plot", "Histogram", "Line Trend"], key="adhoc_chart_type")
-        with c_col2:
-            x_col = st.selectbox("X-Axis", all_cols, index=0, key="adhoc_x_axis")
-        with c_col3:
-            y_default = num_cols[0] if num_cols else all_cols[min(1, len(all_cols)-1)]
-            y_col = st.selectbox("Y-Axis", all_cols, index=all_cols.index(y_default) if y_default in all_cols else 0, key="adhoc_y_axis")
-        with c_col4:
-            color_opts = ["None"] + all_cols
-            color_choice = st.selectbox("Color / Group By", color_opts, index=0, key="adhoc_color_by")
+    # ---------------- TAB 2: AI Analyst (LangGraph) ----------------
+    with tab2:
+        st.subheader("💬 AI Data Analyst (LangGraph Multi-Agent Engine)")
+        st.caption("Ask questions about numbers, business strategy, or hybrid insights. Computed deterministically via DuckDB + Document RAG.")
 
-        color_arg = None if color_choice == "None" else color_choice
+        q_col1, q_col2, q_col3 = st.columns(3)
+        with q_col1:
+            if st.button("Highest profit product?", width="stretch", key="btn_q_profit"):
+                st.session_state.current_query = "Which product generated the highest profit?"
+        with q_col2:
+            if st.button("Total revenue?", width="stretch", key="btn_q_rev"):
+                st.session_state.current_query = "What is the total revenue?"
+        with q_col3:
+            if st.button("Sales by category?", width="stretch", key="btn_q_cat"):
+                st.session_state.current_query = "Sales by category"
 
-        try:
-            if chart_type == "Scatter Plot":
-                custom_fig = px.scatter(
-                    df_clean, x=x_col, y=y_col, color=color_arg,
-                    template="plotly_dark", opacity=0.8,
-                    color_discrete_sequence=px.colors.qualitative.Prism
-                )
-            elif chart_type == "Bar Chart":
-                custom_fig = px.bar(
-                    df_clean, x=x_col, y=y_col, color=color_arg,
-                    template="plotly_dark",
-                    color_discrete_sequence=px.colors.qualitative.Prism
-                )
-            elif chart_type == "Box Plot":
-                custom_fig = px.box(
-                    df_clean, x=x_col, y=y_col, color=color_arg,
-                    template="plotly_dark"
-                )
-            elif chart_type == "Histogram":
-                custom_fig = px.histogram(
-                    df_clean, x=x_col, color=color_arg,
-                    template="plotly_dark", marginal="box"
-                )
-            elif chart_type == "Line Trend":
-                custom_fig = px.line(
-                    df_clean.sort_values(x_col), x=x_col, y=y_col, color=color_arg,
-                    template="plotly_dark", markers=True
-                )
-            
-            custom_fig.update_layout(
-                paper_bgcolor="rgba(15, 23, 42, 0.8)",
-                plot_bgcolor="rgba(15, 23, 42, 0.8)",
-                font=dict(family="'Plus Jakarta Sans', sans-serif"),
-                margin=dict(l=45, r=25, t=45, b=45),
-                height=420,
+        user_query = st.text_input(
+            "Enter your business query:",
+            value=st.session_state.current_query,
+            placeholder="e.g. Total sales in 2023 or Which product had the highest profit?",
+            key="user_query_input"
+        )
+
+        if not llm_client.is_configured():
+            st.caption("ℹ️ *Running with Deterministic Engine. Select Google Gemini, OpenAI, or Ollama in the sidebar for unlimited open-ended queries.*")
+
+        if user_query:
+            orchestrator = DataPilotOrchestrator(
+                df=df_clean,
+                rag_engine=st.session_state.rag_engine,
+                llm_client=llm_client
             )
-            st.plotly_chart(custom_fig, use_container_width=True, key="studio_adhoc_custom_chart")
-        except Exception as e:
-            st.warning(f"Could not render custom chart with chosen parameters: {e}")
+            with st.spinner("Orchestrating agent workflow & validating execution..."):
+                response = orchestrator.run(user_query, roles)
 
+            st.markdown(response["answer"])
 
-# =============================================================================
-# TAB 4: PREDICTIVE AI & DATA-DRIVEN INSIGHTS (REVAMPED SECTION 4)
-# =============================================================================
-with tab_predictive:
-    st.markdown("### 🤖 Predictive AI & Data-Driven Insights Engine")
-    st.caption("Deterministic business findings, statistical linear regressions with 'What-If' forecasting, and multi-dimensional cluster segmentation.")
+            if response.get("executed_sql"):
+                with st.expander("Show Executed DuckDB SQL (Zero Hallucination)", expanded=False):
+                    st.code(response["executed_sql"], language="sql")
 
-    # -------------------------------------------------------------------------
-    # Part A: Grounded Executive Business Findings with Proper Indentation
-    # -------------------------------------------------------------------------
-    st.markdown("#### 💡 Executive Takeaways & Performance Drivers")
-    
-    ins_c1, ins_c2 = st.columns(2)
-    
-    with ins_c1:
-        st.markdown(
-            """
-            <div class="glass-card">
-                <h4 style="margin:0 0 12px 0; color:#38BDF8; font-size:1.02rem;">🏆 Revenue & Volume Drivers</h4>
-            """,
-            unsafe_allow_html=True,
-        )
-        if business_insights.get("drivers"):
-            for d in business_insights["drivers"]:
-                st.markdown(f'<div class="insight-item">{d}</div>', unsafe_allow_html=True)
-        else:
-            st.markdown(f'<div class="insight-item">Total volume analyzed: <strong>{len(df_clean):,} records</strong> across {df_clean.shape[1]} attributes.</div>', unsafe_allow_html=True)
+            if not response["data"].empty:
+                st.dataframe(response["data"], width="stretch")
 
-        if business_insights.get("risks"):
-            st.markdown('<h4 style="margin:16px 0 10px 0; color:#F43F5E; font-size:1.02rem;">⚠️ Risk & Margin Alerts</h4>', unsafe_allow_html=True)
-            for r in business_insights["risks"]:
-                st.markdown(f'<div class="insight-item insight-risk">{r}</div>', unsafe_allow_html=True)
-        st.markdown("</div>", unsafe_allow_html=True)
+            if response.get("citations"):
+                with st.expander("View Document Source Citations", expanded=False):
+                    for cit in response["citations"]:
+                        st.markdown(f"**Source:** `{cit['source']}` (Relevance: {cit['score']:.0%})")
+                        st.caption(f"> \"{cit['content']}\"")
 
-    with ins_c2:
-        st.markdown(
-            """
-            <div class="glass-card">
-                <h4 style="margin:0 0 12px 0; color:#10B981; font-size:1.02rem;">🎯 Strategic Action Recommendations</h4>
-            """,
-            unsafe_allow_html=True,
-        )
-        recs = business_insights.get("recommendations", [])
-        for rec in recs:
-            st.markdown(f'<div class="insight-item insight-rec">💡 {rec}</div>', unsafe_allow_html=True)
+    # ---------------- TAB 3: Recommendations ----------------
+    with tab3:
+        st.subheader("🎯 Prioritized Business Recommendations")
+        st.caption("Grounded in quantitative thresholds and performance disparities identified in your dataset.")
 
-        # Dataset Health Insight
-        st.markdown(
-            f"""
-            <div class="insight-item" style="border-left-color:#8B5CF6;">
-                🛡️ <strong>Data Integrity Score: {health_score}/100</strong>.
-                {f"Imputed {missing_cells} missing values and eliminated {duplicate_count} duplicate records." if (missing_cells or duplicate_count) else "All records met zero-loss schema integrity standards."}
+        for rec in business_recs:
+            p_class = rec["priority"].lower()
+            st.markdown(f"""
+            <div class="rec-box rec-{p_class}">
+                <span class="badge" style="background:#0284c7; color:white;">{rec['priority']} Priority</span>
+                <span style="color:#94a3b8; font-size:0.85rem; margin-left:8px;">{rec['category']}</span>
+                <h4 style="margin:6px 0; color:#f8fafc;">{rec['title']}</h4>
+                <p style="color:#cbd5e1; margin-bottom:6px;"><b>Evidence:</b> {rec['observation']}</p>
+                <div style="background:rgba(56, 189, 248, 0.1); padding:8px; border-radius:4px; color:#e2e8f0; font-size:0.9rem;">
+                    <b>Recommended Action:</b> {rec['action']}
+                </div>
             </div>
-            """,
-            unsafe_allow_html=True,
-        )
-        st.markdown("</div>", unsafe_allow_html=True)
+            """, unsafe_allow_html=True)
 
-    st.markdown("---")
+    # ---------------- TAB 4: Document Knowledge Base ----------------
+    with tab4:
+        st.subheader("📚 Business Document Knowledge Base")
+        st.write(f"Currently indexed chunks: **{len(st.session_state.rag_engine.chunks)}**")
 
-    # -------------------------------------------------------------------------
-    # Part B: Interactive Linear Regression Studio & What-If Simulator
-    # -------------------------------------------------------------------------
-    st.markdown("#### 🔮 Predictive Linear Regression & What-If Simulator")
-    
-    num_cols = df_clean.select_dtypes(include=[np.number]).columns.tolist()
+        if st.session_state.rag_engine.chunks:
+            doc_sources = set(c.source for c in st.session_state.rag_engine.chunks)
+            st.write("Indexed Documents:", ", ".join([f"`{s}`" for s in doc_sources]))
 
-    if len(num_cols) >= 2:
-        # Determine best default pair
-        default_x, default_y = num_cols[0], num_cols[1]
-        if "Experience" in df_clean.columns and "Salary" in df_clean.columns:
-            default_x, default_y = "Experience", "Salary"
-        elif "Quantity" in df_clean.columns and "Sales" in df_clean.columns:
-            default_x, default_y = "Quantity", "Sales"
-        elif "Sales" in df_clean.columns and "Profit" in df_clean.columns:
-            default_x, default_y = "Sales", "Profit"
-        elif "Units" in df_clean.columns and "Total" in df_clean.columns:
-            default_x, default_y = "Units", "Total"
+            with st.expander("Search Document Knowledge Base", expanded=True):
+                doc_q = st.text_input("Search passages:", placeholder="e.g. strategy, margins, retention, compliance", key="doc_search_input")
+                if doc_q:
+                    retrieved = st.session_state.rag_engine.retrieve(doc_q, top_k=5)
+                    st.markdown(st.session_state.rag_engine.format_citations(retrieved))
         else:
-            try:
-                corr_m = df_clean[num_cols].corr().abs()
-                np.fill_diagonal(corr_m.values, 0)
-                if not corr_m.empty and corr_m.max().max() > 0.05:
-                    pair = corr_m.stack().idxmax()
-                    default_x, default_y = pair[0], pair[1]
-            except Exception:
-                pass
+            st.info("No documents uploaded yet. Upload PDF, DOCX, or TXT business files in the sidebar to enable Document RAG and Hybrid Q&A.")
 
-        reg_ctrl_col1, reg_ctrl_col2 = st.columns(2)
-        with reg_ctrl_col1:
-            sel_x = st.selectbox("Predictor Feature (X)", num_cols, index=num_cols.index(default_x) if default_x in num_cols else 0, key="reg_sel_x")
-        with reg_ctrl_col2:
-            y_candidates = [c for c in num_cols if c != sel_x] or num_cols
-            sel_y = st.selectbox("Target Outcome (Y)", y_candidates, index=y_candidates.index(default_y) if default_y in y_candidates else 0, key="reg_sel_y")
+    # ---------------- TAB 5: Export & Reports ----------------
+    with tab5:
+        st.subheader("📄 Download Cleaned Data & Executive Reports")
+        out_c1, out_c2, out_c3 = st.columns(3)
 
-        # Compute regression
-        valid_reg = df_clean[[sel_x, sel_y]].dropna()
-        if len(valid_reg) >= 3 and valid_reg[sel_x].nunique() > 1:
-            X_data = valid_reg[[sel_x]].values
-            y_data = valid_reg[sel_y].values
-
-            lr_model = LinearRegression()
-            lr_model.fit(X_data, y_data)
-            y_pred = lr_model.predict(X_data)
-
-            coef_val = float(lr_model.coef_[0])
-            intercept_val = float(lr_model.intercept_)
-            r2_val = float(r2_score(y_data, y_pred))
-            rmse_val = float(np.sqrt(mean_squared_error(y_data, y_pred)))
-
-            # Regression Plotly Chart
-            fig_reg_interactive = px.scatter(
-                valid_reg,
-                x=sel_x,
-                y=sel_y,
-                opacity=0.75,
-                color_discrete_sequence=["#38BDF8"],
-                hover_data=[sel_x, sel_y],
-                template="plotly_dark",
-            )
-            fig_reg_interactive.update_traces(name="Observed Transactions", showlegend=True)
-
-            sort_order = np.argsort(X_data.flatten())
-            fig_reg_interactive.add_trace(
-                go.Scatter(
-                    x=X_data.flatten()[sort_order],
-                    y=y_pred[sort_order],
-                    mode="lines",
-                    name=f"Fit Line: {sel_y} = {coef_val:.2f}*{sel_x} + {intercept_val:.2f}",
-                    line=dict(color="#F43F5E", width=3.5),
-                )
-            )
-            fig_reg_interactive.update_layout(
-                title=f"Linear Regression: {sel_y} vs. {sel_x} (R² = {r2_val:.3f})",
-                paper_bgcolor="rgba(15, 23, 42, 0.8)",
-                plot_bgcolor="rgba(15, 23, 42, 0.8)",
-                font=dict(family="'Plus Jakarta Sans', sans-serif"),
-                legend=dict(yanchor="top", y=0.98, xanchor="left", x=0.02),
-                height=420,
-                margin=dict(l=45, r=25, t=45, b=45),
-            )
-
-            col_chart, col_sim = st.columns([1.3, 0.7])
-            with col_chart:
-                st.plotly_chart(fig_reg_interactive, use_container_width=True, key="predictive_tab_reg_chart")
-
-            with col_sim:
-                st.markdown(
-                    f"""
-                    <div class="glass-card">
-                        <h4 style="margin:0 0 10px 0; color:#38BDF8;">Model Fit Summary</h4>
-                        <div style="font-size:0.84rem; line-height:1.75; color:#CBD5E1;">
-                            <strong>Formula:</strong> <code>{sel_y} = {coef_val:.2f}*{sel_x} + {intercept_val:.2f}</code><br>
-                            <strong>Fit Quality (R²):</strong> <span style="color:#34D399; font-weight:700;">{r2_val:.4f}</span><br>
-                            <strong>Marginal Slope:</strong> <code>{coef_val:.4f}</code> per unit<br>
-                            <strong>Baseline Intercept:</strong> <code>{intercept_val:.2f}</code><br>
-                            <strong>Root Mean Sq Error:</strong> <code>{rmse_val:.2f}</code>
-                        </div>
-                    </div>
-                    """,
-                    unsafe_allow_html=True,
-                )
-
-                # What-If Simulator with clean sizing
-                st.markdown("##### 🎛️ Interactive 'What-If' Predictor")
-                min_x = float(valid_reg[sel_x].min())
-                max_x = float(valid_reg[sel_x].max())
-                mean_x = float(valid_reg[sel_x].mean())
-
-                sim_x_val = st.number_input(
-                    f"Enter hypothetical {sel_x} value:",
-                    value=float(round(mean_x, 2)),
-                    step=float(round((max_x - min_x) / 20 or 1.0, 2)),
-                    key="what_if_num_input",
-                )
-                pred_sim_y = float(lr_model.predict([[sim_x_val]])[0])
-
-                st.markdown(
-                    f"""
-                    <div style="background:linear-gradient(135deg, rgba(6,182,212,0.15) 0%, rgba(99,102,241,0.15) 100%);
-                                border:1px solid rgba(56,189,248,0.4); border-radius:12px; padding:16px 14px; text-align:center;">
-                        <div style="font-size:0.75rem; text-transform:uppercase; color:#94A3B8; font-weight:700;">Predicted {sel_y}</div>
-                        <div style="font-size:1.6rem; font-weight:800; color:#F8FAFC; margin:4px 0;">
-                            {"${:,.2f}".format(pred_sim_y) if any(t in sel_y.lower() for t in ["sales","revenue","profit","cost","salary","total"]) else f"{pred_sim_y:,.2f}"}
-                        </div>
-                        <div style="font-size:0.74rem; color:#38BDF8;">Based on deterministic regression fit</div>
-                    </div>
-                    """,
-                    unsafe_allow_html=True,
-                )
-        else:
-            st.info(f"Insufficient unique variance between {sel_x} and {sel_y} to compute regression.")
-    else:
-        st.info("At least 2 numeric columns are required to run predictive regression.")
-
-    st.markdown("---")
-
-    # -------------------------------------------------------------------------
-    # Part C: Multi-Dimensional K-Means Clustering Studio
-    # -------------------------------------------------------------------------
-    st.markdown("#### 🧩 Multi-Dimensional Segmentation (K-Means Clustering)")
-    
-    numeric_df = df_clean.select_dtypes(include=[np.number]).dropna()
-    if numeric_df.shape[1] >= 2 and len(numeric_df) >= 3:
-        cluster_k = max(2, min(int(num_clusters), len(numeric_df)))
-        
-        # Pick 2 features for 2D visualization
-        col_c_feat1, col_c_feat2 = st.columns(2)
-        with col_c_feat1:
-            clust_x = st.selectbox("Cluster Feature 1 (X-Axis)", numeric_df.columns, index=0, key="clust_feat_1")
-        with col_c_feat2:
-            clust_y = st.selectbox("Cluster Feature 2 (Y-Axis)", numeric_df.columns, index=min(1, len(numeric_df.columns)-1), key="clust_feat_2")
-
-        try:
-            km = KMeans(n_clusters=cluster_k, n_init="auto", random_state=42)
-            cluster_labels = km.fit_predict(numeric_df[[clust_x, clust_y]])
-            
-            clust_plot_df = numeric_df.copy()
-            clust_plot_df["Cluster"] = [f"Cluster {c}" for c in cluster_labels]
-
-            fig_cluster = px.scatter(
-                clust_plot_df,
-                x=clust_x,
-                y=clust_y,
-                color="Cluster",
-                template="plotly_dark",
-                opacity=0.8,
-                color_discrete_sequence=["#06B6D4", "#8B5CF6", "#10B981", "#F59E0B", "#F43F5E", "#EC4899"],
-                hover_data=[clust_x, clust_y],
-            )
-            # Add Centroids
-            centroids = km.cluster_centers_
-            fig_cluster.add_trace(
-                go.Scatter(
-                    x=centroids[:, 0],
-                    y=centroids[:, 1],
-                    mode="markers",
-                    name="Cluster Centroids",
-                    marker=dict(size=14, color="#FFFFFF", symbol="x", line=dict(width=2, color="#000")),
-                )
-            )
-            fig_cluster.update_layout(
-                title=f"K-Means Customer & Transaction Segmentation (k={cluster_k})",
-                paper_bgcolor="rgba(15, 23, 42, 0.8)",
-                plot_bgcolor="rgba(15, 23, 42, 0.8)",
-                font=dict(family="'Plus Jakarta Sans', sans-serif"),
-                height=420,
-                margin=dict(l=45, r=25, t=45, b=45),
-            )
-
-            col_clust_plot, col_clust_stats = st.columns([1.3, 0.7])
-            with col_clust_plot:
-                st.plotly_chart(fig_cluster, use_container_width=True, key="predictive_tab_cluster_chart")
-
-            with col_clust_stats:
-                st.markdown(
-                    f"""
-                    <div class="glass-card">
-                        <h4 style="margin:0 0 10px 0; color:#38BDF8;">Cluster Breakdown</h4>
-                    """,
-                    unsafe_allow_html=True,
-                )
-                clust_summary = clust_plot_df.groupby("Cluster")[[clust_x, clust_y]].mean().round(2)
-                clust_counts = clust_plot_df["Cluster"].value_counts()
-                clust_summary["Records"] = clust_counts
-
-                st.dataframe(clust_summary, use_container_width=True, height=220)
-                st.caption(f"Segmented {len(clust_plot_df):,} records into {cluster_k} distinct behavioral clusters based on {clust_x} and {clust_y}.")
-                st.markdown("</div>", unsafe_allow_html=True)
-        except Exception as e:
-            st.warning(f"Clustering execution encountered an issue: {e}")
-    else:
-        st.info("Insufficient numeric features to compute K-Means cluster segmentation.")
-
-
-# =============================================================================
-# TAB 5: ASK DATAPILOT (NATURAL LANGUAGE QUERY)
-# =============================================================================
-with tab_query:
-    st.markdown("### 💬 Ask DataPilot – Conversational NL-to-SQL Analytics")
-    st.caption("Ask natural language business questions about the active dataset. Computed deterministically via DuckDB with zero hallucinations.")
-
-    st.markdown("#### ⚡ Quick Questions (One-Click Prompts)")
-    q_col1, q_col2, q_col3, q_col4 = st.columns(4)
-    quick_q = ""
-    with q_col1:
-        if st.button("💎 Highest Profit Item?", use_container_width=True, key="btn_quick_profit"):
-            quick_q = "Which product generated the highest profit?"
-    with q_col2:
-        if st.button("💰 Total Revenue & Records?", use_container_width=True, key="btn_quick_rev"):
-            quick_q = "What is the total revenue?"
-    with q_col3:
-        if st.button("📊 Sales by Category?", use_container_width=True, key="btn_quick_cat"):
-            quick_q = "Sales by category"
-    with q_col4:
-        if st.button("🌍 Regional Breakdown?", use_container_width=True, key="btn_quick_reg"):
-            quick_q = "Sales by region"
-
-    query_input = st.text_input(
-        "Enter your question or analytical command:",
-        value=quick_q,
-        placeholder="e.g. Which product generated the highest profit? or Total sales by category",
-        key="nl_query_box",
-    )
-
-    if query_input:
-        engine = DataPilotQueryEngine(df_clean)
-        result = engine.ask(query_input, inferred_roles)
-
-        st.markdown(
-            f"""
-            <div class="glass-card" style="border-left:4px solid #10B981; background:rgba(16,185,129,0.08);">
-                <div style="font-size:0.75rem; text-transform:uppercase; color:#34D399; font-weight:700;">Query Result</div>
-                <div style="font-size:1.15rem; font-weight:600; color:#F8FAFC; margin-top:4px;">{result['answer']}</div>
-            </div>
-            """,
-            unsafe_allow_html=True,
-        )
-
-        with st.expander("🛠️ Executed DuckDB SQL Statement", expanded=False):
-            st.code(result["executed_sql"], language="sql")
-
-        if not result["data"].empty:
-            st.markdown("#### 📊 Query Result Table")
-            st.dataframe(result["data"], use_container_width=True, height=240)
-
-
-# =============================================================================
-# TAB 6: REPORTS & EXPORT
-# =============================================================================
-with tab_reports:
-    st.markdown("### 📑 Executive Reports & Output Downloads")
-    st.caption("Export cleaned datasets, interactive HTML dashboards, and executive PDF summaries.")
-
-    rep_col1, rep_col2, rep_col3 = st.columns(3)
-
-    with rep_col1:
-        st.markdown(
-            """
-            <div class="glass-card" style="text-align:center;">
-                <span style="font-size:2rem;">📥</span>
-                <h4 style="margin:8px 0 4px 0; color:#F8FAFC;">Cleaned Dataset</h4>
-                <p style="font-size:0.82rem; color:#94A3B8; margin-bottom:14px; line-height:1.5;">Sanitized CSV with imputed values & standardized formats.</p>
-            </div>
-            """,
-            unsafe_allow_html=True,
-        )
-        if os.path.exists(cleaned_path):
+        with out_c1:
             with open(cleaned_path, "rb") as f:
-                st.download_button(
-                    "Download Cleaned CSV",
-                    data=f,
-                    file_name=cleaned_filename,
-                    mime="text/csv",
-                    use_container_width=True,
-                    key="dl_btn_csv",
-                )
+                st.download_button("📥 Cleaned Dataset (CSV)", data=f, file_name=cleaned_filename, mime="text/csv", width="stretch", key="export_dl_csv")
 
-    with rep_col2:
-        st.markdown(
-            """
-            <div class="glass-card" style="text-align:center;">
-                <span style="font-size:2rem;">🌐</span>
-                <h4 style="margin:8px 0 4px 0; color:#F8FAFC;">HTML Executive Report</h4>
-                <p style="font-size:0.82rem; color:#94A3B8; margin-bottom:14px; line-height:1.5;">Standalone, self-contained HTML report with embedded visuals.</p>
-            </div>
-            """,
-            unsafe_allow_html=True,
-        )
-        if os.path.exists(report_path):
-            with open(report_path, "rb") as f:
-                st.download_button(
-                    "Download HTML Report",
-                    data=f,
-                    file_name="DataPilot_Executive_Report.html",
-                    mime="text/html",
-                    use_container_width=True,
-                    key="dl_btn_html",
-                )
+        with out_c2:
+            if os.path.exists(report_path):
+                with open(report_path, "rb") as f:
+                    st.download_button("📥 Executive Report (HTML)", data=f, file_name="DataPilot_Executive_Report.html", mime="text/html", width="stretch", key="export_dl_html")
 
-    with rep_col3:
-        st.markdown(
-            """
-            <div class="glass-card" style="text-align:center;">
-                <span style="font-size:2rem;">📄</span>
-                <h4 style="margin:8px 0 4px 0; color:#F8FAFC;">PDF Executive Report</h4>
-                <p style="font-size:0.82rem; color:#94A3B8; margin-bottom:14px; line-height:1.5;">Print-ready executive summary generated via wkhtmltopdf.</p>
-            </div>
-            """,
-            unsafe_allow_html=True,
-        )
-        pdf_path = report_path.replace(".html", ".pdf")
-        if os.path.exists(pdf_path):
-            with open(pdf_path, "rb") as f:
-                st.download_button(
-                    "Download PDF Report",
-                    data=f,
-                    file_name="DataPilot_Executive_Report.pdf",
-                    mime="application/pdf",
-                    use_container_width=True,
-                    key="dl_btn_pdf",
-                )
-        else:
-            st.caption("PDF generation requires wkhtmltopdf installed at default system path.")
+        with out_c3:
+            pdf_path = report_path.replace(".html", ".pdf")
+            if os.path.exists(pdf_path):
+                with open(pdf_path, "rb") as f:
+                    st.download_button("📥 Executive Report (PDF)", data=f, file_name="DataPilot_Executive_Report.pdf", mime="application/pdf", width="stretch", key="export_dl_pdf")
+            else:
+                st.caption("PDF export generated via wkhtmltopdf")
 
-    # Live Preview of Generated HTML Report
-    st.markdown("---")
-    st.markdown("#### 👁️ Live HTML Report Preview")
-    if os.path.exists(report_path):
-        with open(report_path, "r", encoding="utf-8") as rf:
-            html_content = rf.read()
-            st.components.v1.html(html_content, height=650, scrolling=True)
+else:
+    st.info("👈 Upload a CSV/Excel file or select a sample business dataset from the sidebar to start analysis.")
