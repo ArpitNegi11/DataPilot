@@ -41,16 +41,32 @@ html, body, [class*="css"] {
     color: #F1F5F9;
 }
 
-/* Main Container Spacing */
+/* Streamlit Header Navbar: transparent & unobtrusive so it never clips or obscures content */
+header[data-testid="stHeader"] {
+    background: rgba(8, 12, 22, 0.4) !important;
+    backdrop-filter: blur(8px) !important;
+    height: 2.875rem !important;
+    z-index: 100 !important;
+}
+
+/* Main Container Spacing - safe top clearance ensures title is never cut off */
 .block-container {
-    padding-top: 1.75rem !important;
-    padding-bottom: 3rem !important;
+    padding-top: 3.75rem !important;
+    padding-bottom: 3.5rem !important;
     padding-left: 2.5rem !important;
     padding-right: 2.5rem !important;
     max-width: 1440px !important;
 }
 
-/* Sidebar Top Padding Shift Upwards */
+@media (max-width: 768px) {
+    .block-container {
+        padding-top: 4.25rem !important;
+        padding-left: 1.25rem !important;
+        padding-right: 1.25rem !important;
+    }
+}
+
+/* Sidebar Styling & Compact Upward Spacing */
 section[data-testid="stSidebar"] {
     background: rgba(11, 17, 32, 0.96) !important;
     border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
@@ -68,22 +84,86 @@ section[data-testid="stSidebar"] [data-testid="stSidebarUserContent"] {
     margin-top: 0.2rem !important;
 }
 
-/* Header & Banner */
+/* Hero Header & Title Banner */
+.hero-container {
+    margin-top: 0.2rem;
+    margin-bottom: 1.6rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #38BDF8;
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    padding: 4px 12px;
+    border-radius: 9999px;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+}
+.hero-pulse {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #38BDF8;
+    box-shadow: 0 0 8px #38BDF8;
+    animation: pulse 2s infinite ease-in-out;
+}
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.85); }
+}
 .main-title {
-    font-size: 2.05rem;
+    font-size: 2.15rem;
     font-weight: 800;
-    margin: 0;
+    margin: 0 0 6px 0;
     background: linear-gradient(120deg, #FFFFFF 20%, #38BDF8 60%, #818CF8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: -0.025em;
-    line-height: 1.2;
+    line-height: 1.25;
 }
 .sub-title {
-    font-size: 0.92rem;
+    font-size: 0.94rem;
     color: #94A3B8;
-    margin: 6px 0 16px 0;
-    line-height: 1.5;
+    margin: 0;
+    line-height: 1.55;
+    font-weight: 400;
+}
+
+/* Metric Cards */
+[data-testid="stMetric"] {
+    background: rgba(17, 24, 39, 0.7) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-top: 2px solid #38BDF8 !important;
+    border-radius: 12px !important;
+    padding: 14px 18px !important;
+    backdrop-filter: blur(12px) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+[data-testid="stMetric"]:hover {
+    border-color: rgba(56, 189, 248, 0.4) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(56, 189, 248, 0.12) !important;
+}
+[data-testid="stMetricLabel"] {
+    font-size: 0.80rem !important;
+    font-weight: 600 !important;
+    color: #94A3B8 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+}
+[data-testid="stMetricValue"] {
+    font-size: 1.65rem !important;
+    font-weight: 800 !important;
+    color: #F8FAFC !important;
+    letter-spacing: -0.02em !important;
 }
 
 /* Glass & Recommendation Cards */
@@ -94,46 +174,121 @@ section[data-testid="stSidebar"] [data-testid="stSidebarUserContent"] {
     padding: 18px 22px;
     margin-bottom: 16px;
     backdrop-filter: blur(16px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 .rec-box {
-    background: rgba(30, 41, 59, 0.75);
-    border-radius: 10px;
-    padding: 16px 20px;
-    margin-bottom: 14px;
-    border-left: 4px solid #38bdf8;
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    border-left: 4px solid #38bdf8;
+    background: rgba(17, 24, 39, 0.75);
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-left: 4px solid #38BDF8;
+    backdrop-filter: blur(14px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, border-color 0.2s ease;
 }
-.rec-high { border-left-color: #ef4444 !important; background: rgba(239, 68, 68, 0.06); }
-.rec-medium { border-left-color: #f59e0b !important; background: rgba(245, 158, 11, 0.06); }
-.rec-low { border-left-color: #10b981 !important; background: rgba(16, 185, 129, 0.06); }
-.badge { font-size: 0.75rem; font-weight: 700; padding: 2px 10px; border-radius: 12px; }
+.rec-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+.rec-high {
+    border-left: 4px solid #EF4444 !important;
+    background: linear-gradient(90deg, rgba(239, 68, 68, 0.08) 0%, rgba(17, 24, 39, 0.75) 100%) !important;
+}
+.rec-medium {
+    border-left: 4px solid #F59E0B !important;
+    background: linear-gradient(90deg, rgba(245, 158, 11, 0.08) 0%, rgba(17, 24, 39, 0.75) 100%) !important;
+}
+.rec-low {
+    border-left: 4px solid #10B981 !important;
+    background: linear-gradient(90deg, rgba(16, 185, 129, 0.08) 0%, rgba(17, 24, 39, 0.75) 100%) !important;
+}
+.badge { font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 12px; }
 
 /* Tabs Styling */
+div[data-testid="stTabs"] [data-baseweb="tab-list"] {
+    gap: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 6px;
+    margin-bottom: 1.25rem;
+}
 div[data-testid="stTabs"] button[role="tab"] {
     font-size: 0.90rem;
     font-weight: 600;
     color: #94A3B8;
-    padding: 9px 18px;
-    border-radius: 8px;
-    margin-right: 4px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+div[data-testid="stTabs"] button[role="tab"]:hover {
+    color: #F8FAFC;
+    background: rgba(30, 41, 59, 0.7);
+    border-color: rgba(56, 189, 248, 0.25);
 }
 div[data-testid="stTabs"] button[role="tab"][aria-selected="true"] {
     color: #38BDF8 !important;
-    background: rgba(56, 189, 248, 0.12);
-    border-bottom: 2px solid #38BDF8 !important;
+    background: rgba(56, 189, 248, 0.12) !important;
+    border: 1px solid rgba(56, 189, 248, 0.35) !important;
+    box-shadow: 0 0 14px rgba(56, 189, 248, 0.18);
 }
 
-/* Buttons */
+/* Primary and Download Buttons */
 .stButton>button {
-    background: linear-gradient(135deg, #0EA5E9 0%, #6366F1 100%);
+    background: linear-gradient(135deg, #0284C7 0%, #4F46E5 100%) !important;
     color: #FFFFFF !important;
-    font-weight: 600;
-    border-radius: 9px;
-    border: none;
-    padding: 8px 18px;
-    font-size: 0.88rem;
-    box-shadow: 0 4px 14px rgba(14, 165, 233, 0.25);
+    font-weight: 600 !important;
+    border-radius: 9px !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    padding: 8px 18px !important;
+    font-size: 0.88rem !important;
+    box-shadow: 0 4px 14px rgba(2, 132, 199, 0.25) !important;
+    transition: all 0.2s ease !important;
+}
+.stButton>button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(2, 132, 199, 0.4) !important;
+    border-color: rgba(56, 189, 248, 0.4) !important;
+}
+.stDownloadButton>button {
+    background: linear-gradient(135deg, #059669 0%, #0D9488 100%) !important;
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+    border-radius: 9px !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    padding: 8px 18px !important;
+    font-size: 0.88rem !important;
+    box-shadow: 0 4px 14px rgba(5, 150, 105, 0.25) !important;
+    transition: all 0.2s ease !important;
+}
+.stDownloadButton>button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(5, 150, 105, 0.4) !important;
+}
+
+/* Chat Messages */
+[data-testid="stChatMessage"] {
+    background: rgba(17, 24, 39, 0.72) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 12px !important;
+    padding: 14px 18px !important;
+    margin-top: 12px !important;
+    margin-bottom: 12px !important;
+    backdrop-filter: blur(12px) !important;
+}
+
+/* Form Controls & Inputs */
+.stTextInput>div>div>input,
+.stSelectbox>div>div {
+    background: rgba(15, 23, 42, 0.75) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 9px !important;
+    color: #F1F5F9 !important;
+}
+.stTextInput>div>div>input:focus {
+    border-color: #38BDF8 !important;
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.25) !important;
 }
 
 pre, code {
@@ -147,7 +302,10 @@ st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
 # App Header
 st.markdown(
     """
-    <div style="margin-bottom:16px;">
+    <div class="hero-container">
+        <div class="hero-badge">
+            <span class="hero-pulse"></span> ENTERPRISE AI ANALYTICS &bull; LANGGRAPH MULTI-AGENT
+        </div>
         <div class="main-title">DataPilot – AI Data Analyst & Recommendation Engine</div>
         <div class="sub-title">Deterministic tabular analytics, LangGraph multi-agent querying, business document RAG & executive prescriptive recommendations.</div>
     </div>
@@ -501,7 +659,8 @@ if uploaded_file or sample_file_path:
             with st.spinner("Orchestrating agent workflow & validating execution..."):
                 response = orchestrator.run(user_query, roles)
 
-            st.markdown(response["answer"])
+            with st.chat_message("assistant", avatar="⚡"):
+                st.markdown(response["answer"])
 
             if response.get("executed_sql"):
                 with st.expander("Show Executed DuckDB SQL (Zero Hallucination)", expanded=False):
@@ -521,16 +680,27 @@ if uploaded_file or sample_file_path:
         st.subheader("🎯 Prioritized Business Recommendations")
         st.caption("Grounded in quantitative thresholds and performance disparities identified in your dataset.")
 
+        badge_styles = {
+            "high": ("rgba(239, 68, 68, 0.2)", "#FCA5A5", "rgba(239, 68, 68, 0.4)"),
+            "medium": ("rgba(245, 158, 11, 0.2)", "#FDE68A", "rgba(245, 158, 11, 0.4)"),
+            "low": ("rgba(16, 185, 129, 0.2)", "#A7F3D0", "rgba(16, 185, 129, 0.4)"),
+        }
+
         for rec in business_recs:
             p_class = rec["priority"].lower()
+            bg_col, text_col, border_col = badge_styles.get(p_class, ("rgba(56, 189, 248, 0.2)", "#BAE6FD", "rgba(56, 189, 248, 0.4)"))
             st.markdown(f"""
             <div class="rec-box rec-{p_class}">
-                <span class="badge" style="background:#0284c7; color:white;">{rec['priority']} Priority</span>
-                <span style="color:#94a3b8; font-size:0.85rem; margin-left:8px;">{rec['category']}</span>
-                <h4 style="margin:6px 0; color:#f8fafc;">{rec['title']}</h4>
-                <p style="color:#cbd5e1; margin-bottom:6px;"><b>Evidence:</b> {rec['observation']}</p>
-                <div style="background:rgba(56, 189, 248, 0.1); padding:8px; border-radius:4px; color:#e2e8f0; font-size:0.9rem;">
-                    <b>Recommended Action:</b> {rec['action']}
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                    <span class="badge" style="background:{bg_col}; color:{text_col}; border:1px solid {border_col}; font-weight:700;">{rec['priority']} Priority</span>
+                    <span style="color:#94A3B8; font-size:0.80rem; font-weight:600; text-transform:uppercase; letter-spacing:0.04em;">{rec['category']}</span>
+                </div>
+                <h4 style="margin:4px 0 10px 0; color:#F8FAFC; font-size:1.08rem; font-weight:700;">{rec['title']}</h4>
+                <div style="color:#CBD5E1; font-size:0.92rem; margin-bottom:10px; line-height:1.5;">
+                    <strong style="color:#E2E8F0;">Observation:</strong> {rec['observation']}
+                </div>
+                <div style="background:rgba(56, 189, 248, 0.08); border:1px solid rgba(56, 189, 248, 0.2); border-radius:8px; padding:10px 14px; color:#E2E8F0; font-size:0.92rem; line-height:1.5;">
+                    <strong style="color:#38BDF8;">Recommended Action:</strong> {rec['action']}
                 </div>
             </div>
             """, unsafe_allow_html=True)
@@ -555,24 +725,71 @@ if uploaded_file or sample_file_path:
     # ---------------- TAB 5: Export & Reports ----------------
     with tab5:
         st.subheader("📄 Download Cleaned Data & Executive Reports")
+        st.caption("Export publication-ready artifacts generated deterministically from your dataset.")
         out_c1, out_c2, out_c3 = st.columns(3)
 
         with out_c1:
+            st.markdown(f"""
+            <div class="glass-card" style="min-height:150px; text-align:center; padding:20px 14px;">
+                <div style="font-size:2rem; margin-bottom:6px;">📊</div>
+                <div style="font-weight:700; font-size:1.05rem; color:#F8FAFC; margin-bottom:4px;">Cleaned Dataset</div>
+                <div style="font-size:0.80rem; color:#94A3B8; margin-bottom:14px;">{df_clean.shape[0]:,} rows &bull; Imputed missing values &bull; Normalized schema</div>
+            </div>
+            """, unsafe_allow_html=True)
             with open(cleaned_path, "rb") as f:
-                st.download_button("📥 Cleaned Dataset (CSV)", data=f, file_name=cleaned_filename, mime="text/csv", width="stretch", key="export_dl_csv")
+                st.download_button("📥 Download CSV", data=f, file_name=cleaned_filename, mime="text/csv", width="stretch", key="export_dl_csv")
 
         with out_c2:
+            st.markdown("""
+            <div class="glass-card" style="min-height:150px; text-align:center; padding:20px 14px;">
+                <div style="font-size:2rem; margin-bottom:6px;">🌐</div>
+                <div style="font-weight:700; font-size:1.05rem; color:#F8FAFC; margin-bottom:4px;">Executive HTML Report</div>
+                <div style="font-size:0.80rem; color:#94A3B8; margin-bottom:14px;">Interactive dashboard report with charts, KPIs & strategy</div>
+            </div>
+            """, unsafe_allow_html=True)
             if os.path.exists(report_path):
                 with open(report_path, "rb") as f:
-                    st.download_button("📥 Executive Report (HTML)", data=f, file_name="DataPilot_Executive_Report.html", mime="text/html", width="stretch", key="export_dl_html")
+                    st.download_button("📥 Download HTML Report", data=f, file_name="DataPilot_Executive_Report.html", mime="text/html", width="stretch", key="export_dl_html")
 
         with out_c3:
+            st.markdown("""
+            <div class="glass-card" style="min-height:150px; text-align:center; padding:20px 14px;">
+                <div style="font-size:2rem; margin-bottom:6px;">📑</div>
+                <div style="font-weight:700; font-size:1.05rem; color:#F8FAFC; margin-bottom:4px;">Executive PDF Dossier</div>
+                <div style="font-size:0.80rem; color:#94A3B8; margin-bottom:14px;">Print-ready executive summary generated via wkhtmltopdf</div>
+            </div>
+            """, unsafe_allow_html=True)
             pdf_path = report_path.replace(".html", ".pdf")
             if os.path.exists(pdf_path):
                 with open(pdf_path, "rb") as f:
-                    st.download_button("📥 Executive Report (PDF)", data=f, file_name="DataPilot_Executive_Report.pdf", mime="application/pdf", width="stretch", key="export_dl_pdf")
+                    st.download_button("📥 Download PDF Report", data=f, file_name="DataPilot_Executive_Report.pdf", mime="application/pdf", width="stretch", key="export_dl_pdf")
             else:
                 st.caption("PDF export generated via wkhtmltopdf")
 
 else:
-    st.info("👈 Upload a CSV/Excel file or select a sample business dataset from the sidebar to start analysis.")
+    st.markdown("""
+    <div class="glass-card" style="text-align:center; padding:42px 24px; margin-top:0.5rem;">
+        <div style="font-size:2.8rem; margin-bottom:12px;">⚡</div>
+        <h2 style="color:#F8FAFC; margin-bottom:8px; font-weight:800; letter-spacing:-0.02em;">Welcome to DataPilot Enterprise</h2>
+        <p style="color:#94A3B8; max-width:640px; margin:0 auto 24px auto; font-size:0.95rem; line-height:1.6;">
+            Autonomous tabular business analytics engine with deterministic DuckDB computations, LangGraph multi-agent querying, strategy document RAG, and executive prescriptive recommendations.
+        </p>
+        <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap; margin-top:16px;">
+            <div style="background:rgba(30, 41, 59, 0.6); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:16px 20px; max-width:260px; text-align:left;">
+                <div style="font-weight:700; color:#38BDF8; margin-bottom:4px; font-size:0.95rem;">📊 Deterministic KPIs</div>
+                <div style="font-size:0.82rem; color:#94A3B8; line-height:1.5;">DuckDB zero-hallucination metrics, margins, and automated anomaly scans.</div>
+            </div>
+            <div style="background:rgba(30, 41, 59, 0.6); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:16px 20px; max-width:260px; text-align:left;">
+                <div style="font-weight:700; color:#818CF8; margin-bottom:4px; font-size:0.95rem;">💬 LangGraph Multi-Agent</div>
+                <div style="font-size:0.82rem; color:#94A3B8; line-height:1.5;">Synthesizes natural language queries across structured SQL & document RAG.</div>
+            </div>
+            <div style="background:rgba(30, 41, 59, 0.6); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:16px 20px; max-width:260px; text-align:left;">
+                <div style="font-weight:700; color:#34D399; margin-bottom:4px; font-size:0.95rem;">🎯 Prescriptive Strategy</div>
+                <div style="font-size:0.82rem; color:#94A3B8; line-height:1.5;">Prioritized business recommendations grounded in quantitative thresholds.</div>
+            </div>
+        </div>
+        <div style="margin-top:28px; color:#38BDF8; font-size:0.88rem; font-weight:600;">
+            👈 Select a sample dataset or upload a CSV / Excel file in the sidebar to begin
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
