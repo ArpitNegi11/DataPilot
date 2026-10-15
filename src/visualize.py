@@ -31,10 +31,15 @@ def _safe_filename(name: str) -> str:
 
 _PLOTLY_LAYOUT_DEFAULTS = dict(
     template="plotly_dark",
-    font=dict(family="Inter, sans-serif", size=13),
-    margin=dict(l=60, r=30, t=50, b=60),
-    paper_bgcolor="#0E1117",
-    plot_bgcolor="#0E1117",
+    font=dict(family="'Plus Jakarta Sans', 'Inter', sans-serif", size=13, color="#E2E8F0"),
+    margin=dict(l=50, r=30, t=55, b=50),
+    paper_bgcolor="rgba(15, 23, 42, 0.8)",
+    plot_bgcolor="rgba(15, 23, 42, 0.8)",
+    hoverlabel=dict(
+        bgcolor="#1E293B",
+        font_size=13,
+        font_family="'Plus Jakarta Sans', 'Inter', sans-serif"
+    )
 )
 
 
@@ -43,7 +48,21 @@ def _apply_layout(fig, *, height: int = 400, title: str = ""):
     fig.update_layout(
         **_PLOTLY_LAYOUT_DEFAULTS,
         height=height,
-        title=dict(text=title, x=0.02, font=dict(size=16)),
+        title=dict(
+            text=title,
+            x=0.03,
+            font=dict(size=16, color="#F8FAFC", family="'Plus Jakarta Sans', 'Inter', sans-serif")
+        ),
+    )
+    fig.update_xaxes(
+        gridcolor="rgba(255, 255, 255, 0.07)",
+        zerolinecolor="rgba(255, 255, 255, 0.12)",
+        tickfont=dict(color="#94A3B8")
+    )
+    fig.update_yaxes(
+        gridcolor="rgba(255, 255, 255, 0.07)",
+        zerolinecolor="rgba(255, 255, 255, 0.12)",
+        tickfont=dict(color="#94A3B8")
     )
     return fig
 
