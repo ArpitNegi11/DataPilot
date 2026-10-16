@@ -16,6 +16,11 @@ from src.main import load_config, extract_validation_rules
 from src.document_rag import BusinessDocumentRAG
 from src.orchestrator import DataPilotOrchestrator
 from src.llm_client import LLMClient
+from src.goal_seek import GoalSeekOptimizer
+from src.root_cause import RootCauseDecomposer
+from src.audio_briefing import AudioBriefingEngine
+from src.affinity_miner import MarketBasketAffinityMiner
+from src.visualize import plot_waterfall_chart, plot_affinity_matrix, plot_goal_seek_comparison
 
 # -----------------------------------------------------------------------------
 # 1. Page Configuration & Executive Design System
@@ -552,13 +557,67 @@ if uploaded_file or sample_file_path:
         recommendations=business_recs
     )
 
+    # --- 7. Autonomous Advanced Engines ---
+    audio_engine = AudioBriefingEngine()
+    briefing = audio_engine.get_briefing(
+        summary=summary,
+        kpis=kpis,
+        quality_score=quality_score,
+        anomalies=anomalies_found,
+        recommendations=business_recs
+    )
+
+    goal_seek_optimizer = GoalSeekOptimizer(df_clean, roles)
+    root_cause_decomposer = RootCauseDecomposer(df_clean, roles)
+    affinity_miner = MarketBasketAffinityMiner(df_clean, roles)
+    affinity_data = affinity_miner.mine_affinity_and_cannibalization()
+
     # =========================================================================
-    # 5. UI TABS (5 Official Tabs)
+    # 5. 60-Second Audio Executive Briefing
+    # =========================================================================
+    st.markdown("""
+    <div class="glass-card" style="border-left: 4px solid #38BDF8; padding: 14px 18px; margin-bottom: 16px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+            <div style="display:flex; align-items:center; gap:10px;">
+                <span style="font-size:1.5rem;">🎙️</span>
+                <div>
+                    <div style="font-weight:800; font-size:1.02rem; color:#F8FAFC;">
+                        60-Second Audio Executive Briefing
+                    </div>
+                    <div style="font-size:0.80rem; color:#94A3B8;">
+                        Data-to-Voice AI debrief: Real-time verbal synthesis of data quality, revenue, risks, and strategic priorities
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    audio_c1, audio_c2 = st.columns([3, 1])
+    with audio_c1:
+        st.audio(briefing["audio_bytes"], format=briefing["mime_type"])
+    with audio_c2:
+        dl_ext = "mp3" if briefing["mime_type"] == "audio/mp3" else "wav"
+        st.download_button(
+            f"📥 Download Audio ({dl_ext.upper()})",
+            data=briefing["audio_bytes"],
+            file_name=f"DataPilot_Executive_Briefing.{dl_ext}",
+            mime=briefing["mime_type"],
+            width="stretch",
+            key="btn_dl_briefing_audio"
+        )
+
+    with st.expander("📝 Read Spoken Briefing Transcript", expanded=False):
+        st.markdown(f"> *\"{briefing['script']}\"*")
+        st.caption(f"Estimated Speech Duration: ~{briefing['estimated_duration_sec']} seconds ({briefing['word_count']} words)")
+
+    # =========================================================================
+    # 6. UI TABS (5 Official Tabs)
     # =========================================================================
     tab1, tab2, tab3, tab4, tab5 = st.tabs([
-        "📊 Analytics & Visuals",
+        "📊 Analytics & Root-Cause",
         "💬 AI Analyst (LangGraph)",
-        "🎯 Recommendations",
+        "🎯 Recommendations & Goal-Seek",
         "📚 Document Knowledge Base",
         "📄 Export & Reports"
     ])
@@ -586,9 +645,56 @@ if uploaded_file or sample_file_path:
 
         kpi_c4.metric("Data Quality Health", f"{quality_score['score']}%", quality_score["grade"])
 
+        # --- Diagnostic Root-Cause Decomposition Engine ---
         st.markdown("---")
-        st.subheader("📈 Interactive Visual Analytics")
-        if interactive_figs:
+        st.subheader("🔍 Diagnostic Root-Cause Decomposition (\"Why Did This Happen?\")")
+        st.caption("Variance decomposition between operating periods across Volume, Price Realization, Cost Inflation, and Portfolio Mix effects.")
+
+        avail_periods = root_cause_decomposer.get_available_periods()
+        rc_c1, rc_c2, rc_c3 = st.columns([2, 2, 1])
+        with rc_c1:
+            p_base = st.selectbox("Baseline Period", avail_periods, index=0, key="rc_p_base")
+        with rc_c2:
+            default_curr_idx = len(avail_periods) - 1 if len(avail_periods) > 1 else 0
+            p_curr = st.selectbox("Current / Comparison Period", avail_periods, index=default_curr_idx, key="rc_p_curr")
+        with rc_c3:
+            rc_metric = st.selectbox("Decompose Metric", ["Profit", "Revenue"], index=0, key="rc_metric")
+
+        rc_result = root_cause_decomposer.decompose(period_base=p_base, period_curr=p_curr, metric=rc_metric.lower())
+
+        st.markdown(f"""
+        <div class="glass-card" style="border-left: 4px solid #38BDF8; margin-top: 10px; margin-bottom: 16px;">
+            <div style="font-size:0.80rem; font-weight:700; color:#38BDF8; letter-spacing:0.04em; margin-bottom:6px;">
+                EXECUTIVE ROOT-CAUSE VERDICT &bull; DOMINANT DRIVER: {rc_result['primary_root_cause'].upper()}
+            </div>
+            <div style="font-size:0.95rem; color:#F1F5F9; line-height:1.6;">
+                {rc_result['executive_narrative']}
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+        wf_fig = plot_waterfall_chart(rc_result["waterfall_data"], title=f"Waterfall: {rc_result['period_base']} to {rc_result['period_curr']} {rc_metric} Variance")
+        st.plotly_chart(wf_fig, width="stretch", key="rc_waterfall_chart")
+
+        d_col1, d_col2 = st.columns(2)
+        with d_col1:
+            st.markdown("##### 🟢 Top Positive Drivers (+)")
+            if rc_result["top_positive_drivers"]:
+                for d in rc_result["top_positive_drivers"]:
+                    st.markdown(f"- **{d['category']}**: `{d['net_delta']:+,.2f}` (Lead: *{d['primary_driver']}*)")
+            else:
+                st.caption("No positive drivers detected.")
+        with d_col2:
+            st.markdown("##### 🔴 Top Detractors & Drags (-)")
+            if rc_result["top_negative_drags"]:
+                for d in rc_result["top_negative_drags"]:
+                    st.markdown(f"- **{d['category']}**: `{d['net_delta']:+,.2f}` (Lead: *{d['primary_driver']}*)")
+            else:
+                st.caption("No negative detractors detected.")
+
+        st.markdown("---")
+        st.subheader("📈 Interactive Visual Analytics & Market Basket Mining")
+        if interactive_figs or affinity_data.get("association_rules"):
             tab_config = []
             if "top_products" in interactive_figs:
                 tab_config.append(("Top Items", "top_products"))
@@ -607,12 +713,54 @@ if uploaded_file or sample_file_path:
             if dist_keys:
                 tab_config.append(("Distributions", dist_keys))
 
+            tab_config.append(("🛒 Market Basket & Cannibalization", "_affinity_tab_"))
+
             if tab_config:
                 tab_labels = [t[0] for t in tab_config]
                 chart_tabs = st.tabs(tab_labels)
                 for ctab, (label, key_or_keys) in zip(chart_tabs, tab_config):
                     with ctab:
-                        if isinstance(key_or_keys, list):
+                        if key_or_keys == "_affinity_tab_":
+                            st.markdown("#### 🛒 Product Affinity Matrix & Cannibalization Risks")
+                            st.caption("Mines frequent co-purchases (Support, Confidence, Lift) and alerts when discounted products cannibalize higher-margin sales.")
+                            
+                            aff_col1, aff_col2 = st.columns([1, 1])
+                            with aff_col1:
+                                fig_mat = plot_affinity_matrix(affinity_data["affinity_matrix"], title="Cross-Sell Affinity Heatmap (Lift)")
+                                st.plotly_chart(fig_mat, width="stretch", key="tab1_affinity_heatmap")
+                            with aff_col2:
+                                st.markdown("##### 📦 High-Lift Bundling Opportunities")
+                                if affinity_data["association_rules"]:
+                                    rules_df = pd.DataFrame(affinity_data["association_rules"])[[
+                                        "item_a", "item_b", "lift", "confidence_a_to_b_pct", "recommended_action"
+                                    ]].rename(columns={
+                                        "item_a": "Item A",
+                                        "item_b": "Item B",
+                                        "lift": "Lift (x)",
+                                        "confidence_a_to_b_pct": "Confidence (%)",
+                                        "recommended_action": "Prescribed Bundle"
+                                    })
+                                    st.dataframe(rules_df.head(6), width="stretch")
+                                else:
+                                    st.caption("No strong cross-sell association rules found above support threshold.")
+
+                            st.markdown("##### ⚠️ Product Cannibalization Alerts")
+                            if affinity_data["cannibalization_alerts"]:
+                                cann_df = pd.DataFrame(affinity_data["cannibalization_alerts"])[[
+                                    "cannibalizer_product", "victim_product", "correlation", "severity_score", "estimated_margin_displacement", "countermeasure"
+                                ]].rename(columns={
+                                    "cannibalizer_product": "Cannibalizer (Promoted)",
+                                    "victim_product": "Victim (Higher Margin)",
+                                    "correlation": "Corr (r)",
+                                    "severity_score": "Severity (%)",
+                                    "estimated_margin_displacement": "Displaced Margin ($)",
+                                    "countermeasure": "Countermeasure"
+                                })
+                                st.dataframe(cann_df, width="stretch")
+                            else:
+                                st.success("🟢 Zero product cannibalization detected across product portfolio.")
+
+                        elif isinstance(key_or_keys, list):
                             for dk in key_or_keys:
                                 st.plotly_chart(interactive_figs[dk], width="stretch", key=f"tab1_dist_{dk}")
                         else:
@@ -623,6 +771,7 @@ if uploaded_file or sample_file_path:
         with st.expander("🔎 Raw & Cleaned Data Profiling", expanded=False):
             st.dataframe(df_clean.head(10), width="stretch")
             st.write(df_clean.describe(include="all").transpose())
+
 
     # ---------------- TAB 2: AI Analyst (LangGraph) ----------------
     with tab2:
@@ -704,6 +853,69 @@ if uploaded_file or sample_file_path:
                 </div>
             </div>
             """, unsafe_allow_html=True)
+
+        # --- Autonomous Goal-Seek & Decision Optimizer ---
+        st.markdown("---")
+        st.subheader("⚡ Autonomous Goal-Seek & Decision Optimizer (Prescriptive Analytics)")
+        st.caption("Calculate optimal category price and cost levers to hit strategic financial targets under market elasticity constraints.")
+
+        gs_c1, gs_c2, gs_c3 = st.columns([2, 2, 2])
+        with gs_c1:
+            gs_metric = st.selectbox("Target Outcome", ["Profit", "Revenue", "Margin"], index=0, key="gs_target_metric")
+        with gs_c2:
+            gs_pct = st.slider("Target Desired Change %", min_value=1.0, max_value=40.0, value=12.0, step=1.0, key="gs_target_pct")
+        with gs_c3:
+            gs_elast = st.slider("Price Elasticity (Sensitivity)", min_value=-2.5, max_value=-0.2, value=-1.1, step=0.1, key="gs_elasticity", help="Standard e-commerce elasticity is approx -1.1. Lower values mean higher consumer price sensitivity.")
+
+        gs_res = goal_seek_optimizer.optimize(
+            target_metric=gs_metric.lower(),
+            target_change_pct=gs_pct,
+            price_elasticity=gs_elast
+        )
+
+        st.markdown(f"""
+        <div class="glass-card" style="border-left: 4px solid #10B981; margin-top: 10px; margin-bottom: 16px;">
+            <div style="font-size:0.80rem; font-weight:700; color:#10B981; letter-spacing:0.04em; margin-bottom:6px;">
+                OPTIMIZATION VERDICT &bull; TARGET: +{gs_pct:.0f}% {gs_metric.upper()}
+            </div>
+            <div style="font-size:0.95rem; color:#F1F5F9; line-height:1.6;">
+                {gs_res['directives'][0] if gs_res['directives'] else 'Optimized plan generated.'}
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+        k1, k2, k3 = st.columns(3)
+        k1.metric(
+            "Projected Profit",
+            f"${gs_res['projected']['profit']:,.0f}",
+            f"{gs_res['delta']['profit_delta']:+,.0f} vs base"
+        )
+        k2.metric(
+            "Projected Revenue",
+            f"${gs_res['projected']['revenue']:,.0f}",
+            f"{gs_res['delta']['revenue_delta']:+,.0f} vs base"
+        )
+        k3.metric(
+            "Projected Margin",
+            f"{gs_res['projected']['margin_pct']:.1f}%",
+            f"{gs_res['delta']['margin_delta_pts']:+.1f} pts"
+        )
+
+        fig_gs = plot_goal_seek_comparison(gs_res, title=f"Goal-Seek: Baseline vs +{gs_pct:.0f}% {gs_metric} Optimization")
+        st.plotly_chart(fig_gs, width="stretch", key="gs_comparison_chart")
+
+        st.markdown("##### 📋 Recommended Category Levers & Financial Impact")
+        levers_display = pd.DataFrame(gs_res["category_levers"])[[
+            "category", "recommended_price_change_pct", "recommended_cost_cut_pct", "profit_impact", "action_summary"
+        ]].rename(columns={
+            "category": "Category",
+            "recommended_price_change_pct": "Price Adj (%)",
+            "recommended_cost_cut_pct": "Cost Cut (%)",
+            "profit_impact": "Profit Lift ($)",
+            "action_summary": "Prescribed Action"
+        })
+        st.dataframe(levers_display, width="stretch")
+
 
     # ---------------- TAB 4: Document Knowledge Base ----------------
     with tab4:

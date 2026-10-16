@@ -3,6 +3,9 @@ import pandas as pd
 from typing import Dict, Any, Optional, List
 from src.query_engine import DataPilotQueryEngine
 from src.document_rag import BusinessDocumentRAG
+from src.root_cause import RootCauseDecomposer
+from src.goal_seek import GoalSeekOptimizer
+from src.affinity_miner import MarketBasketAffinityMiner
 
 
 class HybridQueryEngine:
@@ -12,6 +15,9 @@ class HybridQueryEngine:
     1. Structured tabular data (DuckDB)
     2. Unstructured business documents (RAG)
     3. Hybrid questions requiring both quantitative calculation and qualitative context.
+    4. Diagnostic Root-Cause Decomposition ("Why did this happen?")
+    5. Autonomous Goal-Seek & Decision Optimizer
+    6. Product Cannibalization & Market Basket Affinity Miner
     """
 
     def __init__(
@@ -27,13 +33,25 @@ class HybridQueryEngine:
 
     def classify_intent(self, query: str) -> str:
         """
-        Classifies query into: 'conversational', 'data_only', 'document_only', or 'hybrid'.
+        Classifies query into: 'conversational', 'root_cause', 'goal_seek', 'affinity', 'data_only', 'document_only', or 'hybrid'.
         """
         q = query.lower().strip()
 
         # Conversational greetings or persona questions
         if any(q.startswith(kw) for kw in ["hello", "hi ", "hey", "who are you", "what can you do", "introduce yourself", "help me"]):
             return "conversational"
+
+        # Diagnostic Root-Cause keywords
+        if any(kw in q for kw in ["why did", "root cause", "variance decomposition", "why did profit", "why did sales", "why did revenue", "what drove the drop", "what caused the decline"]):
+            return "root_cause"
+
+        # Goal-Seek and Decision Optimization keywords
+        if any(kw in q for kw in ["goal seek", "optimizer", "how to increase profit", "how to achieve", "target margin", "how can we reach", "what levers", "prescriptive levers"]):
+            return "goal_seek"
+
+        # Market Basket & Cannibalization keywords
+        if any(kw in q for kw in ["frequently bought together", "market basket", "affinity", "cross sell", "bundle", "cannibaliz"]):
+            return "affinity"
 
         # Keywords strongly indicating structured tabular computation
         data_keywords = [
@@ -45,7 +63,7 @@ class HybridQueryEngine:
         # Keywords strongly indicating document/policy/strategy text
         doc_keywords = [
             "policy", "guideline", "strategy", "review", "memo", "contract", "terms", "target",
-            "goal", "why did", "explain", "reason", "plan", "roadmap", "objective", "compliance", "clause"
+            "goal", "explain", "reason", "plan", "roadmap", "objective", "compliance", "clause"
         ]
 
         has_data = any(kw in q for kw in data_keywords)
@@ -90,6 +108,73 @@ class HybridQueryEngine:
                 "answer": ans or "Hello! How can I assist with your data analysis today?",
                 "data": pd.DataFrame(),
                 "executed_sql": None,
+                "citations": []
+            }
+
+        # --- 0B. Diagnostic Root-Cause Response ---
+        if intent == "root_cause":
+            decomposer = RootCauseDecomposer(self.df, roles)
+            metric_target = "profit" if "profit" in query.lower() else "revenue"
+            res = decomposer.decompose(metric=metric_target)
+            attr_df = pd.DataFrame(res.get("category_attributions", []))
+            ans = (
+                f"### 🔍 Diagnostic Root-Cause Analysis\n\n"
+                f"**Executive Verdict:** {res['executive_narrative']}\n\n"
+                f"**Orthogonal Variance Breakdown:**\n"
+                f"- **Volume Effect:** ${res['decomposition']['volume_effect']:+,.0f}\n"
+                f"- **Price Realization:** ${res['decomposition']['price_effect']:+,.0f}\n"
+                f"- **Cost/Margin Compression:** ${res['decomposition']['cost_effect']:+,.0f}\n"
+                f"- **Portfolio Mix Shift:** ${res['decomposition']['mix_effect']:+,.0f}\n"
+            )
+            return {
+                "intent": "root_cause",
+                "answer": ans,
+                "data": attr_df.head(10) if not attr_df.empty else pd.DataFrame(),
+                "executed_sql": f"VARIANCE DECOMPOSITION: {res['period_base']} vs {res['period_curr']} ({metric_target})",
+                "citations": []
+            }
+
+        # --- 0C. Autonomous Goal-Seek Response ---
+        if intent == "goal_seek":
+            optimizer = GoalSeekOptimizer(self.df, roles)
+            match = re.search(r'(\d+)\s*%', query)
+            tgt_pct = float(match.group(1)) if match else 10.0
+            res = optimizer.optimize(target_metric="profit", target_change_pct=tgt_pct)
+            levers_df = pd.DataFrame(res.get("category_levers", []))
+            ans = (
+                f"### 🎯 Autonomous Goal-Seek Plan: Target +{tgt_pct:.0f}% Profit\n\n"
+                f"**Baseline:** ${res['baseline']['profit']:,.0f} Profit ({res['baseline']['margin_pct']:.1f}% margin) ➔ "
+                f"**Projected:** ${res['projected']['profit']:,.0f} Profit ({res['projected']['margin_pct']:.1f}% margin) "
+                f"(*Net Profit Delta: ${res['delta']['profit_delta']:+,.0f}*)\n\n"
+                f"**Strategic Directives:**\n"
+                + "\n".join([f"- {d}" for d in res["directives"]])
+            )
+            return {
+                "intent": "goal_seek",
+                "answer": ans,
+                "data": levers_df.head(10) if not levers_df.empty else pd.DataFrame(),
+                "executed_sql": f"CONSTRAINED OPTIMIZATION: target_profit_delta = +{tgt_pct:.1f}%",
+                "citations": []
+            }
+
+        # --- 0D. Market Basket Affinity & Cannibalization Response ---
+        if intent == "affinity":
+            miner = MarketBasketAffinityMiner(self.df, roles)
+            res = miner.mine_affinity_and_cannibalization()
+            rules_df = pd.DataFrame(res.get("association_rules", []))
+            cann_df = pd.DataFrame(res.get("cannibalization_alerts", []))
+            ans = (
+                f"### 🛒 Market Basket Affinity & Cannibalization Analysis\n\n"
+                f"**Top Affinity Co-Purchase:** {res['summary']['top_affinity_pair']}\n\n"
+                f"**Top Cannibalization Risk:** {res['summary']['top_cannibalization_risk']}\n\n"
+                f"Analyzed {res['total_baskets']:,} transaction baskets across {res['unique_items_analyzed']} items."
+            )
+            display_df = rules_df.head(10) if not rules_df.empty else cann_df.head(10)
+            return {
+                "intent": "affinity",
+                "answer": ans,
+                "data": display_df if not display_df.empty else pd.DataFrame(),
+                "executed_sql": "ASSOCIATION MINING: Support >= 1%, Lift >= 1.0",
                 "citations": []
             }
 

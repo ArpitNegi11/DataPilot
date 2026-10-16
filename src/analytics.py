@@ -5,7 +5,7 @@ from typing import Dict, Optional, Any, List
 
 def infer_business_columns(df: pd.DataFrame) -> Dict[str, Optional[str]]:
     """
-    Infer column roles: date, revenue, profit, quantity, product, category, region.
+    Infer column roles: date, revenue, profit, quantity, product, category, region, order_id, customer_id, cost, discount.
     """
     roles = {
         "date": None,
@@ -15,6 +15,10 @@ def infer_business_columns(df: pd.DataFrame) -> Dict[str, Optional[str]]:
         "product": None,
         "category": None,
         "region": None,
+        "order_id": None,
+        "customer_id": None,
+        "cost": None,
+        "discount": None,
     }
 
     cols = list(df.columns)
@@ -24,23 +28,35 @@ def infer_business_columns(df: pd.DataFrame) -> Dict[str, Optional[str]]:
     for key, orig in cols_lower.items():
         if not roles["date"] and ("date" in key or "time" in key or pd.api.types.is_datetime64_any_dtype(df[orig])):
             roles["date"] = orig
-        elif not roles["revenue"] and key in ["sales", "revenue", "total", "total_(usd)", "subscription_cost", "cost_price_total_(usd)"]:
+        elif not roles["revenue"] and key in ["sales", "revenue", "total", "total_(usd)", "subscription_cost", "cost_price_total_(usd)", "total_revenue", "gross_revenue", "net_sales"]:
             roles["revenue"] = orig
-        elif not roles["profit"] and "profit" in key:
+        elif not roles["profit"] and ("profit" in key or key in ["margin", "gross_profit", "net_profit"]):
             roles["profit"] = orig
         elif not roles["quantity"] and key in ["quantity", "qty", "units", "units_sold", "number_of_units"]:
             roles["quantity"] = orig
         elif not roles["product"] and key in ["product_name", "product", "item", "item_name", "product_id"]:
             roles["product"] = orig
-        elif not roles["category"] and key in ["category", "segment", "subscription_interval", "department", "type"]:
+        elif not roles["category"] and key in ["category", "segment", "subscription_interval", "department", "type", "product_category", "customer_segment"]:
             roles["category"] = orig
         elif not roles["region"] and key in ["region", "country", "city", "location", "rep"]:
             roles["region"] = orig
+        elif not roles["order_id"] and key in ["order_id", "order_no", "invoice_id", "invoice_no", "transaction_id"]:
+            roles["order_id"] = orig
+        elif not roles["customer_id"] and key in ["customer_id", "client_id", "customer_name", "customer"]:
+            roles["customer_id"] = orig
+        elif not roles["cost"] and key in ["cost", "cogs", "cost_of_goods_sold", "unit_cost", "cost_price"]:
+            roles["cost"] = orig
+        elif not roles["discount"] and key in ["discount", "discount_pct", "discount_rate", "discount_amount"]:
+            roles["discount"] = orig
 
     # Second pass: Fallbacks
     num_cols = df.select_dtypes(include=[np.number]).columns.tolist()
-    if not roles["revenue"] and num_cols:
-        roles["revenue"] = num_cols[-1]
+    if not roles["revenue"]:
+        rev_candidates = [c for c in num_cols if "rev" in c.lower() or "sale" in c.lower() or "total" in c.lower()]
+        if rev_candidates:
+            roles["revenue"] = rev_candidates[0]
+        elif num_cols:
+            roles["revenue"] = num_cols[-1]
 
     text_cols = df.select_dtypes(include=["object", "string", "category"]).columns.tolist()
     if not roles["product"] and text_cols:

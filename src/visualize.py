@@ -483,3 +483,111 @@ def generate_interactive_visuals(df: pd.DataFrame) -> dict:
             print(f"[VISUAL_WARN] Interactive regression chart error: {e}")
 
     return plotly_figs
+
+
+def plot_waterfall_chart(
+    waterfall_data: dict,
+    title: str = "Root-Cause Variance Decomposition",
+    y_axis_title: str = "USD Impact"
+):
+    """
+    Generate an executive Plotly Waterfall chart for Root-Cause & Goal-Seek variance.
+    """
+    labels = waterfall_data.get("labels", [])
+    values = waterfall_data.get("values", [])
+    measures = waterfall_data.get("measures", [])
+
+    text_labels = []
+    for v, m in zip(values, measures):
+        if m == "relative":
+            text_labels.append(f"{v:+,.0f}")
+        else:
+            text_labels.append(f"{v:,.0f}")
+
+    fig = go.Figure(go.Waterfall(
+        name="Variance",
+        orientation="v",
+        measure=measures,
+        x=labels,
+        textposition="outside",
+        text=text_labels,
+        y=values,
+        connector={"line": {"color": "rgba(255, 255, 255, 0.25)", "width": 1.5}},
+        increasing={"marker": {"color": "#10B981"}},
+        decreasing={"marker": {"color": "#EF4444"}},
+        totals={"marker": {"color": "#38BDF8"}}
+    ))
+
+    _apply_layout(fig, height=430, title=title)
+    fig.update_yaxes(title_text=y_axis_title)
+    fig.update_layout(waterfallgap=0.3)
+    return fig
+
+
+def plot_affinity_matrix(
+    affinity_dict: dict,
+    title: str = "Market Basket Product Affinity Matrix (Cross-Sell Lift)"
+):
+    """
+    Generate an executive Plotly Heatmap showing product co-purchase lift.
+    """
+    df_matrix = pd.DataFrame(affinity_dict)
+    if df_matrix.empty:
+        fig = go.Figure()
+        _apply_layout(fig, height=350, title="No Affinity Data Available")
+        return fig
+
+    fig = px.imshow(
+        df_matrix,
+        color_continuous_scale="Plasma",
+        aspect="auto",
+        labels=dict(color="Lift Multiplier")
+    )
+
+    _apply_layout(fig, height=440, title=title)
+    fig.update_traces(
+        hovertemplate="Product A: %{y}<br>Product B: %{x}<br>Lift: %{z:.2f}x<extra></extra>"
+    )
+    return fig
+
+
+def plot_goal_seek_comparison(
+    goal_seek_result: dict,
+    title: str = "Goal-Seek: Baseline vs Projected Executive Performance"
+):
+    """
+    Generate a comparative grouped bar chart for Goal-Seek KPIs.
+    """
+    base = goal_seek_result.get("baseline", {})
+    proj = goal_seek_result.get("projected", {})
+
+    metrics = ["Revenue", "Operating Profit", "Operating Cost"]
+    base_vals = [base.get("revenue", 0), base.get("profit", 0), base.get("cost", 0)]
+    proj_vals = [proj.get("revenue", 0), proj.get("profit", 0), proj.get("cost", 0)]
+
+    fig = go.Figure(data=[
+        go.Bar(
+            name="Baseline",
+            x=metrics,
+            y=base_vals,
+            marker_color="rgba(148, 163, 184, 0.7)",
+            text=[f"${v:,.0f}" for v in base_vals],
+            textposition="outside"
+        ),
+        go.Bar(
+            name="Optimized Plan",
+            x=metrics,
+            y=proj_vals,
+            marker_color="rgba(56, 189, 248, 0.9)",
+            text=[f"${v:,.0f}" for v in proj_vals],
+            textposition="outside"
+        )
+    ])
+
+    _apply_layout(fig, height=420, title=title)
+    fig.update_layout(
+        barmode="group",
+        legend=dict(yanchor="top", y=0.98, xanchor="right", x=0.98)
+    )
+    return fig
+
